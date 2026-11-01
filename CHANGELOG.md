@@ -2,6 +2,20 @@
 
 All notable changes to this project are documented here. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). This project follows semantic versioning once it reaches 1.0.
 
+## [Unreleased]
+
+### Fixed
+
+- A bare `&` in JSX text (`Rated & Billed`) was reported as a parse error, though TypeScript
+  and React accept it. The file is now re-parsed with a same-length substitute, so byte offsets
+  and evidence stay exact. Found on a 223-file repository where it accounted for all 3 parse
+  errors.
+- Parse errors now name the line, `repograph status` lists the affected files, and
+  `repograph index` reports the index's stored error count instead of only the errors from the
+  files re-parsed in that run.
+- An extractor-version marker re-reads the tree once after an upgrade, so files indexed by
+  older extraction logic are corrected without `--force`.
+
 ## [0.1.2] — 2026-10-31
 
 ### Added
