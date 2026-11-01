@@ -20,6 +20,11 @@ TEST_FILE_RE = (
     "test_", "_test.", ".test.", ".spec.", "conftest.py",
 )
 
+# Bumped whenever extraction changes what it produces. A mismatch re-reads the
+# tree once, so an upgrade heals files that older logic recorded incorrectly
+# (e.g. v2: bare "&" in JSX text was reported as a parse error).
+EXTRACTOR_VERSION = "2"
+
 
 def is_test_path(path: str) -> bool:
     parts = path.lower().split("/")
@@ -74,6 +79,8 @@ def index_repository(root: Path, *, force: bool = False, reset: bool = False,
             store.conn.commit()
         store.set_meta("root", str(root))
         existing = store.existing_files()
+        if existing and store.get_meta("extractor_version") != EXTRACTOR_VERSION:
+            force = True
         scanned = {e.path: e for e in entries}
 
         for path in sorted(set(existing) - set(scanned)):
@@ -173,6 +180,12 @@ def index_repository(root: Path, *, force: bool = False, reset: bool = False,
 
         with store.tx():
             store.set_meta("indexed_at", _now())
+            store.set_meta("extractor_version", EXTRACTOR_VERSION)
+        # Report the index's error count, not this run's: unchanged files keep
+        # the errors they were indexed with, and "0" beside a non-zero status
+        # is how users stop trusting the number.
+        stats.parse_errors = int(store.conn.execute(
+            "SELECT COUNT(*) FROM files WHERE parsed=0").fetchone()[0])
         store.conn.execute("PRAGMA wal_checkpoint(TRUNCATE)")
         stats.duration_s = round(time.perf_counter() - started, 3)
         db = Path(settings.db_path)

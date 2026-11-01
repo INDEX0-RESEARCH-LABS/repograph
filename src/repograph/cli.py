@@ -118,6 +118,8 @@ def status(
     typer.echo(f"files:     {data['files']}  symbols: {data['symbols']}  "
                f"internal edges: {data['internal_imports']}")
     typer.echo(f"tests:     {data['tests']}  parse errors: {data['parse_errors']}")
+    for item in data.get("parse_error_files") or []:
+        typer.echo(f"           {item['path']}: {item['parse_error']}")
     typer.echo(f"languages: {', '.join(f'{k}={v}' for k, v in data['languages'].items()) or '-'}")
     typer.echo(f"database:  {data['db_bytes'] / 1024:.0f} KiB")
     stale = data["stale"]

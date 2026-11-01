@@ -479,6 +479,9 @@ def quick_status(store: Store, settings: Settings) -> dict:
     )
     return {
         **stats,
+        "parse_error_files": _dicts(store.conn.execute(
+            "SELECT path, parse_error FROM files WHERE parsed=0 ORDER BY path LIMIT 50"
+        ).fetchall()),
         "db_bytes": sum(p.stat().st_size for p in (settings.db_path, Path(str(settings.db_path) + "-wal")) if p.exists()),
         "stale": {"added": added, "changed": changed, "deleted": deleted},
         "needs_reindex": bool(added or deleted or changed),

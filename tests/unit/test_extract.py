@@ -51,7 +51,14 @@ def test_python_routes_and_parse_error():
     assert ("POST", "/items/{item_id}", "handle") in routes
     assert ("POST", "/legacy", "legacy") in routes
     bad = extract("bad.py", "python", b"def broken(:\n")
-    assert bad.errors
+    assert bad.errors and "line 1" in bad.errors[0]
+
+
+def test_jsx_bare_ampersand_is_not_a_parse_error():
+    tsx = b"export function P() {\n  return <div>Rated & Billed</div>;\n}\n"
+    out = extract("web/P.tsx", "tsx", tsx)
+    assert out.errors == []
+    assert [s.name for s in out.symbols] == ["P"]
 
 
 def test_python_dynamic_import_detected():

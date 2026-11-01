@@ -56,6 +56,16 @@ def test_force_and_reset(indexed: Path):
     assert stats.added == 20
 
 
+def test_extractor_version_change_reindexes_everything(indexed: Path):
+    # An upgrade that changes extraction must not leave files indexed by the
+    # old logic: the fixture's broken file demonstrates the stale rows.
+    with Store(load_settings(indexed)) as store:
+        store.set_meta("extractor_version", "1")
+        store.conn.commit()
+    stats = index_repository(indexed)
+    assert stats.updated == 20
+
+
 def test_timestamp_only_change_is_skipped(indexed: Path):
     target = indexed / "src/shop/models.py"
     os_time = time.time() + 10

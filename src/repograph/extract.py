@@ -599,6 +599,19 @@ def _parse_prisma(text: str) -> ParseResult:
     return out
 
 
+def _first_error_line(tree, source: bytes) -> int | None:
+    """Lowest line carrying a tree-sitter ERROR or missing token."""
+    first: int | None = None
+    stack = [tree.root_node]
+    while stack:
+        node = stack.pop()
+        if node.type == "ERROR" or node.is_missing:
+            if first is None or node.start_byte < first:
+                first = node.start_byte
+        stack.extend(node.children)
+    return source.count(b"\n", 0, first) + 1 if first is not None else None
+
+
 def extract(rel_path: str, lang: str, source: bytes) -> ParseResult:
     if lang == "prisma":
         return _parse_prisma(source.decode("utf-8", "replace"))
@@ -607,8 +620,18 @@ def extract(rel_path: str, lang: str, source: bytes) -> ParseResult:
     parser = _parser(lang)
     tree = parser.parse(source)
     out = ParseResult()
+    if tree.root_node.has_error and b" & " in source:
+        # tree-sitter's JS/TS grammars reject a bare "&" in JSX text
+        # ("Rated & Billed"), which TypeScript and React accept. Retry with a
+        # same-length substitute so byte offsets, and therefore evidence, are
+        # unchanged. Only adopted if the retry parses cleanly.
+        retry = parser.parse(source.replace(b" & ", b" X "))
+        if not retry.root_node.has_error:
+            tree = retry
     if tree.root_node.has_error:
-        out.errors.append("syntax errors present; extraction is partial")
+        line = _first_error_line(tree, source)
+        where = f" at line {line}" if line else ""
+        out.errors.append(f"syntax errors present{where}; extraction is partial")
     if lang == "python":
         _walk_python(tree.root_node, out, [])
     else:
