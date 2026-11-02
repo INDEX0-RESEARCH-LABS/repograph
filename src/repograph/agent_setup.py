@@ -14,6 +14,7 @@ from __future__ import annotations
 import difflib
 import json
 import re
+import os
 import shutil
 import sys
 from dataclasses import dataclass
@@ -90,9 +91,13 @@ class Change:
 def server_entry(root: Path) -> dict[str, object]:
     """Launch command that does not depend on the client's working directory."""
     args = ["serve", "--root", str(root)]
-    exe = shutil.which("repograph")
-    if exe:
-        return {"command": exe, "args": args}
+    candidates = [
+        os.path.expanduser("~/.local/share/uv/tools/repograph-codeintel/bin/repograph"),
+        shutil.which("repograph"),
+    ]
+    for exe in candidates:
+        if exe and os.path.isfile(exe) and os.access(exe, os.X_OK):
+            return {"command": exe, "args": args}
     return {"command": sys.executable, "args": ["-m", "repograph", *args]}
 
 
