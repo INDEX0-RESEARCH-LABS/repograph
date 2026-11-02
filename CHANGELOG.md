@@ -2,9 +2,11 @@
 
 All notable changes to this project are documented here. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). This project follows semantic versioning once it reaches 1.0.
 
-## [Unreleased]
+### Added
 
-### Fixed
+- Read commands (`impact`, `search`, `refs`, `graph`, `arch`, `tests`) and MCP tools now re-index
+  automatically when the index is missing or stale, so answers follow code changes without a
+  manual `repograph index .`. `status` still reports staleness instead of hiding it.
 
 - A bare `&` in JSX text (`Rated & Billed`) was reported as a parse error, though TypeScript
   and React accept it. The file is now re-parsed with a same-length substitute, so byte offsets
