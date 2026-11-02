@@ -52,8 +52,10 @@ Short, one ask, no pitch:
 
 > Hi — I built a local code-graph tool (tree-sitter + SQLite, no network, no code execution). I am
 > not looking for users, I am looking for wrong answers: would you run
-> `pip install repograph-codeintel` on one repository you know well and tell me one dependency it
-> gets wrong? It takes about a minute. If it is not useful to you, saying so is also a useful reply.
+> `curl -fsSL https://raw.githubusercontent.com/INDEX0-RESEARCH-LABS/repograph/main/install.sh | sh`
+> (installs `repograph` in one line), then `repograph index .` and `repograph impact <a file you touched>`
+> on one repository you know well and tell me one dependency it gets wrong? It takes about a minute.
+> If it is not useful to you, saying so is also a useful reply.
 
 If they reply "it worked", the follow-up is one sentence: *"Did you run it again after that? On what?"*
 That answer, not the first run, is the metric.

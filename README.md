@@ -59,18 +59,20 @@ Python, TypeScript, JavaScript, JSX and TSX. Static analysis only. **Alpha.**
 
 Python 3.10 or newer. Nothing else — no database server, no Docker, no cloud.
 
-```bash
-pip install repograph-codeintel
-repograph version
-```
-
-Or with no install at all (needs [uv](https://docs.astral.sh/uv/)):
+One line (installs [uv](https://docs.astral.sh/uv/) if needed, then `repograph`):
 
 ```bash
-uvx --from repograph-codeintel repograph index .
+curl -fsSL https://raw.githubusercontent.com/INDEX0-RESEARCH-LABS/repograph/main/install.sh | sh
 ```
 
-Or isolated: `pipx install repograph-codeintel`. From source instead: clone the repository and `pip install -e .`. Linux is tested in CI; macOS and Windows should work but are untested.
+Then:
+
+```bash
+repograph index .
+repograph impact src/payments/refund.py
+```
+
+Other options: `pipx install repograph-codeintel`, `pip install repograph-codeintel`, or `uvx --from repograph-codeintel repograph index .` (no install at all). Linux is tested in CI; macOS and Windows should work but are untested.
 
 ## Use
 
