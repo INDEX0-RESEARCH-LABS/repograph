@@ -195,3 +195,21 @@ def index_repository(root: Path, *, force: bool = False, reset: bool = False,
 
 def _now() -> str:
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
+
+
+def ensure_index(root: Path, *, settings: Settings | None = None) -> bool:
+    """Re-index if the index is missing or stale. Returns True if re-indexed."""
+    from .config import load_settings
+    from .query import quick_status
+
+    settings = settings or load_settings(root)
+    if not settings.db_path.exists():
+        index_repository(root, settings=settings)
+        return True
+    with Store(settings) as store:
+        store.init_schema()
+        data = quick_status(store, settings)
+    if data.get("needs_reindex"):
+        index_repository(root, settings=settings)
+        return True
+    return False

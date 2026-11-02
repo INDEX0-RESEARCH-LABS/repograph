@@ -12,7 +12,7 @@ import typer
 from . import __version__
 from .config import INDEX_DIR, load_settings, init_project
 from .impact import analyze_impact
-from .indexer import index_repository
+from .indexer import ensure_index, index_repository
 from .query import (
     architecture_summary,
     dependency_graph,
@@ -138,6 +138,8 @@ def search(
 ) -> None:
     """Search indexed symbols and source text."""
     root = _root(path)
+    if ensure_index(root):
+        typer.echo("index was stale; re-indexed.", err=True)
     store, _ = _open_store(root)
     with store:
         if kind:
@@ -173,6 +175,8 @@ def impact(
 ) -> None:
     """Estimate what a change can affect, with evidence and confidence."""
     root = _root(path)
+    if ensure_index(root):
+        typer.echo("index was stale; re-indexed.", err=True)
     store, _ = _open_store(root)
     with store:
         data = analyze_impact(store, root, paths=list(paths or []), symbol=symbol,
@@ -242,6 +246,8 @@ def tests(
         typer.echo("error: provide paths or --diff", err=True)
         raise typer.Exit(2)
     root = _root(path)
+    if ensure_index(root):
+        typer.echo("index was stale; re-indexed.", err=True)
     store, _ = _open_store(root)
     with store:
         data = select(store, root, paths=list(paths or []), diff=diff, base=base, strict=strict)
@@ -296,6 +302,8 @@ def graph(
 ) -> None:
     """Inspect the file dependency graph or its cycles."""
     root = _root(path)
+    if ensure_index(root):
+        typer.echo("index was stale; re-indexed.", err=True)
     store, _ = _open_store(root)
     with store:
         if cycles:
@@ -332,6 +340,8 @@ def refs(
 ) -> None:
     """Find definitions and resolved references for a symbol."""
     root = _root(path)
+    if ensure_index(root):
+        typer.echo("index was stale; re-indexed.", err=True)
     store, _ = _open_store(root)
     with store:
         data = find_references(store, name, limit=limit)
@@ -353,6 +363,8 @@ def arch(
 ) -> None:
     """Summarize repository architecture from the index."""
     root = _root(path)
+    if ensure_index(root):
+        typer.echo("index was stale; re-indexed.", err=True)
     store, _ = _open_store(root)
     with store:
         data = architecture_summary(store, root)

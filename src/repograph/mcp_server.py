@@ -28,9 +28,14 @@ edits, and read the blind_spots field."""
 def _store(root: Path) -> Store:
     settings = load_settings(root)
     if not settings.db_path.exists():
-        raise FileNotFoundError(
-            f"no index at {settings.db_path}; run `repograph index {root}` first"
-        )
+        # Auto-build on first use so agents never see "no index" after a change.
+        from .indexer import index_repository
+
+        index_repository(root, settings=settings)
+    else:
+        from .indexer import ensure_index
+
+        ensure_index(root, settings=settings)
     store = Store(settings)
     store.init_schema()
     return store
