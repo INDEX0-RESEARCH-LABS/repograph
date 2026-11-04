@@ -3,7 +3,11 @@
 from __future__ import annotations
 
 import json
+import os
+import signal
 import sys
+import time
+from datetime import datetime
 from pathlib import Path
 from typing import Optional
 
@@ -446,6 +450,85 @@ def setup(
     if not settings.db_path.exists():
         typer.echo(f"\nnext: repograph index {root}")
     typer.echo("next: restart your agent, then ask \"what breaks if I change <symbol>?\"")
+
+
+
+
+@app.command()
+def watch(
+    path: Optional[Path] = typer.Option(None, "--root", help="Repository root."),
+    interval: float = typer.Option(2.0, "--interval", help="Poll interval in seconds."),
+    daemon: bool = typer.Option(False, "--daemon", help="Run in background."),
+    stop: bool = typer.Option(False, "--stop", help="Stop a running background watcher."),
+) -> None:
+    """Watch for file changes and re-index automatically (polling, no native deps)."""
+    root = _root(path)
+    settings = load_settings(root)
+    pid_file = settings.state_dir / "watch.pid"
+    log_file = settings.state_dir / "watch.log"
+
+    if stop:
+        if not pid_file.exists():
+            typer.echo("no watcher running")
+            raise typer.Exit(0)
+        pid = int(pid_file.read_text().strip())
+        try:
+            os.kill(pid, signal.SIGTERM)
+            typer.echo(f"stopped watcher (pid {pid})")
+        except ProcessLookupError:
+            typer.echo(f"watcher already dead (pid {pid})")
+        pid_file.unlink(missing_ok=True)
+        raise typer.Exit(0)
+
+    if daemon:
+        if pid_file.exists():
+            pid = int(pid_file.read_text().strip())
+            try:
+                os.kill(pid, 0)
+                typer.echo(f"watcher already running (pid {pid})")
+                raise typer.Exit(0)
+            except ProcessLookupError:
+                pid_file.unlink(missing_ok=True)
+        child = os.fork()
+        if child > 0:
+            pid_file.write_text(str(child))
+            typer.echo(f"watcher started (pid {child}), logging to {log_file}")
+            typer.echo(f"stop with: repograph watch --stop --root {root}")
+            raise typer.Exit(0)
+        os.setsid()
+        sys.stdin.close()
+        _log = open(log_file, "a")
+        sys.stdout = _log
+        sys.stderr = _log
+        _watch_loop(root, interval)
+        raise typer.Exit(0)
+
+    typer.echo(f"watching {root} (poll every {interval}s, Ctrl+C to stop)")
+    try:
+        _watch_loop(root, interval)
+    except KeyboardInterrupt:
+        typer.echo("\nstopped")
+
+
+def _watch_loop(root: Path, interval: float) -> None:
+    settings = load_settings(root)
+    if not settings.db_path.exists():
+        print("no index; running initial index...", flush=True)
+        index_repository(root, settings=settings)
+
+    while True:
+        time.sleep(interval)
+        with Store(settings) as store:
+            store.init_schema()
+            data = quick_status(store, settings)
+        if data.get("needs_reindex"):
+            added = data["stale"]["added"]
+            changed = data["stale"]["changed"]
+            deleted = data["stale"]["deleted"]
+            print(f"[{datetime.now().strftime('%H:%M:%S')}] stale (+{added} ~{changed} -{deleted}); re-indexing...", flush=True)
+            stats = index_repository(root, settings=settings)
+            print(f"  indexed {stats.files_scanned} files, {stats.parse_errors} parse errors", flush=True)
+
 
 
 @app.command()

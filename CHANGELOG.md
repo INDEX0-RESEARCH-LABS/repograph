@@ -4,7 +4,7 @@ All notable changes to this project are documented here. The format is based on 
 
 ### Added
 
-- Read commands (`impact`, `search`, `refs`, `graph`, `arch`, `tests`) and MCP tools now re-index
+- `repograph watch` re-indexes automatically when files change (polling, no native deps). Supports `--daemon` (background, writes `watch.pid`), `--stop`, and `--interval`. Tested: detects a modified file and re-indexes within the poll window.
   automatically when the index is missing or stale, so answers follow code changes without a
   manual `repograph index .`. `status` still reports staleness instead of hiding it.
 
