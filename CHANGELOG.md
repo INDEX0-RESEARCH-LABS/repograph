@@ -2,21 +2,20 @@
 
 All notable changes to this project are documented here. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). This project follows semantic versioning once it reaches 1.0.
 
+## [0.1.3] — 2026-11-04
+
 ### Added
 
-- `repograph watch` re-indexes automatically when files change (polling, no native deps). Supports `--daemon` (background, writes `watch.pid`), `--stop`, and `--interval`. Tested: detects a modified file and re-indexes within the poll window.
-  automatically when the index is missing or stale, so answers follow code changes without a
-  manual `repograph index .`. `status` still reports staleness instead of hiding it.
+- `repograph watch`: re-indexes automatically when files change (polling, no native deps). Supports `--daemon`, `--stop`, and `--interval`.
+- Read commands (`impact`, `search`, `refs`, `graph`, `arch`, `tests`) and MCP tools now auto-refresh the index when it is missing or stale.
+- `repograph setup` now prefers the stable uv tool path over a stale mise shim.
 
-- A bare `&` in JSX text (`Rated & Billed`) was reported as a parse error, though TypeScript
-  and React accept it. The file is now re-parsed with a same-length substitute, so byte offsets
-  and evidence stay exact. Found on a 223-file repository where it accounted for all 3 parse
-  errors.
-- Parse errors now name the line, `repograph status` lists the affected files, and
-  `repograph index` reports the index's stored error count instead of only the errors from the
-  files re-parsed in that run.
-- An extractor-version marker re-reads the tree once after an upgrade, so files indexed by
-  older extraction logic are corrected without `--force`.
+### Fixed
+
+- A bare `&` in JSX text is no longer reported as a parse error.
+- Parse errors now include the line number; `repograph status` lists affected files.
+- `repograph index` reports the stored error count, not just this run's.
+- An extractor-version marker re-reads the tree once after an upgrade.
 
 ## [0.1.2] — 2026-10-31
 

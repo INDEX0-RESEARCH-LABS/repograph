@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "repograph-codeintel"
-version = "0.1.2"
+version = "0.1.3"
 description = "Evidence-backed codebase intelligence and change-impact analysis for AI coding agents"
 readme = "README.md"
 requires-python = ">=3.10"
