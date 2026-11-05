@@ -9,7 +9,7 @@ from __future__ import annotations
 import posixpath
 import re
 import subprocess
-from collections import defaultdict
+from collections import defaultdict, deque
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -285,40 +285,51 @@ def analyze_impact(
             "evidence": entry["reasons"][0]["evidence"],
         })
 
-    # Transitive dependents: reverse-import BFS.
+    # Transitive dependents: reverse-import BFS. A path's confidence is the
+    # weakest hop on it, and `via` is the whole chain back to a changed file,
+    # not just the edge that happened to discover the node.
     edges = store.file_edges()
     reverse: dict[str, list[dict]] = defaultdict(list)
     for e in edges:
         reverse[e["dst"]].append(e)
     seen_depth = {p: 0 for p in target_paths}
     transitive: dict[str, dict] = {}
-    queue = [(p, 0) for p in target_paths]
+    queue = deque((p, 0, [], True) for p in target_paths)
     while queue:
-        cur, d = queue.pop(0)
+        cur, d, path, all_confirmed = queue.popleft()
         if d >= depth:
             continue
         for e in reverse.get(cur, []):
             src = e["src"]
             if src in target_paths:
                 continue
-            if src in seen_depth and seen_depth[src] <= d + 1:
-                continue
-            seen_depth[src] = d + 1
-            chain = transitive.get(src)
+            hop_confirmed = all_confirmed and e["confidence"] == "confirmed"
             step = {"from": src, "to": cur, "line": e["line"], "method": e["method"],
                     "confidence": e["confidence"]}
-            if chain is None:
-                transitive[src] = {"path": src, "depth": d + 1, "chain": [step],
-                                   "confidences": {e["confidence"]}}
-            else:
-                chain["depth"] = min(chain["depth"], d + 1)
-                if len(chain["chain"]) < 5:
-                    chain["chain"].append(step)
-                chain["confidences"].add(e["confidence"])
-            queue.append((src, d + 1))
+            new_path = [step, *path]
+            new_depth = d + 1
+            previous = seen_depth.get(src)
+            if previous is not None:
+                if previous < new_depth:
+                    continue
+                # Same depth: an equal-length path with stronger confidence
+                # replaces the recorded one and propagates the improvement.
+                if previous == new_depth:
+                    entry = transitive.get(src)
+                    if entry is None or entry["all_confirmed"] or not hop_confirmed:
+                        continue
+                    entry["all_confirmed"] = hop_confirmed
+                    entry["chain"] = new_path
+                    queue.append((src, new_depth, new_path, hop_confirmed))
+                    continue
+            seen_depth[src] = new_depth
+            transitive[src] = {"path": src, "depth": new_depth, "chain": new_path,
+                               "all_confirmed": hop_confirmed}
+            queue.append((src, new_depth, new_path, hop_confirmed))
 
     transitive_list = [{
-        "path": v["path"], "depth": v["depth"], "confidence": _conf(v["confidences"]),
+        "path": v["path"], "depth": v["depth"],
+        "confidence": "confirmed" if v["all_confirmed"] else "inferred",
         "via": v["chain"],
         "evidence": {"location": f"{v['chain'][-1]['from']}:{v['chain'][-1]['line']}"},
     } for v in sorted(transitive.values(), key=lambda x: (x["depth"], x["path"]))]
