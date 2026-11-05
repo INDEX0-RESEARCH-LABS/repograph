@@ -89,3 +89,42 @@ def test_extends_into_node_modules_is_not_followed(tmp_path: Path):
     })
     got = _resolve(tmp_path, "use.ts", "@lib/x")
     assert got[0].kind != "internal"
+
+
+def test_variant_tsconfig_is_read_without_a_plain_tsconfig(tmp_path: Path):
+    _make(tmp_path, {
+        "tsconfig.app.json": json.dumps({"compilerOptions": {
+            "baseUrl": "src", "paths": {"@/*": ["*"]}}}),
+        "src/x.ts": "export const x = 1;\n",
+        "use.ts": "",
+    })
+    got = _resolve(tmp_path, "use.ts", "@/x")
+    assert got[0].target == "src/x.ts"
+
+
+def test_root_files_empty_does_not_cover_the_tree(tmp_path: Path):
+    _make(tmp_path, {
+        "tsconfig.json": json.dumps({
+            "files": [],
+            "compilerOptions": {"baseUrl": ".", "paths": {"@/*": ["src/*"]}}}),
+        "tsconfig.app.json": json.dumps({"include": ["app/**/*"]}),
+        "src/x.ts": "export const x = 1;\n",
+        "app/use.ts": "",
+    })
+    got = _resolve(tmp_path, "app/use.ts", "@/x")
+    # The solution-style root config covers nothing; the app config has no
+    # alias, so `@/x` must not become an internal edge.
+    assert got[0].kind != "internal"
+
+
+def test_references_follow_projects_beyond_the_walk_depth(tmp_path: Path):
+    _make(tmp_path, {
+        "tsconfig.json": json.dumps({"files": [], "references": [
+            {"path": "./packages/a/b/c/lib"}]}),
+        "packages/a/b/c/lib/tsconfig.json": json.dumps({"compilerOptions": {
+            "baseUrl": "src", "paths": {"@/*": ["*"]}}}),
+        "packages/a/b/c/lib/src/x.ts": "export const x = 1;\n",
+        "packages/a/b/c/lib/use.ts": "",
+    })
+    got = _resolve(tmp_path, "packages/a/b/c/lib/use.ts", "@/x")
+    assert got[0].target == "packages/a/b/c/lib/src/x.ts"

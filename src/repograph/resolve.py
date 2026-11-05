@@ -63,6 +63,7 @@ def _merge_tsconfig(root: Path, path: Path, seen: frozenset[Path]) -> dict | Non
     data = _read_tsconfig(resolved)
     if data is None:
         return None
+    root = root.resolve()
     try:
         dir_rel = resolved.parent.relative_to(root).as_posix()
     except ValueError:
@@ -106,7 +107,29 @@ def _merge_tsconfig(root: Path, path: Path, seen: frozenset[Path]) -> dict | Non
             own["paths"] = entries
             own["paths_dir"] = dir_rel
     own["scope"] = _ts_scope_patterns(data, dir_rel)
-    return _overlay(merged, own)
+    merged = _overlay(merged, own)
+
+    references: list[Path] = []
+    raw_refs = data.get("references")
+    if isinstance(raw_refs, list):
+        for ref in raw_refs:
+            raw = ref.get("path") if isinstance(ref, dict) else ref
+            if not isinstance(raw, str):
+                continue
+            base = resolved.parent / raw
+            candidates = [base] if base.suffix == ".json" else [base / "tsconfig.json"]
+            for candidate in candidates:
+                if not candidate.is_file():
+                    continue
+                try:
+                    candidate.resolve().relative_to(root)
+                except ValueError:
+                    break
+                if "node_modules" not in candidate.parts:
+                    references.append(candidate)
+                break
+    merged["references"] = references
+    return merged
 
 
 
@@ -339,6 +362,7 @@ class Resolver:
     def _build_ts_configs(self) -> None:
         import os
 
+        pending: list[Path] = []
         for dirpath, dirnames, filenames in os.walk(self.root):
             dirnames[:] = [d for d in dirnames if d not in
                            ("node_modules", ".git", ".venv", "dist", "build", "coverage")]
@@ -347,21 +371,40 @@ class Resolver:
             if depth > 3:
                 dirnames[:] = []
                 continue
-            if "tsconfig.json" not in filenames:
+            for name in sorted(filenames):
+                if name == "tsconfig.json" or (name.startswith("tsconfig.")
+                                               and name.endswith(".json")):
+                    pending.append(Path(dirpath, name))
+
+        seen: set[Path] = set()
+        while pending:
+            cfg = pending.pop(0).resolve()
+            if cfg in seen:
                 continue
-            cfg = Path(dirpath, "tsconfig.json")
+            seen.add(cfg)
             merged = _merge_tsconfig(self.root, cfg, frozenset())
             if merged is None:
                 continue
+            try:
+                rel_dir = cfg.parent.relative_to(self.root).as_posix()
+            except ValueError:
+                continue
             self.ts_configs.append({
                 "dir": "" if rel_dir == "." else rel_dir,
+                "name": cfg.name,
                 "baseurl_dir": merged["baseurl_dir"],
                 "paths_dir": merged["paths_dir"],
                 "paths": merged["paths"] or [],
                 "scope": merged["scope"],
             })
-        # Most specific config (deepest directory) wins.
-        self.ts_configs.sort(key=lambda c: len(c["dir"]), reverse=True)
+            # A root solution config can reference projects deeper than the
+            # filesystem walk's bound; follow them explicitly.
+            pending.extend(p for p in merged["references"] if p.resolve() not in seen)
+
+        # Most specific config (deepest directory) wins; a plain tsconfig.json
+        # outranks its variants in the same directory.
+        self.ts_configs.sort(
+            key=lambda c: (-len(c["dir"]), c["name"] != "tsconfig.json", c["name"]))
 
     @staticmethod
     def _ts_covers(cfg: dict, rel: str) -> bool:
