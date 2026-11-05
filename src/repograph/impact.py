@@ -156,6 +156,34 @@ def _stem(path: str) -> str:
     return base
 
 
+# Stems that carry no location signal: nearly every package has an index.ts or
+# a main.py, so a stem-only match pairs unrelated modules across the repo.
+_GENERIC_STEMS = frozenset({
+    "index", "__init__", "main", "mod", "app", "utils", "util", "types",
+    "config", "constants", "client", "server", "setup", "conftest", "helpers",
+})
+
+
+def _shares_scope(a: str, b: str) -> bool:
+    """True when one path's directory contains the other's."""
+    da, db = posixpath.dirname(a), posixpath.dirname(b)
+    return da == db or da.startswith(db + "/") or db.startswith(da + "/")
+
+
+def _name_matches(test_path: str, other_path: str) -> bool:
+    """Whether a test file's name plausibly covers another module.
+
+    A generic stem such as `index` only counts inside the same directory
+    subtree; otherwise every `index.test.ts` in the repo would be selected for
+    every `index.ts`. A distinctive stem still matches across trees, because
+    `tests/test_billing.py` for `src/shop/services/billing.py` is the norm.
+    """
+    stem = _stem(test_path)
+    if stem != _stem(other_path):
+        return False
+    return stem not in _GENERIC_STEMS or _shares_scope(test_path, other_path)
+
+
 def _is_test_module(path: str) -> bool:
     """True only for a runnable test module, not every file under `tests/`.
 
@@ -412,8 +440,6 @@ def analyze_impact(
             "SELECT path FROM files WHERE is_test=1 ORDER BY path"
         ).fetchall()]
         test_rows = [r for r in test_rows if _is_test_module(r["path"])]
-        changed_stems = {_stem(p) for p in target_paths if _stem(p)}
-        dependent_stems = {_stem(d["path"]) for d in direct_list}
         included: dict[str, dict] = {}
         importer_map: dict[str, list[dict]] = defaultdict(list)
         for e in edges:
@@ -452,14 +478,14 @@ def analyze_impact(
                             "evidence": {"location": f"{tp}:{e['line']}"},
                         })
                         entry["confidences"].add("confirmed")
-            if _stem(tp) in changed_stems:
+            if any(_name_matches(tp, p) for p in target_paths):
                 entry["rules"].append({
                     "rule": "test-name-matches-changed-file",
                     "confidence": "inferred",
                     "evidence": {"location": tp, "method": "path-name-convention"},
                 })
                 entry["confidences"].add("inferred")
-            if _stem(tp) in dependent_stems:
+            if any(_name_matches(tp, d["path"]) for d in direct_list):
                 entry["rules"].append({
                     "rule": "test-name-matches-dependent",
                     "confidence": "inferred",
