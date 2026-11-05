@@ -17,22 +17,97 @@ from pathlib import Path, PurePosixPath
 from .extract import Import
 
 
-def _ts_scope_patterns(data: dict) -> list[str]:
-    """`include`/`files` of a tsconfig, i.e. the files the config applies to.
+def _ts_scope_patterns(data: dict, base_dir: str) -> list[str] | None:
+    """`include`/`files` of a tsconfig, as repo-relative glob patterns.
 
-    A root tsconfig commonly declares `include: ["src/**/*"]`; its `paths`
-    aliases do not apply to a sibling example app that is compiled by its own
-    config (or by none). Applying them anyway produced a false internal edge in
-    zustand's examples.
+    ``None`` means the config declares no scope, so TypeScript's default
+    (everything under the config directory) applies. An explicitly empty
+    ``files`` / ``include`` list means the config covers nothing.
     """
-    out: list[str] = []
-    for key in ("include", "files"):
-        value = data.get(key)
-        if isinstance(value, str):
-            out.append(value)
-        elif isinstance(value, list):
-            out.extend(v for v in value if isinstance(v, str))
-    return out
+    key = "include" if "include" in data else "files" if "files" in data else None
+    if key is None:
+        return None
+    value = data.get(key)
+    raw = [value] if isinstance(value, str) else value if isinstance(value, list) else []
+    return [posixpath.normpath(posixpath.join(base_dir, str(v)))
+            for v in raw if isinstance(v, str)]
+
+
+def _read_tsconfig(path: Path) -> dict | None:
+    try:
+        data = json.loads(_strip_json_comments(path.read_text(encoding="utf-8", errors="replace")))
+    except (OSError, ValueError):
+        return None
+    return data if isinstance(data, dict) else None
+
+
+def _overlay(base: dict, over: dict) -> dict:
+    for key in ("baseurl_dir", "paths_dir", "paths", "scope"):
+        if over.get(key) is not None:
+            base[key] = over[key]
+    return base
+
+
+def _merge_tsconfig(root: Path, path: Path, seen: frozenset[Path]) -> dict | None:
+    """Effective config after following relative `extends` chains.
+
+    Parent options are the base; later array entries override earlier ones,
+    and the child overrides all parents. `baseUrl` keeps the directory of the
+    config that declared it, and includes/files become repo-relative so a
+    parent's scope still matches the tree when inherited. Cycles and
+    node_modules targets are skipped.
+    """
+    resolved = path.resolve()
+    if resolved in seen:
+        return None
+    data = _read_tsconfig(resolved)
+    if data is None:
+        return None
+    try:
+        dir_rel = resolved.parent.relative_to(root).as_posix()
+    except ValueError:
+        return None
+    if dir_rel == ".":
+        dir_rel = ""
+
+    merged: dict = {"baseurl_dir": None, "paths_dir": None, "paths": None, "scope": None}
+    extends = data.get("extends")
+    parents = [extends] if isinstance(extends, str) else extends if isinstance(extends, list) else []
+    for ext in parents:
+        if not isinstance(ext, str) or not ext.startswith("."):
+            continue  # package specifier: node_modules, not project source
+        base = resolved.parent / ext
+        candidates = [base.with_name(base.name + ".json"), base] if base.suffix != ".json" else [base]
+        for candidate in candidates:
+            if not candidate.is_file():
+                continue
+            try:
+                candidate.resolve().relative_to(root)
+            except ValueError:
+                break
+            if "node_modules" in candidate.parts:
+                break
+            parent = _merge_tsconfig(root, candidate, seen | {resolved})
+            if parent is not None:
+                merged = _overlay(merged, parent)
+            break
+
+    opts = data.get("compilerOptions", {})
+    own: dict = {"baseurl_dir": None, "paths_dir": None, "paths": None, "scope": None}
+    if isinstance(opts, dict):
+        if "baseUrl" in opts:
+            own["baseurl_dir"] = posixpath.normpath(posixpath.join(dir_rel, str(opts["baseUrl"])))
+        paths = opts.get("paths")
+        if isinstance(paths, dict):
+            entries = []
+            for pattern, targets in paths.items():
+                if isinstance(targets, list):
+                    entries.append((pattern, [str(t) for t in targets]))
+            own["paths"] = entries
+            own["paths_dir"] = dir_rel
+    own["scope"] = _ts_scope_patterns(data, dir_rel)
+    return _overlay(merged, own)
+
 
 
 def _glob_match(pattern: str, path: str) -> bool:
@@ -275,25 +350,15 @@ class Resolver:
             if "tsconfig.json" not in filenames:
                 continue
             cfg = Path(dirpath, "tsconfig.json")
-            try:
-                data = json.loads(_strip_json_comments(cfg.read_text(encoding="utf-8", errors="replace")))
-            except (OSError, ValueError):
+            merged = _merge_tsconfig(self.root, cfg, frozenset())
+            if merged is None:
                 continue
-            opts = data.get("compilerOptions", {})
-            if not isinstance(opts, dict):
-                continue
-            paths = opts.get("paths", {})
-            entries = []
-            if isinstance(paths, dict):
-                for pattern, targets in paths.items():
-                    if isinstance(targets, list):
-                        entries.append((pattern, [str(t) for t in targets]))
             self.ts_configs.append({
                 "dir": "" if rel_dir == "." else rel_dir,
-                "baseurl": str(opts.get("baseUrl", ".")),
-                "has_baseurl": "baseUrl" in opts,
-                "paths": entries,
-                "scope": _ts_scope_patterns(data),
+                "baseurl_dir": merged["baseurl_dir"],
+                "paths_dir": merged["paths_dir"],
+                "paths": merged["paths"] or [],
+                "scope": merged["scope"],
             })
         # Most specific config (deepest directory) wins.
         self.ts_configs.sort(key=lambda c: len(c["dir"]), reverse=True)
@@ -302,14 +367,13 @@ class Resolver:
     def _ts_covers(cfg: dict, rel: str) -> bool:
         """Whether a tsconfig's `include`/`files` covers this file.
 
-        No include/files means the project's default include (everything under
-        the config directory), so aliases keep applying.
+        No declared scope means the project's default include (everything
+        under the config directory). An explicit empty list covers nothing.
         """
-        scope = cfg.get("scope") or []
-        if not scope:
+        scope = cfg.get("scope")
+        if scope is None:
             return True
-        sub = rel[len(cfg["dir"]) + 1:] if cfg["dir"] else rel
-        return any(_glob_match(pattern, sub) for pattern in scope)
+        return any(_glob_match(pattern, rel) for pattern in scope)
 
     def _nearest_pkg_dir(self, rel: str) -> str:
         d = posixpath.dirname(rel)
@@ -653,9 +717,11 @@ class Resolver:
                 (c for c in self.ts_configs
                  if (c["dir"] == "" or rel == c["dir"] or rel.startswith(c["dir"] + "/"))
                  and self._ts_covers(c, rel)),
-                {"dir": "", "baseurl": ".", "paths": []},
+                {"dir": "", "baseurl_dir": None, "paths_dir": "", "paths": [], "scope": None},
             )
-            baseurl_dir = posixpath.normpath(posixpath.join(cfg["dir"], cfg["baseurl"]))
+            # path targets resolve against baseUrl when set, otherwise against
+            # the config directory that declared them.
+            baseurl_dir = cfg.get("baseurl_dir") or cfg.get("paths_dir") or cfg["dir"]
             for pattern, subs in cfg["paths"]:
                 if "*" in pattern:
                     prefix, suffix = pattern.split("*", 1)
@@ -683,7 +749,7 @@ class Resolver:
                 # baseUrl makes bare specifiers relative to a source directory,
                 # after `paths` has had its chance. It is JSON configuration,
                 # so the edge stays inferred.
-                if cfg.get("has_baseurl"):
+                if cfg.get("baseurl_dir") is not None:
                     found = self._ts_candidates(
                         posixpath.normpath(posixpath.join(baseurl_dir, spec)))
                     if found:
