@@ -184,6 +184,11 @@ def _name_matches(test_path: str, other_path: str) -> bool:
     return stem not in _GENERIC_STEMS or _shares_scope(test_path, other_path)
 
 
+def _tokens(text: str) -> set[str]:
+    """Lowercase alphanumeric tokens, for matching module names to a change."""
+    return {t for t in re.split(r"[^a-z0-9]+", text.lower()) if t}
+
+
 def _is_test_module(path: str) -> bool:
     """True only for a runnable test module, not every file under `tests/`.
 
@@ -576,10 +581,13 @@ def analyze_impact(
                         "the list as complete."),
             "items": truncated_lists,
         })
-    all_unresolved = store.conn.execute(
-        "SELECT COUNT(*) FROM imports WHERE kind='unresolved'"
-    ).fetchone()[0]
     if target_paths:
+        related_names: set[str] = set()
+        for p in target_paths:
+            related_names |= _tokens(_stem(p))
+        for s in changed_symbols:
+            related_names |= _tokens(s["name"])
+
         unres = _query_in(
             store,
             """SELECT f.path, i.line, i.module, i.note FROM imports i JOIN files f ON f.id=i.file_id
@@ -608,18 +616,26 @@ def analyze_impact(
         )
         errs.sort(key=lambda r: r["path"])
         if unres:
-            blind.append({"kind": "unresolved-internal-imports", "count": len(unres),
-                          "message": "Imports that look internal but could not be resolved; dependencies through them are unknown.",
-                          "items": [{"file": r["path"], "line": r["line"], "module": r["module"],
-                                     "note": r["note"]} for r in unres[:20]]})
-        if all_unresolved:
-            blind.append({"kind": "repo-unresolved-imports", "count": all_unresolved,
-                          "message": "Repository-wide unresolved imports can hide paths into the changed files."})
+            unres_items = [{
+                "file": r["path"], "line": r["line"], "module": r["module"],
+                "note": r["note"],
+                "related": bool(_tokens(r["module"]) & related_names),
+            } for r in unres]
+            # Plausibly-related unknowns first: they are the ones most likely to
+            # hide a dependency on this change.
+            unres_items.sort(key=lambda i: not i["related"])
+            blind.append({"kind": "unresolved-internal-imports", "count": len(unres_items),
+                          "message": "Imports in the changed files that look internal but could not be resolved; dependencies through them are unknown.",
+                          "items": unres_items[:20]})
         if dyn:
-            blind.append({"kind": "dynamic-imports", "count": len(dyn),
-                          "message": "Dynamic imports were resolved syntactically but their runtime targets may differ.",
-                          "items": [{"file": r["path"], "line": r["line"], "module": r["module"]}
-                                    for r in dyn[:20]]})
+            dyn_items = [{
+                "file": r["path"], "line": r["line"], "module": r["module"],
+                "related": bool(_tokens(r["module"]) & related_names),
+            } for r in dyn]
+            dyn_items.sort(key=lambda i: not i["related"])
+            blind.append({"kind": "dynamic-imports", "count": len(dyn_items),
+                          "message": "Dynamic imports in the changed files were resolved syntactically but their runtime targets may differ.",
+                          "items": dyn_items[:20]})
         if ext:
             blind.append({"kind": "external-imports", "count": len(ext),
                           "message": "External packages were not analyzed; only their local import sites are known.",
@@ -643,12 +659,9 @@ def analyze_impact(
             blind.append({"kind": "no-static-dependents", "count": len(no_dep),
                           "message": "No static dependents were found. The code may still be used dynamically, as an entry point, or outside this repository.",
                           "items": no_dep})
-    repo_dynamic = store.conn.execute(
-        "SELECT COUNT(*) FROM imports WHERE kind='dynamic'"
-    ).fetchone()[0]
-    if repo_dynamic:
-        blind.append({"kind": "repo-dynamic-imports", "count": repo_dynamic,
-                      "message": "Dynamic imports exist in the repository; their runtime targets may include the changed files."})
+    repo_counts = dict(store.conn.execute(
+        "SELECT kind, COUNT(*) FROM imports WHERE kind IN ('unresolved','dynamic') GROUP BY kind"
+    ).fetchall())
     repo_parse_errors = store.conn.execute(
         "SELECT COUNT(*) FROM files WHERE parsed=0"
     ).fetchone()[0]
@@ -707,6 +720,11 @@ def analyze_impact(
             "note": "Documentation matches are lexical and only point to where a concept is discussed.",
         },
         "blind_spots": blind,
+        "repo_health": {
+            "unresolved_imports": repo_counts.get("unresolved", 0),
+            "dynamic_imports": repo_counts.get("dynamic", 0),
+            "note": "Repository-wide counts; they are not scoped to this change.",
+        },
         "caveats": CAVEATS,
         "summary": {
             "changed_files": len(target_paths),
