@@ -711,9 +711,8 @@ class Resolver:
         they are ordinary static configuration, but the mapping lives in JSON
         outside the module, so the edge is reported as ``inferred``.
         """
-        dirs = sorted(self.package_dirs.values(), key=len, reverse=True)
-        pkg_dir = next((d for d in dirs if d == "" or rel.startswith(d + "/")), None)
-        mapping = self.package_imports.get(pkg_dir) if pkg_dir is not None else None
+        pkg_dir = self._nearest_pkg_dir(rel)
+        mapping = self.package_imports.get(pkg_dir)
         type_only = bool(re.match(r"\s*(?:import|export)\s+type\b", imp.raw))
         target = None
         if mapping:

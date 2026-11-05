@@ -442,3 +442,17 @@ def test_python_alias_uses_top_most_contiguous_package(tmp_path: Path, monkeypat
     imp = extract("libs/pkg/sub/use.py", "python", b"from sub.m import f\n").imports
     got = r.resolve("libs/pkg/sub/use.py", imp)
     assert not any(x.target == "libs/pkg/sub/m.py" for x in got)
+
+
+def test_package_imports_map_works_with_a_nameless_package_json(tmp_path: Path):
+    (tmp_path / "web/src").mkdir(parents=True)
+    (tmp_path / "web/package.json").write_text(json.dumps({
+        "imports": {"#util": "./src/util.ts"}}))
+    (tmp_path / "web/src/util.ts").write_text("export const x = 1;\n")
+    (tmp_path / "web/src/use.ts").write_text("")
+    files = [("web/src/util.ts", "typescript"), ("web/src/use.ts", "typescript")]
+    r = Resolver(tmp_path, files)
+    imp = extract("web/src/use.ts", "typescript", b'import { x } from "#util";\n').imports
+    got = r.resolve("web/src/use.ts", imp)
+    assert (got[0].target, got[0].method, got[0].confidence) == (
+        "web/src/util.ts", "package-imports-map", "inferred")
