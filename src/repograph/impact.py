@@ -120,7 +120,9 @@ def _normalize_path(root: Path, path: str) -> str:
     rel = posixpath.normpath(path.replace("\\", "/"))
     if rel.startswith("../"):
         raise PermissionError(f"path escapes repository root: {path}")
-    return rel.lstrip("./")
+    # normpath already removes a leading "./"; lstrip("./") would strip the
+    # characters, turning ".storybook/main.ts" into "storybook/main.ts".
+    return rel
 
 
 def _stem(path: str) -> str:
