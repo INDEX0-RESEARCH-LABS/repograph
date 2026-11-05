@@ -269,8 +269,7 @@ class Resolver:
                 if parts[0] in ("src", "lib", "python") and len(parts) > 2:
                     self.py_modules.setdefault(".".join(parts[1:-1]), rel)
 
-    @staticmethod
-    def _python_aliases(parts: list[str], stem: str) -> list[str]:
+    def _python_aliases(self, parts: list[str], stem: str) -> list[str]:
         aliases = []
         # Module name relative to the repository root.
         rel_mod = ".".join(parts[:-1] + [stem])
@@ -278,13 +277,16 @@ class Resolver:
         # Module name relative to an `src`/`lib`/`python` source root.
         if parts and parts[0] in ("src", "lib", "python") and len(parts) > 1:
             aliases.append(".".join(parts[1:-1] + [stem]))
-        # Module name relative to the top-most regular package.
+        # Module name relative to the top-most contiguous regular package:
+        # walk upward while every directory still has __init__.py, so
+        # libs/pkg/sub/m.py is `pkg.sub.m`, never `sub.m`. Membership in
+        # self.files keeps this independent of the process working directory.
         dirs = parts[:-1]
         start = None
-        for i in range(len(dirs), 0, -1):
-            if (Path(*dirs[:i]) / "__init__.py").is_file():
-                start = i - 1
+        for i in range(len(dirs) - 1, -1, -1):
+            if "/".join(dirs[:i + 1]) + "/__init__.py" not in self.files:
                 break
+            start = i
         if start is not None:
             aliases.append(".".join(parts[start:-1] + [stem]))
         return list(dict.fromkeys(aliases))

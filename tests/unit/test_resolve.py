@@ -260,8 +260,12 @@ def test_python_project_root_resolves_example_app(tmp_path: Path):
                   b"from flaskr import create_app\nfrom flaskr.db import get_db\n").imports
     got = {(x.module, x.target, x.confidence, x.method) for x in r.resolve(
         "examples/tutorial/tests/test_db.py", imp)}
-    assert any(x[1] == "examples/tutorial/flaskr/db.py" and x[2] == "inferred"
-               and x[3] == "python-project-root" for x in got)
+    # The package name itself is reachable only through the project root.
+    assert any(x[0] == "flaskr" and x[1] == "examples/tutorial/flaskr/__init__.py"
+               and x[2] == "inferred" and x[3] == "python-project-root" for x in got)
+    # The submodule also has a package-alias route now that alias lookup is
+    # independent of the process working directory.
+    assert any(x[1] == "examples/tutorial/flaskr/db.py" for x in got)
 
 
 def test_python_ambiguous_project_roots_stay_unresolved(tmp_path: Path):
@@ -416,3 +420,25 @@ def test_ts_package_self_reference_needs_workspaces_for_cross_package(tmp_path: 
     imp2 = extract("src/use.ts", "typescript", b'import { x } from "zustand";\n').imports
     assert ("zustand", "src/index.ts", "workspace-package") in {
         (x.module, x.target, x.method) for x in r2.resolve("src/use.ts", imp2)}
+
+
+def test_python_alias_uses_top_most_contiguous_package(tmp_path: Path, monkeypatch):
+    """libs/pkg/sub/m.py is `pkg.sub.m`, not `sub.m`, regardless of cwd."""
+    for rel in ("libs/pkg/__init__.py", "libs/pkg/sub/__init__.py",
+                "libs/pkg/sub/m.py", "libs/pkg/sub/use.py"):
+        p = tmp_path / rel
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_text("def f() -> int:\n    return 1\n", encoding="utf-8")
+    monkeypatch.chdir(tmp_path.parent)
+    files = [(rel, "python") for rel in (
+        "libs/pkg/__init__.py", "libs/pkg/sub/__init__.py",
+        "libs/pkg/sub/m.py", "libs/pkg/sub/use.py")]
+    r = Resolver(tmp_path, files)
+
+    imp = extract("libs/pkg/sub/use.py", "python", b"from pkg.sub.m import f\n").imports
+    got = r.resolve("libs/pkg/sub/use.py", imp)
+    assert any(x.target == "libs/pkg/sub/m.py" for x in got)
+
+    imp = extract("libs/pkg/sub/use.py", "python", b"from sub.m import f\n").imports
+    got = r.resolve("libs/pkg/sub/use.py", imp)
+    assert not any(x.target == "libs/pkg/sub/m.py" for x in got)
