@@ -72,7 +72,48 @@ do
 done
 ```
 
+## 2026-11-05 hardening re-check
+
+Same five repositories, re-cloned on 2026-11-05, indexed twice: once with the
+previous release (0.1.3) and once with the current working tree, on identical
+file sets. Absolute counts differ from the October table because the upstream
+repositories moved; only the deltas below are comparable.
+
+| Repository | Files | Internal edges (kind) | Δ | Dynamic | Δ | External | Δ | Unresolved | Δ |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| express | 142 | 142 → 142 | 0 | 0 → 0 | 0 | 225 → 225 | 0 | 0 → 0 | 0 |
+| click | 91 | 335 → 335 | 0 | 1 → 1 | 0 | 354 → 354 | 0 | 0 → 0 | 0 |
+| requests | 37 | 120 → 120 | 0 | 2 → 2 | 0 | 193 → 193 | 0 | 1 → 1 | 0 |
+| vue-core | 528 | 1,894 → 1,894 | 0 | 4 → 0 | −4 | 210 → 214 | +4 | 16 → 16 | 0 |
+| fastapi | 1,223 | 1,911 → 1,911 | 0 | 174 → 169 | −5 | 2,128 → 2,133 | +5 | 158 → 158 | 0 |
+
+What changed and why:
+
+- **Dynamic → external (9 rows).** A dynamic `import("pkg")` / `importlib.import_module("pkg")`
+  now keeps `kind=external` instead of being relabelled `dynamic`, so package
+  dependencies are no longer counted as unresolved runtime targets.
+- **Click confidence (2 rows).** Two example-app imports moved from
+  `python-project-root` (inferred) to `python-absolute-import` (confirmed) after
+  package aliases began coming from the indexed file set instead of the process
+  working directory.
+- **Internal edges unchanged on all five.** These repositories already resolved
+  their `src`-layout Python imports and their `paths` aliases under the old
+  rules, so the new `baseUrl`, `extends`, variant, and reference handling has no
+  effect on them. The TypeScript config work is covered by unit tests, not by
+  these corpora.
+
+Impact timings after the re-check: express 3.1 ms, click 14.6 ms, requests 5.1 ms,
+vue-core 19.9 ms, fastapi 56.8 ms (highest-inbound file, depth 2, median of 5).
+An intermediate build regressed fastapi to 758 ms through quadratic test-name
+matching; that was found by this re-run and fixed. Timings are single-machine and
+not an accuracy claim.
+
 ## Edge accuracy
+
+No new accuracy number was produced for this re-check. The samples behind the
+rounds below predate these changes and their independent labels belong to those
+samples, so re-scoring them would measure the old build. A fresh unseen-corpus
+round is required before quoting accuracy for the current code.
 
 Speed is not accuracy. The edge evaluation is separate:
 

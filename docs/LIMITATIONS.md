@@ -15,8 +15,10 @@ RepoGraph reports what static parsing can establish. It does not prove safety.
 | Re-exports | Some chain re-exports can stop at the re-exporting file | `inferred`/`unresolved` |
 | Framework routing | Only recognized decorator/call patterns | `heuristic` route or absent |
 | Tests | Tests selected by imports/naming, not execution traces | `inferred` or absent |
+| Test name matching | A generic stem (`index`, `main`, ...) only matches inside its own directory subtree; a distinctive stem still matches across trees, so unrelated same-named modules can be paired | `inferred` test list |
 | Test selection | Measured **23% pooled file recall** (41/180 failing files) at a median 6.7% of files selected; 99.4% only if every disclosed reachable file is also run (98.9% of the suite) | `inferred` list, incomplete; `reachable but not selected` list printed |
 | Parsing | Syntax errors, unsupported language features, huge files | `parse_errors` blind spot |
+| Large change sets | Output lists are capped (symbols/transitive 200, tests 50, routes/models 100); the true totals and `output-truncated` blind spot are reported, but the detail is not | totals and `truncated` flags |
 
 ### Known language gaps
 
@@ -38,6 +40,7 @@ RepoGraph reports what static parsing can establish. It does not prove safety.
 - Numbers in the README come from one Linux x86_64 machine, Python 3.14.8, one run per repository. They are not a promise of performance on other hardware or repositories.
 - `impact` timing uses the highest-inbound file at depth 2. Other queries and repositories vary.
 - Star counts and competitor descriptions in `research/` are timestamped GitHub REST snapshots. They are not quality claims.
+- The 2026-11-05 re-check (same five repositories, previous release vs current code, identical file sets) changed no internal edge counts. It moved 4 vue-core and 5 fastapi dynamic import rows to `external`, and upgraded 2 click edges from `python-project-root` (inferred) to `python-absolute-import` (confirmed). Absolute counts differ from the October table because upstream repositories moved; only the within-run deltas are comparable. Edge accuracy was not re-scored: the existing labels belong to other samples.
 
 ## Security model
 

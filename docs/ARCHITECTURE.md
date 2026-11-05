@@ -69,6 +69,7 @@ Python:
 
 - Relative imports (`from . import x`, `from ..models import Y`) are normalized against the current package.
 - Absolute imports are tried against the repo root, the nearest `src` directory and common source roots.
+- Package aliases are derived from the indexed file set, walking upward to the top-most contiguous package, so `libs/pkg/sub/m.py` is reachable as `pkg.sub.m` from any working directory.
 - `import a.b as c` and `from a import b as c` produce local bindings.
 - Syntactic `importlib.import_module("literal")` and `__import__("literal")` are recorded as `dynamic` when the argument is a string literal.
 - External packages are recorded as `external`, not silently discarded.
@@ -76,10 +77,12 @@ Python:
 TypeScript / JavaScript:
 
 - Relative imports resolve with extension probing (`.ts`, `.tsx`, `.js`, `.jsx`, `.mjs`, `.cjs`, `/index.*`).
-- `tsconfig.json` / `jsconfig.json` `baseUrl` and `paths` aliases are honored, including nested configs.
-- Workspace `package.json` names map imports such as `@scope/pkg` to their package directory.
-- CommonJS `require("...")` and dynamic `import("...")` are extracted.
-- Bare package imports are `external`; computed targets are `dynamic` or `unresolved`.
+- `tsconfig.json` / `jsconfig.json` `baseUrl` and `paths` aliases are honored, including `tsconfig.*.json` variants and nested configs. Relative `extends` chains and arrays merge parent-under-child; `baseUrl`/`paths` stay relative to the config that declared them, cycles and `node_modules` targets are skipped, and project `references` are followed past the filesystem walk's depth bound.
+- `baseUrl` also resolves bare specifiers that `paths` did not match, tried after aliases and before package handling, as `inferred`.
+- Workspace `package.json` names map imports such as `@scope/pkg` to their package directory; the `imports` map (`#foo`) is found by nearest package directory, so it works without a `name` field.
+- CommonJS `require("...")` and dynamic `import("...")` are extracted. A dynamic import keeps the resolved kind: local targets become `dynamic`, packages stay `external`.
+- Bare package imports are `external`; a bare name whose first segment is a repository directory is `unresolved` with a note rather than silently external.
+- Include patterns are compiled once per pattern and matched against repo-relative paths; an explicit `files: []` covers nothing, while a config with no scope applies to its whole subtree.
 
 Resolution never reads outside the repository. Failures remain visible as `unresolved` or `external`.
 
@@ -89,6 +92,15 @@ Resolution never reads outside the repository. Failures remain visible as `unres
 - **Cycles** — iterative Kosaraju strongly connected components over file edges. No NetworkX dependency.
 - **Impact** — direct dependents from reverse imports plus resolved reference sites; transitive dependents from reverse-import BFS; tests from import edges and path-name conventions; routes/models from affected files.
 - **Architecture** — layer classification by path, inbound/outbound directory counts, hubs, entry-point heuristics.
+
+Impact specifics:
+
+- A transitive path's confidence is the weakest hop on it, and `via` records only that one path back to a changed file.
+- Every capped list reports a true total and a `truncated` flag; a capped result adds an `output-truncated` blind spot. Repository-wide unresolved/dynamic counts live in `repo_health`, not in the change's blind spots.
+- With `--diff`, stale or unindexed changed files are re-extracted first (`--no-auto-index` disables); without it they appear as `index-stale` / `changed-files-not-indexed`.
+- Test-name matching pairs a test with modules sharing its stem. Generic stems (`index`, `main`, ...) additionally require a shared directory subtree. Candidates are grouped by stem once, so cost stays linear in files.
+- `--symbol` narrows the target to that symbol, and reference sites to it; sibling symbols in the same file are not treated as changed.
+- `IN (...)` file lists are chunked at 900 bound variables to stay below SQLite's pre-3.32 limit.
 
 Impact output is deliberately a report, not a verdict:
 

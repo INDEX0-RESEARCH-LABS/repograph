@@ -2,6 +2,34 @@
 
 All notable changes to this project are documented here. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). This project follows semantic versioning once it reaches 1.0.
 
+## [Unreleased]
+
+### Added
+
+- `impact --auto-index/--no-auto-index`: with `--diff`, changed files are re-extracted before analysis (default on); disabling it leaves stale rows visible as `index-stale`.
+- Every capped impact list now carries a true total and a `truncated` flag, and a capped result adds an `output-truncated` blind spot naming the lists that were cut.
+- `repo_health` in impact output holds repository-wide unresolved/dynamic import counts, separate from the blind spots that apply to the change.
+- Unresolved and dynamic blind-spot items carry `related`, and plausibly-related modules are listed first.
+- tsconfig support for relative `extends` chains and arrays, `tsconfig.*.json` variants, project `references`, and bare-specifier resolution through `baseUrl`.
+- Stale or unindexed changed files are disclosed as `index-stale` / `changed-files-not-indexed` instead of being silently dropped.
+
+### Changed
+
+- Transitive dependent confidence is the weakest hop on the path, and `via` records the whole chain back to the changed file.
+- Name-convention test selection requires a shared directory subtree for generic stems (`index`, `main`, `__init__`, ...), so one package's `index.test.ts` no longer matches another package's `index.ts`. Distinctive stems still match across trees.
+- `impact --symbol` reports only the requested symbol and filters reference sites to it.
+- A dynamic import of a third-party package keeps `kind=external` instead of being rewritten to `dynamic`.
+- `IN (...)` queries are chunked below SQLite's historical 999-variable floor.
+- tsconfig include globs are compiled once per pattern; test-name matching groups candidates by stem instead of rescanning every dependent per test.
+
+### Fixed
+
+- Git diffs parse renames (`--no-renames`), unicode and space-containing paths, and top-level `a/` directories correctly; a git timeout returns an error result instead of raising.
+- Path normalization no longer strips leading dots, so `.storybook/main.ts` stays intact.
+- Python package aliases come from the indexed file set and walk to the top-most contiguous package, so resolution no longer depends on the process working directory.
+- `package.json` `imports` maps are found by directory, including packages with no `name`.
+- A bare specifier whose first segment is a repository directory is reported `unresolved` with a note instead of as an external package.
+
 ## [0.1.3] — 2026-11-04
 
 ### Added
