@@ -291,6 +291,7 @@ class Resolver:
             self.ts_configs.append({
                 "dir": "" if rel_dir == "." else rel_dir,
                 "baseurl": str(opts.get("baseUrl", ".")),
+                "has_baseurl": "baseUrl" in opts,
                 "paths": entries,
                 "scope": _ts_scope_patterns(data),
             })
@@ -678,6 +679,16 @@ class Resolver:
                             break
                 if targets:
                     break
+            if not targets:
+                # baseUrl makes bare specifiers relative to a source directory,
+                # after `paths` has had its chance. It is JSON configuration,
+                # so the edge stays inferred.
+                if cfg.get("has_baseurl"):
+                    found = self._ts_candidates(
+                        posixpath.normpath(posixpath.join(baseurl_dir, spec)))
+                    if found:
+                        targets = found
+                        method = "tsconfig-baseurl"
             if not targets:
                 if spec.startswith("@"):
                     parts = spec.split("/")
