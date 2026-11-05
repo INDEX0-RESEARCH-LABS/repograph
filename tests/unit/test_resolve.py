@@ -456,3 +456,28 @@ def test_package_imports_map_works_with_a_nameless_package_json(tmp_path: Path):
     got = r.resolve("web/src/use.ts", imp)
     assert (got[0].target, got[0].method, got[0].confidence) == (
         "web/src/util.ts", "package-imports-map", "inferred")
+
+
+def test_dynamic_import_of_a_package_is_still_external(tmp_path: Path):
+    for rel in ("use.ts", "dep.ts"):
+        (tmp_path / rel).write_text("export const x = 1;\n", encoding="utf-8")
+    r = Resolver(tmp_path, [("use.ts", "typescript"), ("dep.ts", "typescript")])
+
+    imp = extract("use.ts", "typescript", b'const m = import("react");\n').imports
+    got = r.resolve("use.ts", imp)
+    assert got[0].kind == "external"
+    assert got[0].method == "dynamic-import"
+
+    imp = extract("use.ts", "typescript", b'const m = import("./dep");\n').imports
+    got = r.resolve("use.ts", imp)
+    assert got[0].kind == "dynamic"
+    assert got[0].target == "dep.ts"
+
+
+def test_glob_pattern_compilation_is_cached():
+    from repograph.resolve import _glob_regex
+
+    _glob_regex.cache_clear()
+    _glob_regex("src/**/*")
+    _glob_regex("src/**/*")
+    assert _glob_regex.cache_info().hits >= 1

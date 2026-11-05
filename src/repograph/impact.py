@@ -26,7 +26,6 @@ CAVEATS = [
     "Confidence levels describe extraction certainty, not the risk of the change itself.",
 ]
 
-_UNUSED = None
 _HUNK_RE = re.compile(r"^@@ -\d+(?:,\d+)? \+(\d+)(?:,(\d+))? @@")
 
 
@@ -340,11 +339,16 @@ def analyze_impact(
 
     symbols_in_targets = _symbols_in_files(store, target_paths)
     changed_symbols = symbols_in_targets
-    if changed_lines:
+    if source == "symbol":
+        # Only the requested symbol is the change; siblings in the same file
+        # are not, and their references are not evidence about it.
+        changed_symbols = [s for s in symbols_in_targets if s["id"] == found["id"]]
+    elif changed_lines:
         changed_symbols = [
             s for s in symbols_in_targets
             if any(s["start_line"] <= n <= s["end_line"] for n in changed_lines.get(s["path"], []))
         ]
+    changed_ids = {s["id"] for s in changed_symbols}
     changed_symbol_names: dict[str, set[str]] = defaultdict(set)
     for s in changed_symbols:
         changed_symbol_names[s["path"]].add(s["name"])
@@ -362,7 +366,7 @@ def analyze_impact(
                 "evidence": {"location": f"{imp['src']}:{imp['line']}"},
             })
             entry["confidences"].add(imp["confidence"])
-        names = changed_symbol_names.get(p) if changed_lines else None
+        names = changed_symbol_names.get(p) if (changed_lines or source == "symbol") else None
         for ref in _ref_sites(store, p, names):
             entry = direct.setdefault(ref["src"], {"path": ref["src"], "reasons": [],
                                                    "confidences": set()})
@@ -690,7 +694,7 @@ def analyze_impact(
             "symbols": [{
                 "name": s["name"], "qualified_name": s["qualified_name"], "kind": s["kind"],
                 "path": s["path"], "lines": [s["start_line"], s["end_line"]],
-                "changed_by_hunk": s["id"] in {x["id"] for x in changed_symbols},
+                "changed_by_hunk": s["id"] in changed_ids,
                 "evidence": {"location": f"{s['path']}:{s['start_line']}"},
             } for s in changed_symbols[:200]],
             "symbols_total": symbols_total,

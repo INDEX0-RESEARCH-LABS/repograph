@@ -12,6 +12,7 @@ import posixpath
 import re
 import sys
 from dataclasses import dataclass, field
+from functools import lru_cache
 from pathlib import Path, PurePosixPath
 
 from .extract import Import
@@ -133,8 +134,9 @@ def _merge_tsconfig(root: Path, path: Path, seen: frozenset[Path]) -> dict | Non
 
 
 
-def _glob_match(pattern: str, path: str) -> bool:
-    """Match a tsconfig include pattern against a repo-relative path."""
+@lru_cache(maxsize=1024)
+def _glob_regex(pattern: str) -> str:
+    """Translate a tsconfig include glob to a regex, cached per pattern."""
     pat = pattern[2:] if pattern.startswith("./") else pattern
     out: list[str] = []
     i = 0
@@ -154,7 +156,12 @@ def _glob_match(pattern: str, path: str) -> bool:
         else:
             out.append(re.escape(pat[i]))
             i += 1
-    rx = "".join(out)
+    return "".join(out)
+
+
+def _glob_match(pattern: str, path: str) -> bool:
+    """Match a tsconfig include pattern against a repo-relative path."""
+    rx = _glob_regex(pattern)
     # A bare directory (`src`) covers everything below it.
     return re.fullmatch(rx, path) is not None or re.fullmatch(rx + "/.*", path) is not None
 
@@ -879,7 +886,10 @@ class Resolver:
                 else:
                     sub = []
                 for r in sub:
-                    r.kind = "dynamic"
+                    # A dynamic import of a package is still an external
+                    # dependency; only local resolution becomes `dynamic`.
+                    if r.kind != "external":
+                        r.kind = "dynamic"
                     r.method = "dynamic-import"
                     r.note = "dynamic import; target may change at runtime"
                     r.confidence = "inferred" if r.target else "unresolved"
