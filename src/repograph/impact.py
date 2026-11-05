@@ -169,18 +169,29 @@ def _shares_scope(a: str, b: str) -> bool:
     return da == db or da.startswith(db + "/") or db.startswith(da + "/")
 
 
-def _name_matches(test_path: str, other_path: str) -> bool:
-    """Whether a test file's name plausibly covers another module.
+def _paths_by_stem(paths: list[str]) -> dict[str, list[str]]:
+    out: dict[str, list[str]] = defaultdict(list)
+    for p in paths:
+        out[_stem(p)].append(p)
+    return out
 
-    A generic stem such as `index` only counts inside the same directory
-    subtree; otherwise every `index.test.ts` in the repo would be selected for
-    every `index.ts`. A distinctive stem still matches across trees, because
-    `tests/test_billing.py` for `src/shop/services/billing.py` is the norm.
+
+def _name_match_in(test_path: str, by_stem: dict[str, list[str]]) -> bool:
+    """Whether a test file's name covers any of the grouped paths.
+
+    Grouping by stem keeps this linear in files: a per-test scan of every
+    dependent made impact analysis 12x slower on fastapi.
     """
     stem = _stem(test_path)
-    if stem != _stem(other_path):
+    candidates = by_stem.get(stem)
+    if not candidates:
         return False
-    return stem not in _GENERIC_STEMS or _shares_scope(test_path, other_path)
+    # A generic stem such as `index` only counts inside the same directory
+    # subtree; otherwise every `index.test.ts` would be selected for every
+    # `index.ts`. A distinctive stem still matches across trees, because
+    # `tests/test_billing.py` for `src/shop/services/billing.py` is the norm.
+    return stem not in _GENERIC_STEMS or any(
+        _shares_scope(test_path, other) for other in candidates)
 
 
 def _tokens(text: str) -> set[str]:
@@ -450,6 +461,8 @@ def analyze_impact(
         ).fetchall()]
         test_rows = [r for r in test_rows if _is_test_module(r["path"])]
         included: dict[str, dict] = {}
+        changed_by_stem = _paths_by_stem(target_paths)
+        dependent_by_stem = _paths_by_stem([d["path"] for d in direct_list])
         importer_map: dict[str, list[dict]] = defaultdict(list)
         for e in edges:
             importer_map[e["dst"]].append(e)
@@ -487,14 +500,14 @@ def analyze_impact(
                             "evidence": {"location": f"{tp}:{e['line']}"},
                         })
                         entry["confidences"].add("confirmed")
-            if any(_name_matches(tp, p) for p in target_paths):
+            if _name_match_in(tp, changed_by_stem):
                 entry["rules"].append({
                     "rule": "test-name-matches-changed-file",
                     "confidence": "inferred",
                     "evidence": {"location": tp, "method": "path-name-convention"},
                 })
                 entry["confidences"].add("inferred")
-            if any(_name_matches(tp, d["path"]) for d in direct_list):
+            if _name_match_in(tp, dependent_by_stem):
                 entry["rules"].append({
                     "rule": "test-name-matches-dependent",
                     "confidence": "inferred",
