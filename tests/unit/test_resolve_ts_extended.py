@@ -128,3 +128,29 @@ def test_references_follow_projects_beyond_the_walk_depth(tmp_path: Path):
     })
     got = _resolve(tmp_path, "packages/a/b/c/lib/use.ts", "@/x")
     assert got[0].target == "packages/a/b/c/lib/src/x.ts"
+
+
+def test_missing_module_under_a_source_root_is_unresolved_not_external(tmp_path: Path):
+    _make(tmp_path, {
+        "tsconfig.json": json.dumps({"compilerOptions": {"baseUrl": "src"}}),
+        "src/features/booking.ts": "export const x = 1;\n",
+        "src/use.ts": "",
+    })
+    got = _resolve(tmp_path, "src/use.ts", "features/missing")
+    assert got[0].kind == "unresolved"
+    assert got[0].note
+
+
+def test_bare_name_pointing_at_a_source_root_is_unresolved(tmp_path: Path):
+    _make(tmp_path, {
+        "src/module.ts": "export const x = 1;\n",
+        "use.ts": "",
+    })
+    got = _resolve(tmp_path, "use.ts", "src/module")
+    assert got[0].kind == "unresolved"
+
+
+def test_true_third_party_stays_external(tmp_path: Path):
+    _make(tmp_path, {"use.ts": ""})
+    got = _resolve(tmp_path, "use.ts", "react")
+    assert got[0].kind == "external"

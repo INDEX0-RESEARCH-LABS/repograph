@@ -741,6 +741,23 @@ class Resolver:
             "unresolved", imp.names,
             "private # import is not declared by the nearest package.json imports map")]
 
+    def _looks_internal_bare(self, spec: str, baseurl_dir: str) -> bool:
+        """Whether a bare specifier names a directory in this repository.
+
+        Used only after every resolver failed: a name whose first segment is a
+        real source directory is more likely a missing internal module than a
+        third-party package, so it must not be reported as external.
+        """
+        if spec.startswith("@") or not spec:
+            return False
+        first = spec.split("/")[0]
+        if not first:
+            return False
+        candidates = [first]
+        if baseurl_dir:
+            candidates.append(posixpath.normpath(posixpath.join(baseurl_dir, first)))
+        return any(c in self._dirs for c in candidates)
+
     def _resolve_ts(self, rel: str, imp: Import) -> list[ResolvedImport]:
         spec = imp.module
         method = "typescript-relative-import"
@@ -828,6 +845,12 @@ class Resolver:
                                            f"package {pkg_name!r} is not visible from "
                                            f"{self._nearest_pkg_dir(rel) or '.'}")]
             if not targets:
+                if self._looks_internal_bare(spec, baseurl_dir):
+                    return [ResolvedImport(
+                        imp.raw, spec, imp.line, None, "unresolved", "bare-specifier",
+                        "unresolved", imp.names,
+                        f"bare specifier {spec!r} matches a source directory but no "
+                        f"file or tsconfig alias resolved it")]
                 return [ResolvedImport(imp.raw, spec, imp.line, None, "external",
                                        "bare-specifier", "external", imp.names,
                                        "third-party package or Node builtin")]
