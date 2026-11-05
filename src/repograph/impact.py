@@ -6,6 +6,7 @@ as safety. Every relationship carries its extractor, location and confidence.
 
 from __future__ import annotations
 
+import json
 import posixpath
 import re
 import subprocess
@@ -30,10 +31,29 @@ _HUNK_RE = re.compile(r"^@@ -\d+(?:,\d+)? \+(\d+)(?:,(\d+))? @@")
 
 
 def _git(root: Path, *args: str) -> subprocess.CompletedProcess:
-    return subprocess.run(
-        ["git", "-C", str(root), *args],
-        capture_output=True, text=True, timeout=60, check=False,
-    )
+    try:
+        return subprocess.run(
+            ["git", "-C", str(root), "-c", "core.quotepath=false", *args],
+            capture_output=True, text=True, timeout=60, check=False,
+        )
+    except subprocess.TimeoutExpired:
+        return subprocess.CompletedProcess(
+            args=[str(a) for a in args], returncode=124, stdout="",
+            stderr="git timed out after 60 seconds",
+        )
+
+
+def _diff_path(raw: str) -> str | None:
+    """A path from a ``---``/``+++`` line, with git's C quoting undone."""
+    p = raw.rstrip("\n")
+    if p.startswith('"') and p.endswith('"') and len(p) >= 2:
+        # core.quotepath=false keeps unicode raw; only control characters and
+        # backslashes are quoted, and those fit JSON's escape set closely enough.
+        try:
+            p = json.loads(p)
+        except ValueError:
+            p = p[1:-1]
+    return None if p == "/dev/null" else p
 
 
 def git_changes(root: Path, base: str = "HEAD") -> dict:
@@ -44,9 +64,12 @@ def git_changes(root: Path, base: str = "HEAD") -> dict:
     """
     probe = _git(root, "rev-parse", "--is-inside-work-tree")
     if probe.returncode != 0:
-        return {"available": False, "error": "not a git repository", "paths": [], "lines": {},
+        error = ("git timed out after 60 seconds" if probe.returncode == 124
+                 else "not a git repository")
+        return {"available": False, "error": error, "paths": [], "lines": {},
                 "deleted": [], "untracked": []}
-    diff = _git(root, "diff", "--unified=0", "--no-color", "--no-prefix", base, "--")
+    diff = _git(root, "diff", "--unified=0", "--no-color", "--no-prefix",
+                "--no-renames", base, "--")
     if diff.returncode != 0:
         return {"available": False, "error": diff.stderr.strip()[:300] or "git diff failed",
                 "paths": [], "lines": {}, "deleted": [], "untracked": []}
@@ -57,11 +80,9 @@ def git_changes(root: Path, base: str = "HEAD") -> dict:
     old_path: str | None = None
     for raw in diff.stdout.splitlines():
         if raw.startswith("--- "):
-            p = raw[4:].strip()
-            old_path = None if p == "/dev/null" else p[2:] if p.startswith("a/") else p
+            old_path = _diff_path(raw[4:].split("\t", 1)[0])
         elif raw.startswith("+++ "):
-            p = raw[4:].strip()
-            current = None if p == "/dev/null" else p[2:] if p.startswith("b/") else p
+            current = _diff_path(raw[4:].split("\t", 1)[0])
             if current is None and old_path:
                 deleted.add(old_path)
         elif raw.startswith("@@ ") and current:
