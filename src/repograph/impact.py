@@ -192,15 +192,31 @@ def _find_symbol(store: Store, name: str) -> tuple[dict | None, list[dict]]:
                    "kind": r["kind"]} for r in candidates][:20]
 
 
+# SQLite builds before 3.32 allow only 999 bound variables per statement.
+# Stay below that floor so a large change set works on stock system SQLite.
+_MAX_IN_VARS = 900
+
+
+def _query_in(store: Store, sql: str, paths: list[str]) -> list:
+    """Run an ``IN ({marks})`` query in chunks of at most ``_MAX_IN_VARS``."""
+    rows = []
+    for start in range(0, len(paths), _MAX_IN_VARS):
+        chunk = paths[start:start + _MAX_IN_VARS]
+        marks = ",".join("?" * len(chunk))
+        rows.extend(store.conn.execute(sql.replace("{marks}", marks), chunk).fetchall())
+    return rows
+
+
 def _symbols_in_files(store: Store, paths: list[str]) -> list[dict]:
     if not paths:
         return []
-    marks = ",".join("?" * len(paths))
-    rows = store.conn.execute(
-        f"""SELECT s.*, f.path FROM symbols s JOIN files f ON f.id=s.file_id
-            WHERE f.path IN ({marks}) ORDER BY f.path, s.start_line""",
+    rows = _query_in(
+        store,
+        """SELECT s.*, f.path FROM symbols s JOIN files f ON f.id=s.file_id
+           WHERE f.path IN ({marks}) ORDER BY f.path, s.start_line""",
         paths,
-    ).fetchall()
+    )
+    rows.sort(key=lambda r: (r["path"], r["start_line"]))
     return [dict(r) for r in rows]
 
 
@@ -460,13 +476,14 @@ def analyze_impact(
     related_tests = related_tests[:50]
 
     affected = target_paths + [d["path"] for d in direct_list] + [t["path"] for t in transitive_list]
-    marks = ",".join("?" * len(affected)) if affected else "''"
-    route_rows = store.conn.execute(
-        f"""SELECT r.method,r.path,r.handler,r.line,r.framework,f.path AS file
-            FROM routes r JOIN files f ON f.id=r.file_id
-            WHERE f.path IN ({marks}) ORDER BY f.path, r.line""",
+    route_rows = _query_in(
+        store,
+        """SELECT r.method,r.path,r.handler,r.line,r.framework,f.path AS file
+           FROM routes r JOIN files f ON f.id=r.file_id
+           WHERE f.path IN ({marks})""",
         affected,
-    ).fetchall()
+    )
+    route_rows.sort(key=lambda r: (r["file"], r["line"]))
     affected_routes = [{
         "method": r["method"], "path": r["path"], "handler": r["handler"],
         "file": r["file"], "line": r["line"],
@@ -477,13 +494,14 @@ def analyze_impact(
     routes_total = len(affected_routes)
     affected_routes = affected_routes[:100]
 
-    model_rows = store.conn.execute(
-        f"""SELECT s.name,s.qualified_name,s.kind,f.path,s.start_line
-            FROM symbols s JOIN files f ON f.id=s.file_id
-            WHERE s.tags LIKE '%db_model%' AND f.path IN ({marks})
-            ORDER BY f.path, s.start_line""",
+    model_rows = _query_in(
+        store,
+        """SELECT s.name,s.qualified_name,s.kind,f.path,s.start_line
+           FROM symbols s JOIN files f ON f.id=s.file_id
+           WHERE s.tags LIKE '%db_model%' AND f.path IN ({marks})""",
         affected,
-    ).fetchall()
+    )
+    model_rows.sort(key=lambda m: (m["path"], m["start_line"]))
     related_models = [{
         "name": m["name"], "qualified_name": m["qualified_name"], "kind": m["kind"],
         "path": m["path"], "line": m["start_line"],
@@ -536,26 +554,33 @@ def analyze_impact(
         "SELECT COUNT(*) FROM imports WHERE kind='unresolved'"
     ).fetchone()[0]
     if target_paths:
-        marks_t = ",".join("?" * len(target_paths))
-        unres = store.conn.execute(
-            f"""SELECT f.path, i.line, i.module, i.note FROM imports i JOIN files f ON f.id=i.file_id
-                WHERE f.path IN ({marks_t}) AND i.kind='unresolved' ORDER BY f.path, i.line""",
+        unres = _query_in(
+            store,
+            """SELECT f.path, i.line, i.module, i.note FROM imports i JOIN files f ON f.id=i.file_id
+               WHERE f.path IN ({marks}) AND i.kind='unresolved'""",
             target_paths,
-        ).fetchall()
-        dyn = store.conn.execute(
-            f"""SELECT f.path, i.line, i.module FROM imports i JOIN files f ON f.id=i.file_id
-                WHERE f.path IN ({marks_t}) AND i.kind='dynamic' ORDER BY f.path, i.line""",
+        )
+        unres.sort(key=lambda r: (r["path"], r["line"]))
+        dyn = _query_in(
+            store,
+            """SELECT f.path, i.line, i.module FROM imports i JOIN files f ON f.id=i.file_id
+               WHERE f.path IN ({marks}) AND i.kind='dynamic'""",
             target_paths,
-        ).fetchall()
-        ext = store.conn.execute(
-            f"""SELECT DISTINCT i.module FROM imports i JOIN files f ON f.id=i.file_id
-                WHERE f.path IN ({marks_t}) AND i.kind='external' ORDER BY i.module LIMIT 30""",
+        )
+        dyn.sort(key=lambda r: (r["path"], r["line"]))
+        ext_rows = _query_in(
+            store,
+            """SELECT DISTINCT i.module FROM imports i JOIN files f ON f.id=i.file_id
+               WHERE f.path IN ({marks}) AND i.kind='external'""",
             target_paths,
-        ).fetchall()
-        errs = store.conn.execute(
-            f"SELECT path, parse_error FROM files WHERE parsed=0 AND path IN ({marks_t})",
+        )
+        ext = sorted({r["module"] for r in ext_rows})[:30]
+        errs = _query_in(
+            store,
+            "SELECT path, parse_error FROM files WHERE parsed=0 AND path IN ({marks})",
             target_paths,
-        ).fetchall()
+        )
+        errs.sort(key=lambda r: r["path"])
         if unres:
             blind.append({"kind": "unresolved-internal-imports", "count": len(unres),
                           "message": "Imports that look internal but could not be resolved; dependencies through them are unknown.",
@@ -572,7 +597,7 @@ def analyze_impact(
         if ext:
             blind.append({"kind": "external-imports", "count": len(ext),
                           "message": "External packages were not analyzed; only their local import sites are known.",
-                          "items": [r["module"] for r in ext]})
+                          "items": ext})
         if errs:
             blind.append({"kind": "parse-errors", "count": len(errs),
                           "message": "Files that failed to parse contribute no symbols or edges.",
