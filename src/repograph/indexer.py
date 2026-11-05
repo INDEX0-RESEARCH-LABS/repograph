@@ -55,7 +55,15 @@ def _sha(data: bytes) -> str:
 
 
 def index_repository(root: Path, *, force: bool = False, reset: bool = False,
-                     settings: Settings | None = None) -> IndexStats:
+                     settings: Settings | None = None,
+                     only: set[str] | None = None) -> IndexStats:
+    """Index the repository.
+
+    ``only`` re-extracts just those repo-relative files. The tree is still
+    walked so the resolver sees every file, but unchanged files are not read
+    and nothing is deleted. Used by diff analysis to refresh edited targets
+    without a full index run.
+    """
     from .config import load_settings
 
     started = time.perf_counter()
@@ -83,14 +91,17 @@ def index_repository(root: Path, *, force: bool = False, reset: bool = False,
             force = True
         scanned = {e.path: e for e in entries}
 
-        for path in sorted(set(existing) - set(scanned)):
-            store.delete_file(path)
-            stats.deleted += 1
+        if only is None:
+            for path in sorted(set(existing) - set(scanned)):
+                store.delete_file(path)
+                stats.deleted += 1
 
         pending: list[tuple] = []
         for e in entries:
+            if only is not None and e.path not in only:
+                continue
             old = existing.get(e.path)
-            if old and not force and old.size == e.size and old.mtime == e.mtime:
+            if only is None and old and not force and old.size == e.size and old.mtime == e.mtime:
                 stats.unchanged += 1
                 continue
             data = read_source(root, e.path, settings)
@@ -98,7 +109,7 @@ def index_repository(root: Path, *, force: bool = False, reset: bool = False,
                 stats.unchanged += 1
                 continue
             sha = _sha(data)
-            if old and old.sha256 == sha and not force:
+            if only is None and old and old.sha256 == sha and not force:
                 stats.unchanged += 1
                 continue
             pending.append((e, data, sha, old))

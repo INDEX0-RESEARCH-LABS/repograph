@@ -175,6 +175,10 @@ def impact(
     diff: bool = typer.Option(False, "--diff", help="Use the current git worktree diff."),
     depth: int = typer.Option(2, "--depth", min=1, max=5),
     tests: bool = typer.Option(True, "--tests/--no-tests"),
+    auto_index: bool = typer.Option(
+        True, "--auto-index/--no-auto-index",
+        help="With --diff, re-index changed files before analysis.",
+    ),
     as_json: bool = typer.Option(False, "--json"),
 ) -> None:
     """Estimate what a change can affect, with evidence and confidence."""
@@ -184,7 +188,8 @@ def impact(
     store, _ = _open_store(root)
     with store:
         data = analyze_impact(store, root, paths=list(paths or []), symbol=symbol,
-                              diff=diff, depth=depth, include_tests=tests)
+                              diff=diff, depth=depth, include_tests=tests,
+                              auto_index=auto_index)
     if as_json:
         _emit(data, True)
         if "error" in data:

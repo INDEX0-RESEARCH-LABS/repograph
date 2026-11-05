@@ -125,6 +125,22 @@ def _normalize_path(root: Path, path: str) -> str:
     return rel
 
 
+def _target_stale(root: Path, settings, row) -> bool:
+    """True when the indexed row no longer describes the file on disk."""
+    import hashlib
+
+    from .scanner import read_source
+
+    try:
+        st = (root / row["path"]).stat()
+    except OSError:
+        return False
+    if st.st_size != row["size"] or st.st_mtime != row["mtime"]:
+        return True
+    data = read_source(root, row["path"], settings)
+    return data is not None and hashlib.sha256(data).hexdigest() != row["sha256"]
+
+
 def _stem(path: str) -> str:
     base = posixpath.basename(path)
     for ext in (".py", ".pyi", ".ts", ".tsx", ".js", ".jsx", ".mjs", ".cjs", ".mts", ".cts", ".prisma"):
@@ -222,6 +238,7 @@ def analyze_impact(
     diff: bool = False,
     depth: int = 2,
     include_tests: bool = True,
+    auto_index: bool = True,
 ) -> dict:
     depth = max(1, min(int(depth), 5))
     source = "files"
@@ -255,8 +272,21 @@ def analyze_impact(
     else:
         return {"error": "provide paths, a symbol, or --diff", "caveats": CAVEATS}
 
-    indexed = {r["path"] for r in store.all_files()}
+    indexed = {r["path"]: r for r in store.all_files()}
+    if diff and auto_index:
+        refresh = [
+            p for p in target_paths
+            if p not in deleted
+            and (p not in indexed or _target_stale(root, store.settings, indexed[p]))
+        ]
+        if refresh:
+            from .indexer import index_repository
+
+            index_repository(root, settings=store.settings, only=set(refresh))
+            indexed = {r["path"]: r for r in store.all_files()}
     missing = [p for p in target_paths if p not in indexed]
+    stale = [p for p in target_paths
+             if p in indexed and _target_stale(root, store.settings, indexed[p])]
     target_paths = [p for p in target_paths if p in indexed]
 
     symbols_in_targets = _symbols_in_files(store, target_paths)
@@ -460,6 +490,22 @@ def analyze_impact(
 
     # Explicit blind spots, not silent omissions.
     blind: list[dict] = []
+    if missing:
+        blind.append({
+            "kind": "changed-files-not-indexed",
+            "count": len(missing),
+            "message": ("Changed files are absent from the index, so their symbols and "
+                        "dependents are unknown."),
+            "items": missing[:50],
+        })
+    if stale:
+        blind.append({
+            "kind": "index-stale",
+            "count": len(stale),
+            "message": ("Changed files differ from their indexed row, so symbol ranges and "
+                        "edges may be out of date. Re-run `repograph index .`."),
+            "items": stale[:50],
+        })
     all_unresolved = store.conn.execute(
         "SELECT COUNT(*) FROM imports WHERE kind='unresolved'"
     ).fetchone()[0]
