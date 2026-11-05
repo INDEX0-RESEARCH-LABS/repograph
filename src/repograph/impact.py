@@ -485,6 +485,7 @@ def analyze_impact(
     transitive_total = len(transitive_list)
 
     related_tests: list[dict] = []
+    selected_test_paths: set[str] = set()
     reach: dict[str, dict] = {}
     if include_tests:
         test_rows = [dict(r) for r in store.conn.execute(
@@ -552,6 +553,7 @@ def analyze_impact(
             "evidence": v["rules"][0]["evidence"],
         } for v in sorted(included.values(), key=lambda x: x["path"]) if v["rules"]]
     related_tests_total = len(related_tests)
+    selected_test_paths = {t["path"] for t in related_tests}
     related_tests = related_tests[:50]
 
     affected = target_paths + [d["path"] for d in direct_list] + [t["path"] for t in transitive_list]
@@ -692,7 +694,7 @@ def analyze_impact(
             blind.append({"kind": "parse-errors", "count": len(errs),
                           "message": "Files that failed to parse contribute no symbols or edges.",
                           "items": [{"file": r["path"], "error": r["parse_error"]} for r in errs]})
-        unreached_tests = sorted(set(reach) - {t["path"] for t in related_tests})
+        unreached_tests = sorted(set(reach) - selected_test_paths)
         if unreached_tests:
             blind.append({
                 "kind": "test-selection-reachability",

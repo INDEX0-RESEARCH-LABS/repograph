@@ -67,3 +67,24 @@ def test_capped_lists_report_totals_and_a_blind_spot(repo: Path):
         "transitive_dependents", "related_tests", "affected_routes",
         "related_models", "symbols",
     }
+
+
+def test_capped_selected_tests_are_not_reported_as_unreached(repo: Path):
+    (repo / "core.py").write_text("def fn() -> int:\n    return 0\n", encoding="utf-8")
+    selected = []
+    for i in range(51):
+        path = f"tests/test_core_{i:02d}.py"
+        (repo / path).write_text(
+            "from core import fn\n\ndef test_it() -> None:\n    assert fn() == 0\n",
+            encoding="utf-8")
+        selected.append(path)
+    index_repository(repo)
+
+    with Store(load_settings(repo)) as store:
+        result = analyze_impact(store, repo, paths=["core.py"])
+
+    assert result["related_tests_total"] == 51
+    assert len(result["related_tests"]) == 50
+    blind = {b["kind"]: b for b in result["blind_spots"]}
+    unreached = set(blind.get("test-selection-reachability", {}).get("items", []))
+    assert unreached.isdisjoint(selected)
