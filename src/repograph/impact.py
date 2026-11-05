@@ -75,6 +75,7 @@ def git_changes(root: Path, base: str = "HEAD") -> dict:
 
     lines: dict[str, set[int]] = defaultdict(set)
     deleted: set[str] = set()
+    changed: set[str] = set()
     current: str | None = None
     old_path: str | None = None
     for raw in diff.stdout.splitlines():
@@ -84,13 +85,20 @@ def git_changes(root: Path, base: str = "HEAD") -> dict:
             current = _diff_path(raw[4:].split("\t", 1)[0])
             if current is None and old_path:
                 deleted.add(old_path)
+            elif current:
+                changed.add(current)
         elif raw.startswith("@@ ") and current:
             m = _HUNK_RE.match(raw)
             if m:
                 start = int(m.group(1))
-                count = int(m.group(2) or 1)
-                for n in range(start, start + count):
-                    lines[current].add(n)
+                count = int(m.group(2)) if m.group(2) is not None else 1
+                if count == 0:
+                    # A pure-deletion hunk names no new lines. The enclosing or
+                    # adjacent symbol still counts as changed.
+                    lines[current].update({max(start, 1), start + 1})
+                else:
+                    for n in range(start, start + count):
+                        lines[current].add(n)
 
     untracked = [
         p for p in _git(root, "ls-files", "--others", "--exclude-standard", "-z").stdout.split("\0") if p
@@ -101,7 +109,8 @@ def git_changes(root: Path, base: str = "HEAD") -> dict:
     own = (INDEX_DIR + "/", INDEX_DIR)
     untracked = [p for p in untracked if not p.startswith(own)]
     lines = {k: v for k, v in lines.items() if not k.startswith(own)}
-    paths = sorted(set(lines) | set(untracked))
+    changed = {p for p in changed if not p.startswith(own)}
+    paths = sorted(set(lines) | changed | set(untracked))
     return {
         "available": True,
         "paths": paths,
@@ -332,6 +341,7 @@ def analyze_impact(
         return {"error": "provide paths, a symbol, or --diff", "caveats": CAVEATS}
 
     indexed = {r["path"]: r for r in store.all_files()}
+    previous_symbols: dict[str, set[str]] = {}
     if diff and auto_index:
         refresh = [
             p for p in target_paths
@@ -341,6 +351,10 @@ def analyze_impact(
         if refresh:
             from .indexer import index_repository
 
+            previous_symbols = {
+                p: {s["name"] for s in _symbols_in_files(store, [p])}
+                for p in refresh if p in indexed
+            }
             index_repository(root, settings=store.settings, only=set(refresh))
             indexed = {r["path"]: r for r in store.all_files()}
     missing = [p for p in target_paths if p not in indexed]
@@ -363,6 +377,17 @@ def analyze_impact(
     changed_symbol_names: dict[str, set[str]] = defaultdict(set)
     for s in changed_symbols:
         changed_symbol_names[s["path"]].add(s["name"])
+    current_names: dict[str, set[str]] = defaultdict(set)
+    for s in symbols_in_targets:
+        current_names[s["path"]].add(s["name"])
+    removed_symbols = [
+        {"name": name, "path": p, "evidence": {"location": p}}
+        for p, names in sorted(previous_symbols.items())
+        for name in sorted(names - current_names.get(p, set()))
+    ]
+    removed_by_path: dict[str, set[str]] = defaultdict(set)
+    for item in removed_symbols:
+        removed_by_path[item["path"]].add(item["name"])
 
     # Direct dependents: static importers plus resolved reference sites.
     direct: dict[str, dict] = {}
@@ -378,16 +403,22 @@ def analyze_impact(
             })
             entry["confidences"].add(imp["confidence"])
         names = changed_symbol_names.get(p) if (changed_lines or source == "symbol") else None
+        gone = removed_by_path.get(p, set())
+        if names is not None:
+            names = set(names) | gone
         for ref in _ref_sites(store, p, names):
+            removed = ref["target_name"] in gone
             entry = direct.setdefault(ref["src"], {"path": ref["src"], "reasons": [],
                                                    "confidences": set()})
+            conf = "confirmed" if removed else ref["confidence"]
             entry["reasons"].append({
-                "relation": "references-changed-symbol", "target": p, "symbol": ref["target_name"],
+                "relation": "references-removed-symbol" if removed else "references-changed-symbol",
+                "target": p, "symbol": ref["target_name"],
                 "line": ref["line"], "reference_kind": ref["kind"],
-                "method": ref["method"], "confidence": ref["confidence"],
+                "method": ref["method"], "confidence": conf,
                 "evidence": {"location": f"{ref['src']}:{ref['line']}"},
             })
-            entry["confidences"].add(ref["confidence"])
+            entry["confidences"].add(conf)
 
     def _conf(confidences: set[str]) -> str:
         return "confirmed" if confidences and confidences <= {"confirmed"} else "inferred"
@@ -689,6 +720,14 @@ def analyze_impact(
         blind.append({"kind": "deleted-files", "count": len(deleted),
                       "message": "Deleted files have no current symbols; impact is based on remaining importers only.",
                       "items": deleted[:20]})
+    if removed_symbols:
+        blind.append({
+            "kind": "removed-symbols",
+            "count": len(removed_symbols),
+            "message": ("Symbols present in the previous index of a changed file are gone after "
+                        "refresh. Remaining call sites are listed as references-removed-symbol."),
+            "items": [{"name": s["name"], "path": s["path"]} for s in removed_symbols[:50]],
+        })
 
     needles = {_stem(p) for p in target_paths if _stem(p)}
     needles |= {s["name"] for s in changed_symbols[:5]}
@@ -713,6 +752,7 @@ def analyze_impact(
             "symbols_total": symbols_total,
             "symbols_truncated": symbols_total > 200,
             "changed_lines": changed_lines,
+            "removed_symbols": removed_symbols[:50],
             "deleted": deleted,
             "missing_from_index": missing,
             "diff": {k: v for k, v in (diff_info or {}).items() if k in ("untracked",)} if diff_info else None,

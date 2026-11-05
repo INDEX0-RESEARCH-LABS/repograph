@@ -176,3 +176,61 @@ def test_git_diff_reports_not_a_repository(indexed: Path):
 def test_path_escape_is_rejected(indexed: Path):
     result = _impact(indexed, paths=["../../etc/passwd"])
     assert "error" in result
+
+
+def test_pure_deletion_file_has_importers_as_dependents(repo: Path):
+    target = repo / "src/shop/pair.py"
+    target.write_text("def keep() -> int:\n    return 1\n\ndef gone() -> int:\n    return 2\n",
+                      encoding="utf-8")
+    (repo / "src/shop/uses_pair.py").write_text(
+        "from shop.pair import keep, gone\n", encoding="utf-8")
+    _git(repo, "init")
+    _git(repo, "config", "user.email", "test@example.com")
+    _git(repo, "config", "user.name", "Test")
+    _git(repo, "add", "-A")
+    _git(repo, "commit", "-m", "initial")
+    index_repository(repo)
+    target.write_text("def keep() -> int:\n    return 1\n", encoding="utf-8")
+
+    changes = git_changes(repo)
+    assert "src/shop/pair.py" in changes["paths"]
+
+    result = _impact(repo, diff=True)
+    assert "src/shop/pair.py" in result["changed_files"]
+    assert "src/shop/uses_pair.py" in {d["path"] for d in result["direct_dependents"]}
+
+
+def test_deleted_function_is_reported_and_call_sites_are_marked(repo: Path):
+    target = repo / "src/shop/services/audit.py"
+    target.write_text(
+        "def record(event: str, subject: str) -> None:\n    return None\n\n"
+        "def unused() -> None:\n    return None\n",
+        encoding="utf-8",
+    )
+    caller = repo / "src/shop/caller.py"
+    caller.write_text(
+        "from shop.services.audit import record\n\ndef run() -> None:\n    record('x', 'y')\n",
+        encoding="utf-8",
+    )
+    _git(repo, "init")
+    _git(repo, "config", "user.email", "test@example.com")
+    _git(repo, "config", "user.name", "Test")
+    _git(repo, "add", "-A")
+    _git(repo, "commit", "-m", "initial")
+    index_repository(repo)
+    target.write_text("def unused() -> None:\n    return None\n", encoding="utf-8")
+
+    result = _impact(repo, diff=True)
+    removed = result["target"]["removed_symbols"]
+    assert any(s["name"] == "record" and s["path"] == "src/shop/services/audit.py"
+               for s in removed)
+    blind = {b["kind"]: b for b in result["blind_spots"]}
+    assert "removed-symbols" in blind
+    reasons = [
+        r for d in result["direct_dependents"] if d["path"] == "src/shop/caller.py"
+        for r in d["reasons"]
+    ]
+    assert any(r["relation"] == "references-removed-symbol"
+               and r["symbol"] == "record"
+               and r["confidence"] == "confirmed"
+               for r in reasons)
