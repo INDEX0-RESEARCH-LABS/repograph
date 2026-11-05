@@ -387,6 +387,7 @@ def analyze_impact(
         "evidence": {"location": f"{v['chain'][-1]['from']}:{v['chain'][-1]['line']}"},
     } for v in sorted(transitive.values(), key=lambda x: (x["depth"], x["path"]))]
     transitive_list = [t for t in transitive_list if t["path"] not in direct]
+    transitive_total = len(transitive_list)
 
     related_tests: list[dict] = []
     reach: dict[str, dict] = {}
@@ -454,14 +455,16 @@ def analyze_impact(
             "confidence": _conf(v["confidences"]),
             "rules": v["rules"],
             "evidence": v["rules"][0]["evidence"],
-        } for v in sorted(included.values(), key=lambda x: x["path"]) if v["rules"]][:50]
+        } for v in sorted(included.values(), key=lambda x: x["path"]) if v["rules"]]
+    related_tests_total = len(related_tests)
+    related_tests = related_tests[:50]
 
     affected = target_paths + [d["path"] for d in direct_list] + [t["path"] for t in transitive_list]
     marks = ",".join("?" * len(affected)) if affected else "''"
     route_rows = store.conn.execute(
         f"""SELECT r.method,r.path,r.handler,r.line,r.framework,f.path AS file
             FROM routes r JOIN files f ON f.id=r.file_id
-            WHERE f.path IN ({marks}) ORDER BY f.path, r.line LIMIT 100""",
+            WHERE f.path IN ({marks}) ORDER BY f.path, r.line""",
         affected,
     ).fetchall()
     affected_routes = [{
@@ -471,12 +474,14 @@ def analyze_impact(
         "reason": "route-defined-in-changed-or-dependent-file",
         "evidence": {"extractor": r["framework"], "location": f"{r['file']}:{r['line']}"},
     } for r in route_rows]
+    routes_total = len(affected_routes)
+    affected_routes = affected_routes[:100]
 
     model_rows = store.conn.execute(
         f"""SELECT s.name,s.qualified_name,s.kind,f.path,s.start_line
             FROM symbols s JOIN files f ON f.id=s.file_id
             WHERE s.tags LIKE '%db_model%' AND f.path IN ({marks})
-            ORDER BY f.path, s.start_line LIMIT 100""",
+            ORDER BY f.path, s.start_line""",
         affected,
     ).fetchall()
     related_models = [{
@@ -487,6 +492,8 @@ def analyze_impact(
         "evidence": {"method": "base-class-name-heuristic",
                      "location": f"{m['path']}:{m['start_line']}"},
     } for m in model_rows]
+    models_total = len(related_models)
+    related_models = related_models[:100]
 
     # Explicit blind spots, not silent omissions.
     blind: list[dict] = []
@@ -505,6 +512,25 @@ def analyze_impact(
             "message": ("Changed files differ from their indexed row, so symbol ranges and "
                         "edges may be out of date. Re-run `repograph index .`."),
             "items": stale[:50],
+        })
+    symbols_total = len(changed_symbols)
+    truncated_lists = [
+        name for name, total, cap in (
+            ("symbols", symbols_total, 200),
+            ("transitive_dependents", transitive_total, 200),
+            ("related_tests", related_tests_total, 50),
+            ("affected_routes", routes_total, 100),
+            ("related_models", models_total, 100),
+        ) if total > cap
+    ]
+    if truncated_lists:
+        blind.append({
+            "kind": "output-truncated",
+            "count": len(truncated_lists),
+            "message": ("One or more lists are capped for output; the summary reports the "
+                        "true totals. Narrow the target or raise --depth before trusting "
+                        "the list as complete."),
+            "items": truncated_lists,
         })
     all_unresolved = store.conn.execute(
         "SELECT COUNT(*) FROM imports WHERE kind='unresolved'"
@@ -603,6 +629,8 @@ def analyze_impact(
                 "changed_by_hunk": s["id"] in {x["id"] for x in changed_symbols},
                 "evidence": {"location": f"{s['path']}:{s['start_line']}"},
             } for s in changed_symbols[:200]],
+            "symbols_total": symbols_total,
+            "symbols_truncated": symbols_total > 200,
             "changed_lines": changed_lines,
             "deleted": deleted,
             "missing_from_index": missing,
@@ -611,9 +639,17 @@ def analyze_impact(
         "changed_files": target_paths,
         "direct_dependents": direct_list,
         "transitive_dependents": transitive_list[:200],
+        "transitive_dependents_total": transitive_total,
+        "transitive_dependents_truncated": transitive_total > 200,
         "related_tests": related_tests,
+        "related_tests_total": related_tests_total,
+        "related_tests_truncated": related_tests_total > 50,
         "affected_routes": affected_routes,
+        "affected_routes_total": routes_total,
+        "affected_routes_truncated": routes_total > 100,
         "related_models": related_models,
+        "related_models_total": models_total,
+        "related_models_truncated": models_total > 100,
         "architecture": {
             "layers": dict(by_layer),
             "documentation_mentions": docs,
@@ -625,10 +661,10 @@ def analyze_impact(
             "changed_files": len(target_paths),
             "changed_symbols": len(changed_symbols),
             "direct_dependents": len(direct_list),
-            "transitive_dependents": len(transitive_list),
-            "related_tests": len(related_tests),
-            "affected_routes": len(affected_routes),
-            "related_models": len(related_models),
+            "transitive_dependents": transitive_total,
+            "related_tests": related_tests_total,
+            "affected_routes": routes_total,
+            "related_models": models_total,
             "completeness": "partial" if blind else "partial-static",
             "confidence_counts": {
                 "confirmed": sum(1 for d in direct_list if d["confidence"] == "confirmed"),
