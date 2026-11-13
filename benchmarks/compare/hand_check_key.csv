@@ -1,0 +1,41 @@
+id,repo,importer_file,imported_file,line_snippet,orig_id,tool,category,gt_answer
+1,koa,__tests__/request/charset.test.js,test-helpers/context.js,const request = require('../../test-helpers/context').request,6,repograph,FN,yes
+2,koa,__tests__/request/headers.test.js,test-helpers/context.js,const request = require('../../test-helpers/context').request,36,repograph,FN,yes
+3,koa,__tests__/context/assert.test.js,test-helpers/context.js,const context = require('../../test-helpers/context'),13,code-impact,CI_MISS,yes
+4,koa,__tests__/lib/search-params.test.js,lib/search-params.js,const sp = require('../../lib/search-params'),20,code-impact,CI_MISS,yes
+5,esbuild,lib/shared/common.ts,lib/shared/types.ts,"import type * as types from ""./types""",16,repograph,TP,yes
+6,esbuild,scripts/node-unref-tests.js,scripts/esbuild.js,const esbuild = require('./esbuild').installForTests(),11,repograph,FN,yes
+7,django,django/contrib/gis/db/backends/postgis/operations.py,django/utils/version.py,from django.utils.version import get_version_tuple,31,repograph,TP,yes
+8,django,django/apps/config.py,django/conf/__init__.py,from django.conf import settings,22,any,RANDOM,yes
+9,koa,__tests__/context/onerror.test.js,test-helpers/context.js,const context = require('../../test-helpers/context'),9,repograph,TP,yes
+10,esbuild,scripts/js-api-tests.js,scripts/decorator-tests.js,"const { installForTests, removeRecursiveSync, writeFileAtomic } = require('./esbuild')",12,trace,FP,no
+11,koa,__tests__/response/redirect.test.js,lib/application.js,"const { describe, it } = require('node:test')",40,repograph,FN,yes
+12,koa,lib/request.js,lib/search-params.js,const sp = require('./search-params.js'),1,repograph,TP,yes
+13,koa,__tests__/request/header.test.js,test-helpers/context.js,const request = require('../../test-helpers/context').request,29,repograph,FN,yes
+14,koa,__tests__/response/body.test.js,test-helpers/stream.js,const CustomStream = require('../../test-helpers/stream'),15,code-impact,CI_MISS,yes
+15,koa,__tests__/application/response.test.js,lib/application.js,"const { describe, it } = require('node:test')",39,repograph,FN,yes
+16,django,django/template/backends/django.py,django/template/backends/base.py,from .base import BaseEngine,19,any,RANDOM,yes
+17,esbuild,scripts/test262-async.js,scripts/esbuild.js,const esbuild = require('./esbuild').installForTests(),23,repograph,FN,yes
+18,esbuild,compat-table/src/index.ts,compat-table/src/css_table.ts,import { generateTableForCSS } from './css_table',32,code-impact,CI_MISS,yes
+19,esbuild,compat-table/src/compat-table.ts,compat-table/src/index.ts,"import { Engine, JSFeature, SupportMap } from './index'",28,repograph,TP,yes
+20,koa,__tests__/application/context.test.js,lib/application.js,"const { describe, it } = require('node:test')",25,code-impact,CI_MISS,yes
+21,koa,__tests__/application/compose.test.js,lib/application.js,"const { describe, it } = require('node:test')",18,code-impact,CI_MISS,yes
+22,koa,__tests__/response/body.test.js,test-helpers/stream.js,const CustomStream = require('../../test-helpers/stream'),33,any,RANDOM,yes
+23,django,django/contrib/admin/apps.py,django/utils/translation/__init__.py,from django.utils.translation import gettext_lazy as _,8,any,RANDOM,yes
+24,esbuild,compat-table/src/compat-table.ts,compat-table/src/index.ts,"import { Engine, JSFeature, SupportMap } from './index'",27,code-impact,CI_MISS,yes
+25,koa,__tests__/response/etag.test.js,test-helpers/context.js,const response = require('../../test-helpers/context').response,38,repograph,FN,yes
+26,django,django/db/migrations/writer.py,django/utils/version.py,from django import get_version,14,trace,FP,no
+27,esbuild,compat-table/src/caniuse.ts,compat-table/src/index.ts,"import { CSSFeature, CSSPrefixMap, CSSProperty, Engine, JSFeature, PrefixData, Support, SupportMap } from './index'",3,code-impact,CI_MISS,yes
+28,django,django/apps/registry.py,django/core/exceptions.py,"from django.core.exceptions import AppRegistryNotReady, ImproperlyConfigured",2,repograph,TP,yes
+29,django,django/contrib/gis/db/backends/spatialite/operations.py,django/utils/version.py,from django.utils.version import get_version_tuple,34,repograph,TP,yes
+30,koa,__tests__/lib/search-params.test.js,lib/search-params.js,const sp = require('../../lib/search-params'),17,repograph,TP,yes
+31,django,django/apps/registry.py,django/core/exceptions.py,"from django.core.exceptions import AppRegistryNotReady, ImproperlyConfigured",30,any,RANDOM,yes
+32,koa,__tests__/request/idempotent.test.js,test-helpers/context.js,const request = require('../../test-helpers/context').request,37,repograph,FN,yes
+33,koa,__tests__/application/compose.test.js,lib/application.js,"const { describe, it } = require('node:test')",24,repograph,FN,yes
+34,esbuild,scripts/destructuring-fuzzer.js,scripts/esbuild.js,let es = require('./esbuild').installForTests(),7,repograph,FN,yes
+35,koa,__tests__/context/inspect.test.js,test-helpers/context.js,const prototype = require('../../lib/context'),35,code-impact,CI_MISS,yes
+36,koa,__tests__/application/context.test.js,lib/application.js,"const { describe, it } = require('node:test')",5,repograph,FN,yes
+37,koa,__tests__/context/inspect.test.js,lib/context.js,const prototype = require('../../lib/context'),4,code-impact,CI_MISS,yes
+38,django,django/contrib/admin/filters.py,django/db/models/__init__.py,import datetime,26,repograph,TP,yes
+39,koa,lib/request.js,lib/only.js,const only = require('./only.js'),10,repograph,TP,yes
+40,koa,__tests__/application/currentContext.test.js,lib/application.js,"const { describe, it, beforeEach, afterEach } = require('node:test')",21,repograph,FN,yes
