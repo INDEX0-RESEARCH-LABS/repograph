@@ -385,20 +385,31 @@ def _ts_import(node: Node, out: ParseResult, kind: str = "static") -> None:
     out.imports.append(Import(_text(node), module, 0, names, node.start_point[0] + 1, kind))
 
 
+
+def _require_call_module(node: "Node") -> "str | None":
+    """Return the module string if node is a bare require('...') call, else None."""
+    if node.type != "call_expression":
+        return None
+    fn = _field(node, "function")
+    if fn is None or fn.type != "identifier" or _text(fn) != "require":
+        return None
+    args = _field(node, "arguments")
+    return _string_value(args) if args is not None else None
+
+
 def _ts_require(node: Node, out: ParseResult) -> None:
-    declarator = node.parent
+    # node is the require(...) call_expression.
+    # Walk up past an optional member_expression to find the variable_declarator.
+    parent = node.parent
+    if parent is not None and parent.type == "member_expression":
+        parent = parent.parent
+    declarator = parent
     if declarator is None or declarator.type != "variable_declarator":
         return
-    value = _field(declarator, "value")
-    if value is None:
-        return
-    call = value
-    if call.type != "call_expression":
-        return
-    fn = _field(call, "function")
+    fn = _field(node, "function")
     if fn is None or _text(fn) != "require":
         return
-    args = _field(call, "arguments")
+    args = _field(node, "arguments")
     module = _string_value(args) if args is not None else None
     if module is None:
         return
@@ -457,6 +468,16 @@ def _ts_walk(node: Node, out: ParseResult, scope: list[str]) -> None:
                 elif fn.type == "member_expression":
                     prop = _field(fn, "property")
                     obj = _field(fn, "object")
+                    # require('path').method() — bare call, no assignment
+                    if obj is not None:
+                        req_mod = _require_call_module(obj)
+                        if req_mod is not None:
+                            stem = req_mod.split("/")[-1]
+                            out.imports.append(Import(
+                                _text(child), req_mod, 0,
+                                [("default", stem)],
+                                child.start_point[0] + 1, "require",
+                            ))
                     receiver = None
                     if obj is not None:
                         if obj.type in ("identifier", "this"):
@@ -475,6 +496,10 @@ def _ts_walk(node: Node, out: ParseResult, scope: list[str]) -> None:
             if ctor is not None:
                 out.refs.append(Ref(_text(ctor).split(".")[-1], child.start_point[0] + 1,
                                     ctor.start_point[1], "new"))
+            _ts_walk(child, out, scope)
+            continue
+
+        if typ == "expression_statement":
             _ts_walk(child, out, scope)
             continue
 
