@@ -1,0 +1,31 @@
+{
+  "tool": "trace-mcp",
+  "version": "3.44.0",
+  "repo_root": "/tmp/opencode/compare/repos/koa",
+  "file": "lib/request.js",
+  "get_change_impact": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"target\":{\"path\":\"lib/request.js\",\"symbolId\":\"lib/request.js::__module__#namespace\",\"symbolName\":\"__module__:request\",\"kind\":\"namespace\"},\"summary\":{\"totalFiles\":2,\"totalSymbols\":0,\"maxDepth\":2,\"crossBoundary\":true,\"publicApiAffected\":0,\"untestedDependents\":2,\"highComplexityDependents\":0,\"sentence\":\"Impact: 2 file(s) across 2 module(s), 2 untested.\"},\"risk\":{\"score\":0.2,\"level\":\"low\",\"publicApiBreaking\":false,\"untestedRatio\":1,\"maxComplexity\":0,\"mitigations\":[\"Add test coverage for the target before modifying\",\"2/2 dependents lack tests \u2014 add integration tests\"]},\"affectedTests\":{\"total\":0,\"files\":[],\"truncated\":false},\"dependents\":[{\"path\":\"lib/application.js\",\"edgeTypes\":[\"imports\"],\"depth\":1,\"hasTests\":false},{\"path\":\"test-helpers/context.js\",\"edgeTypes\":[\"imports\"],\"depth\":2,\"hasTests\":false}],\"totalAffected\":2,\"resolution_tiers\":{\"scip_resolved\":0,\"lsp_resolved\":0,\"ast_resolved\":2,\"ast_inferred\":0,\"text_matched\":0},\"byModule\":[{\"module\":\"lib\",\"count\":1,\"files\":[\"lib/application.js\"],\"maxDepth\":1,\"hasUntested\":true},{\"module\":\"test-helpers\",\"count\":1,\"files\":[\"test-helpers/context.js\"],\"maxDepth\":2,\"hasUntested\":true}],\"byEdgeType\":{\"imports\":2},\"byDepth\":{\"1\":1,\"2\":1},\"_hints\":[{\"tool\":\"get_tests_for\",\"args\":{\"symbol_id\":\"<affected_symbol>\"},\"why\":\"Find tests for affected dependents\"},{\"tool\":\"check_rename\",\"args\":{\"symbol_id\":\"<symbol>\"},\"why\":\"Verify rename is safe across all usages\"}]}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 1
+  },
+  "find_usages": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"target\":{\"file\":\"lib/request.js\"},\"references\":[{\"edge_type\":\"imports\",\"resolution_tier\":\"ast_resolved\",\"file\":\"lib/application.js\",\"_freshness\":\"edited_uncommitted\"}],\"total\":1,\"resolution_tiers\":{\"scip_resolved\":0,\"lsp_resolved\":0,\"ast_resolved\":1,\"ast_inferred\":0,\"text_matched\":0},\"_meta\":{\"freshness\":{\"fresh\":0,\"edited_uncommitted\":1,\"stale_index\":0,\"repo_is_stale\":true},\"confidence\":0.65,\"confidence_signals\":{\"top1_strength\":1,\"top_gap\":1,\"identity_match\":0,\"freshness\":0}},\"_hints\":[{\"tool\":\"get_change_impact\",\"args\":{\"symbol_id\":\"<symbol>\"},\"why\":\"See transitive impact beyond direct references\"},{\"tool\":\"get_tests_for\",\"args\":{\"symbol_id\":\"<symbol>\"},\"why\":\"Find tests covering this symbol\"}]}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 2
+  },
+  "stderr": "{\"level\":30,\"time\":1794548929905,\"pid\":16648,\"hostname\":\"omarchy\",\"name\":\"trace-mcp\",\"msg\":\"Daemon auto-spawn is disabled \u2014 running local-only (stdio).\"}\n{\"level\":30,\"time\":1794548929907,\"pid\":16648,\"hostname\":\"omarchy\",\"name\":\"trace-mcp\",\"projectRoot\":\"/tmp/opencode/compare/repos/koa\",\"indexRoot\":\"/tmp/opencode/compare/repos/koa\",\"idleTimeoutMs\":1800000,\"daemonStabilityMs\":30000,\"msg\":\"Starting trace-mcp stdio session...\"}\n{\"level\":30,\"time\":1794548929956,\"pid\":16648,\"hostname\":\"omarchy\",\"name\""
+}

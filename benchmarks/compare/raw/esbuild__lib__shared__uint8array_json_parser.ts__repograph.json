@@ -1,0 +1,323 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-13T05:29:18+00:00",
+  "source": "files",
+  "target": {
+    "paths": [
+      "lib/shared/uint8array_json_parser.ts"
+    ],
+    "symbols": [
+      {
+        "name": "State",
+        "qualified_name": "State",
+        "kind": "enum",
+        "path": "lib/shared/uint8array_json_parser.ts",
+        "lines": [
+          1,
+          5
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/uint8array_json_parser.ts:1"
+        }
+      },
+      {
+        "name": "Char",
+        "qualified_name": "Char",
+        "kind": "enum",
+        "path": "lib/shared/uint8array_json_parser.ts",
+        "lines": [
+          7,
+          52
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/uint8array_json_parser.ts:7"
+        }
+      },
+      {
+        "name": "throwSyntaxError",
+        "qualified_name": "throwSyntaxError",
+        "kind": "function",
+        "path": "lib/shared/uint8array_json_parser.ts",
+        "lines": [
+          56,
+          75
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/uint8array_json_parser.ts:56"
+        }
+      },
+      {
+        "name": "JSON_parse",
+        "qualified_name": "JSON_parse",
+        "kind": "function",
+        "path": "lib/shared/uint8array_json_parser.ts",
+        "lines": [
+          77,
+          415
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/uint8array_json_parser.ts:77"
+        }
+      }
+    ],
+    "symbols_total": 4,
+    "symbols_truncated": false,
+    "changed_lines": {},
+    "removed_symbols": [],
+    "deleted": [],
+    "missing_from_index": [],
+    "diff": null
+  },
+  "changed_files": [
+    "lib/shared/uint8array_json_parser.ts"
+  ],
+  "direct_dependents": [
+    {
+      "path": "lib/shared/common.ts",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "lib/shared/uint8array_json_parser.ts",
+          "line": 3,
+          "module": "./uint8array_json_parser",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "lib/shared/common.ts:3"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "lib/shared/uint8array_json_parser.ts",
+          "symbol": "JSON_parse",
+          "line": 1879,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "lib/shared/common.ts:1879"
+          }
+        }
+      ],
+      "reason_count": 2,
+      "evidence": {
+        "location": "lib/shared/common.ts:3"
+      }
+    }
+  ],
+  "transitive_dependents": [
+    {
+      "path": "lib/npm/browser.ts",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "lib/npm/browser.ts",
+          "to": "lib/shared/common.ts",
+          "line": 2,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "lib/shared/common.ts",
+          "to": "lib/shared/uint8array_json_parser.ts",
+          "line": 3,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "lib/shared/common.ts:3"
+      }
+    },
+    {
+      "path": "lib/npm/node.ts",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "lib/npm/node.ts",
+          "to": "lib/shared/common.ts",
+          "line": 2,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "lib/shared/common.ts",
+          "to": "lib/shared/uint8array_json_parser.ts",
+          "line": 3,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "lib/shared/common.ts:3"
+      }
+    }
+  ],
+  "transitive_dependents_total": 2,
+  "transitive_dependents_truncated": false,
+  "related_tests": [],
+  "related_tests_total": 0,
+  "related_tests_truncated": false,
+  "affected_routes": [],
+  "affected_routes_total": 0,
+  "affected_routes_truncated": false,
+  "related_models": [],
+  "related_models_total": 0,
+  "related_models_truncated": false,
+  "architecture": {
+    "layers": {
+      "domain": 1
+    },
+    "documentation_mentions": [
+      {
+        "path": "README.md",
+        "line": 23,
+        "excerpt": "<img alt=\"Bar chart with benchmark results\" src=\"./images/benchmark-light.svg\">",
+        "matched": "Char",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "README.md:23"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 62,
+        "excerpt": "This phase starts with a set of entry points and traverses the dependency graph to find all modules that need to be in the bundle. This is implemented in `bundler.ScanBundle()` as a parallel worklist algorithm. The workl",
+        "matched": "State",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:62"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 110,
+        "excerpt": "One TypeScript subtlety is that unused imports in TypeScript code must be removed, since they may be type-only imports. And if all imports in an import statement are removed, the whole import statement itself must also b",
+        "matched": "State",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:110"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 124,
+        "excerpt": "If a module uses any CommonJS features (e.g. references `exports`, references `module`, or uses a top-level `return` statement) then it's considered a CommonJS module. This means it's represented as a separate closure wi",
+        "matched": "State",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:124"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 209,
+        "excerpt": "These two syntaxes are supported side-by-side as transparently as possible. This means you can use both CommonJS syntax (`exports` and `module` assignments and `require()` calls) and ES6 syntax (`import` and `export` sta",
+        "matched": "State",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:209"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 229,
+        "excerpt": "The goal of tree shaking is to remove code that will never be used from the final bundle, which reduces download and parse time. Tree shaking treats the input files as a graph. Each node in the graph is a top-level state",
+        "matched": "State",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:229"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 231,
+        "excerpt": "Each part may declare symbols, reference symbols, and depend on other files. Parts are also marked as either having side effects or not. For example, the statement `let foo = 123` does not have side effects because, if n",
+        "matched": "State",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:231"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 233,
+        "excerpt": "If part A references a symbol declared in part B, the graph has an edge from A to B. References can span across files due to ES6 imports and exports. And if part A depends on file C, the graph has an edge from A to every",
+        "matched": "State",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:233"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 279,
+        "excerpt": "After all chunks are identified, the chunks are linked together by automatically generating import and export statements for references to symbols that are declared in another chunk. Import statements must also be insert",
+        "matched": "State",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:279"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 493,
+        "excerpt": "function useReducer(reducer, initialState) {",
+        "matched": "State",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:493"
+        }
+      }
+    ],
+    "note": "Documentation matches are lexical and only point to where a concept is discussed."
+  },
+  "blind_spots": [
+    {
+      "kind": "repo-parse-errors",
+      "count": 1,
+      "message": "Files with parse errors contribute no symbols or edges anywhere in the index."
+    }
+  ],
+  "repo_health": {
+    "unresolved_imports": 1,
+    "dynamic_imports": 6,
+    "note": "Repository-wide counts; they are not scoped to this change."
+  },
+  "caveats": [
+    "This is a static analysis of statically resolvable relationships. Absence of a relationship is not evidence that a change is safe.",
+    "Dynamic imports, reflection, runtime dependency injection, generated code and external consumers are not modeled.",
+    "Test selection uses import edges and naming conventions, not execution traces; it can miss tests and include irrelevant ones.",
+    "Route and database-model detection use framework-specific heuristics and may produce false positives or miss frameworks.",
+    "Confidence levels describe extraction certainty, not the risk of the change itself."
+  ],
+  "summary": {
+    "changed_files": 1,
+    "changed_symbols": 4,
+    "direct_dependents": 1,
+    "transitive_dependents": 2,
+    "related_tests": 0,
+    "affected_routes": 0,
+    "related_models": 0,
+    "completeness": "partial",
+    "confidence_counts": {
+      "confirmed": 1,
+      "inferred": 0
+    }
+  },
+  "_query_time_ms": 5.4,
+  "_wall_ms": 63.0,
+  "_meta": {
+    "repo": "esbuild",
+    "file": "lib/shared/uint8array_json_parser.ts",
+    "tool": "repograph",
+    "wall_s": 0.1
+  }
+}

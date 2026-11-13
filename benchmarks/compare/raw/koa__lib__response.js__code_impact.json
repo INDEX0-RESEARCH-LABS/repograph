@@ -1,0 +1,50 @@
+{
+  "tool": "code-impact-mcp",
+  "version": "1.6.10",
+  "repo_root": "/tmp/opencode/compare/repos/koa",
+  "file": "lib/response.js",
+  "refresh": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"status\": \"Graph rebuilt successfully\",\n  \"files\": 7,\n  \"edges\": 9,\n  \"buildTimeMs\": 202,\n  \"circularDependencies\": 0\n}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 1
+  },
+  "get_dependencies": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"file\": \"lib/response.js\",\n  \"summary\": \"lib/response.js is a bridge module with 1 incoming and 2 outgoing dependency edges.\",\n  \"explanation\": \"This is a structural dependency view. It does not distinguish runtime-only vs type-only usage yet.\",\n  \"imports\": [\n    \"lib/is-stream.js\",\n    \"lib/only.js\"\n  ],\n  \"importedBy\": [\n    \"lib/application.js\"\n  ],\n  \"exports\": [],\n  \"fanIn\": 1,\n  \"fanOut\": 2,\n  \"isHighCoupling\": false,\n  \"couplingRole\": \"bridge module\"\n}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 2
+  },
+  "analyze_impact": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"summary\": \"Low graph impact: the current change looks locally contained in graph terms.\",\n  \"scanSummary\": \"LOW, 1 affected across lib (1)\",\n  \"explanation\": \"This result is graph-based only. It does not account for tests, runtime behavior, migrations, or production traffic.\",\n  \"changedFiles\": [\n    \"lib/response.js\"\n  ],\n  \"directlyAffected\": [\n    \"lib/application.js\"\n  ],\n  \"transitivelyAffected\": [],\n  \"impactBreakdown\": {\n    \"directCount\": 1,\n    \"transitiveCount\": 0,\n    \"directScan\": {\n      \"totalFiles\": 1,\n      \"topDirectories\": [\n        {\n          \"directory\": \"lib\",\n          \"count\": 1\n        }\n      ],\n      \"directoryGroups\": [\n        {\n          \"directory\": \"lib\",\n          \"count\": 1,\n          \"examples\": [\n            \"lib/application.js\"\n          ],\n          \"remainingExamples\": 0\n        }\n      ],\n      \"firstFiles\": [\n        \"lib/application.js\"\n      ],\n      \"remainingFiles\": 0,\n      \"summaryLine\": \"lib (1)\",\n      \"displayMode\": \"flat\"\n    },\n    \"transitiveScan\": {\n      \"totalFiles\": 0,\n      \"topDirectories\": [],\n      \"directoryGroups\": [],\n      \"firstFiles\": [],\n      \"remainingFiles\": 0,\n      \"summaryLine\": \"\",\n      \"displayMode\": \"flat\"\n    }\n  },\n  \"riskScore\": 0.14,\n  \"totalAffected\": 1,\n  \"cascadeDepth\": 2\n}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 3
+  },
+  "stderr": "",
+  "_wall_ms": 1177.2,
+  "_meta": {
+    "repo": "koa",
+    "file": "lib/response.js",
+    "tool": "code_impact",
+    "wall_s": 1.2
+  }
+}

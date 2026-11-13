@@ -1,0 +1,50 @@
+{
+  "tool": "code-impact-mcp",
+  "version": "1.6.10",
+  "repo_root": "/tmp/opencode/compare/repos/esbuild",
+  "file": "scripts/esbuild.js",
+  "refresh": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"status\": \"Graph rebuilt successfully\",\n  \"files\": 30,\n  \"edges\": 27,\n  \"buildTimeMs\": 1173,\n  \"circularDependencies\": 0\n}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 1
+  },
+  "get_dependencies": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"file\": \"scripts/esbuild.js\",\n  \"summary\": \"scripts/esbuild.js is a central module with 14 incoming and 0 outgoing dependency edges.\",\n  \"explanation\": \"This is a structural dependency view. It does not distinguish runtime-only vs type-only usage yet.\",\n  \"imports\": [],\n  \"importedBy\": [\n    \"scripts/destructuring-fuzzer.js\",\n    \"scripts/end-to-end-tests.js\",\n    \"scripts/js-api-tests.js\",\n    \"scripts/node-unref-tests.js\",\n    \"scripts/plugin-tests.js\",\n    \"scripts/register-test.js\",\n    \"scripts/terser-tests.js\",\n    \"scripts/test-yarnpnp.js\",\n    \"scripts/test262-async.js\",\n    \"scripts/test262.js\",\n    \"scripts/ts-type-tests.js\",\n    \"scripts/uglify-tests.js\",\n    \"scripts/verify-source-map.js\",\n    \"scripts/wasm-tests.js\"\n  ],\n  \"exports\": [],\n  \"fanIn\": 14,\n  \"fanOut\": 0,\n  \"isHighCoupling\": true,\n  \"couplingRole\": \"central module\"\n}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 2
+  },
+  "analyze_impact": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"summary\": \"Medium graph impact: review the 14 affected files before changing this area.\",\n  \"scanSummary\": \"MEDIUM, 14 affected across scripts (14)\",\n  \"explanation\": \"This result is graph-based only. It does not account for tests, runtime behavior, migrations, or production traffic.\",\n  \"changedFiles\": [\n    \"scripts/esbuild.js\"\n  ],\n  \"directlyAffected\": [\n    \"scripts/destructuring-fuzzer.js\",\n    \"scripts/end-to-end-tests.js\",\n    \"scripts/js-api-tests.js\",\n    \"scripts/node-unref-tests.js\",\n    \"scripts/plugin-tests.js\",\n    \"scripts/register-test.js\",\n    \"scripts/terser-tests.js\",\n    \"scripts/test-yarnpnp.js\",\n    \"scripts/test262-async.js\",\n    \"scripts/test262.js\",\n    \"scripts/ts-type-tests.js\",\n    \"scripts/uglify-tests.js\",\n    \"scripts/verify-source-map.js\",\n    \"scripts/wasm-tests.js\"\n  ],\n  \"transitivelyAffected\": [],\n  \"impactBreakdown\": {\n    \"directCount\": 14,\n    \"transitiveCount\": 0,\n    \"directScan\": {\n      \"totalFiles\": 14,\n      \"topDirectories\": [\n        {\n          \"directory\": \"scripts\",\n          \"count\": 14\n        }\n      ],\n      \"directoryGroups\": [\n        {\n          \"directory\": \"scripts\",\n          \"count\": 14,\n          \"examples\": [\n            \"scripts/destructuring-fuzzer.js\",\n            \"scripts/end-to-end-tests.js\",\n            \"scripts/js-api-tests.js\"\n          ],\n          \"remainingExamples\": 11\n        }\n      ],\n      \"firstFiles\": [\n        \"scripts/destructuring-fuzzer.js\",\n        \"scripts/end-to-end-tests.js\",\n        \"scripts/js-api-tests.js\",\n        \"scripts/node-unref-tests.js\",\n        \"scripts/plugin-tests.js\",\n        \"scripts/register-test.js\",\n        \"scripts/terser-tests.js\",\n        \"scripts/test-yarnpnp.js\"\n      ],\n      \"remainingFiles\": 6,\n      \"summaryLine\": \"scripts (14)\",\n      \"displayMode\": \"grouped\"\n    },\n    \"transitiveScan\": {\n      \"totalFiles\": 0,\n      \"topDirectories\": [],\n      \"directoryGroups\": [],\n      \"firstFiles\": [],\n      \"remainingFiles\": 0,\n      \"summaryLine\": \"\",\n      \"displayMode\": \"flat\"\n    }\n  },\n  \"riskScore\": 0.47,\n  \"totalAffected\": 14,\n  \"cascadeDepth\": 2\n}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 3
+  },
+  "stderr": "",
+  "_wall_ms": 1934.4,
+  "_meta": {
+    "repo": "esbuild",
+    "file": "scripts/esbuild.js",
+    "tool": "code_impact",
+    "wall_s": 1.9
+  }
+}

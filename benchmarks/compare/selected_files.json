@@ -1,0 +1,37 @@
+{
+  "django": [
+    "django/db/__init__.py",
+    "django/db/models/__init__.py",
+    "django/core/exceptions.py",
+    "django/conf/__init__.py",
+    "django/utils/translation/__init__.py",
+    "django/conf/locale/es_AR/__init__.py",
+    "django/contrib/sites/shortcuts.py",
+    "django/utils/version.py",
+    "django/conf/locale/ta/formats.py",
+    "django/template/backends/base.py"
+  ],
+  "esbuild": [
+    "scripts/esbuild.js",
+    "compat-table/src/index.ts",
+    "lib/shared/types.ts",
+    "lib/npm/node-platform.ts",
+    "lib/shared/common.ts",
+    "lib/shared/uint8array_json_parser.ts",
+    "compat-table/src/css_table.ts",
+    "scripts/decorator-tests.js",
+    "require/yarnpnp/in.mjs",
+    "lib/shared/worker.ts"
+  ],
+  "koa": [
+    "test-helpers/context.js",
+    "lib/only.js",
+    "lib/context.js",
+    "lib/is-stream.js",
+    "lib/search-params.js",
+    "lib/application.js",
+    "test-helpers/stream.js",
+    "lib/request.js",
+    "lib/response.js"
+  ]
+}

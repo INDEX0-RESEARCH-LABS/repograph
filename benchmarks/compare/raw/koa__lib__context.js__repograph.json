@@ -1,0 +1,1358 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-13T05:30:14+00:00",
+  "source": "files",
+  "target": {
+    "paths": [
+      "lib/context.js"
+    ],
+    "symbols": [],
+    "symbols_total": 0,
+    "symbols_truncated": false,
+    "changed_lines": {},
+    "removed_symbols": [],
+    "deleted": [],
+    "missing_from_index": [],
+    "diff": null
+  },
+  "changed_files": [
+    "lib/context.js"
+  ],
+  "direct_dependents": [
+    {
+      "path": "__tests__/context/inspect.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "lib/context.js",
+          "line": 4,
+          "module": "../../lib/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/context/inspect.test.js:4"
+          }
+        }
+      ],
+      "reason_count": 1,
+      "evidence": {
+        "location": "__tests__/context/inspect.test.js:4"
+      }
+    },
+    {
+      "path": "lib/application.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "lib/context.js",
+          "line": 21,
+          "module": "./context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "lib/application.js:21"
+          }
+        }
+      ],
+      "reason_count": 1,
+      "evidence": {
+        "location": "lib/application.js:21"
+      }
+    }
+  ],
+  "transitive_dependents": [
+    {
+      "path": "test-helpers/context.js",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "test-helpers/context.js",
+          "to": "lib/application.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "lib/application.js",
+          "to": "lib/context.js",
+          "line": 21,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "lib/application.js:21"
+      }
+    },
+    {
+      "path": "__tests__/context/assert.test.js",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "__tests__/context/assert.test.js",
+          "to": "test-helpers/context.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "test-helpers/context.js",
+          "to": "lib/application.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "lib/application.js",
+          "to": "lib/context.js",
+          "line": 21,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "lib/application.js:21"
+      }
+    },
+    {
+      "path": "__tests__/context/onerror.test.js",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "__tests__/context/onerror.test.js",
+          "to": "test-helpers/context.js",
+          "line": 7,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "test-helpers/context.js",
+          "to": "lib/application.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "lib/application.js",
+          "to": "lib/context.js",
+          "line": 21,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "lib/application.js:21"
+      }
+    },
+    {
+      "path": "__tests__/context/throw.test.js",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "__tests__/context/throw.test.js",
+          "to": "test-helpers/context.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "test-helpers/context.js",
+          "to": "lib/application.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "lib/application.js",
+          "to": "lib/context.js",
+          "line": 21,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "lib/application.js:21"
+      }
+    },
+    {
+      "path": "__tests__/context/toJSON.test.js",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "__tests__/context/toJSON.test.js",
+          "to": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "test-helpers/context.js",
+          "to": "lib/application.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "lib/application.js",
+          "to": "lib/context.js",
+          "line": 21,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "lib/application.js:21"
+      }
+    },
+    {
+      "path": "__tests__/request/accept.test.js",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "__tests__/request/accept.test.js",
+          "to": "test-helpers/context.js",
+          "line": 6,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "test-helpers/context.js",
+          "to": "lib/application.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "lib/application.js",
+          "to": "lib/context.js",
+          "line": 21,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "lib/application.js:21"
+      }
+    },
+    {
+      "path": "__tests__/request/accepts.test.js",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "__tests__/request/accepts.test.js",
+          "to": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "test-helpers/context.js",
+          "to": "lib/application.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "lib/application.js",
+          "to": "lib/context.js",
+          "line": 21,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "lib/application.js:21"
+      }
+    },
+    {
+      "path": "__tests__/request/acceptsCharsets.test.js",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "__tests__/request/acceptsCharsets.test.js",
+          "to": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "test-helpers/context.js",
+          "to": "lib/application.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "lib/application.js",
+          "to": "lib/context.js",
+          "line": 21,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "lib/application.js:21"
+      }
+    },
+    {
+      "path": "__tests__/request/acceptsEncodings.test.js",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "__tests__/request/acceptsEncodings.test.js",
+          "to": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "test-helpers/context.js",
+          "to": "lib/application.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "lib/application.js",
+          "to": "lib/context.js",
+          "line": 21,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "lib/application.js:21"
+      }
+    },
+    {
+      "path": "__tests__/request/acceptsLanguages.test.js",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "__tests__/request/acceptsLanguages.test.js",
+          "to": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "test-helpers/context.js",
+          "to": "lib/application.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "lib/application.js",
+          "to": "lib/context.js",
+          "line": 21,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "lib/application.js:21"
+      }
+    },
+    {
+      "path": "__tests__/request/fresh.test.js",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "__tests__/request/fresh.test.js",
+          "to": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "test-helpers/context.js",
+          "to": "lib/application.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "lib/application.js",
+          "to": "lib/context.js",
+          "line": 21,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "lib/application.js:21"
+      }
+    },
+    {
+      "path": "__tests__/request/get.test.js",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "__tests__/request/get.test.js",
+          "to": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "test-helpers/context.js",
+          "to": "lib/application.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "lib/application.js",
+          "to": "lib/context.js",
+          "line": 21,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "lib/application.js:21"
+      }
+    },
+    {
+      "path": "__tests__/request/href.test.js",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "__tests__/request/href.test.js",
+          "to": "test-helpers/context.js",
+          "line": 8,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "test-helpers/context.js",
+          "to": "lib/application.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "lib/application.js",
+          "to": "lib/context.js",
+          "line": 21,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "lib/application.js:21"
+      }
+    },
+    {
+      "path": "__tests__/request/is.test.js",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "__tests__/request/is.test.js",
+          "to": "test-helpers/context.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "test-helpers/context.js",
+          "to": "lib/application.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "lib/application.js",
+          "to": "lib/context.js",
+          "line": 21,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "lib/application.js:21"
+      }
+    },
+    {
+      "path": "__tests__/request/origin.test.js",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "__tests__/request/origin.test.js",
+          "to": "test-helpers/context.js",
+          "line": 6,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "test-helpers/context.js",
+          "to": "lib/application.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "lib/application.js",
+          "to": "lib/context.js",
+          "line": 21,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "lib/application.js:21"
+      }
+    },
+    {
+      "path": "__tests__/request/path.test.js",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "__tests__/request/path.test.js",
+          "to": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "test-helpers/context.js",
+          "to": "lib/application.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "lib/application.js",
+          "to": "lib/context.js",
+          "line": 21,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "lib/application.js:21"
+      }
+    },
+    {
+      "path": "__tests__/request/query.test.js",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "__tests__/request/query.test.js",
+          "to": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "test-helpers/context.js",
+          "to": "lib/application.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "lib/application.js",
+          "to": "lib/context.js",
+          "line": 21,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "lib/application.js:21"
+      }
+    },
+    {
+      "path": "__tests__/request/querystring.test.js",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "__tests__/request/querystring.test.js",
+          "to": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "test-helpers/context.js",
+          "to": "lib/application.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "lib/application.js",
+          "to": "lib/context.js",
+          "line": 21,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "lib/application.js:21"
+      }
+    },
+    {
+      "path": "__tests__/request/search.test.js",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "__tests__/request/search.test.js",
+          "to": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "test-helpers/context.js",
+          "to": "lib/application.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "lib/application.js",
+          "to": "lib/context.js",
+          "line": 21,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "lib/application.js:21"
+      }
+    },
+    {
+      "path": "__tests__/request/stale.test.js",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "__tests__/request/stale.test.js",
+          "to": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "test-helpers/context.js",
+          "to": "lib/application.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "lib/application.js",
+          "to": "lib/context.js",
+          "line": 21,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "lib/application.js:21"
+      }
+    },
+    {
+      "path": "__tests__/request/whatwg-url.test.js",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "__tests__/request/whatwg-url.test.js",
+          "to": "test-helpers/context.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "test-helpers/context.js",
+          "to": "lib/application.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "lib/application.js",
+          "to": "lib/context.js",
+          "line": 21,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "lib/application.js:21"
+      }
+    },
+    {
+      "path": "__tests__/response/append.test.js",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "__tests__/response/append.test.js",
+          "to": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "test-helpers/context.js",
+          "to": "lib/application.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "lib/application.js",
+          "to": "lib/context.js",
+          "line": 21,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "lib/application.js:21"
+      }
+    },
+    {
+      "path": "__tests__/response/attachment.test.js",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "__tests__/response/attachment.test.js",
+          "to": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "test-helpers/context.js",
+          "to": "lib/application.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "lib/application.js",
+          "to": "lib/context.js",
+          "line": 21,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "lib/application.js:21"
+      }
+    },
+    {
+      "path": "__tests__/response/back.test.js",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "__tests__/response/back.test.js",
+          "to": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "test-helpers/context.js",
+          "to": "lib/application.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "lib/application.js",
+          "to": "lib/context.js",
+          "line": 21,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "lib/application.js:21"
+      }
+    },
+    {
+      "path": "__tests__/response/get.test.js",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "__tests__/response/get.test.js",
+          "to": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "test-helpers/context.js",
+          "to": "lib/application.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "lib/application.js",
+          "to": "lib/context.js",
+          "line": 21,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "lib/application.js:21"
+      }
+    },
+    {
+      "path": "__tests__/response/has.test.js",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "__tests__/response/has.test.js",
+          "to": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "test-helpers/context.js",
+          "to": "lib/application.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "lib/application.js",
+          "to": "lib/context.js",
+          "line": 21,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "lib/application.js:21"
+      }
+    },
+    {
+      "path": "__tests__/response/is.test.js",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "__tests__/response/is.test.js",
+          "to": "test-helpers/context.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "test-helpers/context.js",
+          "to": "lib/application.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "lib/application.js",
+          "to": "lib/context.js",
+          "line": 21,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "lib/application.js:21"
+      }
+    },
+    {
+      "path": "__tests__/response/redirect.test.js",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "__tests__/response/redirect.test.js",
+          "to": "test-helpers/context.js",
+          "line": 6,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "test-helpers/context.js",
+          "to": "lib/application.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "lib/application.js",
+          "to": "lib/context.js",
+          "line": 21,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "lib/application.js:21"
+      }
+    },
+    {
+      "path": "__tests__/response/remove.test.js",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "__tests__/response/remove.test.js",
+          "to": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "test-helpers/context.js",
+          "to": "lib/application.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "lib/application.js",
+          "to": "lib/context.js",
+          "line": 21,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "lib/application.js:21"
+      }
+    },
+    {
+      "path": "__tests__/response/set.test.js",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "__tests__/response/set.test.js",
+          "to": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "test-helpers/context.js",
+          "to": "lib/application.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "lib/application.js",
+          "to": "lib/context.js",
+          "line": 21,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "lib/application.js:21"
+      }
+    },
+    {
+      "path": "__tests__/response/type.test.js",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "__tests__/response/type.test.js",
+          "to": "test-helpers/context.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "test-helpers/context.js",
+          "to": "lib/application.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "lib/application.js",
+          "to": "lib/context.js",
+          "line": 21,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "lib/application.js:21"
+      }
+    },
+    {
+      "path": "__tests__/response/vary.test.js",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "__tests__/response/vary.test.js",
+          "to": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "test-helpers/context.js",
+          "to": "lib/application.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "lib/application.js",
+          "to": "lib/context.js",
+          "line": 21,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "lib/application.js:21"
+      }
+    }
+  ],
+  "transitive_dependents_total": 32,
+  "transitive_dependents_truncated": false,
+  "related_tests": [
+    {
+      "path": "__tests__/application/context.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-name-matches-changed-file",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/application/context.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/application/context.test.js",
+        "method": "path-name-convention"
+      }
+    },
+    {
+      "path": "__tests__/application/inspect.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/application/inspect.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/application/inspect.test.js",
+        "method": "path-name-convention"
+      }
+    },
+    {
+      "path": "__tests__/context/inspect.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "lib/context.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/context/inspect.test.js:4"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/context/inspect.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/context/inspect.test.js:4"
+      }
+    },
+    {
+      "path": "__tests__/request/inspect.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/request/inspect.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/request/inspect.test.js",
+        "method": "path-name-convention"
+      }
+    },
+    {
+      "path": "__tests__/response/inspect.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/response/inspect.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/response/inspect.test.js",
+        "method": "path-name-convention"
+      }
+    }
+  ],
+  "related_tests_total": 5,
+  "related_tests_truncated": false,
+  "affected_routes": [],
+  "affected_routes_total": 0,
+  "affected_routes_truncated": false,
+  "related_models": [],
+  "related_models_total": 0,
+  "related_models_truncated": false,
+  "architecture": {
+    "layers": {
+      "domain": 1
+    },
+    "documentation_mentions": [
+      {
+        "path": "docs/troubleshooting.md",
+        "line": 4,
+        "excerpt": "- [My response or context changes have no effect](#my-response-or-context-changes-have-no-effect)",
+        "matched": "context",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/troubleshooting.md:4"
+        }
+      },
+      {
+        "path": "docs/troubleshooting.md",
+        "line": 20,
+        "excerpt": "- [My response or context changes have no effect](#my-response-or-context-changes-have-no-effect)",
+        "matched": "context",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/troubleshooting.md:20"
+        }
+      },
+      {
+        "path": "docs/troubleshooting.md",
+        "line": 23,
+        "excerpt": "## My response or context changes have no effect",
+        "matched": "context",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/troubleshooting.md:23"
+        }
+      },
+      {
+        "path": "docs/troubleshooting.md",
+        "line": 109,
+        "excerpt": "This is less common than [My response or context changes have no effect](#my-response-or-context-changes-have-no-effect),",
+        "matched": "context",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/troubleshooting.md:109"
+        }
+      },
+      {
+        "path": "docs/migration-v2-to-v3.md",
+        "line": 86,
+        "excerpt": "Koa v3 adds support for [AsyncLocalStorage](https://nodejs.org/api/async_context.html#class-asynclocalstorage), which allows you to access the current context from anywhere in your application:",
+        "matched": "context",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/migration-v2-to-v3.md:86"
+        }
+      },
+      {
+        "path": "docs/migration-v2-to-v3.md",
+        "line": 98,
+        "excerpt": "// Access the current context",
+        "matched": "context",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/migration-v2-to-v3.md:98"
+        }
+      },
+      {
+        "path": "docs/migration-v2-to-v3.md",
+        "line": 99,
+        "excerpt": "const ctx = app.currentContext",
+        "matched": "context",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/migration-v2-to-v3.md:99"
+        }
+      },
+      {
+        "path": "docs/migration-v2-to-v3.md",
+        "line": 117,
+        "excerpt": "// Access the current context",
+        "matched": "context",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/migration-v2-to-v3.md:117"
+        }
+      },
+      {
+        "path": "docs/migration-v1-to-v2.md",
+        "line": 31,
+        "excerpt": "The signature has changed to pass `Context` via an explicit parameter, `ctx` above, instead of via",
+        "matched": "context",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/migration-v1-to-v2.md:31"
+        }
+      },
+      {
+        "path": "docs/migration-v1-to-v2.md",
+        "line": 32,
+        "excerpt": "`this`.  The context passing change makes Koa more compatible with es6 arrow functions, which capture `this`.",
+        "matched": "context",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/migration-v1-to-v2.md:32"
+        }
+      }
+    ],
+    "note": "Documentation matches are lexical and only point to where a concept is discussed."
+  },
+  "blind_spots": [
+    {
+      "kind": "external-imports",
+      "count": 6,
+      "message": "External packages were not analyzed; only their local import sites are known.",
+      "items": [
+        "cookies",
+        "delegates",
+        "http-assert",
+        "http-errors",
+        "statuses",
+        "util"
+      ]
+    },
+    {
+      "kind": "test-selection-reachability",
+      "count": 31,
+      "message": "Test files reachable through dependent modules but not in the selected list. The list is a selection, not the full impact; run these or the suite before trusting it.",
+      "items": [
+        "__tests__/context/assert.test.js",
+        "__tests__/context/onerror.test.js",
+        "__tests__/context/throw.test.js",
+        "__tests__/context/toJSON.test.js",
+        "__tests__/request/accept.test.js",
+        "__tests__/request/accepts.test.js",
+        "__tests__/request/acceptsCharsets.test.js",
+        "__tests__/request/acceptsEncodings.test.js",
+        "__tests__/request/acceptsLanguages.test.js",
+        "__tests__/request/fresh.test.js",
+        "__tests__/request/get.test.js",
+        "__tests__/request/href.test.js",
+        "__tests__/request/is.test.js",
+        "__tests__/request/origin.test.js",
+        "__tests__/request/path.test.js",
+        "__tests__/request/query.test.js",
+        "__tests__/request/querystring.test.js",
+        "__tests__/request/search.test.js",
+        "__tests__/request/stale.test.js",
+        "__tests__/request/whatwg-url.test.js",
+        "__tests__/response/append.test.js",
+        "__tests__/response/attachment.test.js",
+        "__tests__/response/back.test.js",
+        "__tests__/response/get.test.js",
+        "__tests__/response/has.test.js",
+        "__tests__/response/is.test.js",
+        "__tests__/response/redirect.test.js",
+        "__tests__/response/remove.test.js",
+        "__tests__/response/set.test.js",
+        "__tests__/response/type.test.js",
+        "__tests__/response/vary.test.js"
+      ]
+    }
+  ],
+  "repo_health": {
+    "unresolved_imports": 23,
+    "dynamic_imports": 0,
+    "note": "Repository-wide counts; they are not scoped to this change."
+  },
+  "caveats": [
+    "This is a static analysis of statically resolvable relationships. Absence of a relationship is not evidence that a change is safe.",
+    "Dynamic imports, reflection, runtime dependency injection, generated code and external consumers are not modeled.",
+    "Test selection uses import edges and naming conventions, not execution traces; it can miss tests and include irrelevant ones.",
+    "Route and database-model detection use framework-specific heuristics and may produce false positives or miss frameworks.",
+    "Confidence levels describe extraction certainty, not the risk of the change itself."
+  ],
+  "summary": {
+    "changed_files": 1,
+    "changed_symbols": 0,
+    "direct_dependents": 2,
+    "transitive_dependents": 32,
+    "related_tests": 5,
+    "affected_routes": 0,
+    "related_models": 0,
+    "completeness": "partial",
+    "confidence_counts": {
+      "confirmed": 2,
+      "inferred": 0
+    }
+  },
+  "_query_time_ms": 6.5,
+  "_wall_ms": 57.4,
+  "_meta": {
+    "repo": "koa",
+    "file": "lib/context.js",
+    "tool": "repograph",
+    "wall_s": 0.1
+  }
+}

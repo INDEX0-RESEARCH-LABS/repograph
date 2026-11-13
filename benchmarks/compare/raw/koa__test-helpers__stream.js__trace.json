@@ -1,0 +1,31 @@
+{
+  "tool": "trace-mcp",
+  "version": "3.44.0",
+  "repo_root": "/tmp/opencode/compare/repos/koa",
+  "file": "test-helpers/stream.js",
+  "get_change_impact": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"target\":{\"path\":\"test-helpers/stream.js\",\"symbolId\":\"test-helpers/stream.js::Readable#class\",\"symbolName\":\"Readable\",\"kind\":\"class\"},\"summary\":{\"totalFiles\":0,\"totalSymbols\":0,\"maxDepth\":0,\"crossBoundary\":false,\"publicApiAffected\":0,\"untestedDependents\":0,\"highComplexityDependents\":0,\"sentence\":\"Impact: 0 file(s) across 0 module(s).\"},\"risk\":{\"score\":0.16,\"level\":\"low\",\"publicApiBreaking\":false,\"untestedRatio\":0,\"maxComplexity\":0,\"mitigations\":[\"Add test coverage for the target before modifying\"]},\"affectedTests\":{\"total\":0,\"files\":[],\"truncated\":false},\"dependents\":[],\"totalAffected\":0,\"resolution_tiers\":{\"scip_resolved\":0,\"lsp_resolved\":0,\"ast_resolved\":0,\"ast_inferred\":0,\"text_matched\":0},\"_methodology\":{\"algorithm\":\"reverse_dependency_graph_bfs\",\"signals\":[\"static import/export edges from the dependency graph\",\"co-change pairs from git history (temporal coupling)\",\"breaking-change detection via exported-symbol comparison\"],\"confidence_formula\":\"medium \u2014 BFS over reverse dependency edges gives the static blast radius; co-change couplings add hidden runtime coupling. Dynamic requires/imports and runtime DI bindings are not traced.\",\"limitations\":[\"dynamic require() / import() calls not resolved\",\"runtime dependency injection bindings not traversed\",\"transitive depth capped \u2014 very deep chains may be truncated\",\"co-change signal requires git history; absent in fresh repos\"]},\"empty_result_note\":\"Index is behind test-helpers/stream.js on disk \u2014 reindex before reading this zero as \\\"no callers\\\".\",\"_hints\":[{\"tool\":\"check_rename\",\"args\":{\"symbol_id\":\"<symbol>\"},\"why\":\"Verify rename is safe across all usages\"}]}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 1
+  },
+  "find_usages": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"target\":{\"file\":\"test-helpers/stream.js\"},\"references\":[],\"total\":0,\"resolution_tiers\":{\"scip_resolved\":0,\"lsp_resolved\":0,\"ast_resolved\":0,\"ast_inferred\":0,\"text_matched\":0},\"evidence\":{\"scope\":\"full_index\",\"indexed_files\":41,\"indexed_symbols\":22,\"query_expanded\":false,\"verdict\":\"resolver_gap_suspected\",\"suggestion\":\"Symbol indexed but edges incomplete. search_text finds 8 occurrences of \\\"js\\\" \u2014 the resolver likely missed parametric / dynamic call sites. Confirm with search_text or grep.\",\"symbol\":\"test-helpers/stream.js\",\"text_occurrences\":8},\"empty_result_note\":\"Index is behind test-helpers/stream.js on disk \u2014 reindex before reading this zero as \\\"no callers\\\".\"}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 2
+  },
+  "stderr": "{\"level\":30,\"time\":1794548891031,\"pid\":15949,\"hostname\":\"omarchy\",\"name\":\"trace-mcp\",\"msg\":\"Daemon auto-spawn is disabled \u2014 running local-only (stdio).\"}\n{\"level\":30,\"time\":1794548891033,\"pid\":15949,\"hostname\":\"omarchy\",\"name\":\"trace-mcp\",\"projectRoot\":\"/tmp/opencode/compare/repos/koa\",\"indexRoot\":\"/tmp/opencode/compare/repos/koa\",\"idleTimeoutMs\":1800000,\"daemonStabilityMs\":30000,\"msg\":\"Starting trace-mcp stdio session...\"}\n{\"level\":30,\"time\":1794548891081,\"pid\":15949,\"hostname\":\"omarchy\",\"name\""
+}

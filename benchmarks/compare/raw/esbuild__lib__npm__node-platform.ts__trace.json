@@ -1,0 +1,38 @@
+{
+  "tool": "trace-mcp",
+  "version": "3.44.0",
+  "repo_root": "/tmp/opencode/compare/repos/esbuild",
+  "file": "lib/npm/node-platform.ts",
+  "get_change_impact": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"target\":{\"path\":\"lib/npm/node-platform.ts\",\"symbolId\":\"lib/npm/node-platform.ts::isValidBinaryPath#function\",\"symbolName\":\"isValidBinaryPath\",\"kind\":\"function\"},\"summary\":{\"totalFiles\":4,\"totalSymbols\":17,\"maxDepth\":2,\"crossBoundary\":true,\"publicApiAffected\":10,\"untestedDependents\":4,\"highComplexityDependents\":1,\"sentence\":\"Impact: 4 file(s) across 2 module(s), 10 public API, 4 untested, 1 high-complexity, 4 breaking risk(s). Risk: medium.\"},\"risk\":{\"score\":0.4,\"level\":\"medium\",\"publicApiBreaking\":true,\"untestedRatio\":1,\"maxComplexity\":17,\"mitigations\":[\"Add test coverage for the target before modifying\",\"High complexity in dependents \u2014 review carefully for regressions\",\"4/4 dependents lack tests \u2014 add integration tests\",\"10 public API symbol(s) affected \u2014 check for breaking changes\",\"4 exported symbol(s) with 5 consumer(s) \u2014 signature change = breaking\"]},\"affectedTests\":{\"total\":0,\"files\":[],\"truncated\":false},\"dependents\":[{\"path\":\"lib/npm/node-install.ts\",\"edgeTypes\":[\"imports\",\"calls\"],\"depth\":1,\"hasTests\":false,\"symbols\":[{\"symbolId\":\"lib/npm/node-install.ts::checkAndPreparePackage#function\",\"symbolName\":\"checkAndPreparePackage\",\"symbolKind\":\"function\",\"resolutionTier\":\"ast_resolved\",\"complexity\":7,\"isExported\":false},{\"symbolId\":\"lib/npm/node-install.ts::__module__#namespace\",\"symbolName\":\"__module__:node-install\",\"symbolKind\":\"namespace\",\"resolutionTier\":\"ast_resolved\",\"isExported\":false}]},{\"path\":\"lib/npm/node-shim.ts\",\"edgeTypes\":[\"imports\",\"calls\"],\"depth\":1,\"hasTests\":false,\"symbols\":[{\"symbolId\":\"lib/npm/node-shim.ts::__module__#namespace\",\"symbolName\":\"__module__:node-shim\",\"symbolKind\":\"namespace\",\"resolutionTier\":\"ast_resolved\",\"isExported\":false}]},{\"path\":\"lib/npm/node.ts\",\"edgeTypes\":[\"imports\",\"calls\"],\"depth\":1,\"hasTests\":false,\"symbols\":[{\"symbolId\":\"lib/npm/node.ts::esbuildCommandAndArgs#function\",\"symbolName\":\"esbuildCommandAndArgs\",\"symbolKind\":\"function\",\"resolutionTier\":\"ast_resolved\",\"complexity\":7,\"isExported\":false},{\"symbolId\":\"lib/npm/node.ts::ensureServiceIsRunning#function\",\"symbolName\":\"ensureServiceIsRunning\",\"symbolKind\":\"function\",\"resolutionTier\":\"ast_resolved\",\"complexity\":17,\"isExported\":false},{\"symbolId\":\"lib/npm/node.ts::runServiceSync#function\",\"symbolName\":\"runServiceSync\",\"symbolKind\":\"function\",\"resolutionTier\":\"ast_resolved\",\"complexity\":3,\"isExported\":false},{\"symbolId\":\"lib/npm/node.ts::build#function\",\"symbolName\":\"build\",\"symbolKind\":\"function\",\"resolutionTier\":\"ast_resolved\",\"complexity\":1,\"isExported\":true}]},{\"path\":\"lib/shared/worker.ts\",\"edgeTypes\":[\"imports\"],\"depth\":2,\"hasTests\":false}],\"totalAffected\":4,\"resolution_tiers\":{\"scip_resolved\":0,\"lsp_resolved\":0,\"ast_resolved\":20,\"ast_inferred\":1,\"text_matched\":0},\"breakingChanges\":[{\"symbolId\":\"lib/npm/node-platform.ts::generateBinPath#function\",\"symbolName\":\"generateBinPath\",\"kind\":\"function\",\"consumers\":2,\"consumerFiles\":[\"lib/npm/node-shim.ts\",\"lib/npm/node.ts\"]},{\"symbolId\":\"lib/npm/node-platform.ts::isValidBinaryPath#function\",\"symbolName\":\"isValidBinaryPath\",\"kind\":\"function\",\"consumers\":1,\"consumerFiles\":[\"lib/npm/node-install.ts\"]},{\"symbolId\":\"lib/npm/node-platform.ts::pkgAndSubpathForCurrentPlatform#function\",\"symbolName\":\"pkgAndSubpathForCurrentPlatform\",\"kind\":\"function\",\"consumers\":1,\"consumerFiles\":[\"lib/npm/node-install.ts\"]},{\"symbolId\":\"lib/npm/node-platform.ts::downloadedBinPath#function\",\"symbolName\":\"downloadedBinPath\",\"kind\":\"function\",\"consumers\":1,\"consumerFiles\":[\"lib/npm/node-install.ts\"]}],\"byModule\":[{\"module\":\"lib/npm\",\"count\":3,\"files\":[\"lib/npm/node-install.ts\",\"lib/npm/node-shim.ts\",\"lib/npm/node.ts\"],\"maxDepth\":1,\"hasUntested\":true},{\"module\":\"lib/shared\",\"count\":1,\"files\":[\"lib/shared/worker.ts\"],\"maxDepth\":2,\"hasUntested\":true}],\"byEdgeType\":{\"imports\":4,\"calls\":17},\"byDepth\":{\"1\":6,\"2\":4,\"3\":11},\"truncated\":true,\"_hints\":[{\"tool\":\"get_tests_for\",\"args\":{\"symbol_id\":\"<affected_symbol>\"},\"why\":\"Find tests for affected dependents\"},{\"tool\":\"check_rename\",\"args\":{\"symbol_id\":\"<symbol>\"},\"why\":\"Verify rename is safe across all usages\"}]}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 1
+  },
+  "find_usages": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"target\":{\"file\":\"lib/npm/node-platform.ts\"},\"references\":[{\"edge_type\":\"imports\",\"resolution_tier\":\"ast_resolved\",\"file\":\"lib/npm/node-install.ts\",\"_freshness\":\"fresh\"},{\"edge_type\":\"imports\",\"resolution_tier\":\"ast_resolved\",\"file\":\"lib/npm/node-shim.ts\",\"_freshness\":\"fresh\"},{\"edge_type\":\"imports\",\"resolution_tier\":\"ast_resolved\",\"file\":\"lib/npm/node.ts\",\"_freshness\":\"fresh\"}],\"total\":3,\"resolution_tiers\":{\"scip_resolved\":0,\"lsp_resolved\":0,\"ast_resolved\":3,\"ast_inferred\":0,\"text_matched\":0},\"_meta\":{\"freshness\":{\"fresh\":3,\"edited_uncommitted\":0,\"stale_index\":0,\"repo_is_stale\":false},\"confidence\":0.55,\"confidence_signals\":{\"top1_strength\":1,\"top_gap\":0,\"identity_match\":0,\"freshness\":1}},\"_hints\":[{\"tool\":\"get_change_impact\",\"args\":{\"symbol_id\":\"<symbol>\"},\"why\":\"See transitive impact beyond direct references\"},{\"tool\":\"get_tests_for\",\"args\":{\"symbol_id\":\"<symbol>\"},\"why\":\"Find tests covering this symbol\"}]}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 2
+  },
+  "stderr": "{\"level\":30,\"time\":1794547744479,\"pid\":38418,\"hostname\":\"omarchy\",\"name\":\"trace-mcp\",\"msg\":\"Daemon auto-spawn is disabled \u2014 running local-only (stdio).\"}\n{\"level\":30,\"time\":1794547744481,\"pid\":38418,\"hostname\":\"omarchy\",\"name\":\"trace-mcp\",\"projectRoot\":\"/tmp/opencode/compare/repos/esbuild\",\"indexRoot\":\"/tmp/opencode/compare/repos/esbuild\",\"idleTimeoutMs\":1800000,\"daemonStabilityMs\":30000,\"msg\":\"Starting trace-mcp stdio session...\"}\n{\"level\":40,\"time\":1794547744488,\"pid\":38418,\"hostname\":\"omarchy",
+  "_wall_ms": 6169.6,
+  "_meta": {
+    "repo": "esbuild",
+    "file": "lib/npm/node-platform.ts",
+    "tool": "trace",
+    "wall_s": 6.2
+  }
+}

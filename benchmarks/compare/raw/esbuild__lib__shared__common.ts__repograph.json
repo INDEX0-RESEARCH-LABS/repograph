@@ -1,0 +1,1285 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-13T05:29:09+00:00",
+  "source": "files",
+  "target": {
+    "paths": [
+      "lib/shared/common.ts"
+    ],
+    "symbols": [
+      {
+        "name": "validateAndJoinStringArray",
+        "qualified_name": "validateAndJoinStringArray",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          12,
+          20
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:12"
+        }
+      },
+      {
+        "name": "canBeAnything",
+        "qualified_name": "canBeAnything",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          22,
+          22
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:22"
+        }
+      },
+      {
+        "name": "mustBeBoolean",
+        "qualified_name": "mustBeBoolean",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          24,
+          25
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:24"
+        }
+      },
+      {
+        "name": "mustBeString",
+        "qualified_name": "mustBeString",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          27,
+          28
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:27"
+        }
+      },
+      {
+        "name": "mustBeRegExp",
+        "qualified_name": "mustBeRegExp",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          30,
+          31
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:30"
+        }
+      },
+      {
+        "name": "mustBeInteger",
+        "qualified_name": "mustBeInteger",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          33,
+          34
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:33"
+        }
+      },
+      {
+        "name": "mustBeValidPortNumber",
+        "qualified_name": "mustBeValidPortNumber",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          36,
+          37
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:36"
+        }
+      },
+      {
+        "name": "mustBeFunction",
+        "qualified_name": "mustBeFunction",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          39,
+          40
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:39"
+        }
+      },
+      {
+        "name": "mustBeArray",
+        "qualified_name": "mustBeArray",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          42,
+          43
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:42"
+        }
+      },
+      {
+        "name": "mustBeArrayOfStrings",
+        "qualified_name": "mustBeArrayOfStrings",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          45,
+          46
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:45"
+        }
+      },
+      {
+        "name": "mustBeObject",
+        "qualified_name": "mustBeObject",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          48,
+          49
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:48"
+        }
+      },
+      {
+        "name": "mustBeEntryPoints",
+        "qualified_name": "mustBeEntryPoints",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          51,
+          52
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:51"
+        }
+      },
+      {
+        "name": "mustBeWebAssemblyModule",
+        "qualified_name": "mustBeWebAssemblyModule",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          54,
+          55
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:54"
+        }
+      },
+      {
+        "name": "mustBeObjectOrNull",
+        "qualified_name": "mustBeObjectOrNull",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          57,
+          58
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:57"
+        }
+      },
+      {
+        "name": "mustBeStringOrBoolean",
+        "qualified_name": "mustBeStringOrBoolean",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          60,
+          61
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:60"
+        }
+      },
+      {
+        "name": "mustBeStringOrObject",
+        "qualified_name": "mustBeStringOrObject",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          63,
+          64
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:63"
+        }
+      },
+      {
+        "name": "mustBeStringOrArrayOfStrings",
+        "qualified_name": "mustBeStringOrArrayOfStrings",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          66,
+          67
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:66"
+        }
+      },
+      {
+        "name": "mustBeStringOrUint8Array",
+        "qualified_name": "mustBeStringOrUint8Array",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          69,
+          70
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:69"
+        }
+      },
+      {
+        "name": "mustBeStringOrURL",
+        "qualified_name": "mustBeStringOrURL",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          72,
+          73
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:72"
+        }
+      },
+      {
+        "name": "OptionKeys",
+        "qualified_name": "OptionKeys",
+        "kind": "type",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          75,
+          75
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:75"
+        }
+      },
+      {
+        "name": "getFlag",
+        "qualified_name": "getFlag",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          77,
+          84
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:77"
+        }
+      },
+      {
+        "name": "checkForInvalidFlags",
+        "qualified_name": "checkForInvalidFlags",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          86,
+          92
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:86"
+        }
+      },
+      {
+        "name": "validateInitializeOptions",
+        "qualified_name": "validateInitializeOptions",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          94,
+          105
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:94"
+        }
+      },
+      {
+        "name": "MangleCache",
+        "qualified_name": "MangleCache",
+        "kind": "type",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          107,
+          107
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:107"
+        }
+      },
+      {
+        "name": "validateMangleCache",
+        "qualified_name": "validateMangleCache",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          109,
+          123
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:109"
+        }
+      },
+      {
+        "name": "CommonOptions",
+        "qualified_name": "CommonOptions",
+        "kind": "type",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          125,
+          125
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:125"
+        }
+      },
+      {
+        "name": "pushLogFlags",
+        "qualified_name": "pushLogFlags",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          127,
+          138
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:127"
+        }
+      },
+      {
+        "name": "validateStringValue",
+        "qualified_name": "validateStringValue",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          140,
+          145
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:140"
+        }
+      },
+      {
+        "name": "pushCommonFlags",
+        "qualified_name": "pushCommonFlags",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          147,
+          235
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:147"
+        }
+      },
+      {
+        "name": "flagsForBuildOptions",
+        "qualified_name": "flagsForBuildOptions",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          237,
+          402
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:237"
+        }
+      },
+      {
+        "name": "flagsForTransformOptions",
+        "qualified_name": "flagsForTransformOptions",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          404,
+          436
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:404"
+        }
+      },
+      {
+        "name": "StreamIn",
+        "qualified_name": "StreamIn",
+        "kind": "interface",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          438,
+          444
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:438"
+        }
+      },
+      {
+        "name": "StreamOut",
+        "qualified_name": "StreamOut",
+        "kind": "interface",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          446,
+          450
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:446"
+        }
+      },
+      {
+        "name": "StreamFS",
+        "qualified_name": "StreamFS",
+        "kind": "interface",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          452,
+          455
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:452"
+        }
+      },
+      {
+        "name": "Refs",
+        "qualified_name": "Refs",
+        "kind": "interface",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          457,
+          460
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:457"
+        }
+      },
+      {
+        "name": "StreamService",
+        "qualified_name": "StreamService",
+        "kind": "interface",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          462,
+          497
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:462"
+        }
+      },
+      {
+        "name": "CloseData",
+        "qualified_name": "CloseData",
+        "kind": "type",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          499,
+          499
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:499"
+        }
+      },
+      {
+        "name": "RequestCallback",
+        "qualified_name": "RequestCallback",
+        "kind": "type",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          500,
+          500
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:500"
+        }
+      },
+      {
+        "name": "createChannel",
+        "qualified_name": "createChannel",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          505,
+          842
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:505"
+        }
+      },
+      {
+        "name": "readFromStdout",
+        "qualified_name": "createChannel.readFromStdout",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          515,
+          541
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:515"
+        }
+      },
+      {
+        "name": "afterClose",
+        "qualified_name": "createChannel.afterClose",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          543,
+          552
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:543"
+        }
+      },
+      {
+        "name": "sendRequest",
+        "qualified_name": "createChannel.sendRequest",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          554,
+          566
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:554"
+        }
+      },
+      {
+        "name": "sendResponse",
+        "qualified_name": "createChannel.sendResponse",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          568,
+          571
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:568"
+        }
+      },
+      {
+        "name": "handleRequest",
+        "qualified_name": "createChannel.handleRequest",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          573,
+          609
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:573"
+        }
+      },
+      {
+        "name": "handleIncomingPacket",
+        "qualified_name": "createChannel.handleIncomingPacket",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          613,
+          640
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:613"
+        }
+      },
+      {
+        "name": "buildOrContext",
+        "qualified_name": "createChannel.buildOrContext",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          642,
+          687
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:642"
+        }
+      },
+      {
+        "name": "transform",
+        "qualified_name": "createChannel.transform",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          689,
+          788
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:689"
+        }
+      },
+      {
+        "name": "start",
+        "qualified_name": "createChannel.transform.start",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          707,
+          782
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:707"
+        }
+      },
+      {
+        "name": "formatMessages",
+        "qualified_name": "createChannel.formatMessages",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          790,
+          812
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:790"
+        }
+      },
+      {
+        "name": "analyzeMetafile",
+        "qualified_name": "createChannel.analyzeMetafile",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          814,
+          830
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:814"
+        }
+      },
+      {
+        "name": "buildOrContextImpl",
+        "qualified_name": "buildOrContextImpl",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          844,
+          1165
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:844"
+        }
+      },
+      {
+        "name": "handleError",
+        "qualified_name": "buildOrContextImpl.handleError",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          860,
+          868
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:860"
+        }
+      },
+      {
+        "name": "buildOrContextContinue",
+        "qualified_name": "buildOrContextImpl.buildOrContextContinue",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          915,
+          1164
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:915"
+        }
+      },
+      {
+        "name": "buildResponseToResult",
+        "qualified_name": "buildOrContextImpl.buildOrContextContinue.buildResponseToResult",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          946,
+          970
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:946"
+        }
+      },
+      {
+        "name": "RunOnEndCallbacks",
+        "qualified_name": "RunOnEndCallbacks",
+        "kind": "type",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          1167,
+          1167
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:1167"
+        }
+      },
+      {
+        "name": "handlePlugins",
+        "qualified_name": "handlePlugins",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          1169,
+          1551
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:1169"
+        }
+      },
+      {
+        "name": "resolve",
+        "qualified_name": "handlePlugins.resolve",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          1243,
+          1286
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:1243"
+        }
+      },
+      {
+        "name": "runOnEndCallbacks",
+        "qualified_name": "handlePlugins.runOnEndCallbacks",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          1484,
+          1484
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:1484"
+        }
+      },
+      {
+        "name": "scheduleOnDisposeCallbacks",
+        "qualified_name": "handlePlugins.scheduleOnDisposeCallbacks",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          1537,
+          1542
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:1537"
+        }
+      },
+      {
+        "name": "ObjectStash",
+        "qualified_name": "ObjectStash",
+        "kind": "interface",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          1558,
+          1562
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:1558"
+        }
+      },
+      {
+        "name": "createObjectStash",
+        "qualified_name": "createObjectStash",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          1564,
+          1581
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:1564"
+        }
+      },
+      {
+        "name": "extractCallerV8",
+        "qualified_name": "extractCallerV8",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          1583,
+          1600
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:1583"
+        }
+      },
+      {
+        "name": "extractErrorMessageV8",
+        "qualified_name": "extractErrorMessageV8",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          1602,
+          1618
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:1602"
+        }
+      },
+      {
+        "name": "parseStackLinesV8",
+        "qualified_name": "parseStackLinesV8",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          1620,
+          1672
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:1620"
+        }
+      },
+      {
+        "name": "failureErrorWithLog",
+        "qualified_name": "failureErrorWithLog",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          1674,
+          1705
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:1674"
+        }
+      },
+      {
+        "name": "replaceDetailsInMessages",
+        "qualified_name": "replaceDetailsInMessages",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          1707,
+          1712
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:1707"
+        }
+      },
+      {
+        "name": "sanitizeLocation",
+        "qualified_name": "sanitizeLocation",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          1714,
+          1762
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:1714"
+        }
+      },
+      {
+        "name": "sanitizeMessages",
+        "qualified_name": "sanitizeMessages",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          1764,
+          1811
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:1764"
+        }
+      },
+      {
+        "name": "sanitizeStringArray",
+        "qualified_name": "sanitizeStringArray",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          1813,
+          1820
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:1813"
+        }
+      },
+      {
+        "name": "sanitizeStringMap",
+        "qualified_name": "sanitizeStringMap",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          1822,
+          1830
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:1822"
+        }
+      },
+      {
+        "name": "convertOutputFiles",
+        "qualified_name": "convertOutputFiles",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          1832,
+          1859
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:1832"
+        }
+      },
+      {
+        "name": "jsRegExpToGoRegExp",
+        "qualified_name": "jsRegExpToGoRegExp",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          1861,
+          1865
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:1861"
+        }
+      },
+      {
+        "name": "parseJSON",
+        "qualified_name": "parseJSON",
+        "kind": "function",
+        "path": "lib/shared/common.ts",
+        "lines": [
+          1867,
+          1882
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/common.ts:1867"
+        }
+      }
+    ],
+    "symbols_total": 73,
+    "symbols_truncated": false,
+    "changed_lines": {},
+    "removed_symbols": [],
+    "deleted": [],
+    "missing_from_index": [],
+    "diff": null
+  },
+  "changed_files": [
+    "lib/shared/common.ts"
+  ],
+  "direct_dependents": [
+    {
+      "path": "lib/npm/browser.ts",
+      "confidence": "inferred",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "lib/shared/common.ts",
+          "line": 2,
+          "module": "../shared/common",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "lib/npm/browser.ts:2"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "lib/shared/common.ts",
+          "symbol": "createChannel",
+          "line": 137,
+          "reference_kind": "attr_call",
+          "method": "module-or-instance-attribute",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "lib/npm/browser.ts:137"
+          }
+        }
+      ],
+      "reason_count": 2,
+      "evidence": {
+        "location": "lib/npm/browser.ts:2"
+      }
+    },
+    {
+      "path": "lib/npm/node.ts",
+      "confidence": "inferred",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "lib/shared/common.ts",
+          "line": 2,
+          "module": "../shared/common",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "lib/npm/node.ts:2"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "lib/shared/common.ts",
+          "symbol": "createChannel",
+          "line": 264,
+          "reference_kind": "attr_call",
+          "method": "module-or-instance-attribute",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "lib/npm/node.ts:264"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "lib/shared/common.ts",
+          "symbol": "createChannel",
+          "line": 384,
+          "reference_kind": "attr_call",
+          "method": "module-or-instance-attribute",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "lib/npm/node.ts:384"
+          }
+        }
+      ],
+      "reason_count": 3,
+      "evidence": {
+        "location": "lib/npm/node.ts:2"
+      }
+    }
+  ],
+  "transitive_dependents": [],
+  "transitive_dependents_total": 0,
+  "transitive_dependents_truncated": false,
+  "related_tests": [],
+  "related_tests_total": 0,
+  "related_tests_truncated": false,
+  "affected_routes": [],
+  "affected_routes_total": 0,
+  "affected_routes_truncated": false,
+  "related_models": [],
+  "related_models_total": 0,
+  "related_models_truncated": false,
+  "architecture": {
+    "layers": {
+      "domain": 1
+    },
+    "documentation_mentions": [
+      {
+        "path": "README.md",
+        "line": 34,
+        "excerpt": "- Bundles ESM and CommonJS modules",
+        "matched": "common",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "README.md:34"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 11,
+        "excerpt": "* [CommonJS linking](#commonjs-linking)",
+        "matched": "common",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:11"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 13,
+        "excerpt": "* [Hybrid CommonJS and ES6 modules](#hybrid-commonjs-and-es6-modules)",
+        "matched": "common",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:13"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 15,
+        "excerpt": "* [Converting ES6 imports to CommonJS imports](#converting-es6-imports-to-commonjs-imports)",
+        "matched": "common",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:15"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 38,
+        "excerpt": "* **Transparently support both ES6 and CommonJS module syntax**",
+        "matched": "common",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:38"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 40,
+        "excerpt": "The parser in esbuild processes a superset of both ES6 and CommonJS modules. It doesn't distinguish between ES6 modules and other modules so you can use both ES6 and CommonJS syntax in the same file if you'd like.",
+        "matched": "common",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:40"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 62,
+        "excerpt": "This phase starts with a set of entry points and traverses the dependency graph to find all modules that need to be in the bundle. This is implemented in `bundler.ScanBundle()` as a parallel worklist algorithm. The workl",
+        "matched": "common",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:62"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 122,
+        "excerpt": "### CommonJS linking",
+        "matched": "common",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:122"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 124,
+        "excerpt": "If a module uses any CommonJS features (e.g. references `exports`, references `module`, or uses a top-level `return` statement) then it's considered a CommonJS module. This means it's represented as a separate closure wi",
+        "matched": "common",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:124"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 146,
+        "excerpt": "let __commonJS = (callback, module) => () => {",
+        "matched": "common",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:146"
+        }
+      }
+    ],
+    "note": "Documentation matches are lexical and only point to where a concept is discussed."
+  },
+  "blind_spots": [
+    {
+      "kind": "repo-parse-errors",
+      "count": 1,
+      "message": "Files with parse errors contribute no symbols or edges anywhere in the index."
+    }
+  ],
+  "repo_health": {
+    "unresolved_imports": 1,
+    "dynamic_imports": 6,
+    "note": "Repository-wide counts; they are not scoped to this change."
+  },
+  "caveats": [
+    "This is a static analysis of statically resolvable relationships. Absence of a relationship is not evidence that a change is safe.",
+    "Dynamic imports, reflection, runtime dependency injection, generated code and external consumers are not modeled.",
+    "Test selection uses import edges and naming conventions, not execution traces; it can miss tests and include irrelevant ones.",
+    "Route and database-model detection use framework-specific heuristics and may produce false positives or miss frameworks.",
+    "Confidence levels describe extraction certainty, not the risk of the change itself."
+  ],
+  "summary": {
+    "changed_files": 1,
+    "changed_symbols": 73,
+    "direct_dependents": 2,
+    "transitive_dependents": 0,
+    "related_tests": 0,
+    "affected_routes": 0,
+    "related_models": 0,
+    "completeness": "partial",
+    "confidence_counts": {
+      "confirmed": 0,
+      "inferred": 2
+    }
+  },
+  "_query_time_ms": 6.0,
+  "_wall_ms": 64.0,
+  "_meta": {
+    "repo": "esbuild",
+    "file": "lib/shared/common.ts",
+    "tool": "repograph",
+    "wall_s": 0.1
+  }
+}

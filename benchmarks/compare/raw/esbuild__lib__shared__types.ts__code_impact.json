@@ -1,0 +1,50 @@
+{
+  "tool": "code-impact-mcp",
+  "version": "1.6.10",
+  "repo_root": "/tmp/opencode/compare/repos/esbuild",
+  "file": "lib/shared/types.ts",
+  "refresh": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"status\": \"Graph rebuilt successfully\",\n  \"files\": 30,\n  \"edges\": 27,\n  \"buildTimeMs\": 1384,\n  \"circularDependencies\": 0\n}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 1
+  },
+  "get_dependencies": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"file\": \"lib/shared/types.ts\",\n  \"summary\": \"lib/shared/types.ts is a leaf with 4 incoming and 0 outgoing dependency edges.\",\n  \"explanation\": \"This is a structural dependency view. It does not distinguish runtime-only vs type-only usage yet.\",\n  \"imports\": [],\n  \"importedBy\": [\n    \"lib/npm/browser.ts\",\n    \"lib/npm/node.ts\",\n    \"lib/shared/common.ts\",\n    \"lib/shared/stdio_protocol.ts\"\n  ],\n  \"exports\": [\n    \"AbsPaths\",\n    \"AnalyzeMetafileOptions\",\n    \"BuildContext\",\n    \"BuildFailure\",\n    \"BuildOptions\",\n    \"BuildResult\",\n    \"CORSOptions\",\n    \"Charset\",\n    \"Drop\",\n    \"Format\",\n    \"FormatMessagesOptions\",\n    \"ImportKind\",\n    \"InitializeOptions\",\n    \"Loader\",\n    \"Location\",\n    \"LogLevel\",\n    \"LogStyle\",\n    \"Message\",\n    \"Metafile\",\n    \"Note\",\n    \"OnEndResult\",\n    \"OnLoadArgs\",\n    \"OnLoadOptions\",\n    \"OnLoadResult\",\n    \"OnResolveArgs\",\n    \"OnResolveOptions\",\n    \"OnResolveResult\",\n    \"OnStartResult\",\n    \"OutputFile\",\n    \"PartialMessage\",\n    \"PartialNote\",\n    \"Platform\",\n    \"Plugin\",\n    \"PluginBuild\",\n    \"ResolveOptions\",\n    \"ResolveResult\",\n    \"ServeOnRequestArgs\",\n    \"ServeOptions\",\n    \"ServeResult\",\n    \"StdinOptions\",\n    \"TransformFailure\",\n    \"TransformOptions\",\n    \"TransformResult\",\n    \"TsconfigRaw\",\n    \"WatchOptions\",\n    \"analyzeMetafile\",\n    \"analyzeMetafileSync\",\n    \"build\",\n    \"buildSync\",\n    \"context\",\n    \"formatMessages\",\n    \"formatMessagesSync\",\n    \"initialize\",\n    \"stop\",\n    \"transform\",\n    \"transformSync\",\n    \"version\"\n  ],\n  \"fanIn\": 4,\n  \"fanOut\": 0,\n  \"isHighCoupling\": false,\n  \"couplingRole\": \"leaf\"\n}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 2
+  },
+  "analyze_impact": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"summary\": \"Low graph impact: the current change looks locally contained in graph terms.\",\n  \"scanSummary\": \"LOW, 4 affected across lib/npm (2), lib/shared (2)\",\n  \"explanation\": \"This result is graph-based only. It does not account for tests, runtime behavior, migrations, or production traffic.\",\n  \"changedFiles\": [\n    \"lib/shared/types.ts\"\n  ],\n  \"directlyAffected\": [\n    \"lib/npm/browser.ts\",\n    \"lib/npm/node.ts\",\n    \"lib/shared/common.ts\",\n    \"lib/shared/stdio_protocol.ts\"\n  ],\n  \"transitivelyAffected\": [],\n  \"impactBreakdown\": {\n    \"directCount\": 4,\n    \"transitiveCount\": 0,\n    \"directScan\": {\n      \"totalFiles\": 4,\n      \"topDirectories\": [\n        {\n          \"directory\": \"lib/npm\",\n          \"count\": 2\n        },\n        {\n          \"directory\": \"lib/shared\",\n          \"count\": 2\n        }\n      ],\n      \"directoryGroups\": [\n        {\n          \"directory\": \"lib/npm\",\n          \"count\": 2,\n          \"examples\": [\n            \"lib/npm/browser.ts\",\n            \"lib/npm/node.ts\"\n          ],\n          \"remainingExamples\": 0\n        },\n        {\n          \"directory\": \"lib/shared\",\n          \"count\": 2,\n          \"examples\": [\n            \"lib/shared/common.ts\",\n            \"lib/shared/stdio_protocol.ts\"\n          ],\n          \"remainingExamples\": 0\n        }\n      ],\n      \"firstFiles\": [\n        \"lib/npm/browser.ts\",\n        \"lib/npm/node.ts\",\n        \"lib/shared/common.ts\",\n        \"lib/shared/stdio_protocol.ts\"\n      ],\n      \"remainingFiles\": 0,\n      \"summaryLine\": \"lib/npm (2), lib/shared (2)\",\n      \"displayMode\": \"flat\"\n    },\n    \"transitiveScan\": {\n      \"totalFiles\": 0,\n      \"topDirectories\": [],\n      \"directoryGroups\": [],\n      \"firstFiles\": [],\n      \"remainingFiles\": 0,\n      \"summaryLine\": \"\",\n      \"displayMode\": \"flat\"\n    }\n  },\n  \"riskScore\": 0.13,\n  \"totalAffected\": 4,\n  \"cascadeDepth\": 2\n}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 3
+  },
+  "stderr": "",
+  "_wall_ms": 2171.5,
+  "_meta": {
+    "repo": "esbuild",
+    "file": "lib/shared/types.ts",
+    "tool": "code_impact",
+    "wall_s": 2.2
+  }
+}
