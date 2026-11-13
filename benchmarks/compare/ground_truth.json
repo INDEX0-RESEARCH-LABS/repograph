@@ -858,6 +858,7 @@
         "django/core/cache/backends/db.py",
         "django/core/checks/messages.py",
         "django/core/checks/model_checks.py",
+        "django/core/management/commands/createcachetable.py",
         "django/core/management/sql.py",
         "django/core/serializers/base.py",
         "django/core/serializers/python.py",
@@ -882,7 +883,6 @@
         "django/db/migrations/recorder.py",
         "django/db/migrations/serializer.py",
         "django/db/migrations/state.py",
-        "django/db/migrations/writer.py",
         "django/db/models/base.py",
         "django/db/models/deletion.py",
         "django/db/models/expressions.py",
@@ -975,6 +975,7 @@
         "tests/backends/tests.py",
         "tests/base/models.py",
         "tests/basic/models.py",
+        "tests/basic/tests.py",
         "tests/bulk_create/models.py",
         "tests/bulk_create/tests.py",
         "tests/cache/models.py",
@@ -1215,6 +1216,7 @@
         "tests/migrations/test_add_many_to_many_field_initial/0002_initial.py",
         "tests/migrations/test_auto_now_add/0001_initial.py",
         "tests/migrations/test_autodetector.py",
+        "tests/migrations/test_commands.py",
         "tests/migrations/test_executor.py",
         "tests/migrations/test_fake_initial_case_insensitive/fake_initial/0001_initial.py",
         "tests/migrations/test_fake_initial_case_insensitive/initial/0001_initial.py",
@@ -1415,6 +1417,7 @@
         "tests/test_client_regress/models.py",
         "tests/test_runner/models.py",
         "tests/test_utils/models.py",
+        "tests/test_utils/tests.py",
         "tests/timezones/models.py",
         "tests/timezones/tests.py",
         "tests/transaction_hooks/models.py",
@@ -1431,9 +1434,7 @@
         "tests/validation/test_unique.py",
         "tests/view_tests/models.py",
         "tests/xor_lookups/models.py",
-        "tests/xor_lookups/tests.py",
-        "django/core/management/commands/createcachetable.py",
-        "tests/basic/tests.py"
+        "tests/xor_lookups/tests.py"
       ],
       "unverified_candidates": []
     },
@@ -1609,7 +1610,6 @@
         "tests/admin_inlines/admin.py",
         "tests/admin_inlines/models.py",
         "tests/admin_registration/tests.py",
-        "tests/admin_scripts/tests.py",
         "tests/admin_views/admin.py",
         "tests/admin_views/custom_has_permission_admin.py",
         "tests/admin_views/forms.py",
@@ -2380,8 +2380,7 @@
         "compat-table/src/compat-table.ts",
         "compat-table/src/css_table.ts",
         "compat-table/src/js_table.ts",
-        "compat-table/src/mdn.ts",
-        "scripts/plugin-tests.js"
+        "compat-table/src/mdn.ts"
       ],
       "unverified_candidates": []
     },
@@ -2405,8 +2404,7 @@
     "lib/shared/common.ts": {
       "verified_importers": [
         "lib/npm/browser.ts",
-        "lib/npm/node.ts",
-        "scripts/end-to-end-tests.js"
+        "lib/npm/node.ts"
       ],
       "unverified_candidates": [
         "scripts/js-api-tests.js"
@@ -2429,9 +2427,7 @@
       "unverified_candidates": []
     },
     "require/yarnpnp/in.mjs": {
-      "verified_importers": [
-        "scripts/end-to-end-tests.js"
-      ],
+      "verified_importers": [],
       "unverified_candidates": []
     },
     "lib/shared/worker.ts": {
