@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-13T06:47:25+00:00",
+  "source": "files",
+  "target": {
+    "paths": [
+      "django/conf/locale/es_AR/__init__.py"
+    ],
+    "symbols": [],
+    "symbols_total": 0,
+    "symbols_truncated": false,
+    "changed_lines": {},
+    "removed_symbols": [],
+    "deleted": [],
+    "missing_from_index": [],
+    "diff": null
+  },
+  "changed_files": [
+    "django/conf/locale/es_AR/__init__.py"
+  ],
+  "direct_dependents": [],
+  "transitive_dependents": [],
+  "transitive_dependents_total": 0,
+  "transitive_dependents_truncated": false,
+  "related_tests": [],
+  "related_tests_total": 0,
+  "related_tests_truncated": false,
+  "affected_routes": [],
+  "affected_routes_total": 0,
+  "affected_routes_truncated": false,
+  "related_models": [],
+  "related_models_total": 0,
+  "related_models_truncated": false,
+  "architecture": {
+    "layers": {
+      "other": 1
+    },
+    "documentation_mentions": [
+      {
+        "path": "docs/topics/serialization.txt",
+        "line": 401,
+        "excerpt": "def __init__(self, stream_or_string, **options):",
+        "matched": "__init__",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/topics/serialization.txt:401"
+        }
+      },
+      {
+        "path": "docs/topics/serialization.txt",
+        "line": 410,
+        "excerpt": "super().__init__(objects, **options)",
+        "matched": "__init__",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/topics/serialization.txt:410"
+        }
+      },
+      {
+        "path": "docs/topics/migrations.txt",
+        "line": 375,
+        "excerpt": "modified ``__init__`` method with the old signature. So if you need a new",
+        "matched": "__init__",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/topics/migrations.txt:375"
+        }
+      },
+      {
+        "path": "docs/topics/migrations.txt",
+        "line": 614,
+        "excerpt": "database migrations such as ``__init__()``, ``deconstruct()``, and",
+        "matched": "__init__",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/topics/migrations.txt:614"
+        }
+      },
+      {
+        "path": "docs/topics/migrations.txt",
+        "line": 936,
+        "excerpt": "``__init__`` method. Everything in this list should itself be serializable.",
+        "matched": "__init__",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/topics/migrations.txt:936"
+        }
+      },
+      {
+        "path": "docs/topics/migrations.txt",
+        "line": 939,
+        "excerpt": "``__init__`` method. Every value should itself be serializable.",
+        "matched": "__init__",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/topics/migrations.txt:939"
+        }
+      },
+      {
+        "path": "docs/topics/migrations.txt",
+        "line": 964,
+        "excerpt": "def __init__(self, foo=1):",
+        "matched": "__init__",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/topics/migrations.txt:964"
+        }
+      },
+      {
+        "path": "docs/topics/email.txt",
+        "line": 1288,
+        "excerpt": "any ``__init__()`` keyword arguments your backend supports.",
+        "matched": "__init__",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/topics/email.txt:1288"
+        }
+      },
+      {
+        "path": "docs/topics/checks.txt",
+        "line": 158,
+        "excerpt": "def __init__(self, min=None, max=None, **kwargs):",
+        "matched": "__init__",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/topics/checks.txt:158"
+        }
+      },
+      {
+        "path": "docs/topics/checks.txt",
+        "line": 159,
+        "excerpt": "super().__init__(**kwargs)",
+        "matched": "__init__",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/topics/checks.txt:159"
+        }
+      }
+    ],
+    "note": "Documentation matches are lexical and only point to where a concept is discussed."
+  },
+  "blind_spots": [
+    {
+      "kind": "no-static-dependents",
+      "count": 1,
+      "message": "No static dependents were found. The code may still be used dynamically, as an entry point, or outside this repository.",
+      "items": [
+        "django/conf/locale/es_AR/__init__.py"
+      ]
+    },
+    {
+      "kind": "repo-parse-errors",
+      "count": 3,
+      "message": "Files with parse errors contribute no symbols or edges anywhere in the index."
+    }
+  ],
+  "repo_health": {
+    "unresolved_imports": 25,
+    "dynamic_imports": 9,
+    "note": "Repository-wide counts; they are not scoped to this change."
+  },
+  "caveats": [
+    "This is a static analysis of statically resolvable relationships. Absence of a relationship is not evidence that a change is safe.",
+    "Dynamic imports, reflection, runtime dependency injection, generated code and external consumers are not modeled.",
+    "Test selection uses import edges and naming conventions, not execution traces; it can miss tests and include irrelevant ones.",
+    "Route and database-model detection use framework-specific heuristics and may produce false positives or miss frameworks.",
+    "Confidence levels describe extraction certainty, not the risk of the change itself."
+  ],
+  "summary": {
+    "changed_files": 1,
+    "changed_symbols": 0,
+    "direct_dependents": 0,
+    "transitive_dependents": 0,
+    "related_tests": 0,
+    "affected_routes": 0,
+    "related_models": 0,
+    "completeness": "partial",
+    "confidence_counts": {
+      "confirmed": 0,
+      "inferred": 0
+    }
+  },
+  "_query_time_ms": 72.5
+}

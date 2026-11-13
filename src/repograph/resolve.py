@@ -249,6 +249,8 @@ class Resolver:
         # self-reference from a nested app importing the same name from the
         # registry (measured zustand defect: examples pin `zustand ^5`).
         self.pkg_dirs: set[str] = set()
+        # Directory → resolved main file for packages in this repo.
+        self._pkg_dir_main: dict[str, str] = {}
         # Package dirs that declare workspaces. Bare-name resolution may only
         # cross package boundaries inside one of these.
         self.workspace_roots: set[str] = set()
@@ -575,6 +577,7 @@ class Resolver:
                         break
             if resolved:
                 self.packages[name] = resolved
+                self._pkg_dir_main[base] = resolved
 
     # -- Python -------------------------------------------------------------
 
@@ -688,7 +691,11 @@ class Resolver:
 
     def _ts_candidates(self, base: str) -> list[str]:
         base = posixpath.normpath(base)
-        if base.startswith("../") or base == "..":
+        # Relative paths that escape the repository root are unresolvable,
+        # unless they reach a directory that IS the repo root (base == "").
+        # Example: `../..` from `__tests__/application/` normalises to ""
+        # (repo root) which may have a package.json main.
+        if base.startswith("../"):
             return []
         cands = [base] if base in self.files else []
         if not cands:
@@ -709,6 +716,12 @@ class Resolver:
                     if stem + ext in self.files:
                         cands.append(stem + ext)
                         break
+            # Directory import: `require('../..')` → repo root → package.json main
+            if not cands:
+                # normpath gives '.' for repo root but pkg_dirs/pkg_dir_main uses ''
+                lookup = "" if base == "." else base
+                if lookup in self._pkg_dir_main:
+                    cands.append(self._pkg_dir_main[lookup])
         return cands
 
     def _resolve_package_import(self, rel: str, spec: str, imp: Import) -> list[ResolvedImport]:

@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-13T06:47:25+00:00",
+  "source": "files",
+  "target": {
+    "paths": [
+      "django/conf/locale/ta/formats.py"
+    ],
+    "symbols": [],
+    "symbols_total": 0,
+    "symbols_truncated": false,
+    "changed_lines": {},
+    "removed_symbols": [],
+    "deleted": [],
+    "missing_from_index": [],
+    "diff": null
+  },
+  "changed_files": [
+    "django/conf/locale/ta/formats.py"
+  ],
+  "direct_dependents": [],
+  "transitive_dependents": [],
+  "transitive_dependents_total": 0,
+  "transitive_dependents_truncated": false,
+  "related_tests": [],
+  "related_tests_total": 0,
+  "related_tests_truncated": false,
+  "affected_routes": [],
+  "affected_routes_total": 0,
+  "affected_routes_truncated": false,
+  "related_models": [],
+  "related_models_total": 0,
+  "related_models_truncated": false,
+  "architecture": {
+    "layers": {
+      "other": 1
+    },
+    "documentation_mentions": [
+      {
+        "path": "docs/index.txt",
+        "line": 111,
+        "excerpt": "* **Other output formats**:",
+        "matched": "formats",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/index.txt:111"
+        }
+      },
+      {
+        "path": "docs/topics/serialization.txt",
+        "line": 6,
+        "excerpt": "models into other formats. Usually these other formats will be text-based and",
+        "matched": "formats",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/topics/serialization.txt:6"
+        }
+      },
+      {
+        "path": "docs/topics/serialization.txt",
+        "line": 25,
+        "excerpt": "data to (see `Serialization formats`_) and a",
+        "matched": "formats",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/topics/serialization.txt:25"
+        }
+      },
+      {
+        "path": "docs/topics/serialization.txt",
+        "line": 48,
+        "excerpt": ":ref:`format <serialization-formats>` will raise a",
+        "matched": "formats",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/topics/serialization.txt:48"
+        }
+      },
+      {
+        "path": "docs/topics/serialization.txt",
+        "line": 151,
+        "excerpt": ".. _serialization-formats:",
+        "matched": "formats",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/topics/serialization.txt:151"
+        }
+      },
+      {
+        "path": "docs/topics/serialization.txt",
+        "line": 153,
+        "excerpt": "Serialization formats",
+        "matched": "formats",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/topics/serialization.txt:153"
+        }
+      },
+      {
+        "path": "docs/topics/serialization.txt",
+        "line": 156,
+        "excerpt": "Django supports a number of serialization formats, some of which require you",
+        "matched": "formats",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/topics/serialization.txt:156"
+        }
+      },
+      {
+        "path": "docs/topics/serialization.txt",
+        "line": 176,
+        "excerpt": ".. _serialization-formats-xml:",
+        "matched": "formats",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/topics/serialization.txt:176"
+        }
+      },
+      {
+        "path": "docs/topics/serialization.txt",
+        "line": 246,
+        "excerpt": ".. _serialization-formats-json:",
+        "matched": "formats",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/topics/serialization.txt:246"
+        }
+      },
+      {
+        "path": "docs/topics/serialization.txt",
+        "line": 327,
+        "excerpt": ".. _serialization-formats-jsonl:",
+        "matched": "formats",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/topics/serialization.txt:327"
+        }
+      }
+    ],
+    "note": "Documentation matches are lexical and only point to where a concept is discussed."
+  },
+  "blind_spots": [
+    {
+      "kind": "no-static-dependents",
+      "count": 1,
+      "message": "No static dependents were found. The code may still be used dynamically, as an entry point, or outside this repository.",
+      "items": [
+        "django/conf/locale/ta/formats.py"
+      ]
+    },
+    {
+      "kind": "repo-parse-errors",
+      "count": 3,
+      "message": "Files with parse errors contribute no symbols or edges anywhere in the index."
+    }
+  ],
+  "repo_health": {
+    "unresolved_imports": 25,
+    "dynamic_imports": 9,
+    "note": "Repository-wide counts; they are not scoped to this change."
+  },
+  "caveats": [
+    "This is a static analysis of statically resolvable relationships. Absence of a relationship is not evidence that a change is safe.",
+    "Dynamic imports, reflection, runtime dependency injection, generated code and external consumers are not modeled.",
+    "Test selection uses import edges and naming conventions, not execution traces; it can miss tests and include irrelevant ones.",
+    "Route and database-model detection use framework-specific heuristics and may produce false positives or miss frameworks.",
+    "Confidence levels describe extraction certainty, not the risk of the change itself."
+  ],
+  "summary": {
+    "changed_files": 1,
+    "changed_symbols": 0,
+    "direct_dependents": 0,
+    "transitive_dependents": 0,
+    "related_tests": 0,
+    "affected_routes": 0,
+    "related_models": 0,
+    "completeness": "partial",
+    "confidence_counts": {
+      "confirmed": 0,
+      "inferred": 0
+    }
+  },
+  "_query_time_ms": 62.5
+}

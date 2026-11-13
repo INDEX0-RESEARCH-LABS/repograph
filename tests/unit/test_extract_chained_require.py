@@ -62,3 +62,29 @@ def test_no_edge_for_property_require():
     """y.require('path') is not a top-level require."""
     mods = _modules(b"const x = y.require('./mod')")
     assert "./mod" not in mods
+
+
+# ── package.json main resolution ─────────────────────────────────────────
+
+def test_relative_up_resolves_via_package_main(tmp_path: "Path"):
+    """require('../..') from __tests__/application/ resolves to package main."""
+    from pathlib import Path as _Path
+    import json as _json
+    from repograph.resolve import Resolver
+    from repograph.extract import Import
+
+    # Create a minimal repo structure
+    (tmp_path / "__tests__" / "application").mkdir(parents=True)
+    (tmp_path / "lib").mkdir()
+    (tmp_path / "lib" / "application.js").write_text("module.exports = {}")
+    (tmp_path / "package.json").write_text(_json.dumps({"name": "mypkg", "main": "lib/application.js"}))
+
+    files = [
+        ("__tests__/application/compose.test.js", "javascript"),
+        ("lib/application.js", "javascript"),
+    ]
+    r = Resolver(tmp_path, files)
+    imp = Import("require('../..')", "../..", 0, [("default", "compose")], 6, "require")
+    resolved = r.resolve("__tests__/application/compose.test.js", [imp])
+    targets = [x.target for x in resolved]
+    assert "lib/application.js" in targets, f"got {targets}"

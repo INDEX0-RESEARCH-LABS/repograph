@@ -1,0 +1,2892 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-13T06:47:25+00:00",
+  "source": "files",
+  "target": {
+    "paths": [
+      "scripts/decorator-tests.js"
+    ],
+    "symbols": [
+      {
+        "name": "__knownSymbol",
+        "qualified_name": "__knownSymbol",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          4,
+          4
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:4"
+        }
+      },
+      {
+        "name": "__typeError",
+        "qualified_name": "__typeError",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          5,
+          7
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:5"
+        }
+      },
+      {
+        "name": "__defNormalProp",
+        "qualified_name": "__defNormalProp",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          8,
+          8
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:8"
+        }
+      },
+      {
+        "name": "__name",
+        "qualified_name": "__name",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          9,
+          9
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:9"
+        }
+      },
+      {
+        "name": "__decoratorStart",
+        "qualified_name": "__decoratorStart",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          10,
+          10
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:10"
+        }
+      },
+      {
+        "name": "__expectFn",
+        "qualified_name": "__expectFn",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          12,
+          12
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:12"
+        }
+      },
+      {
+        "name": "__decoratorContext",
+        "qualified_name": "__decoratorContext",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          13,
+          13
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:13"
+        }
+      },
+      {
+        "name": "__decoratorMetadata",
+        "qualified_name": "__decoratorMetadata",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          14,
+          14
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:14"
+        }
+      },
+      {
+        "name": "__runInitializers",
+        "qualified_name": "__runInitializers",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          15,
+          18
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:15"
+        }
+      },
+      {
+        "name": "__decorateElement",
+        "qualified_name": "__decorateElement",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          19,
+          42
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:19"
+        }
+      },
+      {
+        "name": "__publicField",
+        "qualified_name": "__publicField",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          43,
+          43
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:43"
+        }
+      },
+      {
+        "name": "__accessCheck",
+        "qualified_name": "__accessCheck",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          44,
+          44
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:44"
+        }
+      },
+      {
+        "name": "__privateIn",
+        "qualified_name": "__privateIn",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          45,
+          45
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:45"
+        }
+      },
+      {
+        "name": "__privateGet",
+        "qualified_name": "__privateGet",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          46,
+          46
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:46"
+        }
+      },
+      {
+        "name": "__privateAdd",
+        "qualified_name": "__privateAdd",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          47,
+          47
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:47"
+        }
+      },
+      {
+        "name": "__privateSet",
+        "qualified_name": "__privateSet",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          48,
+          48
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:48"
+        }
+      },
+      {
+        "name": "__privateMethod",
+        "qualified_name": "__privateMethod",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          49,
+          49
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:49"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          61,
+          70
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:61"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          72,
+          73
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:72"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          82,
+          91
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:82"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          102,
+          111
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:102"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          126,
+          135
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:126"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          146,
+          155
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:146"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          166,
+          175
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:166"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          186,
+          195
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:186"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          208,
+          217
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:208"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          230,
+          239
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:230"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          252,
+          261
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:252"
+        }
+      },
+      {
+        "name": "Class",
+        "qualified_name": "Class",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          262,
+          265
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:262"
+        }
+      },
+      {
+        "name": "Class2",
+        "qualified_name": "Class2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          268,
+          271
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:268"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          278,
+          287
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:278"
+        }
+      },
+      {
+        "name": "Class",
+        "qualified_name": "Class",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          288,
+          291
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:288"
+        }
+      },
+      {
+        "name": "Class2",
+        "qualified_name": "Class2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          293,
+          296
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:293"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          302,
+          311
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:302"
+        }
+      },
+      {
+        "name": "Class",
+        "qualified_name": "Class",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          312,
+          321
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:312"
+        }
+      },
+      {
+        "name": "Foo",
+        "qualified_name": "Class.Foo",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          315,
+          317
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:315"
+        }
+      },
+      {
+        "name": "Foo",
+        "qualified_name": "Class.Foo",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          318,
+          320
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:318"
+        }
+      },
+      {
+        "name": "Class2",
+        "qualified_name": "Class2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          324,
+          333
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:324"
+        }
+      },
+      {
+        "name": "Bar",
+        "qualified_name": "Class2.Bar",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          327,
+          329
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:327"
+        }
+      },
+      {
+        "name": "Bar",
+        "qualified_name": "Class2.Bar",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          330,
+          332
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:330"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          340,
+          349
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:340"
+        }
+      },
+      {
+        "name": "Class",
+        "qualified_name": "Class",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          350,
+          359
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:350"
+        }
+      },
+      {
+        "name": "Foo",
+        "qualified_name": "Class.Foo",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          353,
+          355
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:353"
+        }
+      },
+      {
+        "name": "Foo",
+        "qualified_name": "Class.Foo",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          356,
+          358
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:356"
+        }
+      },
+      {
+        "name": "Class2",
+        "qualified_name": "Class2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          361,
+          370
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:361"
+        }
+      },
+      {
+        "name": "Bar",
+        "qualified_name": "Class2.Bar",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          364,
+          366
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:364"
+        }
+      },
+      {
+        "name": "Bar",
+        "qualified_name": "Class2.Bar",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          367,
+          369
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:367"
+        }
+      },
+      {
+        "name": "dec1",
+        "qualified_name": "dec1",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          378,
+          385
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:378"
+        }
+      },
+      {
+        "name": "dec2",
+        "qualified_name": "dec2",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          386,
+          393
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:386"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          396,
+          400
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:396"
+        }
+      },
+      {
+        "name": "constructor",
+        "qualified_name": "Foo2.constructor",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          397,
+          399
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:397"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          413,
+          415
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:413"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          417,
+          418
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:417"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          427,
+          429
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:427"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          431,
+          432
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:431"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          442,
+          450
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:442"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          452,
+          453
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:452"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          464,
+          476
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:464"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          479,
+          489
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:479"
+        }
+      },
+      {
+        "name": "constructor",
+        "qualified_name": "Foo2.constructor",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          480,
+          482
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:480"
+        }
+      },
+      {
+        "name": "foo",
+        "qualified_name": "Foo2.foo",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          483,
+          484
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:483"
+        }
+      },
+      {
+        "name": "[(_foo_dec = [dec(\"foo\", \"foo\")], _b = (_bar_dec = [dec(bar, \"[bar]\")], bar))]",
+        "qualified_name": "Foo2.[(_foo_dec = [dec(\"foo\", \"foo\")], _b = (_bar_dec = [dec(bar, \"[bar]\")], bar))]",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          485,
+          486
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:485"
+        }
+      },
+      {
+        "name": "[_a = (_baz_dec = [dec(baz, \"\")], baz)]",
+        "qualified_name": "Foo2.[_a = (_baz_dec = [dec(baz, \"\")], baz)]",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          487,
+          488
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:487"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          502,
+          514
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:502"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          517,
+          524
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:517"
+        }
+      },
+      {
+        "name": "foo",
+        "qualified_name": "Foo2.foo",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          518,
+          519
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:518"
+        }
+      },
+      {
+        "name": "[(_foo_dec = [dec(\"foo\", \"foo\")], _b = (_bar_dec = [dec(bar, \"[bar]\")], bar))]",
+        "qualified_name": "Foo2.[(_foo_dec = [dec(\"foo\", \"foo\")], _b = (_bar_dec = [dec(bar, \"[bar]\")], bar))]",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          520,
+          521
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:520"
+        }
+      },
+      {
+        "name": "[_a = (_baz_dec = [dec(baz, \"\")], baz)]",
+        "qualified_name": "Foo2.[_a = (_baz_dec = [dec(baz, \"\")], baz)]",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          522,
+          523
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:522"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          539,
+          553
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:539"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          577,
+          591
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:577"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          612,
+          617
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:612"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          619,
+          627
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:619"
+        }
+      },
+      {
+        "name": "constructor",
+        "qualified_name": "Foo2.constructor",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          620,
+          623
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:620"
+        }
+      },
+      {
+        "name": "foo",
+        "qualified_name": "Foo2.foo",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          624,
+          626
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:624"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          637,
+          642
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:637"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          644,
+          648
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:644"
+        }
+      },
+      {
+        "name": "foo",
+        "qualified_name": "Foo2.foo",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          645,
+          647
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:645"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          660,
+          665
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:660"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          690,
+          695
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:690"
+        }
+      },
+      {
+        "name": "dec1",
+        "qualified_name": "dec1",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          720,
+          727
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:720"
+        }
+      },
+      {
+        "name": "dec2",
+        "qualified_name": "dec2",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          728,
+          735
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:728"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          738,
+          745
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:738"
+        }
+      },
+      {
+        "name": "constructor",
+        "qualified_name": "Foo2.constructor",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          739,
+          741
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:739"
+        }
+      },
+      {
+        "name": "foo",
+        "qualified_name": "Foo2.foo",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          742,
+          744
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:742"
+        }
+      },
+      {
+        "name": "dec1",
+        "qualified_name": "dec1",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          760,
+          767
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:760"
+        }
+      },
+      {
+        "name": "dec2",
+        "qualified_name": "dec2",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          768,
+          775
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:768"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          778,
+          782
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:778"
+        }
+      },
+      {
+        "name": "foo",
+        "qualified_name": "Foo2.foo",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          779,
+          781
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:779"
+        }
+      },
+      {
+        "name": "dec1",
+        "qualified_name": "dec1",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          798,
+          805
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:798"
+        }
+      },
+      {
+        "name": "dec2",
+        "qualified_name": "dec2",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          806,
+          813
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:806"
+        }
+      },
+      {
+        "name": "dec1",
+        "qualified_name": "dec1",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          843,
+          850
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:843"
+        }
+      },
+      {
+        "name": "dec2",
+        "qualified_name": "dec2",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          851,
+          858
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:851"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          884,
+          886
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:884"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          888,
+          894
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:888"
+        }
+      },
+      {
+        "name": "constructor",
+        "qualified_name": "Foo2.constructor",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          889,
+          891
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:889"
+        }
+      },
+      {
+        "name": "foo",
+        "qualified_name": "Foo2.foo",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          892,
+          893
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:892"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          903,
+          905
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:903"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          907,
+          910
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:907"
+        }
+      },
+      {
+        "name": "foo",
+        "qualified_name": "Foo2.foo",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          908,
+          909
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:908"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          920,
+          922
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:920"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          924,
+          929
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:924"
+        }
+      },
+      {
+        "name": "constructor",
+        "qualified_name": "Foo2.constructor",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          925,
+          928
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:925"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          941,
+          943
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:941"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          945,
+          946
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:945"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          960,
+          962
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:960"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          964,
+          970
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:964"
+        }
+      },
+      {
+        "name": "constructor",
+        "qualified_name": "Foo2.constructor",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          965,
+          967
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:965"
+        }
+      },
+      {
+        "name": "foo",
+        "qualified_name": "Foo2.foo",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          968,
+          969
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:968"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          979,
+          981
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:979"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          983,
+          986
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:983"
+        }
+      },
+      {
+        "name": "foo",
+        "qualified_name": "Foo2.foo",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          984,
+          985
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:984"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          996,
+          998
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:996"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1000,
+          1005
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1000"
+        }
+      },
+      {
+        "name": "constructor",
+        "qualified_name": "Foo2.constructor",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1001,
+          1004
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1001"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1017,
+          1019
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1017"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1021,
+          1022
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1021"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1037,
+          1045
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1037"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1047,
+          1053
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1047"
+        }
+      },
+      {
+        "name": "constructor",
+        "qualified_name": "Foo2.constructor",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1048,
+          1050
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1048"
+        }
+      },
+      {
+        "name": "foo",
+        "qualified_name": "Foo2.foo",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1051,
+          1052
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1051"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1066,
+          1074
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1066"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1076,
+          1079
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1076"
+        }
+      },
+      {
+        "name": "foo",
+        "qualified_name": "Foo2.foo",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1077,
+          1078
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1077"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1091,
+          1099
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1091"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1101,
+          1106
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1101"
+        }
+      },
+      {
+        "name": "constructor",
+        "qualified_name": "Foo2.constructor",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1102,
+          1105
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1102"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1122,
+          1130
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1122"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1132,
+          1133
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1132"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1148,
+          1162
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1148"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1166,
+          1172
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1166"
+        }
+      },
+      {
+        "name": "constructor",
+        "qualified_name": "Foo2.constructor",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1167,
+          1171
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1167"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1184,
+          1198
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1184"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1202,
+          1203
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1202"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1219,
+          1235
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1219"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1238,
+          1242
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1238"
+        }
+      },
+      {
+        "name": "constructor",
+        "qualified_name": "Foo2.constructor",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1239,
+          1241
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1239"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1254,
+          1269
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1254"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1272,
+          1273
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1272"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1286,
+          1291
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1286"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1293,
+          1298
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1293"
+        }
+      },
+      {
+        "name": "constructor",
+        "qualified_name": "Foo2.constructor",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1294,
+          1297
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1294"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1313,
+          1318
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1313"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1338,
+          1343
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1338"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1349,
+          1354
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1349"
+        }
+      },
+      {
+        "name": "constructor",
+        "qualified_name": "Foo2.constructor",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1350,
+          1353
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1350"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1375,
+          1380
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1375"
+        }
+      },
+      {
+        "name": "dec1",
+        "qualified_name": "dec1",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1410,
+          1413
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1410"
+        }
+      },
+      {
+        "name": "dec2",
+        "qualified_name": "dec2",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1414,
+          1417
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1414"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1420,
+          1424
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1420"
+        }
+      },
+      {
+        "name": "constructor",
+        "qualified_name": "Foo2.constructor",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1421,
+          1423
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1421"
+        }
+      },
+      {
+        "name": "dec1",
+        "qualified_name": "dec1",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1437,
+          1440
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1437"
+        }
+      },
+      {
+        "name": "dec2",
+        "qualified_name": "dec2",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1441,
+          1444
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1441"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1447,
+          1448
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1447"
+        }
+      },
+      {
+        "name": "dec1",
+        "qualified_name": "dec1",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1460,
+          1463
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1460"
+        }
+      },
+      {
+        "name": "dec2",
+        "qualified_name": "dec2",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1464,
+          1467
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1464"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1471,
+          1475
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1471"
+        }
+      },
+      {
+        "name": "constructor",
+        "qualified_name": "Foo2.constructor",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1472,
+          1474
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1472"
+        }
+      },
+      {
+        "name": "dec1",
+        "qualified_name": "dec1",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1490,
+          1493
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1490"
+        }
+      },
+      {
+        "name": "dec2",
+        "qualified_name": "dec2",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1494,
+          1497
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1494"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1501,
+          1502
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1501"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1516,
+          1518
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1516"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1520,
+          1524
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1520"
+        }
+      },
+      {
+        "name": "constructor",
+        "qualified_name": "Foo2.constructor",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1521,
+          1523
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1521"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1533,
+          1535
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1533"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1537,
+          1538
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1537"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1548,
+          1550
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1548"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1552,
+          1556
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1552"
+        }
+      },
+      {
+        "name": "constructor",
+        "qualified_name": "Foo2.constructor",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1553,
+          1555
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1553"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1566,
+          1568
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1566"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1570,
+          1571
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1570"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1582,
+          1584
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1582"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1586,
+          1590
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1586"
+        }
+      },
+      {
+        "name": "constructor",
+        "qualified_name": "Foo2.constructor",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1587,
+          1589
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1587"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1599,
+          1601
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1599"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1603,
+          1604
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1603"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1614,
+          1616
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1614"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1618,
+          1622
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1618"
+        }
+      },
+      {
+        "name": "constructor",
+        "qualified_name": "Foo2.constructor",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1619,
+          1621
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1619"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1632,
+          1634
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1632"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1636,
+          1637
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1636"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1649,
+          1657
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1649"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1659,
+          1663
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1659"
+        }
+      },
+      {
+        "name": "constructor",
+        "qualified_name": "Foo2.constructor",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1660,
+          1662
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1660"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1676,
+          1684
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1676"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1686,
+          1687
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1686"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1699,
+          1707
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1699"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1709,
+          1713
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1709"
+        }
+      },
+      {
+        "name": "constructor",
+        "qualified_name": "Foo2.constructor",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1710,
+          1712
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1710"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1727,
+          1735
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1727"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1737,
+          1738
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1737"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1750,
+          1761
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1750"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1764,
+          1778
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1764"
+        }
+      },
+      {
+        "name": "constructor",
+        "qualified_name": "Foo2.constructor",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1765,
+          1768
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1765"
+        }
+      },
+      {
+        "name": "foo",
+        "qualified_name": "Foo2.foo",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1769,
+          1771
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1769"
+        }
+      },
+      {
+        "name": "[(_foo_dec = [dec(\"foo\", \"get foo\")], _b = (_bar_dec = [dec(bar, \"get [bar]\")], bar))]",
+        "qualified_name": "Foo2.[(_foo_dec = [dec(\"foo\", \"get foo\")], _b = (_bar_dec = [dec(bar, \"get [bar]\")], bar))]",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1772,
+          1774
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1772"
+        }
+      },
+      {
+        "name": "[_a = (_baz_dec = [dec(baz, \"get \")], baz)]",
+        "qualified_name": "Foo2.[_a = (_baz_dec = [dec(baz, \"get \")], baz)]",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1775,
+          1777
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1775"
+        }
+      },
+      {
+        "name": "dec",
+        "qualified_name": "dec",
+        "kind": "function",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1790,
+          1801
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1790"
+        }
+      },
+      {
+        "name": "Foo2",
+        "qualified_name": "Foo2",
+        "kind": "class",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1804,
+          1814
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1804"
+        }
+      },
+      {
+        "name": "foo",
+        "qualified_name": "Foo2.foo",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1805,
+          1807
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1805"
+        }
+      },
+      {
+        "name": "[(_foo_dec = [dec(\"foo\", \"get foo\")], _b = (_bar_dec = [dec(bar, \"get [bar]\")], bar))]",
+        "qualified_name": "Foo2.[(_foo_dec = [dec(\"foo\", \"get foo\")], _b = (_bar_dec = [dec(bar, \"get [bar]\")], bar))]",
+        "kind": "method",
+        "path": "scripts/decorator-tests.js",
+        "lines": [
+          1808,
+          1810
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/decorator-tests.js:1808"
+        }
+      }
+    ],
+    "symbols_total": 558,
+    "symbols_truncated": true,
+    "changed_lines": {},
+    "removed_symbols": [],
+    "deleted": [],
+    "missing_from_index": [],
+    "diff": null
+  },
+  "changed_files": [
+    "scripts/decorator-tests.js"
+  ],
+  "direct_dependents": [],
+  "transitive_dependents": [],
+  "transitive_dependents_total": 0,
+  "transitive_dependents_truncated": false,
+  "related_tests": [],
+  "related_tests_total": 0,
+  "related_tests_truncated": false,
+  "affected_routes": [],
+  "affected_routes_total": 0,
+  "affected_routes_truncated": false,
+  "related_models": [],
+  "related_models_total": 0,
+  "related_models_truncated": false,
+  "architecture": {
+    "layers": {
+      "infra": 1
+    },
+    "documentation_mentions": [],
+    "note": "Documentation matches are lexical and only point to where a concept is discussed."
+  },
+  "blind_spots": [
+    {
+      "kind": "output-truncated",
+      "count": 1,
+      "message": "One or more lists are capped for output; the summary reports the true totals. Narrow the target or raise --depth before trusting the list as complete.",
+      "items": [
+        "symbols"
+      ]
+    },
+    {
+      "kind": "no-static-dependents",
+      "count": 1,
+      "message": "No static dependents were found. The code may still be used dynamically, as an entry point, or outside this repository.",
+      "items": [
+        "scripts/decorator-tests.js"
+      ]
+    },
+    {
+      "kind": "repo-parse-errors",
+      "count": 1,
+      "message": "Files with parse errors contribute no symbols or edges anywhere in the index."
+    }
+  ],
+  "repo_health": {
+    "unresolved_imports": 1,
+    "dynamic_imports": 9,
+    "note": "Repository-wide counts; they are not scoped to this change."
+  },
+  "caveats": [
+    "This is a static analysis of statically resolvable relationships. Absence of a relationship is not evidence that a change is safe.",
+    "Dynamic imports, reflection, runtime dependency injection, generated code and external consumers are not modeled.",
+    "Test selection uses import edges and naming conventions, not execution traces; it can miss tests and include irrelevant ones.",
+    "Route and database-model detection use framework-specific heuristics and may produce false positives or miss frameworks.",
+    "Confidence levels describe extraction certainty, not the risk of the change itself."
+  ],
+  "summary": {
+    "changed_files": 1,
+    "changed_symbols": 558,
+    "direct_dependents": 0,
+    "transitive_dependents": 0,
+    "related_tests": 0,
+    "affected_routes": 0,
+    "related_models": 0,
+    "completeness": "partial",
+    "confidence_counts": {
+      "confirmed": 0,
+      "inferred": 0
+    }
+  },
+  "_query_time_ms": 7.7
+}

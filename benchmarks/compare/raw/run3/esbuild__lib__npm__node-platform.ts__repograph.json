@@ -1,0 +1,270 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-13T06:47:25+00:00",
+  "source": "files",
+  "target": {
+    "paths": [
+      "lib/npm/node-platform.ts"
+    ],
+    "symbols": [
+      {
+        "name": "isValidBinaryPath",
+        "qualified_name": "isValidBinaryPath",
+        "kind": "function",
+        "path": "lib/npm/node-platform.ts",
+        "lines": [
+          17,
+          17
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/npm/node-platform.ts:17"
+        }
+      },
+      {
+        "name": "pkgAndSubpathForCurrentPlatform",
+        "qualified_name": "pkgAndSubpathForCurrentPlatform",
+        "kind": "function",
+        "path": "lib/npm/node-platform.ts",
+        "lines": [
+          57,
+          84
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/npm/node-platform.ts:57"
+        }
+      },
+      {
+        "name": "pkgForSomeOtherPlatform",
+        "qualified_name": "pkgForSomeOtherPlatform",
+        "kind": "function",
+        "path": "lib/npm/node-platform.ts",
+        "lines": [
+          86,
+          109
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/npm/node-platform.ts:86"
+        }
+      },
+      {
+        "name": "downloadedBinPath",
+        "qualified_name": "downloadedBinPath",
+        "kind": "function",
+        "path": "lib/npm/node-platform.ts",
+        "lines": [
+          111,
+          114
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/npm/node-platform.ts:111"
+        }
+      },
+      {
+        "name": "generateBinPath",
+        "qualified_name": "generateBinPath",
+        "kind": "function",
+        "path": "lib/npm/node-platform.ts",
+        "lines": [
+          116,
+          291
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/npm/node-platform.ts:116"
+        }
+      }
+    ],
+    "symbols_total": 5,
+    "symbols_truncated": false,
+    "changed_lines": {},
+    "removed_symbols": [],
+    "deleted": [],
+    "missing_from_index": [],
+    "diff": null
+  },
+  "changed_files": [
+    "lib/npm/node-platform.ts"
+  ],
+  "direct_dependents": [
+    {
+      "path": "lib/npm/node-install.ts",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "lib/npm/node-platform.ts",
+          "line": 1,
+          "module": "./node-platform",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "lib/npm/node-install.ts:1"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "lib/npm/node-platform.ts",
+          "symbol": "isValidBinaryPath",
+          "line": 256,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "lib/npm/node-install.ts:256"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "lib/npm/node-platform.ts",
+          "symbol": "pkgAndSubpathForCurrentPlatform",
+          "line": 265,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "lib/npm/node-install.ts:265"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "lib/npm/node-platform.ts",
+          "symbol": "downloadedBinPath",
+          "line": 296,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "lib/npm/node-install.ts:296"
+          }
+        }
+      ],
+      "reason_count": 4,
+      "evidence": {
+        "location": "lib/npm/node-install.ts:1"
+      }
+    },
+    {
+      "path": "lib/npm/node-shim.ts",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "lib/npm/node-platform.ts",
+          "line": 3,
+          "module": "./node-platform",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "lib/npm/node-shim.ts:3"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "lib/npm/node-platform.ts",
+          "symbol": "generateBinPath",
+          "line": 4,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "lib/npm/node-shim.ts:4"
+          }
+        }
+      ],
+      "reason_count": 2,
+      "evidence": {
+        "location": "lib/npm/node-shim.ts:3"
+      }
+    },
+    {
+      "path": "lib/npm/node.ts",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "lib/npm/node-platform.ts",
+          "line": 3,
+          "module": "./node-platform",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "lib/npm/node.ts:3"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "lib/npm/node-platform.ts",
+          "symbol": "generateBinPath",
+          "line": 72,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "lib/npm/node.ts:72"
+          }
+        }
+      ],
+      "reason_count": 2,
+      "evidence": {
+        "location": "lib/npm/node.ts:3"
+      }
+    }
+  ],
+  "transitive_dependents": [],
+  "transitive_dependents_total": 0,
+  "transitive_dependents_truncated": false,
+  "related_tests": [],
+  "related_tests_total": 0,
+  "related_tests_truncated": false,
+  "affected_routes": [],
+  "affected_routes_total": 0,
+  "affected_routes_truncated": false,
+  "related_models": [],
+  "related_models_total": 0,
+  "related_models_truncated": false,
+  "architecture": {
+    "layers": {
+      "domain": 1
+    },
+    "documentation_mentions": [],
+    "note": "Documentation matches are lexical and only point to where a concept is discussed."
+  },
+  "blind_spots": [
+    {
+      "kind": "repo-parse-errors",
+      "count": 1,
+      "message": "Files with parse errors contribute no symbols or edges anywhere in the index."
+    }
+  ],
+  "repo_health": {
+    "unresolved_imports": 1,
+    "dynamic_imports": 9,
+    "note": "Repository-wide counts; they are not scoped to this change."
+  },
+  "caveats": [
+    "This is a static analysis of statically resolvable relationships. Absence of a relationship is not evidence that a change is safe.",
+    "Dynamic imports, reflection, runtime dependency injection, generated code and external consumers are not modeled.",
+    "Test selection uses import edges and naming conventions, not execution traces; it can miss tests and include irrelevant ones.",
+    "Route and database-model detection use framework-specific heuristics and may produce false positives or miss frameworks.",
+    "Confidence levels describe extraction certainty, not the risk of the change itself."
+  ],
+  "summary": {
+    "changed_files": 1,
+    "changed_symbols": 5,
+    "direct_dependents": 3,
+    "transitive_dependents": 0,
+    "related_tests": 0,
+    "affected_routes": 0,
+    "related_models": 0,
+    "completeness": "partial",
+    "confidence_counts": {
+      "confirmed": 3,
+      "inferred": 0
+    }
+  },
+  "_query_time_ms": 2.7
+}

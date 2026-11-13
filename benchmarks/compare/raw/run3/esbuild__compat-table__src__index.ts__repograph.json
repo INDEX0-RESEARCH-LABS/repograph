@@ -1,0 +1,544 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-13T06:47:25+00:00",
+  "source": "files",
+  "target": {
+    "paths": [
+      "compat-table/src/index.ts"
+    ],
+    "symbols": [
+      {
+        "name": "Engine",
+        "qualified_name": "Engine",
+        "kind": "type",
+        "path": "compat-table/src/index.ts",
+        "lines": [
+          12,
+          12
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "compat-table/src/index.ts:12"
+        }
+      },
+      {
+        "name": "JSFeature",
+        "qualified_name": "JSFeature",
+        "kind": "type",
+        "path": "compat-table/src/index.ts",
+        "lines": [
+          28,
+          28
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "compat-table/src/index.ts:28"
+        }
+      },
+      {
+        "name": "CSSFeature",
+        "qualified_name": "CSSFeature",
+        "kind": "type",
+        "path": "compat-table/src/index.ts",
+        "lines": [
+          93,
+          93
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "compat-table/src/index.ts:93"
+        }
+      },
+      {
+        "name": "CSSProperty",
+        "qualified_name": "CSSProperty",
+        "kind": "type",
+        "path": "compat-table/src/index.ts",
+        "lines": [
+          110,
+          110
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "compat-table/src/index.ts:110"
+        }
+      },
+      {
+        "name": "Support",
+        "qualified_name": "Support",
+        "kind": "interface",
+        "path": "compat-table/src/index.ts",
+        "lines": [
+          147,
+          151
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "compat-table/src/index.ts:147"
+        }
+      },
+      {
+        "name": "VersionRange",
+        "qualified_name": "VersionRange",
+        "kind": "interface",
+        "path": "compat-table/src/index.ts",
+        "lines": [
+          153,
+          156
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "compat-table/src/index.ts:153"
+        }
+      },
+      {
+        "name": "PrefixData",
+        "qualified_name": "PrefixData",
+        "kind": "interface",
+        "path": "compat-table/src/index.ts",
+        "lines": [
+          158,
+          162
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "compat-table/src/index.ts:158"
+        }
+      },
+      {
+        "name": "SupportMap",
+        "qualified_name": "SupportMap",
+        "kind": "type",
+        "path": "compat-table/src/index.ts",
+        "lines": [
+          164,
+          164
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "compat-table/src/index.ts:164"
+        }
+      },
+      {
+        "name": "VersionRangeMap",
+        "qualified_name": "VersionRangeMap",
+        "kind": "type",
+        "path": "compat-table/src/index.ts",
+        "lines": [
+          165,
+          165
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "compat-table/src/index.ts:165"
+        }
+      },
+      {
+        "name": "WhyNotMap",
+        "qualified_name": "WhyNotMap",
+        "kind": "type",
+        "path": "compat-table/src/index.ts",
+        "lines": [
+          166,
+          166
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "compat-table/src/index.ts:166"
+        }
+      },
+      {
+        "name": "CSSPrefixMap",
+        "qualified_name": "CSSPrefixMap",
+        "kind": "type",
+        "path": "compat-table/src/index.ts",
+        "lines": [
+          167,
+          167
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "compat-table/src/index.ts:167"
+        }
+      },
+      {
+        "name": "compareVersions",
+        "qualified_name": "compareVersions",
+        "kind": "function",
+        "path": "compat-table/src/index.ts",
+        "lines": [
+          169,
+          178
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "compat-table/src/index.ts:169"
+        }
+      },
+      {
+        "name": "mergeSupportMaps",
+        "qualified_name": "mergeSupportMaps",
+        "kind": "function",
+        "path": "compat-table/src/index.ts",
+        "lines": [
+          180,
+          198
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "compat-table/src/index.ts:180"
+        }
+      },
+      {
+        "name": "mergePrefixMaps",
+        "qualified_name": "mergePrefixMaps",
+        "kind": "function",
+        "path": "compat-table/src/index.ts",
+        "lines": [
+          200,
+          207
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "compat-table/src/index.ts:200"
+        }
+      },
+      {
+        "name": "supportMapToVersionRanges",
+        "qualified_name": "supportMapToVersionRanges",
+        "kind": "function",
+        "path": "compat-table/src/index.ts",
+        "lines": [
+          209,
+          304
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "compat-table/src/index.ts:209"
+        }
+      },
+      {
+        "name": "installGitHubDependencies",
+        "qualified_name": "installGitHubDependencies",
+        "kind": "function",
+        "path": "compat-table/src/index.ts",
+        "lines": [
+          306,
+          333
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "compat-table/src/index.ts:306"
+        }
+      }
+    ],
+    "symbols_total": 16,
+    "symbols_truncated": false,
+    "changed_lines": {},
+    "removed_symbols": [],
+    "deleted": [],
+    "missing_from_index": [],
+    "diff": null
+  },
+  "changed_files": [
+    "compat-table/src/index.ts"
+  ],
+  "direct_dependents": [
+    {
+      "path": "compat-table/src/caniuse.ts",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "compat-table/src/index.ts",
+          "line": 4,
+          "module": "./index",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "compat-table/src/caniuse.ts:4"
+          }
+        }
+      ],
+      "reason_count": 1,
+      "evidence": {
+        "location": "compat-table/src/caniuse.ts:4"
+      }
+    },
+    {
+      "path": "compat-table/src/compat-table.ts",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "compat-table/src/index.ts",
+          "line": 13,
+          "module": "./index",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "compat-table/src/compat-table.ts:13"
+          }
+        }
+      ],
+      "reason_count": 1,
+      "evidence": {
+        "location": "compat-table/src/compat-table.ts:13"
+      }
+    },
+    {
+      "path": "compat-table/src/css_table.ts",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "compat-table/src/index.ts",
+          "line": 4,
+          "module": "./index",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "compat-table/src/css_table.ts:4"
+          }
+        }
+      ],
+      "reason_count": 1,
+      "evidence": {
+        "location": "compat-table/src/css_table.ts:4"
+      }
+    },
+    {
+      "path": "compat-table/src/js_table.ts",
+      "confidence": "inferred",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "compat-table/src/index.ts",
+          "line": 4,
+          "module": "./index",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "compat-table/src/js_table.ts:4"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "compat-table/src/index.ts",
+          "symbol": "reduce",
+          "line": 48,
+          "reference_kind": "attr_call",
+          "method": "module-or-instance-attribute",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "compat-table/src/js_table.ts:48"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "compat-table/src/index.ts",
+          "symbol": "map",
+          "line": 50,
+          "reference_kind": "attr_call",
+          "method": "module-or-instance-attribute",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "compat-table/src/js_table.ts:50"
+          }
+        }
+      ],
+      "reason_count": 3,
+      "evidence": {
+        "location": "compat-table/src/js_table.ts:4"
+      }
+    },
+    {
+      "path": "compat-table/src/mdn.ts",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "compat-table/src/index.ts",
+          "line": 4,
+          "module": "./index",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "compat-table/src/mdn.ts:4"
+          }
+        }
+      ],
+      "reason_count": 1,
+      "evidence": {
+        "location": "compat-table/src/mdn.ts:4"
+      }
+    }
+  ],
+  "transitive_dependents": [],
+  "transitive_dependents_total": 0,
+  "transitive_dependents_truncated": false,
+  "related_tests": [],
+  "related_tests_total": 0,
+  "related_tests_truncated": false,
+  "affected_routes": [],
+  "affected_routes_total": 0,
+  "affected_routes_truncated": false,
+  "related_models": [],
+  "related_models_total": 0,
+  "related_models_truncated": false,
+  "architecture": {
+    "layers": {
+      "other": 1
+    },
+    "documentation_mentions": [
+      {
+        "path": "docs/architecture.md",
+        "line": 38,
+        "excerpt": "* **Transparently support both ES6 and CommonJS module syntax**",
+        "matched": "Support",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:38"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 86,
+        "excerpt": "Symbols for the whole file are stored in a flat top-level array. That way you can easily traverse over all symbols in the file without traversing the AST. That also lets us easily create a modified AST where the symbols ",
+        "matched": "index",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:86"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 209,
+        "excerpt": "These two syntaxes are supported side-by-side as transparently as possible. This means you can use both CommonJS syntax (`exports` and `module` assignments and `require()` calls) and ES6 syntax (`import` and `export` sta",
+        "matched": "Support",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:209"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 215,
+        "excerpt": "During bundling, the symbol maps from all files are merged into a single giant symbol map, which allows symbols to be merged across files. The symbol map is represented as an array-of-arrays and a symbol reference is rep",
+        "matched": "index",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:215"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 225,
+        "excerpt": "This library contains support code that is needed to implement various aspects of JavaScript transformation and bundling. For example, it contains the `__commonJS()` helper function for wrapping CommonJS modules and the ",
+        "matched": "Support",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:225"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 241,
+        "excerpt": "There are three input files: `index.js`, `config.js`, and `net.js`. Tree shaking traverses along all graph edges from `index.js` (the entry point). The two types of edges are shown with different arrows. Solid arrows are",
+        "matched": "index",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:241"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 258,
+        "excerpt": "// index.js",
+        "matched": "index",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:258"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 275,
+        "excerpt": "These two tree shaking passes result in three chunks: all parts only reachable from `index.js`, all parts only reachable from `settings.js`, and all parts reachable from both `index.js` and `settings.js`. Parts belonging",
+        "matched": "index",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:275"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 284,
+        "excerpt": "<tr><th>Chunk for index.js</th><th>Chunk for settings.js</th><th>Chunk for shared code</th></tr>",
+        "matched": "index",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:284"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 303,
+        "excerpt": "// index.js",
+        "matched": "index",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:303"
+        }
+      }
+    ],
+    "note": "Documentation matches are lexical and only point to where a concept is discussed."
+  },
+  "blind_spots": [
+    {
+      "kind": "dynamic-imports",
+      "count": 1,
+      "message": "Dynamic imports in the changed files were resolved syntactically but their runtime targets may differ.",
+      "items": [
+        {
+          "file": "compat-table/src/index.ts",
+          "line": 338,
+          "module": "./compat-table",
+          "related": false
+        }
+      ]
+    },
+    {
+      "kind": "repo-parse-errors",
+      "count": 1,
+      "message": "Files with parse errors contribute no symbols or edges anywhere in the index."
+    }
+  ],
+  "repo_health": {
+    "unresolved_imports": 1,
+    "dynamic_imports": 9,
+    "note": "Repository-wide counts; they are not scoped to this change."
+  },
+  "caveats": [
+    "This is a static analysis of statically resolvable relationships. Absence of a relationship is not evidence that a change is safe.",
+    "Dynamic imports, reflection, runtime dependency injection, generated code and external consumers are not modeled.",
+    "Test selection uses import edges and naming conventions, not execution traces; it can miss tests and include irrelevant ones.",
+    "Route and database-model detection use framework-specific heuristics and may produce false positives or miss frameworks.",
+    "Confidence levels describe extraction certainty, not the risk of the change itself."
+  ],
+  "summary": {
+    "changed_files": 1,
+    "changed_symbols": 16,
+    "direct_dependents": 5,
+    "transitive_dependents": 0,
+    "related_tests": 0,
+    "affected_routes": 0,
+    "related_models": 0,
+    "completeness": "partial",
+    "confidence_counts": {
+      "confirmed": 4,
+      "inferred": 1
+    }
+  },
+  "_query_time_ms": 2.1
+}

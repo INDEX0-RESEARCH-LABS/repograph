@@ -1,0 +1,1769 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-13T06:47:25+00:00",
+  "source": "files",
+  "target": {
+    "paths": [
+      "django/template/backends/base.py"
+    ],
+    "symbols": [
+      {
+        "name": "BaseEngine",
+        "qualified_name": "BaseEngine",
+        "kind": "class",
+        "path": "django/template/backends/base.py",
+        "lines": [
+          8,
+          84
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "django/template/backends/base.py:8"
+        }
+      },
+      {
+        "name": "__init__",
+        "qualified_name": "BaseEngine.__init__",
+        "kind": "method",
+        "path": "django/template/backends/base.py",
+        "lines": [
+          12,
+          25
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "django/template/backends/base.py:12"
+        }
+      },
+      {
+        "name": "check",
+        "qualified_name": "BaseEngine.check",
+        "kind": "method",
+        "path": "django/template/backends/base.py",
+        "lines": [
+          27,
+          28
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "django/template/backends/base.py:27"
+        }
+      },
+      {
+        "name": "app_dirname",
+        "qualified_name": "BaseEngine.app_dirname",
+        "kind": "method",
+        "path": "django/template/backends/base.py",
+        "lines": [
+          31,
+          35
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "django/template/backends/base.py:31"
+        }
+      },
+      {
+        "name": "from_string",
+        "qualified_name": "BaseEngine.from_string",
+        "kind": "method",
+        "path": "django/template/backends/base.py",
+        "lines": [
+          37,
+          45
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "django/template/backends/base.py:37"
+        }
+      },
+      {
+        "name": "get_template",
+        "qualified_name": "BaseEngine.get_template",
+        "kind": "method",
+        "path": "django/template/backends/base.py",
+        "lines": [
+          47,
+          55
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "django/template/backends/base.py:47"
+        }
+      },
+      {
+        "name": "template_dirs",
+        "qualified_name": "BaseEngine.template_dirs",
+        "kind": "method",
+        "path": "django/template/backends/base.py",
+        "lines": [
+          61,
+          69
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "django/template/backends/base.py:61"
+        }
+      },
+      {
+        "name": "iter_template_filenames",
+        "qualified_name": "BaseEngine.iter_template_filenames",
+        "kind": "method",
+        "path": "django/template/backends/base.py",
+        "lines": [
+          71,
+          84
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "django/template/backends/base.py:71"
+        }
+      }
+    ],
+    "symbols_total": 8,
+    "symbols_truncated": false,
+    "changed_lines": {},
+    "removed_symbols": [],
+    "deleted": [],
+    "missing_from_index": [],
+    "diff": null
+  },
+  "changed_files": [
+    "django/template/backends/base.py"
+  ],
+  "direct_dependents": [
+    {
+      "path": "django/template/backends/django.py",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "django/template/backends/base.py",
+          "line": 13,
+          "module": "base",
+          "method": "python-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "django/template/backends/django.py:13"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "django/template/backends/base.py",
+          "symbol": "BaseEngine",
+          "line": 16,
+          "reference_kind": "inherits",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "django/template/backends/django.py:16"
+          }
+        }
+      ],
+      "reason_count": 2,
+      "evidence": {
+        "location": "django/template/backends/django.py:13"
+      }
+    },
+    {
+      "path": "django/template/backends/dummy.py",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "django/template/backends/base.py",
+          "line": 7,
+          "module": "base",
+          "method": "python-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "django/template/backends/dummy.py:7"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "django/template/backends/base.py",
+          "symbol": "BaseEngine",
+          "line": 11,
+          "reference_kind": "inherits",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "django/template/backends/dummy.py:11"
+          }
+        }
+      ],
+      "reason_count": 2,
+      "evidence": {
+        "location": "django/template/backends/dummy.py:7"
+      }
+    },
+    {
+      "path": "django/template/backends/jinja2.py",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "django/template/backends/base.py",
+          "line": 10,
+          "module": "base",
+          "method": "python-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "django/template/backends/jinja2.py:10"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "django/template/backends/base.py",
+          "symbol": "BaseEngine",
+          "line": 14,
+          "reference_kind": "inherits",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "django/template/backends/jinja2.py:14"
+          }
+        }
+      ],
+      "reason_count": 2,
+      "evidence": {
+        "location": "django/template/backends/jinja2.py:10"
+      }
+    },
+    {
+      "path": "tests/check_framework/test_templates.py",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "django/template/backends/base.py",
+          "line": 7,
+          "module": "django.template.backends.base",
+          "method": "python-absolute-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "tests/check_framework/test_templates.py:7"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "django/template/backends/base.py",
+          "symbol": "BaseEngine",
+          "line": 12,
+          "reference_kind": "inherits",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "tests/check_framework/test_templates.py:12"
+          }
+        }
+      ],
+      "reason_count": 2,
+      "evidence": {
+        "location": "tests/check_framework/test_templates.py:7"
+      }
+    }
+  ],
+  "transitive_dependents": [
+    {
+      "path": "django/contrib/admin/checks.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/contrib/admin/checks.py",
+          "to": "django/template/backends/django.py",
+          "line": 15,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/backends/django.py",
+          "to": "django/template/backends/base.py",
+          "line": 13,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/template/backends/django.py:13"
+      }
+    },
+    {
+      "path": "django/forms/renderers.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/forms/renderers.py",
+          "to": "django/template/backends/django.py",
+          "line": 5,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/backends/django.py",
+          "to": "django/template/backends/base.py",
+          "line": 13,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/template/backends/django.py:13"
+      }
+    },
+    {
+      "path": "django/template/autoreload.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/template/autoreload.py",
+          "to": "django/template/backends/django.py",
+          "line": 5,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/backends/django.py",
+          "to": "django/template/backends/base.py",
+          "line": 13,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/template/backends/django.py:13"
+      }
+    },
+    {
+      "path": "django/template/engine.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/template/engine.py",
+          "to": "django/template/backends/django.py",
+          "line": 121,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/backends/django.py",
+          "to": "django/template/backends/base.py",
+          "line": 13,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/template/backends/django.py:13"
+      }
+    },
+    {
+      "path": "django/template/loaders/cached.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/template/loaders/cached.py",
+          "to": "django/template/backends/django.py",
+          "line": 9,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/backends/django.py",
+          "to": "django/template/backends/base.py",
+          "line": 13,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/template/backends/django.py:13"
+      }
+    },
+    {
+      "path": "tests/template_backends/test_django.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/template_backends/test_django.py",
+          "to": "django/template/backends/django.py",
+          "line": 6,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/backends/django.py",
+          "to": "django/template/backends/base.py",
+          "line": 13,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/template/backends/django.py:13"
+      }
+    },
+    {
+      "path": "tests/template_backends/test_dummy.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/template_backends/test_dummy.py",
+          "to": "django/template/backends/dummy.py",
+          "line": 12,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/backends/dummy.py",
+          "to": "django/template/backends/base.py",
+          "line": 7,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/template/backends/dummy.py:7"
+      }
+    },
+    {
+      "path": "tests/template_backends/test_jinja2.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/template_backends/test_jinja2.py",
+          "to": "django/template/backends/jinja2.py",
+          "line": 16,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/backends/jinja2.py",
+          "to": "django/template/backends/base.py",
+          "line": 10,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/template/backends/jinja2.py:10"
+      }
+    },
+    {
+      "path": "tests/template_tests/test_partials.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/template_tests/test_partials.py",
+          "to": "django/template/backends/django.py",
+          "line": 15,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/backends/django.py",
+          "to": "django/template/backends/base.py",
+          "line": 13,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/template/backends/django.py:13"
+      }
+    },
+    {
+      "path": "django/contrib/admin/apps.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/contrib/admin/apps.py",
+          "to": "django/contrib/admin/checks.py",
+          "line": 2,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/admin/checks.py",
+          "to": "django/template/backends/django.py",
+          "line": 15,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/backends/django.py",
+          "to": "django/template/backends/base.py",
+          "line": 13,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/template/backends/django.py:13"
+      }
+    },
+    {
+      "path": "django/contrib/admin/options.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/contrib/admin/options.py",
+          "to": "django/contrib/admin/checks.py",
+          "line": 20,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/admin/checks.py",
+          "to": "django/template/backends/django.py",
+          "line": 15,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/backends/django.py",
+          "to": "django/template/backends/base.py",
+          "line": 13,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/template/backends/django.py:13"
+      }
+    },
+    {
+      "path": "django/contrib/admindocs/views.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/contrib/admindocs/views.py",
+          "to": "django/template/engine.py",
+          "line": 18,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/engine.py",
+          "to": "django/template/backends/django.py",
+          "line": 121,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/backends/django.py",
+          "to": "django/template/backends/base.py",
+          "line": 13,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/template/backends/django.py:13"
+      }
+    },
+    {
+      "path": "django/contrib/contenttypes/admin.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/contrib/contenttypes/admin.py",
+          "to": "django/contrib/admin/checks.py",
+          "line": 3,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/admin/checks.py",
+          "to": "django/template/backends/django.py",
+          "line": 15,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/backends/django.py",
+          "to": "django/template/backends/base.py",
+          "line": 13,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/template/backends/django.py:13"
+      }
+    },
+    {
+      "path": "django/forms/forms.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/forms/forms.py",
+          "to": "django/forms/renderers.py",
+          "line": 16,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/forms/renderers.py",
+          "to": "django/template/backends/django.py",
+          "line": 5,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/backends/django.py",
+          "to": "django/template/backends/base.py",
+          "line": 13,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/template/backends/django.py:13"
+      }
+    },
+    {
+      "path": "django/forms/formsets.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/forms/formsets.py",
+          "to": "django/forms/renderers.py",
+          "line": 6,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/forms/renderers.py",
+          "to": "django/template/backends/django.py",
+          "line": 5,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/backends/django.py",
+          "to": "django/template/backends/base.py",
+          "line": 13,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/template/backends/django.py:13"
+      }
+    },
+    {
+      "path": "django/forms/utils.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/forms/utils.py",
+          "to": "django/forms/renderers.py",
+          "line": 6,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/forms/renderers.py",
+          "to": "django/template/backends/django.py",
+          "line": 5,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/backends/django.py",
+          "to": "django/template/backends/base.py",
+          "line": 13,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/template/backends/django.py:13"
+      }
+    },
+    {
+      "path": "django/forms/widgets.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/forms/widgets.py",
+          "to": "django/forms/renderers.py",
+          "line": 23,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/forms/renderers.py",
+          "to": "django/template/backends/django.py",
+          "line": 5,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/backends/django.py",
+          "to": "django/template/backends/base.py",
+          "line": 13,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/template/backends/django.py:13"
+      }
+    },
+    {
+      "path": "django/template/__init__.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/template/__init__.py",
+          "to": "django/template/autoreload.py",
+          "line": 73,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/autoreload.py",
+          "to": "django/template/backends/django.py",
+          "line": 5,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/backends/django.py",
+          "to": "django/template/backends/base.py",
+          "line": 13,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/template/backends/django.py:13"
+      }
+    },
+    {
+      "path": "django/template/base.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/template/base.py",
+          "to": "django/template/engine.py",
+          "line": 151,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/engine.py",
+          "to": "django/template/backends/django.py",
+          "line": 121,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/backends/django.py",
+          "to": "django/template/backends/base.py",
+          "line": 13,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/template/backends/django.py:13"
+      }
+    },
+    {
+      "path": "django/test/signals.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/test/signals.py",
+          "to": "django/forms/renderers.py",
+          "line": 111,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/forms/renderers.py",
+          "to": "django/template/backends/django.py",
+          "line": 5,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/backends/django.py",
+          "to": "django/template/backends/base.py",
+          "line": 13,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/template/backends/django.py:13"
+      }
+    },
+    {
+      "path": "tests/forms_tests/tests/test_forms.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/forms_tests/tests/test_forms.py",
+          "to": "django/forms/renderers.py",
+          "line": 44,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/forms/renderers.py",
+          "to": "django/template/backends/django.py",
+          "line": 5,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/backends/django.py",
+          "to": "django/template/backends/base.py",
+          "line": 13,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/template/backends/django.py:13"
+      }
+    },
+    {
+      "path": "tests/forms_tests/tests/test_formsets.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/forms_tests/tests/test_formsets.py",
+          "to": "django/forms/renderers.py",
+          "line": 26,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/forms/renderers.py",
+          "to": "django/template/backends/django.py",
+          "line": 5,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/backends/django.py",
+          "to": "django/template/backends/base.py",
+          "line": 13,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/template/backends/django.py:13"
+      }
+    },
+    {
+      "path": "tests/forms_tests/tests/test_renderers.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/forms_tests/tests/test_renderers.py",
+          "to": "django/forms/renderers.py",
+          "line": 4,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/forms/renderers.py",
+          "to": "django/template/backends/django.py",
+          "line": 5,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/backends/django.py",
+          "to": "django/template/backends/base.py",
+          "line": 13,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/template/backends/django.py:13"
+      }
+    },
+    {
+      "path": "tests/forms_tests/tests/test_utils.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/forms_tests/tests/test_utils.py",
+          "to": "django/forms/renderers.py",
+          "line": 5,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/forms/renderers.py",
+          "to": "django/template/backends/django.py",
+          "line": 5,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/backends/django.py",
+          "to": "django/template/backends/base.py",
+          "line": 13,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/template/backends/django.py:13"
+      }
+    },
+    {
+      "path": "tests/forms_tests/widget_tests/base.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/forms_tests/widget_tests/base.py",
+          "to": "django/forms/renderers.py",
+          "line": 1,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/forms/renderers.py",
+          "to": "django/template/backends/django.py",
+          "line": 5,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/backends/django.py",
+          "to": "django/template/backends/base.py",
+          "line": 13,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/template/backends/django.py:13"
+      }
+    },
+    {
+      "path": "tests/gis_tests/gdal_tests/test_geom.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/gis_tests/gdal_tests/test_geom.py",
+          "to": "django/template/engine.py",
+          "line": 16,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/engine.py",
+          "to": "django/template/backends/django.py",
+          "line": 121,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/backends/django.py",
+          "to": "django/template/backends/base.py",
+          "line": 13,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/template/backends/django.py:13"
+      }
+    },
+    {
+      "path": "tests/gis_tests/geos_tests/test_geos.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/gis_tests/geos_tests/test_geos.py",
+          "to": "django/template/engine.py",
+          "line": 29,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/engine.py",
+          "to": "django/template/backends/django.py",
+          "line": 121,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/backends/django.py",
+          "to": "django/template/backends/base.py",
+          "line": 13,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/template/backends/django.py:13"
+      }
+    },
+    {
+      "path": "tests/model_formsets/tests.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/model_formsets/tests.py",
+          "to": "django/forms/renderers.py",
+          "line": 18,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/forms/renderers.py",
+          "to": "django/template/backends/django.py",
+          "line": 5,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/backends/django.py",
+          "to": "django/template/backends/base.py",
+          "line": 13,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/template/backends/django.py:13"
+      }
+    },
+    {
+      "path": "tests/template_tests/test_autoreloader.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/template_tests/test_autoreloader.py",
+          "to": "django/template/autoreload.py",
+          "line": 4,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/autoreload.py",
+          "to": "django/template/backends/django.py",
+          "line": 5,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/backends/django.py",
+          "to": "django/template/backends/base.py",
+          "line": 13,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/template/backends/django.py:13"
+      }
+    },
+    {
+      "path": "tests/template_tests/test_engine.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/template_tests/test_engine.py",
+          "to": "django/template/engine.py",
+          "line": 5,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/engine.py",
+          "to": "django/template/backends/django.py",
+          "line": 121,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/backends/django.py",
+          "to": "django/template/backends/base.py",
+          "line": 13,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/template/backends/django.py:13"
+      }
+    },
+    {
+      "path": "tests/template_tests/test_loaders.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/template_tests/test_loaders.py",
+          "to": "django/template/engine.py",
+          "line": 8,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/engine.py",
+          "to": "django/template/backends/django.py",
+          "line": 121,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/backends/django.py",
+          "to": "django/template/backends/base.py",
+          "line": 13,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/template/backends/django.py:13"
+      }
+    },
+    {
+      "path": "tests/template_tests/utils.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/template_tests/utils.py",
+          "to": "django/template/engine.py",
+          "line": 4,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/engine.py",
+          "to": "django/template/backends/django.py",
+          "line": 121,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/template/backends/django.py",
+          "to": "django/template/backends/base.py",
+          "line": 13,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/template/backends/django.py:13"
+      }
+    }
+  ],
+  "transitive_dependents_total": 32,
+  "transitive_dependents_truncated": false,
+  "related_tests": [
+    {
+      "path": "tests/admin_inlines/test_templates.py",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "tests/admin_inlines/test_templates.py",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "tests/admin_inlines/test_templates.py",
+        "method": "path-name-convention"
+      }
+    },
+    {
+      "path": "tests/auth_tests/test_templates.py",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "tests/auth_tests/test_templates.py",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "tests/auth_tests/test_templates.py",
+        "method": "path-name-convention"
+      }
+    },
+    {
+      "path": "tests/backends/base/test_base.py",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-name-matches-changed-file",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "tests/backends/base/test_base.py",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "tests/backends/base/test_base.py",
+        "method": "path-name-convention"
+      }
+    },
+    {
+      "path": "tests/check_framework/test_templates.py",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "django/template/backends/base.py",
+          "line": 7,
+          "method": "python-absolute-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "tests/check_framework/test_templates.py:7"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "tests/check_framework/test_templates.py",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "tests/check_framework/test_templates.py:7"
+      }
+    },
+    {
+      "path": "tests/file_storage/test_base.py",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-name-matches-changed-file",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "tests/file_storage/test_base.py",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "tests/file_storage/test_base.py",
+        "method": "path-name-convention"
+      }
+    },
+    {
+      "path": "tests/forms_tests/field_tests/test_base.py",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-name-matches-changed-file",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "tests/forms_tests/field_tests/test_base.py",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "tests/forms_tests/field_tests/test_base.py",
+        "method": "path-name-convention"
+      }
+    },
+    {
+      "path": "tests/generic_views/test_base.py",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-name-matches-changed-file",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "tests/generic_views/test_base.py",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "tests/generic_views/test_base.py",
+        "method": "path-name-convention"
+      }
+    },
+    {
+      "path": "tests/template_backends/test_django.py",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "tests/template_backends/test_django.py",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "tests/template_backends/test_django.py",
+        "method": "path-name-convention"
+      }
+    },
+    {
+      "path": "tests/template_backends/test_dummy.py",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "tests/template_backends/test_dummy.py",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "tests/template_backends/test_dummy.py",
+        "method": "path-name-convention"
+      }
+    },
+    {
+      "path": "tests/template_backends/test_jinja2.py",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "tests/template_backends/test_jinja2.py",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "tests/template_backends/test_jinja2.py",
+        "method": "path-name-convention"
+      }
+    },
+    {
+      "path": "tests/template_tests/test_base.py",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-name-matches-changed-file",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "tests/template_tests/test_base.py",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "tests/template_tests/test_base.py",
+        "method": "path-name-convention"
+      }
+    }
+  ],
+  "related_tests_total": 11,
+  "related_tests_truncated": false,
+  "affected_routes": [
+    {
+      "method": "PATCH",
+      "path": "django.contrib.gis.geos.libgeos.geos_version",
+      "handler": "test_equals_identical_geos_version",
+      "file": "tests/gis_tests/geos_tests/test_geos.py",
+      "line": 336,
+      "confidence": "heuristic",
+      "reason": "route-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "extractor": "python-web",
+        "location": "tests/gis_tests/geos_tests/test_geos.py:336"
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "django.contrib.gis.geos.libgeos.geos_version",
+      "handler": "test_hasm_geos_version",
+      "file": "tests/gis_tests/geos_tests/test_geos.py",
+      "line": 351,
+      "confidence": "heuristic",
+      "reason": "route-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "extractor": "python-web",
+        "location": "tests/gis_tests/geos_tests/test_geos.py:351"
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "django.template.autoreload.reset_loaders",
+      "handler": "test_template_changed",
+      "file": "tests/template_tests/test_autoreloader.py",
+      "line": 35,
+      "confidence": "heuristic",
+      "reason": "route-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "extractor": "python-web",
+        "location": "tests/template_tests/test_autoreloader.py:35"
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "django.template.autoreload.reset_loaders",
+      "handler": "test_non_template_changed",
+      "file": "tests/template_tests/test_autoreloader.py",
+      "line": 41,
+      "confidence": "heuristic",
+      "reason": "route-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "extractor": "python-web",
+        "location": "tests/template_tests/test_autoreloader.py:41"
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "django.template.autoreload.reset_loaders",
+      "handler": "test_non_template_changed_in_template_directory",
+      "file": "tests/template_tests/test_autoreloader.py",
+      "line": 54,
+      "confidence": "heuristic",
+      "reason": "route-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "extractor": "python-web",
+        "location": "tests/template_tests/test_autoreloader.py:54"
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "django.forms.renderers.get_default_renderer",
+      "handler": "test_form_template_reset_template_change",
+      "file": "tests/template_tests/test_autoreloader.py",
+      "line": 59,
+      "confidence": "heuristic",
+      "reason": "route-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "extractor": "python-web",
+        "location": "tests/template_tests/test_autoreloader.py:59"
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "django.template.loaders.cached.Loader.reset",
+      "handler": "test_form_template_reset_template_change_reset_call",
+      "file": "tests/template_tests/test_autoreloader.py",
+      "line": 65,
+      "confidence": "heuristic",
+      "reason": "route-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "extractor": "python-web",
+        "location": "tests/template_tests/test_autoreloader.py:65"
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "django.template.loaders.cached.Loader.reset",
+      "handler": "test_form_template_reset_template_change_no_djangotemplates",
+      "file": "tests/template_tests/test_autoreloader.py",
+      "line": 72,
+      "confidence": "heuristic",
+      "reason": "route-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "extractor": "python-web",
+        "location": "tests/template_tests/test_autoreloader.py:72"
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "django.forms.renderers.get_default_renderer",
+      "handler": "test_form_template_reset_non_template_change",
+      "file": "tests/template_tests/test_autoreloader.py",
+      "line": 80,
+      "confidence": "heuristic",
+      "reason": "route-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "extractor": "python-web",
+        "location": "tests/template_tests/test_autoreloader.py:80"
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "django.template.loaders.base.Loader.reset",
+      "handler": "test_reset_all_loaders",
+      "file": "tests/template_tests/test_autoreloader.py",
+      "line": 105,
+      "confidence": "heuristic",
+      "reason": "route-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "extractor": "python-web",
+        "location": "tests/template_tests/test_autoreloader.py:105"
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "django.template.loaders.base.Loader.reset",
+      "handler": "test_reset_all_loaders",
+      "file": "tests/template_tests/test_autoreloader.py",
+      "line": 165,
+      "confidence": "heuristic",
+      "reason": "route-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "extractor": "python-web",
+        "location": "tests/template_tests/test_autoreloader.py:165"
+      }
+    }
+  ],
+  "affected_routes_total": 11,
+  "affected_routes_truncated": false,
+  "related_models": [],
+  "related_models_total": 0,
+  "related_models_truncated": false,
+  "architecture": {
+    "layers": {
+      "other": 1
+    },
+    "documentation_mentions": [
+      {
+        "path": "docs/requirements.txt",
+        "line": 7,
+        "excerpt": "epubcheck",
+        "matched": "check",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/requirements.txt:7"
+        }
+      },
+      {
+        "path": "docs/index.txt",
+        "line": 40,
+        "excerpt": "handle, described in Python, and stored in a database.",
+        "matched": "base",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/index.txt:40"
+        }
+      },
+      {
+        "path": "docs/index.txt",
+        "line": 64,
+        "excerpt": ":doc:`Database Functions </ref/models/database-functions>` |",
+        "matched": "base",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/index.txt:64"
+        }
+      },
+      {
+        "path": "docs/index.txt",
+        "line": 76,
+        "excerpt": ":doc:`Multiple databases </topics/db/multi-db>` |",
+        "matched": "base",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/index.txt:76"
+        }
+      },
+      {
+        "path": "docs/index.txt",
+        "line": 99,
+        "excerpt": "* **Class-based views**:",
+        "matched": "base",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/index.txt:99"
+        }
+      },
+      {
+        "path": "docs/index.txt",
+        "line": 100,
+        "excerpt": ":doc:`Introduction to class-based views </topics/class-based-views/index>` |",
+        "matched": "base",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/index.txt:100"
+        }
+      },
+      {
+        "path": "docs/index.txt",
+        "line": 101,
+        "excerpt": ":doc:`Built-in display views </topics/class-based-views/generic-display>` |",
+        "matched": "base",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/index.txt:101"
+        }
+      },
+      {
+        "path": "docs/index.txt",
+        "line": 102,
+        "excerpt": ":doc:`Built-in editing views </topics/class-based-views/generic-editing>` |",
+        "matched": "base",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/index.txt:102"
+        }
+      },
+      {
+        "path": "docs/index.txt",
+        "line": 103,
+        "excerpt": ":doc:`Using mixins </topics/class-based-views/mixins>` |",
+        "matched": "base",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/index.txt:103"
+        }
+      },
+      {
+        "path": "docs/index.txt",
+        "line": 104,
+        "excerpt": ":doc:`API reference </ref/class-based-views/index>` |",
+        "matched": "base",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/index.txt:104"
+        }
+      }
+    ],
+    "note": "Documentation matches are lexical and only point to where a concept is discussed."
+  },
+  "blind_spots": [
+    {
+      "kind": "external-imports",
+      "count": 1,
+      "message": "External packages were not analyzed; only their local import sites are known.",
+      "items": [
+        "functools"
+      ]
+    },
+    {
+      "kind": "test-selection-reachability",
+      "count": 373,
+      "message": "Test files reachable through dependent modules but not in the selected list. The list is a selection, not the full impact; run these or the suite before trusting it.",
+      "items": [
+        "tests/admin_changelist/test_date_hierarchy.py",
+        "tests/admin_docs/test_utils.py",
+        "tests/admin_docs/test_views.py",
+        "tests/admin_utils/test_logentry.py",
+        "tests/admin_views/test_actions.py",
+        "tests/admin_views/test_adminsite.py",
+        "tests/admin_views/test_autocomplete_view.py",
+        "tests/admin_views/test_forms.py",
+        "tests/admin_views/test_multidb.py",
+        "tests/admin_views/test_nav_sidebar.py",
+        "tests/admin_views/test_templatetags.py",
+        "tests/admin_widgets/test_autocomplete_widget.py",
+        "tests/aggregation/test_filter_argument.py",
+        "tests/async/test_async_shortcuts.py",
+        "tests/auth_tests/test_admin_multidb.py",
+        "tests/auth_tests/test_auth_backends.py",
+        "tests/auth_tests/test_checks.py",
+        "tests/auth_tests/test_decorators.py",
+        "tests/auth_tests/test_forms.py",
+        "tests/auth_tests/test_hashers.py",
+        "tests/auth_tests/test_management.py",
+        "tests/auth_tests/test_migrations.py",
+        "tests/auth_tests/test_signals.py",
+        "tests/auth_tests/test_templatetags.py",
+        "tests/auth_tests/test_tokens.py",
+        "tests/auth_tests/test_validators.py",
+        "tests/auth_tests/test_views.py",
+        "tests/backends/base/test_creation.py",
+        "tests/backends/mysql/test_creation.py",
+        "tests/backends/postgresql/test_server_side_cursors.py",
+        "tests/check_framework/test_4_0_compatibility.py",
+        "tests/check_framework/test_caches.py",
+        "tests/check_framework/test_commands.py",
+        "tests/check_framework/test_model_checks.py",
+        "tests/check_framework/test_model_field_deprecation.py",
+        "tests/check_framework/test_multi_db.py",
+        "tests/check_framework/test_security.py",
+        "tests/check_framework/test_urls.py",
+        "tests/composite_pk/test_checks.py",
+        "tests/contenttypes_tests/test_checks.py",
+        "tests/contenttypes_tests/test_fields.py",
+        "tests/contenttypes_tests/test_management.py",
+        "tests/contenttypes_tests/test_models.py",
+        "tests/db_functions/comparison/test_cast.py",
+        "tests/db_functions/json/test_json_array.py",
+        "tests/db_functions/json/test_json_object.py",
+        "tests/db_functions/math/test_abs.py",
+        "tests/db_functions/math/test_acos.py",
+        "tests/db_functions/math/test_asin.py",
+        "tests/db_functions/math/test_atan.py"
+      ]
+    },
+    {
+      "kind": "repo-parse-errors",
+      "count": 3,
+      "message": "Files with parse errors contribute no symbols or edges anywhere in the index."
+    }
+  ],
+  "repo_health": {
+    "unresolved_imports": 25,
+    "dynamic_imports": 9,
+    "note": "Repository-wide counts; they are not scoped to this change."
+  },
+  "caveats": [
+    "This is a static analysis of statically resolvable relationships. Absence of a relationship is not evidence that a change is safe.",
+    "Dynamic imports, reflection, runtime dependency injection, generated code and external consumers are not modeled.",
+    "Test selection uses import edges and naming conventions, not execution traces; it can miss tests and include irrelevant ones.",
+    "Route and database-model detection use framework-specific heuristics and may produce false positives or miss frameworks.",
+    "Confidence levels describe extraction certainty, not the risk of the change itself."
+  ],
+  "summary": {
+    "changed_files": 1,
+    "changed_symbols": 8,
+    "direct_dependents": 4,
+    "transitive_dependents": 32,
+    "related_tests": 11,
+    "affected_routes": 11,
+    "related_models": 0,
+    "completeness": "partial",
+    "confidence_counts": {
+      "confirmed": 4,
+      "inferred": 0
+    }
+  },
+  "_query_time_ms": 62.5
+}

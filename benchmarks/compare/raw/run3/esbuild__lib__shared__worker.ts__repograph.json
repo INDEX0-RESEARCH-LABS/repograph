@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-13T06:47:25+00:00",
+  "source": "files",
+  "target": {
+    "paths": [
+      "lib/shared/worker.ts"
+    ],
+    "symbols": [
+      {
+        "name": "Go",
+        "qualified_name": "Go",
+        "kind": "interface",
+        "path": "lib/shared/worker.ts",
+        "lines": [
+          3,
+          7
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/worker.ts:3"
+        }
+      },
+      {
+        "name": "tryToInstantiateModule",
+        "qualified_name": "tryToInstantiateModule",
+        "kind": "function",
+        "path": "lib/shared/worker.ts",
+        "lines": [
+          84,
+          102
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/worker.ts:84"
+        }
+      }
+    ],
+    "symbols_total": 2,
+    "symbols_truncated": false,
+    "changed_lines": {},
+    "removed_symbols": [],
+    "deleted": [],
+    "missing_from_index": [],
+    "diff": null
+  },
+  "changed_files": [
+    "lib/shared/worker.ts"
+  ],
+  "direct_dependents": [],
+  "transitive_dependents": [],
+  "transitive_dependents_total": 0,
+  "transitive_dependents_truncated": false,
+  "related_tests": [],
+  "related_tests_total": 0,
+  "related_tests_truncated": false,
+  "affected_routes": [],
+  "affected_routes_total": 0,
+  "affected_routes_truncated": false,
+  "related_models": [],
+  "related_models_total": 0,
+  "related_models_truncated": false,
+  "architecture": {
+    "layers": {
+      "domain": 1
+    },
+    "documentation_mentions": [
+      {
+        "path": "README.md",
+        "line": 27,
+        "excerpt": "The main goal of the esbuild bundler project is to bring about a new era of build tool performance, and create an easy-to-use modern bundler along the way.",
+        "matched": "Go",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "README.md:27"
+        }
+      },
+      {
+        "path": "README.md",
+        "line": 33,
+        "excerpt": "- A straightforward [API](https://esbuild.github.io/api/) for CLI, JS, and Go",
+        "matched": "Go",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "README.md:33"
+        }
+      },
+      {
+        "path": "docs/development.md",
+        "line": 11,
+        "excerpt": "Assuming you have [Go](https://go.dev/) installed, you can compile esbuild by running `make` in the top-level directory (or `go build ./cmd/esbuild` if you don't have `make` installed). This creates an executable called ",
+        "matched": "Go",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/development.md:11"
+        }
+      },
+      {
+        "path": "docs/development.md",
+        "line": 15,
+        "excerpt": "You can run the tests written in Go by running `make test-go` in the top-level directory (or `go test ./internal/... ./pkg/...` if you don't have `make` installed).",
+        "matched": "Go",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/development.md:15"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 32,
+        "excerpt": "Most of the time should be spent doing fully parallelizable work. This can be observed by taking a CPU trace using the `--trace=[file]` flag and viewing it using `go tool trace [file]`.",
+        "matched": "Go",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:32"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 52,
+        "excerpt": "Incremental builds mean only rebuilding changed files to the greatest extent possible. This means not re-running any of the full-AST passes on unchanged files. Data structures that live across builds must be immutable to",
+        "matched": "Go",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:52"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 58,
+        "excerpt": "The build pipeline has two main phases: scan and compile. These both reside in [bundler.go](../internal/bundler/bundler.go).",
+        "matched": "Go",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:58"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 62,
+        "excerpt": "This phase starts with a set of entry points and traverses the dependency graph to find all modules that need to be in the bundle. This is implemented in `bundler.ScanBundle()` as a parallel worklist algorithm. The workl",
+        "matched": "Go",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:62"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 114,
+        "excerpt": "The main goal of linking is to merge multiple modules into a single file so that imports from one module can reference exports from another module. This is accomplished in several different ways depending on the import a",
+        "matched": "Go",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:114"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 225,
+        "excerpt": "This library contains support code that is needed to implement various aspects of JavaScript transformation and bundling. For example, it contains the `__commonJS()` helper function for wrapping CommonJS modules and the ",
+        "matched": "Go",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:225"
+        }
+      }
+    ],
+    "note": "Documentation matches are lexical and only point to where a concept is discussed."
+  },
+  "blind_spots": [
+    {
+      "kind": "no-static-dependents",
+      "count": 1,
+      "message": "No static dependents were found. The code may still be used dynamically, as an entry point, or outside this repository.",
+      "items": [
+        "lib/shared/worker.ts"
+      ]
+    },
+    {
+      "kind": "repo-parse-errors",
+      "count": 1,
+      "message": "Files with parse errors contribute no symbols or edges anywhere in the index."
+    }
+  ],
+  "repo_health": {
+    "unresolved_imports": 1,
+    "dynamic_imports": 9,
+    "note": "Repository-wide counts; they are not scoped to this change."
+  },
+  "caveats": [
+    "This is a static analysis of statically resolvable relationships. Absence of a relationship is not evidence that a change is safe.",
+    "Dynamic imports, reflection, runtime dependency injection, generated code and external consumers are not modeled.",
+    "Test selection uses import edges and naming conventions, not execution traces; it can miss tests and include irrelevant ones.",
+    "Route and database-model detection use framework-specific heuristics and may produce false positives or miss frameworks.",
+    "Confidence levels describe extraction certainty, not the risk of the change itself."
+  ],
+  "summary": {
+    "changed_files": 1,
+    "changed_symbols": 2,
+    "direct_dependents": 0,
+    "transitive_dependents": 0,
+    "related_tests": 0,
+    "affected_routes": 0,
+    "related_models": 0,
+    "completeness": "partial",
+    "confidence_counts": {
+      "confirmed": 0,
+      "inferred": 0
+    }
+  },
+  "_query_time_ms": 1.5
+}

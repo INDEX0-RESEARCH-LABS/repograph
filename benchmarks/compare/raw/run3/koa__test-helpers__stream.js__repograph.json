@@ -1,0 +1,328 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-13T06:47:25+00:00",
+  "source": "files",
+  "target": {
+    "paths": [
+      "test-helpers/stream.js"
+    ],
+    "symbols": [
+      {
+        "name": "Readable",
+        "qualified_name": "Readable",
+        "kind": "class",
+        "path": "test-helpers/stream.js",
+        "lines": [
+          5,
+          20
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "test-helpers/stream.js:5"
+        }
+      },
+      {
+        "name": "pipe",
+        "qualified_name": "Readable.pipe",
+        "kind": "method",
+        "path": "test-helpers/stream.js",
+        "lines": [
+          6,
+          6
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "test-helpers/stream.js:6"
+        }
+      },
+      {
+        "name": "read",
+        "qualified_name": "Readable.read",
+        "kind": "method",
+        "path": "test-helpers/stream.js",
+        "lines": [
+          7,
+          7
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "test-helpers/stream.js:7"
+        }
+      },
+      {
+        "name": "destroy",
+        "qualified_name": "Readable.destroy",
+        "kind": "method",
+        "path": "test-helpers/stream.js",
+        "lines": [
+          8,
+          8
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "test-helpers/stream.js:8"
+        }
+      },
+      {
+        "name": "readable",
+        "qualified_name": "Readable.readable",
+        "kind": "method",
+        "path": "test-helpers/stream.js",
+        "lines": [
+          9,
+          11
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "test-helpers/stream.js:9"
+        }
+      },
+      {
+        "name": "readableObjectMode",
+        "qualified_name": "Readable.readableObjectMode",
+        "kind": "method",
+        "path": "test-helpers/stream.js",
+        "lines": [
+          13,
+          15
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "test-helpers/stream.js:13"
+        }
+      },
+      {
+        "name": "destroyed",
+        "qualified_name": "Readable.destroyed",
+        "kind": "method",
+        "path": "test-helpers/stream.js",
+        "lines": [
+          17,
+          19
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "test-helpers/stream.js:17"
+        }
+      }
+    ],
+    "symbols_total": 7,
+    "symbols_truncated": false,
+    "changed_lines": {},
+    "removed_symbols": [],
+    "deleted": [],
+    "missing_from_index": [],
+    "diff": null
+  },
+  "changed_files": [
+    "test-helpers/stream.js"
+  ],
+  "direct_dependents": [
+    {
+      "path": "__tests__/response/body.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/stream.js",
+          "line": 5,
+          "module": "../../test-helpers/stream",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/body.test.js:5"
+          }
+        }
+      ],
+      "reason_count": 1,
+      "evidence": {
+        "location": "__tests__/response/body.test.js:5"
+      }
+    }
+  ],
+  "transitive_dependents": [],
+  "transitive_dependents_total": 0,
+  "transitive_dependents_truncated": false,
+  "related_tests": [
+    {
+      "path": "__tests__/response/body.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/stream.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/body.test.js:5"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/response/body.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/response/body.test.js:5"
+      }
+    }
+  ],
+  "related_tests_total": 1,
+  "related_tests_truncated": false,
+  "affected_routes": [],
+  "affected_routes_total": 0,
+  "affected_routes_truncated": false,
+  "related_models": [],
+  "related_models_total": 0,
+  "related_models_truncated": false,
+  "architecture": {
+    "layers": {
+      "other": 1
+    },
+    "documentation_mentions": [
+      {
+        "path": "docs/migration-v2-to-v3.md",
+        "line": 128,
+        "excerpt": "- Support for `ReadableStream` objects as response bodies",
+        "matched": "Readable",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/migration-v2-to-v3.md:128"
+        }
+      },
+      {
+        "path": "docs/migration-v2-to-v3.md",
+        "line": 136,
+        "excerpt": "// Using a ReadableStream",
+        "matched": "Readable",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/migration-v2-to-v3.md:136"
+        }
+      },
+      {
+        "path": "docs/migration-v2-to-v3.md",
+        "line": 137,
+        "excerpt": "ctx.body = new ReadableStream({",
+        "matched": "Readable",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/migration-v2-to-v3.md:137"
+        }
+      },
+      {
+        "path": "docs/koa-vs-express.md",
+        "line": 85,
+        "excerpt": "Proper stream handling.",
+        "matched": "stream",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/koa-vs-express.md:85"
+        }
+      },
+      {
+        "path": "docs/guide.md",
+        "line": 24,
+        "excerpt": "the middleware is run, it must manually invoke `next()` to run the \"downstream\" middleware.",
+        "matched": "stream",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/guide.md:24"
+        }
+      },
+      {
+        "path": "docs/guide.md",
+        "line": 143,
+        "excerpt": "Middleware that decide to respond to a request and wish to bypass downstream middleware may",
+        "matched": "stream",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/guide.md:143"
+        }
+      },
+      {
+        "path": "docs/guide.md",
+        "line": 146,
+        "excerpt": "downstream \"three\" middleware a chance to manipulate the response.",
+        "matched": "stream",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/guide.md:146"
+        }
+      },
+      {
+        "path": "docs/guide.md",
+        "line": 170,
+        "excerpt": "with \"two\", however the third (and any other downstream middleware) will be ignored:",
+        "matched": "stream",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/guide.md:170"
+        }
+      },
+      {
+        "path": "docs/guide.md",
+        "line": 192,
+        "excerpt": "When the furthest downstream middleware executes `next();`, it's really yielding to a noop",
+        "matched": "stream",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/guide.md:192"
+        }
+      },
+      {
+        "path": "docs/guide.md",
+        "line": 198,
+        "excerpt": "you to write non-blocking sequential code. For example this middleware reads the filenames from `./docs`,",
+        "matched": "read",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/guide.md:198"
+        }
+      }
+    ],
+    "note": "Documentation matches are lexical and only point to where a concept is discussed."
+  },
+  "blind_spots": [
+    {
+      "kind": "external-imports",
+      "count": 1,
+      "message": "External packages were not analyzed; only their local import sites are known.",
+      "items": [
+        "events"
+      ]
+    }
+  ],
+  "repo_health": {
+    "unresolved_imports": 4,
+    "dynamic_imports": 2,
+    "note": "Repository-wide counts; they are not scoped to this change."
+  },
+  "caveats": [
+    "This is a static analysis of statically resolvable relationships. Absence of a relationship is not evidence that a change is safe.",
+    "Dynamic imports, reflection, runtime dependency injection, generated code and external consumers are not modeled.",
+    "Test selection uses import edges and naming conventions, not execution traces; it can miss tests and include irrelevant ones.",
+    "Route and database-model detection use framework-specific heuristics and may produce false positives or miss frameworks.",
+    "Confidence levels describe extraction certainty, not the risk of the change itself."
+  ],
+  "summary": {
+    "changed_files": 1,
+    "changed_symbols": 7,
+    "direct_dependents": 1,
+    "transitive_dependents": 0,
+    "related_tests": 1,
+    "affected_routes": 0,
+    "related_models": 0,
+    "completeness": "partial",
+    "confidence_counts": {
+      "confirmed": 1,
+      "inferred": 0
+    }
+  },
+  "_query_time_ms": 3.4
+}

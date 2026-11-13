@@ -1,0 +1,5859 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-13T06:47:25+00:00",
+  "source": "files",
+  "target": {
+    "paths": [
+      "test-helpers/context.js"
+    ],
+    "symbols": [],
+    "symbols_total": 0,
+    "symbols_truncated": false,
+    "changed_lines": {},
+    "removed_symbols": [],
+    "deleted": [],
+    "missing_from_index": [],
+    "diff": null
+  },
+  "changed_files": [
+    "test-helpers/context.js"
+  ],
+  "direct_dependents": [
+    {
+      "path": "__tests__/context/assert.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 4,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/context/assert.test.js:4"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 36,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/context/assert.test.js:36"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 52,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/context/assert.test.js:52"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 64,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/context/assert.test.js:64"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 74,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/context/assert.test.js:74"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 91,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/context/assert.test.js:91"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 125,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/context/assert.test.js:125"
+          }
+        }
+      ],
+      "reason_count": 7,
+      "evidence": {
+        "location": "__tests__/context/assert.test.js:4"
+      }
+    },
+    {
+      "path": "__tests__/context/inspect.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 7,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/context/inspect.test.js:7"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 11,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/context/inspect.test.js:11"
+          }
+        }
+      ],
+      "reason_count": 2,
+      "evidence": {
+        "location": "__tests__/context/inspect.test.js:7"
+      }
+    },
+    {
+      "path": "__tests__/context/onerror.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 7,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/context/onerror.test.js:7"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 229,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/context/onerror.test.js:229"
+          }
+        }
+      ],
+      "reason_count": 2,
+      "evidence": {
+        "location": "__tests__/context/onerror.test.js:7"
+      }
+    },
+    {
+      "path": "__tests__/context/throw.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 4,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/context/throw.test.js:4"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 9,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/context/throw.test.js:9"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 22,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/context/throw.test.js:22"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 37,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/context/throw.test.js:37"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 52,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/context/throw.test.js:52"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 66,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/context/throw.test.js:66"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 79,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/context/throw.test.js:79"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 95,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/context/throw.test.js:95"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 109,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/context/throw.test.js:109"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 128,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/context/throw.test.js:128"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 143,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/context/throw.test.js:143"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 158,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/context/throw.test.js:158"
+          }
+        }
+      ],
+      "reason_count": 12,
+      "evidence": {
+        "location": "__tests__/context/throw.test.js:4"
+      }
+    },
+    {
+      "path": "__tests__/context/toJSON.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/context/toJSON.test.js:5"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 9,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/context/toJSON.test.js:9"
+          }
+        }
+      ],
+      "reason_count": 2,
+      "evidence": {
+        "location": "__tests__/context/toJSON.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/accept.test.js",
+      "confidence": "inferred",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 6,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/accept.test.js:6"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 10,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/accept.test.js:10"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 18,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/accept.test.js:18"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 22,
+          "reference_kind": "attr_call",
+          "method": "module-or-instance-attribute",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/request/accept.test.js:22"
+          }
+        }
+      ],
+      "reason_count": 4,
+      "evidence": {
+        "location": "__tests__/request/accept.test.js:6"
+      }
+    },
+    {
+      "path": "__tests__/request/accepts.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/accepts.test.js:5"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 11,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/accepts.test.js:11"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 21,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/accepts.test.js:21"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 29,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/accepts.test.js:29"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 37,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/accepts.test.js:37"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 49,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/accepts.test.js:49"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 58,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/accepts.test.js:58"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 67,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/accepts.test.js:67"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 76,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/accepts.test.js:76"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 86,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/accepts.test.js:86"
+          }
+        }
+      ],
+      "reason_count": 10,
+      "evidence": {
+        "location": "__tests__/request/accepts.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/acceptsCharsets.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/acceptsCharsets.test.js:5"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 11,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/acceptsCharsets.test.js:11"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 22,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/acceptsCharsets.test.js:22"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 30,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/acceptsCharsets.test.js:30"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 39,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/acceptsCharsets.test.js:39"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 47,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/acceptsCharsets.test.js:47"
+          }
+        }
+      ],
+      "reason_count": 6,
+      "evidence": {
+        "location": "__tests__/request/acceptsCharsets.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/acceptsEncodings.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/acceptsEncodings.test.js:5"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 11,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/acceptsEncodings.test.js:11"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 20,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/acceptsEncodings.test.js:20"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 29,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/acceptsEncodings.test.js:29"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 38,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/acceptsEncodings.test.js:38"
+          }
+        }
+      ],
+      "reason_count": 5,
+      "evidence": {
+        "location": "__tests__/request/acceptsEncodings.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/acceptsLanguages.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/acceptsLanguages.test.js:5"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 11,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/acceptsLanguages.test.js:11"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 22,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/acceptsLanguages.test.js:22"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 30,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/acceptsLanguages.test.js:30"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 39,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/acceptsLanguages.test.js:39"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 47,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/acceptsLanguages.test.js:47"
+          }
+        }
+      ],
+      "reason_count": 6,
+      "evidence": {
+        "location": "__tests__/request/acceptsLanguages.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/charset.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 4,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/charset.test.js:4"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 10,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/charset.test.js:10"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 17,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/charset.test.js:17"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 25,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/charset.test.js:25"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 31,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/charset.test.js:31"
+          }
+        }
+      ],
+      "reason_count": 5,
+      "evidence": {
+        "location": "__tests__/request/charset.test.js:4"
+      }
+    },
+    {
+      "path": "__tests__/request/fresh.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/fresh.test.js:5"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 10,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/fresh.test.js:10"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 18,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/fresh.test.js:18"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 30,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/fresh.test.js:30"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 41,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/fresh.test.js:41"
+          }
+        }
+      ],
+      "reason_count": 5,
+      "evidence": {
+        "location": "__tests__/request/fresh.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/get.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/get.test.js:5"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 9,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/get.test.js:9"
+          }
+        }
+      ],
+      "reason_count": 2,
+      "evidence": {
+        "location": "__tests__/request/get.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/header.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/header.test.js:5"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 9,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/header.test.js:9"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 14,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/header.test.js:14"
+          }
+        }
+      ],
+      "reason_count": 3,
+      "evidence": {
+        "location": "__tests__/request/header.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/headers.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/headers.test.js:5"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 9,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/headers.test.js:9"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 14,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/headers.test.js:14"
+          }
+        }
+      ],
+      "reason_count": 3,
+      "evidence": {
+        "location": "__tests__/request/headers.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/host.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 4,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/host.test.js:4"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 9,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/host.test.js:9"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 16,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/host.test.js:16"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 23,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/host.test.js:23"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 35,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/host.test.js:35"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 45,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/host.test.js:45"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 57,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/host.test.js:57"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 64,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/host.test.js:64"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 77,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/host.test.js:77"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 85,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/host.test.js:85"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 100,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/host.test.js:100"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 106,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/host.test.js:106"
+          }
+        }
+      ],
+      "reason_count": 16,
+      "evidence": {
+        "location": "__tests__/request/host.test.js:4"
+      }
+    },
+    {
+      "path": "__tests__/request/hostname.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 4,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/hostname.test.js:4"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 9,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/hostname.test.js:9"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 16,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/hostname.test.js:16"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 23,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/hostname.test.js:23"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 29,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/hostname.test.js:29"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 35,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/hostname.test.js:35"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 41,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/hostname.test.js:41"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 47,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/hostname.test.js:47"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 62,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/hostname.test.js:62"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 81,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/hostname.test.js:81"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 95,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/hostname.test.js:95"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 104,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/hostname.test.js:104"
+          }
+        }
+      ],
+      "reason_count": 16,
+      "evidence": {
+        "location": "__tests__/request/hostname.test.js:4"
+      }
+    },
+    {
+      "path": "__tests__/request/href.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 8,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/href.test.js:8"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 21,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/href.test.js:21"
+          }
+        }
+      ],
+      "reason_count": 2,
+      "evidence": {
+        "location": "__tests__/request/href.test.js:8"
+      }
+    },
+    {
+      "path": "__tests__/request/idempotent.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/idempotent.test.js:5"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 12,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/idempotent.test.js:12"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 21,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/idempotent.test.js:21"
+          }
+        }
+      ],
+      "reason_count": 3,
+      "evidence": {
+        "location": "__tests__/request/idempotent.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/inspect.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 4,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/inspect.test.js:4"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 11,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/inspect.test.js:11"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 20,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/inspect.test.js:20"
+          }
+        }
+      ],
+      "reason_count": 3,
+      "evidence": {
+        "location": "__tests__/request/inspect.test.js:4"
+      }
+    },
+    {
+      "path": "__tests__/request/ip.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 7,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/ip.test.js:7"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "Request",
+          "line": 17,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/ip.test.js:17"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "Request",
+          "line": 26,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/ip.test.js:26"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "Request",
+          "line": 37,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/ip.test.js:37"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "Request",
+          "line": 45,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/ip.test.js:45"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "Request",
+          "line": 54,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/ip.test.js:54"
+          }
+        }
+      ],
+      "reason_count": 6,
+      "evidence": {
+        "location": "__tests__/request/ip.test.js:7"
+      }
+    },
+    {
+      "path": "__tests__/request/ips.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/ips.test.js:5"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 11,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/ips.test.js:11"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 20,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/ips.test.js:20"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 31,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/ips.test.js:31"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 41,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/ips.test.js:41"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 53,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/ips.test.js:53"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 63,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/ips.test.js:63"
+          }
+        }
+      ],
+      "reason_count": 7,
+      "evidence": {
+        "location": "__tests__/request/ips.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/is.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 4,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/is.test.js:4"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 9,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/is.test.js:9"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 18,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/is.test.js:18"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 28,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/is.test.js:28"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 39,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/is.test.js:39"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 49,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/is.test.js:49"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 69,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/is.test.js:69"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 94,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/is.test.js:94"
+          }
+        }
+      ],
+      "reason_count": 8,
+      "evidence": {
+        "location": "__tests__/request/is.test.js:4"
+      }
+    },
+    {
+      "path": "__tests__/request/length.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 4,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/length.test.js:4"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 9,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/length.test.js:9"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 15,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/length.test.js:15"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 20,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/length.test.js:20"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 26,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/length.test.js:26"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 32,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/length.test.js:32"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 38,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/length.test.js:38"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 44,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/length.test.js:44"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 50,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/length.test.js:50"
+          }
+        }
+      ],
+      "reason_count": 9,
+      "evidence": {
+        "location": "__tests__/request/length.test.js:4"
+      }
+    },
+    {
+      "path": "__tests__/request/origin.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 6,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/origin.test.js:6"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 20,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/origin.test.js:20"
+          }
+        }
+      ],
+      "reason_count": 2,
+      "evidence": {
+        "location": "__tests__/request/origin.test.js:6"
+      }
+    },
+    {
+      "path": "__tests__/request/path.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/path.test.js:5"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 10,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/path.test.js:10"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 18,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/path.test.js:18"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 27,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/path.test.js:27"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 35,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/path.test.js:35"
+          }
+        }
+      ],
+      "reason_count": 5,
+      "evidence": {
+        "location": "__tests__/request/path.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/protocol.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/protocol.test.js:5"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 10,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/protocol.test.js:10"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 18,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/protocol.test.js:18"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 27,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/protocol.test.js:27"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 37,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/protocol.test.js:37"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 48,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/protocol.test.js:48"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 59,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/protocol.test.js:59"
+          }
+        }
+      ],
+      "reason_count": 7,
+      "evidence": {
+        "location": "__tests__/request/protocol.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/query.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/query.test.js:5"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 9,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/query.test.js:9"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 24,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/query.test.js:24"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 29,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/query.test.js:29"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 36,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/query.test.js:36"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 47,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/query.test.js:47"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 56,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/query.test.js:56"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 62,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/query.test.js:62"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 75,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/query.test.js:75"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 83,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/query.test.js:83"
+          }
+        }
+      ],
+      "reason_count": 10,
+      "evidence": {
+        "location": "__tests__/request/query.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/querystring.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/querystring.test.js:5"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 10,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/querystring.test.js:10"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 16,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/querystring.test.js:16"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 25,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/querystring.test.js:25"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 32,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/querystring.test.js:32"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 41,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/querystring.test.js:41"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 49,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/querystring.test.js:49"
+          }
+        }
+      ],
+      "reason_count": 7,
+      "evidence": {
+        "location": "__tests__/request/querystring.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/search.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/search.test.js:5"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 9,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/search.test.js:9"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 16,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/search.test.js:16"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 25,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/search.test.js:25"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 34,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/search.test.js:34"
+          }
+        }
+      ],
+      "reason_count": 5,
+      "evidence": {
+        "location": "__tests__/request/search.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/secure.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/secure.test.js:5"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 9,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/secure.test.js:9"
+          }
+        }
+      ],
+      "reason_count": 2,
+      "evidence": {
+        "location": "__tests__/request/secure.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/stale.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/stale.test.js:5"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 9,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/stale.test.js:9"
+          }
+        }
+      ],
+      "reason_count": 2,
+      "evidence": {
+        "location": "__tests__/request/stale.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/subdomains.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/subdomains.test.js:5"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 9,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/subdomains.test.js:9"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 19,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/subdomains.test.js:19"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 24,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/subdomains.test.js:24"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 32,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/subdomains.test.js:32"
+          }
+        }
+      ],
+      "reason_count": 5,
+      "evidence": {
+        "location": "__tests__/request/subdomains.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/type.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 4,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/type.test.js:4"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 9,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/type.test.js:9"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "request",
+          "line": 15,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/type.test.js:15"
+          }
+        }
+      ],
+      "reason_count": 3,
+      "evidence": {
+        "location": "__tests__/request/type.test.js:4"
+      }
+    },
+    {
+      "path": "__tests__/request/whatwg-url.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 4,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/whatwg-url.test.js:4"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 29,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/whatwg-url.test.js:29"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 40,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/whatwg-url.test.js:40"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 49,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/whatwg-url.test.js:49"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 59,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/whatwg-url.test.js:59"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 68,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/whatwg-url.test.js:68"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 77,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/whatwg-url.test.js:77"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 85,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/whatwg-url.test.js:85"
+          }
+        }
+      ],
+      "reason_count": 8,
+      "evidence": {
+        "location": "__tests__/request/whatwg-url.test.js:4"
+      }
+    },
+    {
+      "path": "__tests__/response/append.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/append.test.js:5"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 9,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/append.test.js:9"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 16,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/append.test.js:16"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 24,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/append.test.js:24"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 35,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/append.test.js:35"
+          }
+        }
+      ],
+      "reason_count": 5,
+      "evidence": {
+        "location": "__tests__/response/append.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/response/attachment.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/attachment.test.js:5"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 12,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/attachment.test.js:12"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 20,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/attachment.test.js:20"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 27,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/attachment.test.js:27"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 34,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/attachment.test.js:34"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 43,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/attachment.test.js:43"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 51,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/attachment.test.js:51"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 78,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/attachment.test.js:78"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 84,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/attachment.test.js:84"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 92,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/attachment.test.js:92"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 99,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/attachment.test.js:99"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 108,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/attachment.test.js:108"
+          }
+        }
+      ],
+      "reason_count": 25,
+      "evidence": {
+        "location": "__tests__/response/attachment.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/response/back.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/back.test.js:5"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 9,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/back.test.js:9"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 16,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/back.test.js:16"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 24,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/back.test.js:24"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 32,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/back.test.js:32"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 39,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/back.test.js:39"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 45,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/back.test.js:45"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 51,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/back.test.js:51"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 57,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/back.test.js:57"
+          }
+        }
+      ],
+      "reason_count": 9,
+      "evidence": {
+        "location": "__tests__/response/back.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/response/body.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 4,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/body.test.js:4"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 13,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/body.test.js:13"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 21,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/body.test.js:21"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 32,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/body.test.js:32"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 41,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/body.test.js:41"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 47,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/body.test.js:47"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 54,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/body.test.js:54"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 63,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/body.test.js:63"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 70,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/body.test.js:70"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 77,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/body.test.js:77"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 85,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/body.test.js:85"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 101,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/body.test.js:101"
+          }
+        }
+      ],
+      "reason_count": 35,
+      "evidence": {
+        "location": "__tests__/response/body.test.js:4"
+      }
+    },
+    {
+      "path": "__tests__/response/etag.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/etag.test.js:5"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 9,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/etag.test.js:9"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 15,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/etag.test.js:15"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 21,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/etag.test.js:21"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 29,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/etag.test.js:29"
+          }
+        }
+      ],
+      "reason_count": 5,
+      "evidence": {
+        "location": "__tests__/response/etag.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/response/get.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/get.test.js:5"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 9,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/get.test.js:9"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 15,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/get.test.js:15"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 23,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/get.test.js:23"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 39,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/get.test.js:39"
+          }
+        }
+      ],
+      "reason_count": 5,
+      "evidence": {
+        "location": "__tests__/response/get.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/response/has.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/has.test.js:5"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 9,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/has.test.js:9"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 16,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/has.test.js:16"
+          }
+        }
+      ],
+      "reason_count": 3,
+      "evidence": {
+        "location": "__tests__/response/has.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/response/header.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 6,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/header.test.js:6"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 11,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/header.test.js:11"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 18,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/header.test.js:18"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 41,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/header.test.js:41"
+          }
+        }
+      ],
+      "reason_count": 4,
+      "evidence": {
+        "location": "__tests__/response/header.test.js:6"
+      }
+    },
+    {
+      "path": "__tests__/response/headers.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/headers.test.js:5"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 9,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/headers.test.js:9"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 16,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/headers.test.js:16"
+          }
+        }
+      ],
+      "reason_count": 3,
+      "evidence": {
+        "location": "__tests__/response/headers.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/response/inspect.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 4,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/inspect.test.js:4"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 11,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/inspect.test.js:11"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 20,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/inspect.test.js:20"
+          }
+        }
+      ],
+      "reason_count": 3,
+      "evidence": {
+        "location": "__tests__/response/inspect.test.js:4"
+      }
+    },
+    {
+      "path": "__tests__/response/is.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 4,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/is.test.js:4"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 9,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/is.test.js:9"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 17,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/is.test.js:17"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 26,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/is.test.js:26"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 35,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/is.test.js:35"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 54,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/is.test.js:54"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 78,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/is.test.js:78"
+          }
+        }
+      ],
+      "reason_count": 7,
+      "evidence": {
+        "location": "__tests__/response/is.test.js:4"
+      }
+    },
+    {
+      "path": "__tests__/response/last-modified.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/last-modified.test.js:5"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 9,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/last-modified.test.js:9"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 16,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/last-modified.test.js:16"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 24,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/last-modified.test.js:24"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 32,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/last-modified.test.js:32"
+          }
+        }
+      ],
+      "reason_count": 5,
+      "evidence": {
+        "location": "__tests__/response/last-modified.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/response/length.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 4,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/length.test.js:4"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 11,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/length.test.js:11"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 18,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/length.test.js:18"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 28,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/length.test.js:28"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 64,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/length.test.js:64"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 73,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/length.test.js:73"
+          }
+        }
+      ],
+      "reason_count": 6,
+      "evidence": {
+        "location": "__tests__/response/length.test.js:4"
+      }
+    },
+    {
+      "path": "__tests__/response/message.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/message.test.js:5"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 9,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/message.test.js:9"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 16,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/message.test.js:16"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 25,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/message.test.js:25"
+          }
+        }
+      ],
+      "reason_count": 4,
+      "evidence": {
+        "location": "__tests__/response/message.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/response/redirect.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 6,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/redirect.test.js:6"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 11,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/redirect.test.js:11"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 18,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/redirect.test.js:18"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 25,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/redirect.test.js:25"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 47,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/redirect.test.js:47"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 56,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/redirect.test.js:56"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 68,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/redirect.test.js:68"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 78,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/redirect.test.js:78"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 90,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/redirect.test.js:90"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 102,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/redirect.test.js:102"
+          }
+        }
+      ],
+      "reason_count": 10,
+      "evidence": {
+        "location": "__tests__/response/redirect.test.js:6"
+      }
+    },
+    {
+      "path": "__tests__/response/remove.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/remove.test.js:5"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 9,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/remove.test.js:9"
+          }
+        }
+      ],
+      "reason_count": 2,
+      "evidence": {
+        "location": "__tests__/response/remove.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/response/set.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/set.test.js:5"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 9,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/set.test.js:9"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 15,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/set.test.js:15"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 21,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/set.test.js:21"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 27,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/set.test.js:27"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 35,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/set.test.js:35"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 47,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/set.test.js:47"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 63,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/set.test.js:63"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 78,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/set.test.js:78"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 87,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/set.test.js:87"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 100,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/set.test.js:100"
+          }
+        }
+      ],
+      "reason_count": 11,
+      "evidence": {
+        "location": "__tests__/response/set.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/response/socket.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/socket.test.js:5"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 10,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/socket.test.js:10"
+          }
+        }
+      ],
+      "reason_count": 2,
+      "evidence": {
+        "location": "__tests__/response/socket.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/response/status.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 4,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/status.test.js:4"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 14,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/status.test.js:14"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 20,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/status.test.js:20"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 27,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/status.test.js:27"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 36,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/status.test.js:36"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 42,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/status.test.js:42"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 48,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/status.test.js:48"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "response",
+          "line": 60,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/status.test.js:60"
+          }
+        }
+      ],
+      "reason_count": 8,
+      "evidence": {
+        "location": "__tests__/response/status.test.js:4"
+      }
+    },
+    {
+      "path": "__tests__/response/type.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 4,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/type.test.js:4"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 10,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/type.test.js:10"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 19,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/type.test.js:19"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 28,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/type.test.js:28"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 37,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/type.test.js:37"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 46,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/type.test.js:46"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 57,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/type.test.js:57"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 64,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/type.test.js:64"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 72,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/type.test.js:72"
+          }
+        }
+      ],
+      "reason_count": 9,
+      "evidence": {
+        "location": "__tests__/response/type.test.js:4"
+      }
+    },
+    {
+      "path": "__tests__/response/vary.test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "module": "../../test-helpers/context",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/vary.test.js:5"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 10,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/vary.test.js:10"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 18,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/vary.test.js:18"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "test-helpers/context.js",
+          "symbol": "context",
+          "line": 27,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/vary.test.js:27"
+          }
+        }
+      ],
+      "reason_count": 4,
+      "evidence": {
+        "location": "__tests__/response/vary.test.js:5"
+      }
+    }
+  ],
+  "transitive_dependents": [],
+  "transitive_dependents_total": 0,
+  "transitive_dependents_truncated": false,
+  "related_tests": [
+    {
+      "path": "__tests__/application/context.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-name-matches-changed-file",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/application/context.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/application/context.test.js",
+        "method": "path-name-convention"
+      }
+    },
+    {
+      "path": "__tests__/application/inspect.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/application/inspect.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/application/inspect.test.js",
+        "method": "path-name-convention"
+      }
+    },
+    {
+      "path": "__tests__/application/onerror.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/application/onerror.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/application/onerror.test.js",
+        "method": "path-name-convention"
+      }
+    },
+    {
+      "path": "__tests__/application/toJSON.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/application/toJSON.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/application/toJSON.test.js",
+        "method": "path-name-convention"
+      }
+    },
+    {
+      "path": "__tests__/context/assert.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/context/assert.test.js:4"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/context/assert.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/context/assert.test.js:4"
+      }
+    },
+    {
+      "path": "__tests__/context/inspect.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 7,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/context/inspect.test.js:7"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/context/inspect.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/context/inspect.test.js:7"
+      }
+    },
+    {
+      "path": "__tests__/context/onerror.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 7,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/context/onerror.test.js:7"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/context/onerror.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/context/onerror.test.js:7"
+      }
+    },
+    {
+      "path": "__tests__/context/throw.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/context/throw.test.js:4"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/context/throw.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/context/throw.test.js:4"
+      }
+    },
+    {
+      "path": "__tests__/context/toJSON.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/context/toJSON.test.js:5"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/context/toJSON.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/context/toJSON.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/accept.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 6,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/accept.test.js:6"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/request/accept.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/request/accept.test.js:6"
+      }
+    },
+    {
+      "path": "__tests__/request/accepts.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/accepts.test.js:5"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/request/accepts.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/request/accepts.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/acceptsCharsets.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/acceptsCharsets.test.js:5"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/request/acceptsCharsets.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/request/acceptsCharsets.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/acceptsEncodings.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/acceptsEncodings.test.js:5"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/request/acceptsEncodings.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/request/acceptsEncodings.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/acceptsLanguages.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/acceptsLanguages.test.js:5"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/request/acceptsLanguages.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/request/acceptsLanguages.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/charset.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/charset.test.js:4"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/request/charset.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/request/charset.test.js:4"
+      }
+    },
+    {
+      "path": "__tests__/request/fresh.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/fresh.test.js:5"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/request/fresh.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/request/fresh.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/get.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/get.test.js:5"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/request/get.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/request/get.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/header.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/header.test.js:5"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/request/header.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/request/header.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/headers.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/headers.test.js:5"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/request/headers.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/request/headers.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/host.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/host.test.js:4"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/request/host.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/request/host.test.js:4"
+      }
+    },
+    {
+      "path": "__tests__/request/hostname.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/hostname.test.js:4"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/request/hostname.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/request/hostname.test.js:4"
+      }
+    },
+    {
+      "path": "__tests__/request/href.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 8,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/href.test.js:8"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/request/href.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/request/href.test.js:8"
+      }
+    },
+    {
+      "path": "__tests__/request/idempotent.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/idempotent.test.js:5"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/request/idempotent.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/request/idempotent.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/inspect.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/inspect.test.js:4"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/request/inspect.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/request/inspect.test.js:4"
+      }
+    },
+    {
+      "path": "__tests__/request/ip.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 7,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/ip.test.js:7"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/request/ip.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/request/ip.test.js:7"
+      }
+    },
+    {
+      "path": "__tests__/request/ips.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/ips.test.js:5"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/request/ips.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/request/ips.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/is.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/is.test.js:4"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/request/is.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/request/is.test.js:4"
+      }
+    },
+    {
+      "path": "__tests__/request/length.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/length.test.js:4"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/request/length.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/request/length.test.js:4"
+      }
+    },
+    {
+      "path": "__tests__/request/origin.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 6,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/origin.test.js:6"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/request/origin.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/request/origin.test.js:6"
+      }
+    },
+    {
+      "path": "__tests__/request/path.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/path.test.js:5"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/request/path.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/request/path.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/protocol.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/protocol.test.js:5"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/request/protocol.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/request/protocol.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/query.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/query.test.js:5"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/request/query.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/request/query.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/querystring.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/querystring.test.js:5"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/request/querystring.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/request/querystring.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/search.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/search.test.js:5"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/request/search.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/request/search.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/secure.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/secure.test.js:5"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/request/secure.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/request/secure.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/stale.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/stale.test.js:5"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/request/stale.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/request/stale.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/subdomains.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/subdomains.test.js:5"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/request/subdomains.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/request/subdomains.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/request/type.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/type.test.js:4"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/request/type.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/request/type.test.js:4"
+      }
+    },
+    {
+      "path": "__tests__/request/whatwg-url.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/request/whatwg-url.test.js:4"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/request/whatwg-url.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/request/whatwg-url.test.js:4"
+      }
+    },
+    {
+      "path": "__tests__/response/append.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/append.test.js:5"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/response/append.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/response/append.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/response/attachment.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/attachment.test.js:5"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/response/attachment.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/response/attachment.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/response/back.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/back.test.js:5"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/response/back.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/response/back.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/response/body.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/body.test.js:4"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/response/body.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/response/body.test.js:4"
+      }
+    },
+    {
+      "path": "__tests__/response/etag.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/etag.test.js:5"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/response/etag.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/response/etag.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/response/get.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/get.test.js:5"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/response/get.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/response/get.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/response/has.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/has.test.js:5"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/response/has.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/response/has.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/response/header.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 6,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/header.test.js:6"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/response/header.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/response/header.test.js:6"
+      }
+    },
+    {
+      "path": "__tests__/response/headers.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 5,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/headers.test.js:5"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/response/headers.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/response/headers.test.js:5"
+      }
+    },
+    {
+      "path": "__tests__/response/inspect.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/inspect.test.js:4"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/response/inspect.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/response/inspect.test.js:4"
+      }
+    },
+    {
+      "path": "__tests__/response/is.test.js",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "test-helpers/context.js",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "__tests__/response/is.test.js:4"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "__tests__/response/is.test.js",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "__tests__/response/is.test.js:4"
+      }
+    }
+  ],
+  "related_tests_total": 60,
+  "related_tests_truncated": true,
+  "affected_routes": [],
+  "affected_routes_total": 0,
+  "affected_routes_truncated": false,
+  "related_models": [],
+  "related_models_total": 0,
+  "related_models_truncated": false,
+  "architecture": {
+    "layers": {
+      "other": 1
+    },
+    "documentation_mentions": [
+      {
+        "path": "docs/troubleshooting.md",
+        "line": 4,
+        "excerpt": "- [My response or context changes have no effect](#my-response-or-context-changes-have-no-effect)",
+        "matched": "context",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/troubleshooting.md:4"
+        }
+      },
+      {
+        "path": "docs/troubleshooting.md",
+        "line": 20,
+        "excerpt": "- [My response or context changes have no effect](#my-response-or-context-changes-have-no-effect)",
+        "matched": "context",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/troubleshooting.md:20"
+        }
+      },
+      {
+        "path": "docs/troubleshooting.md",
+        "line": 23,
+        "excerpt": "## My response or context changes have no effect",
+        "matched": "context",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/troubleshooting.md:23"
+        }
+      },
+      {
+        "path": "docs/troubleshooting.md",
+        "line": 109,
+        "excerpt": "This is less common than [My response or context changes have no effect](#my-response-or-context-changes-have-no-effect),",
+        "matched": "context",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/troubleshooting.md:109"
+        }
+      },
+      {
+        "path": "docs/migration-v2-to-v3.md",
+        "line": 86,
+        "excerpt": "Koa v3 adds support for [AsyncLocalStorage](https://nodejs.org/api/async_context.html#class-asynclocalstorage), which allows you to access the current context from anywhere in your application:",
+        "matched": "context",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/migration-v2-to-v3.md:86"
+        }
+      },
+      {
+        "path": "docs/migration-v2-to-v3.md",
+        "line": 98,
+        "excerpt": "// Access the current context",
+        "matched": "context",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/migration-v2-to-v3.md:98"
+        }
+      },
+      {
+        "path": "docs/migration-v2-to-v3.md",
+        "line": 99,
+        "excerpt": "const ctx = app.currentContext",
+        "matched": "context",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/migration-v2-to-v3.md:99"
+        }
+      },
+      {
+        "path": "docs/migration-v2-to-v3.md",
+        "line": 117,
+        "excerpt": "// Access the current context",
+        "matched": "context",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/migration-v2-to-v3.md:117"
+        }
+      },
+      {
+        "path": "docs/migration-v1-to-v2.md",
+        "line": 31,
+        "excerpt": "The signature has changed to pass `Context` via an explicit parameter, `ctx` above, instead of via",
+        "matched": "context",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/migration-v1-to-v2.md:31"
+        }
+      },
+      {
+        "path": "docs/migration-v1-to-v2.md",
+        "line": 32,
+        "excerpt": "`this`.  The context passing change makes Koa more compatible with es6 arrow functions, which capture `this`.",
+        "matched": "context",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/migration-v1-to-v2.md:32"
+        }
+      }
+    ],
+    "note": "Documentation matches are lexical and only point to where a concept is discussed."
+  },
+  "blind_spots": [
+    {
+      "kind": "output-truncated",
+      "count": 1,
+      "message": "One or more lists are capped for output; the summary reports the true totals. Narrow the target or raise --depth before trusting the list as complete.",
+      "items": [
+        "related_tests"
+      ]
+    },
+    {
+      "kind": "external-imports",
+      "count": 1,
+      "message": "External packages were not analyzed; only their local import sites are known.",
+      "items": [
+        "stream"
+      ]
+    }
+  ],
+  "repo_health": {
+    "unresolved_imports": 4,
+    "dynamic_imports": 2,
+    "note": "Repository-wide counts; they are not scoped to this change."
+  },
+  "caveats": [
+    "This is a static analysis of statically resolvable relationships. Absence of a relationship is not evidence that a change is safe.",
+    "Dynamic imports, reflection, runtime dependency injection, generated code and external consumers are not modeled.",
+    "Test selection uses import edges and naming conventions, not execution traces; it can miss tests and include irrelevant ones.",
+    "Route and database-model detection use framework-specific heuristics and may produce false positives or miss frameworks.",
+    "Confidence levels describe extraction certainty, not the risk of the change itself."
+  ],
+  "summary": {
+    "changed_files": 1,
+    "changed_symbols": 0,
+    "direct_dependents": 56,
+    "transitive_dependents": 0,
+    "related_tests": 60,
+    "affected_routes": 0,
+    "related_models": 0,
+    "completeness": "partial",
+    "confidence_counts": {
+      "confirmed": 55,
+      "inferred": 1
+    }
+  },
+  "_query_time_ms": 5.6
+}

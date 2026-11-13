@@ -1,0 +1,1238 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-13T06:47:25+00:00",
+  "source": "files",
+  "target": {
+    "paths": [
+      "scripts/esbuild.js"
+    ],
+    "symbols": [
+      {
+        "name": "buildNeutralLib",
+        "qualified_name": "buildNeutralLib",
+        "kind": "function",
+        "path": "scripts/esbuild.js",
+        "lines": [
+          14,
+          87
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/esbuild.js:14"
+        }
+      },
+      {
+        "name": "generateBinaryHashes",
+        "qualified_name": "generateBinaryHashes",
+        "kind": "function",
+        "path": "scripts/esbuild.js",
+        "lines": [
+          89,
+          132
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/esbuild.js:89"
+        }
+      },
+      {
+        "name": "generateWorkerCode",
+        "qualified_name": "generateWorkerCode",
+        "kind": "function",
+        "path": "scripts/esbuild.js",
+        "lines": [
+          134,
+          172
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/esbuild.js:134"
+        }
+      },
+      {
+        "name": "updateVersionPackageJSON",
+        "qualified_name": "updateVersionPackageJSON",
+        "kind": "function",
+        "path": "scripts/esbuild.js",
+        "lines": [
+          309,
+          317
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/esbuild.js:309"
+        }
+      },
+      {
+        "name": "updateVersionGo",
+        "qualified_name": "updateVersionGo",
+        "kind": "function",
+        "path": "scripts/esbuild.js",
+        "lines": [
+          346,
+          355
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "scripts/esbuild.js:346"
+        }
+      }
+    ],
+    "symbols_total": 5,
+    "symbols_truncated": false,
+    "changed_lines": {},
+    "removed_symbols": [],
+    "deleted": [],
+    "missing_from_index": [],
+    "diff": null
+  },
+  "changed_files": [
+    "scripts/esbuild.js"
+  ],
+  "direct_dependents": [
+    {
+      "path": "scripts/destructuring-fuzzer.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "scripts/esbuild.js",
+          "line": 349,
+          "module": "./esbuild",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/destructuring-fuzzer.js:349"
+          }
+        }
+      ],
+      "reason_count": 1,
+      "evidence": {
+        "location": "scripts/destructuring-fuzzer.js:349"
+      }
+    },
+    {
+      "path": "scripts/end-to-end-tests.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "scripts/esbuild.js",
+          "line": 2,
+          "module": "./esbuild.js",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/end-to-end-tests.js:2"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "buildBinary",
+          "line": 15,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/end-to-end-tests.js:15"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "dirname",
+          "line": 9671,
+          "reference_kind": "attr_call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/end-to-end-tests.js:9671"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "removeRecursiveSync",
+          "line": 9730,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/end-to-end-tests.js:9730"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "removeRecursiveSync",
+          "line": 9745,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/end-to-end-tests.js:9745"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "removeRecursiveSync",
+          "line": 9782,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/end-to-end-tests.js:9782"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "removeRecursiveSync",
+          "line": 9854,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/end-to-end-tests.js:9854"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "writeFileAtomic",
+          "line": 9940,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/end-to-end-tests.js:9940"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "removeRecursiveSync",
+          "line": 9962,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/end-to-end-tests.js:9962"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "removeRecursiveSync",
+          "line": 9986,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/end-to-end-tests.js:9986"
+          }
+        }
+      ],
+      "reason_count": 10,
+      "evidence": {
+        "location": "scripts/end-to-end-tests.js:2"
+      }
+    },
+    {
+      "path": "scripts/js-api-tests.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "scripts/esbuild.js",
+          "line": 1,
+          "module": "./esbuild",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/js-api-tests.js:1"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "writeFileAtomic",
+          "line": 4144,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/js-api-tests.js:4144"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "writeFileAtomic",
+          "line": 4155,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/js-api-tests.js:4155"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "writeFileAtomic",
+          "line": 4166,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/js-api-tests.js:4166"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "writeFileAtomic",
+          "line": 4177,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/js-api-tests.js:4177"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "writeFileAtomic",
+          "line": 4198,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/js-api-tests.js:4198"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "writeFileAtomic",
+          "line": 4240,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/js-api-tests.js:4240"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "writeFileAtomic",
+          "line": 4250,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/js-api-tests.js:4250"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "writeFileAtomic",
+          "line": 4292,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/js-api-tests.js:4292"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "writeFileAtomic",
+          "line": 4333,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/js-api-tests.js:4333"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "writeFileAtomic",
+          "line": 4373,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/js-api-tests.js:4373"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "writeFileAtomic",
+          "line": 4382,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/js-api-tests.js:4382"
+          }
+        }
+      ],
+      "reason_count": 19,
+      "evidence": {
+        "location": "scripts/js-api-tests.js:1"
+      }
+    },
+    {
+      "path": "scripts/node-unref-tests.js",
+      "confidence": "inferred",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "scripts/esbuild.js",
+          "line": 10,
+          "module": "./esbuild",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/node-unref-tests.js:10"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "transform",
+          "line": 13,
+          "reference_kind": "attr_call",
+          "method": "module-or-instance-attribute",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "scripts/node-unref-tests.js:13"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "transform",
+          "line": 14,
+          "reference_kind": "attr_call",
+          "method": "module-or-instance-attribute",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "scripts/node-unref-tests.js:14"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "context",
+          "line": 20,
+          "reference_kind": "attr_call",
+          "method": "module-or-instance-attribute",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "scripts/node-unref-tests.js:20"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "context",
+          "line": 31,
+          "reference_kind": "attr_call",
+          "method": "module-or-instance-attribute",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "scripts/node-unref-tests.js:31"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "context",
+          "line": 50,
+          "reference_kind": "attr_call",
+          "method": "module-or-instance-attribute",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "scripts/node-unref-tests.js:50"
+          }
+        }
+      ],
+      "reason_count": 6,
+      "evidence": {
+        "location": "scripts/node-unref-tests.js:10"
+      }
+    },
+    {
+      "path": "scripts/plugin-tests.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "scripts/esbuild.js",
+          "line": 1,
+          "module": "./esbuild",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/plugin-tests.js:1"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "writeFileAtomic",
+          "line": 2822,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/plugin-tests.js:2822"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "writeFileAtomic",
+          "line": 2884,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/plugin-tests.js:2884"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "writeFileAtomic",
+          "line": 2943,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/plugin-tests.js:2943"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "writeFileAtomic",
+          "line": 3254,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/plugin-tests.js:3254"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "installForTests",
+          "line": 3466,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/plugin-tests.js:3466"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "removeRecursiveSync",
+          "line": 3469,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/plugin-tests.js:3469"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "removeRecursiveSync",
+          "line": 3485,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/plugin-tests.js:3485"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "removeRecursiveSync",
+          "line": 3506,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/plugin-tests.js:3506"
+          }
+        }
+      ],
+      "reason_count": 9,
+      "evidence": {
+        "location": "scripts/plugin-tests.js:1"
+      }
+    },
+    {
+      "path": "scripts/register-test.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "scripts/esbuild.js",
+          "line": 1,
+          "module": "./esbuild",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/register-test.js:1"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "installForTests",
+          "line": 6,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/register-test.js:6"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "removeRecursiveSync",
+          "line": 10,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/register-test.js:10"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "removeRecursiveSync",
+          "line": 88,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/register-test.js:88"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "removeRecursiveSync",
+          "line": 109,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/register-test.js:109"
+          }
+        }
+      ],
+      "reason_count": 5,
+      "evidence": {
+        "location": "scripts/register-test.js:1"
+      }
+    },
+    {
+      "path": "scripts/terser-tests.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "scripts/esbuild.js",
+          "line": 1,
+          "module": "./esbuild",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/terser-tests.js:1"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "installForTests",
+          "line": 29,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/terser-tests.js:29"
+          }
+        }
+      ],
+      "reason_count": 2,
+      "evidence": {
+        "location": "scripts/terser-tests.js:1"
+      }
+    },
+    {
+      "path": "scripts/test-yarnpnp.js",
+      "confidence": "inferred",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "scripts/esbuild.js",
+          "line": 2,
+          "module": "./esbuild",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/test-yarnpnp.js:2"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "buildBinary",
+          "line": 6,
+          "reference_kind": "attr_call",
+          "method": "module-or-instance-attribute",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "scripts/test-yarnpnp.js:6"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "buildWasmLib",
+          "line": 75,
+          "reference_kind": "attr_call",
+          "method": "module-or-instance-attribute",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "scripts/test-yarnpnp.js:75"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "buildWasmLib",
+          "line": 80,
+          "reference_kind": "attr_call",
+          "method": "module-or-instance-attribute",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "scripts/test-yarnpnp.js:80"
+          }
+        }
+      ],
+      "reason_count": 4,
+      "evidence": {
+        "location": "scripts/test-yarnpnp.js:2"
+      }
+    },
+    {
+      "path": "scripts/test262-async.js",
+      "confidence": "inferred",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "scripts/esbuild.js",
+          "line": 6,
+          "module": "./esbuild",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/test262-async.js:6"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "transform",
+          "line": 99,
+          "reference_kind": "attr_call",
+          "method": "module-or-instance-attribute",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "scripts/test262-async.js:99"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "transform",
+          "line": 100,
+          "reference_kind": "attr_call",
+          "method": "module-or-instance-attribute",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "scripts/test262-async.js:100"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "transform",
+          "line": 101,
+          "reference_kind": "attr_call",
+          "method": "module-or-instance-attribute",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "scripts/test262-async.js:101"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "transform",
+          "line": 103,
+          "reference_kind": "attr_call",
+          "method": "module-or-instance-attribute",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "scripts/test262-async.js:103"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "transform",
+          "line": 104,
+          "reference_kind": "attr_call",
+          "method": "module-or-instance-attribute",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "scripts/test262-async.js:104"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "transform",
+          "line": 105,
+          "reference_kind": "attr_call",
+          "method": "module-or-instance-attribute",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "scripts/test262-async.js:105"
+          }
+        }
+      ],
+      "reason_count": 7,
+      "evidence": {
+        "location": "scripts/test262-async.js:6"
+      }
+    },
+    {
+      "path": "scripts/test262.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "scripts/esbuild.js",
+          "line": 6,
+          "module": "./esbuild",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/test262.js:6"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "installForTests",
+          "line": 420,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/test262.js:420"
+          }
+        }
+      ],
+      "reason_count": 2,
+      "evidence": {
+        "location": "scripts/test262.js:6"
+      }
+    },
+    {
+      "path": "scripts/ts-type-tests.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "scripts/esbuild.js",
+          "line": 1,
+          "module": "./esbuild",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/ts-type-tests.js:1"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "removeRecursiveSync",
+          "line": 389,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/ts-type-tests.js:389"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "removeRecursiveSync",
+          "line": 456,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/ts-type-tests.js:456"
+          }
+        }
+      ],
+      "reason_count": 3,
+      "evidence": {
+        "location": "scripts/ts-type-tests.js:1"
+      }
+    },
+    {
+      "path": "scripts/uglify-tests.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "scripts/esbuild.js",
+          "line": 1,
+          "module": "./esbuild",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/uglify-tests.js:1"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "installForTests",
+          "line": 29,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/uglify-tests.js:29"
+          }
+        }
+      ],
+      "reason_count": 2,
+      "evidence": {
+        "location": "scripts/uglify-tests.js:1"
+      }
+    },
+    {
+      "path": "scripts/verify-source-map.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "scripts/esbuild.js",
+          "line": 2,
+          "module": "./esbuild",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/verify-source-map.js:2"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "buildBinary",
+          "line": 11,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/verify-source-map.js:11"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "removeRecursiveSync",
+          "line": 931,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/verify-source-map.js:931"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "removeRecursiveSync",
+          "line": 1073,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/verify-source-map.js:1073"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "removeRecursiveSync",
+          "line": 1315,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/verify-source-map.js:1315"
+          }
+        }
+      ],
+      "reason_count": 5,
+      "evidence": {
+        "location": "scripts/verify-source-map.js:2"
+      }
+    },
+    {
+      "path": "scripts/wasm-tests.js",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "scripts/esbuild.js",
+          "line": 1,
+          "module": "./esbuild.js",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/wasm-tests.js:1"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "buildWasmLib",
+          "line": 363,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/wasm-tests.js:363"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "scripts/esbuild.js",
+          "symbol": "removeRecursiveSync",
+          "line": 386,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "scripts/wasm-tests.js:386"
+          }
+        }
+      ],
+      "reason_count": 3,
+      "evidence": {
+        "location": "scripts/wasm-tests.js:1"
+      }
+    }
+  ],
+  "transitive_dependents": [],
+  "transitive_dependents_total": 0,
+  "transitive_dependents_truncated": false,
+  "related_tests": [],
+  "related_tests_total": 0,
+  "related_tests_truncated": false,
+  "affected_routes": [],
+  "affected_routes_total": 0,
+  "affected_routes_truncated": false,
+  "related_models": [],
+  "related_models_total": 0,
+  "related_models_truncated": false,
+  "architecture": {
+    "layers": {
+      "infra": 1
+    },
+    "documentation_mentions": [
+      {
+        "path": "README.md",
+        "line": 5,
+        "excerpt": "<img alt=\"esbuild: An extremely fast JavaScript bundler\" src=\"./images/wordmark-light.svg\">",
+        "matched": "esbuild",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "README.md:5"
+        }
+      },
+      {
+        "path": "README.md",
+        "line": 8,
+        "excerpt": "<a href=\"https://esbuild.github.io/\">Website</a> |",
+        "matched": "esbuild",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "README.md:8"
+        }
+      },
+      {
+        "path": "README.md",
+        "line": 9,
+        "excerpt": "<a href=\"https://esbuild.github.io/getting-started/\">Getting started</a> |",
+        "matched": "esbuild",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "README.md:9"
+        }
+      },
+      {
+        "path": "README.md",
+        "line": 10,
+        "excerpt": "<a href=\"https://esbuild.github.io/api/\">Documentation</a> |",
+        "matched": "esbuild",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "README.md:10"
+        }
+      },
+      {
+        "path": "README.md",
+        "line": 11,
+        "excerpt": "<a href=\"https://esbuild.github.io/plugins/\">Plugins</a> |",
+        "matched": "esbuild",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "README.md:11"
+        }
+      },
+      {
+        "path": "README.md",
+        "line": 12,
+        "excerpt": "<a href=\"https://esbuild.github.io/faq/\">FAQ</a>",
+        "matched": "esbuild",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "README.md:12"
+        }
+      },
+      {
+        "path": "README.md",
+        "line": 27,
+        "excerpt": "The main goal of the esbuild bundler project is to bring about a new era of build tool performance, and create an easy-to-use modern bundler along the way.",
+        "matched": "esbuild",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "README.md:27"
+        }
+      },
+      {
+        "path": "README.md",
+        "line": 32,
+        "excerpt": "- [JavaScript](https://esbuild.github.io/content-types/#javascript), [CSS](https://esbuild.github.io/content-types/#css), [TypeScript](https://esbuild.github.io/content-types/#typescript), and [JSX](https://esbuild.githu",
+        "matched": "esbuild",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "README.md:32"
+        }
+      },
+      {
+        "path": "README.md",
+        "line": 33,
+        "excerpt": "- A straightforward [API](https://esbuild.github.io/api/) for CLI, JS, and Go",
+        "matched": "esbuild",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "README.md:33"
+        }
+      },
+      {
+        "path": "README.md",
+        "line": 36,
+        "excerpt": "- Tree shaking, [minification](https://esbuild.github.io/api/#minify), and [source maps](https://esbuild.github.io/api/#sourcemap)",
+        "matched": "esbuild",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "README.md:36"
+        }
+      }
+    ],
+    "note": "Documentation matches are lexical and only point to where a concept is discussed."
+  },
+  "blind_spots": [
+    {
+      "kind": "external-imports",
+      "count": 5,
+      "message": "External packages were not analyzed; only their local import sites are known.",
+      "items": [
+        "child_process",
+        "crypto",
+        "fs",
+        "os",
+        "path"
+      ]
+    },
+    {
+      "kind": "repo-parse-errors",
+      "count": 1,
+      "message": "Files with parse errors contribute no symbols or edges anywhere in the index."
+    }
+  ],
+  "repo_health": {
+    "unresolved_imports": 1,
+    "dynamic_imports": 9,
+    "note": "Repository-wide counts; they are not scoped to this change."
+  },
+  "caveats": [
+    "This is a static analysis of statically resolvable relationships. Absence of a relationship is not evidence that a change is safe.",
+    "Dynamic imports, reflection, runtime dependency injection, generated code and external consumers are not modeled.",
+    "Test selection uses import edges and naming conventions, not execution traces; it can miss tests and include irrelevant ones.",
+    "Route and database-model detection use framework-specific heuristics and may produce false positives or miss frameworks.",
+    "Confidence levels describe extraction certainty, not the risk of the change itself."
+  ],
+  "summary": {
+    "changed_files": 1,
+    "changed_symbols": 5,
+    "direct_dependents": 14,
+    "transitive_dependents": 0,
+    "related_tests": 0,
+    "affected_routes": 0,
+    "related_models": 0,
+    "completeness": "partial",
+    "confidence_counts": {
+      "confirmed": 11,
+      "inferred": 3
+    }
+  },
+  "_query_time_ms": 2.5
+}
