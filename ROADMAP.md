@@ -24,6 +24,9 @@ No dates. Items move when they are tested, not when they are announced.
 
 ## 0.2 — precision before breadth
 
+- [ ] Run held-out validation on three fresh repos; publish the number if it holds.
+- [ ] CI/PR integration: `repograph impact --diff --fail-on-blind-spots` as a GitHub Actions step.
+- [ ] Test-selection recall: investigate execution-trace or coverage-based approaches (static import graph measured at 0.23; not viable as a gate).
 - [ ] Reduce unresolved imports on real repositories; publish unresolved-rate metrics per benchmark.
 - [ ] Better CommonJS/ESM export handling, including `export *` chains and `package.json` `exports`.
 - [ ] Improve TypeScript symbol extraction for arrow-function exports and default exports.
@@ -32,7 +35,9 @@ No dates. Items move when they are tested, not when they are announced.
 - [ ] Add `--fail-on-unresolved` style CI guardrails for teams that want a strict mode.
 - [ ] Add schema migration tooling instead of the current version-mismatch error.
 - [x] Publish a precision/recall evaluation on a labeled set of import edges, including false positives.
+- [x] Head-to-head comparison with code-impact-mcp and trace-mcp on three fresh repos (django, esbuild, koa). Pre-fix baseline: 0.999 precision / 0.979 recall. See `benchmarks/compare/RESULTS.md`.
 - [ ] Close measured recall gaps: Python `tests/`/`examples/` roots, Node `#imports`, JSON/config imports, conditional `exports`.
+- [ ] **Held-out validation of November 2026 fixes** (`benchmarks/compare/scripts/run_held_out_validation.sh`). Run on three repos never used in development. Required before citing post-fix numbers as accuracy.
 
 ## 0.3 — language and repository coverage
 

@@ -181,9 +181,23 @@ Claude Code and Cursor accept this JSON shape. Use an absolute `--root` and put 
 
 ## How accurate is it?
 
-Measured in October 2026 with a pre-registered protocol and two independent AI labelers, on three repositories never used to build the tool.
+**Unseen-repo baseline (before any fixes):** measured 2026-11-13 on django, esbuild, and koa — three repositories never previously indexed or tuned against. The comparison includes code-impact-mcp and trace-mcp run with correct setups (trace requires `trace index <dir>` before querying; code-impact has documented Python limitations).
 
-| Repository | Correct links (precision) | Links found (recall) |
+| Tool | Precision | Recall | Errors | Notes |
+| --- | ---: | ---: | ---: | --- |
+| **RepoGraph** | **0.999** | **0.979** | **0** | 29 queries, 2,427 GT edges |
+| code-impact-mcp | 1.000 | 0.268 | 15 | JS/TS only; Python errors are documented behavior |
+| trace-mcp | 0.992 | 0.105 | 0 | 25-item output cap limits recall on large modules |
+
+- Ground truth: 2,427 direct-importer edges verified by ripgrep + Python `ast` module (independent methods, 99.9% agreement).
+- Precision / recall defined on direct importers of each file. `run1` commit `80856eb`.
+- 51 FNs in run1 were two resolver bugs (chained `require('x').prop` and `require('../..')` → `package.json` main). Both fixed in `ba5fd0d`.
+- **Post-fix on the same repos (run3): 1.000 / 1.000 — development set, not held out.** Run3 fixes were found and applied using these same repos; it cannot be cited as an accuracy claim. See `benchmarks/compare/RESULTS.md`.
+- **Held-out validation: pending.** Script: `benchmarks/compare/scripts/run_held_out_validation.sh`.
+
+For the earlier edge-accuracy rounds (httpx, zustand, mocha — round 5 unseen corpus):
+
+| Repository | Precision | Recall |
 | --- | ---: | ---: |
 | [httpx](https://github.com/encode/httpx) (Python) | 100% (30/30) | 100% (30/30) |
 | [zustand](https://github.com/pmndrs/zustand) (TypeScript) | 96.7% (58/60) | 100% (58/58) |
@@ -191,11 +205,11 @@ Measured in October 2026 with a pre-registered protocol and two independent AI l
 | **Overall** | **98.3%** (118/120) | **93.7%** (118/126) |
 
 - 95% intervals: precision 94.1%–99.5%, recall 88.0%–96.8%.
-- Both mistakes were one bug (a config alias leaking into example apps). Fixed and rechecked; the measured figure stays 118/120.
-- All eight missed links were JSON files in mocha, which is why mocha's recall is shown on its own.
-- Recall is an estimate, not a census. JSON/config imports, some Node aliases and non-code assets (`.css`, images, `.vue`) are not mapped.
+- Both errors were one bug (a config alias leaking into example apps).
+- All eight missed links were JSON files in mocha.
+- These rounds used AI labelers with no human adjudication.
 
-Method, raw samples and threats to validity: [research/EDGE_ACCURACY_RESULTS.md](research/EDGE_ACCURACY_RESULTS.md).
+Method, raw samples and threats to validity: [`benchmarks/compare/RESULTS.md`](benchmarks/compare/RESULTS.md) and [`research/EDGE_ACCURACY_RESULTS.md`](research/EDGE_ACCURACY_RESULTS.md).
 
 ## How fast is it?
 
@@ -218,6 +232,33 @@ Express is a known weak spot: its CommonJS export style yields few symbols from 
 - **Tests are heuristic.** A measured run on Flask found **24% of failing test files** (60% counting indirect dependents). Run the suite.
 - **Routes and models are partial.** Common frameworks only.
 - **An empty result is not proof.** It says "no dependents found", not "safe".
+
+## Comparison with other tools
+
+Measured 2026-11-13 on django, esbuild, and koa. Full method in
+[`benchmarks/compare/RESULTS.md`](benchmarks/compare/RESULTS.md). Read the
+threats to validity before citing these numbers: the benchmark was run by the
+tool's author, hand-check labels are pending human review, and held-out
+validation has not yet been run.
+
+| | RepoGraph | code-impact-mcp v1.6.10 | trace-mcp v3.44.0 |
+| --- | --- | --- | --- |
+| **Precision (run1)** | **0.999** | 1.000 | 0.992 |
+| **Recall (run1)** | **0.979** | 0.268¹ | 0.105² |
+| Confidence per edge | ✓ | ✗ | ✗ |
+| Blind spots reported | ✓ | ✗ | ✗ |
+| Python support | ✓ full | partial (file-level only) | ✗ (no .py glob) |
+| Index step required | ✓ auto | ✓ auto | **manual** (`trace index`) |
+
+¹ JS/TS only; Python errors are documented behavior in code-impact-mcp.  
+² trace-mcp output capped at 25 items per query regardless of `max_dependents` setting.
+
+**Setup note:** trace-mcp run1 results were a setup failure — repos
+auto-registered but never indexed. After running `trace index <dir>` and
+querying at depth=1, trace-mcp precision improves to 0.992. The run1 numbers
+for trace reflect the tool as configured without reading its README; run2
+numbers (after correct setup) are in
+[`benchmarks/compare/RESULTS.md`](benchmarks/compare/RESULTS.md).
 
 It is not a compiler, a type checker, a semantic search engine, or a replacement for tests.
 
