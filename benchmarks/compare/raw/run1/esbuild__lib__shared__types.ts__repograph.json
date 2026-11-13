@@ -1,0 +1,941 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-13T05:28:53+00:00",
+  "source": "files",
+  "target": {
+    "paths": [
+      "lib/shared/types.ts"
+    ],
+    "symbols": [
+      {
+        "name": "Platform",
+        "qualified_name": "Platform",
+        "kind": "type",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          1,
+          1
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:1"
+        }
+      },
+      {
+        "name": "Format",
+        "qualified_name": "Format",
+        "kind": "type",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          2,
+          2
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:2"
+        }
+      },
+      {
+        "name": "Loader",
+        "qualified_name": "Loader",
+        "kind": "type",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          3,
+          3
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:3"
+        }
+      },
+      {
+        "name": "LogLevel",
+        "qualified_name": "LogLevel",
+        "kind": "type",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          4,
+          4
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:4"
+        }
+      },
+      {
+        "name": "LogStyle",
+        "qualified_name": "LogStyle",
+        "kind": "type",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          5,
+          5
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:5"
+        }
+      },
+      {
+        "name": "Charset",
+        "qualified_name": "Charset",
+        "kind": "type",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          6,
+          6
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:6"
+        }
+      },
+      {
+        "name": "Drop",
+        "qualified_name": "Drop",
+        "kind": "type",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          7,
+          7
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:7"
+        }
+      },
+      {
+        "name": "AbsPaths",
+        "qualified_name": "AbsPaths",
+        "kind": "type",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          8,
+          8
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:8"
+        }
+      },
+      {
+        "name": "CommonOptions",
+        "qualified_name": "CommonOptions",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          10,
+          95
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:10"
+        }
+      },
+      {
+        "name": "TsconfigRaw",
+        "qualified_name": "TsconfigRaw",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          97,
+          114
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:97"
+        }
+      },
+      {
+        "name": "BuildOptions",
+        "qualified_name": "BuildOptions",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          116,
+          177
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:116"
+        }
+      },
+      {
+        "name": "StdinOptions",
+        "qualified_name": "StdinOptions",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          179,
+          184
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:179"
+        }
+      },
+      {
+        "name": "Message",
+        "qualified_name": "Message",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          186,
+          198
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:186"
+        }
+      },
+      {
+        "name": "Note",
+        "qualified_name": "Note",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          200,
+          203
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:200"
+        }
+      },
+      {
+        "name": "Location",
+        "qualified_name": "Location",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          205,
+          216
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:205"
+        }
+      },
+      {
+        "name": "OutputFile",
+        "qualified_name": "OutputFile",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          218,
+          224
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:218"
+        }
+      },
+      {
+        "name": "BuildResult",
+        "qualified_name": "BuildResult",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          226,
+          235
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:226"
+        }
+      },
+      {
+        "name": "BuildFailure",
+        "qualified_name": "BuildFailure",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          237,
+          240
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:237"
+        }
+      },
+      {
+        "name": "ServeOptions",
+        "qualified_name": "ServeOptions",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          243,
+          252
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:243"
+        }
+      },
+      {
+        "name": "CORSOptions",
+        "qualified_name": "CORSOptions",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          255,
+          257
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:255"
+        }
+      },
+      {
+        "name": "ServeOnRequestArgs",
+        "qualified_name": "ServeOnRequestArgs",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          259,
+          266
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:259"
+        }
+      },
+      {
+        "name": "ServeResult",
+        "qualified_name": "ServeResult",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          269,
+          272
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:269"
+        }
+      },
+      {
+        "name": "TransformOptions",
+        "qualified_name": "TransformOptions",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          274,
+          283
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:274"
+        }
+      },
+      {
+        "name": "TransformResult",
+        "qualified_name": "TransformResult",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          285,
+          293
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:285"
+        }
+      },
+      {
+        "name": "TransformFailure",
+        "qualified_name": "TransformFailure",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          295,
+          298
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:295"
+        }
+      },
+      {
+        "name": "Plugin",
+        "qualified_name": "Plugin",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          300,
+          303
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:300"
+        }
+      },
+      {
+        "name": "PluginBuild",
+        "qualified_name": "PluginBuild",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          305,
+          345
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:305"
+        }
+      },
+      {
+        "name": "ResolveOptions",
+        "qualified_name": "ResolveOptions",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          348,
+          356
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:348"
+        }
+      },
+      {
+        "name": "ResolveResult",
+        "qualified_name": "ResolveResult",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          359,
+          369
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:359"
+        }
+      },
+      {
+        "name": "OnStartResult",
+        "qualified_name": "OnStartResult",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          371,
+          374
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:371"
+        }
+      },
+      {
+        "name": "OnEndResult",
+        "qualified_name": "OnEndResult",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          376,
+          379
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:376"
+        }
+      },
+      {
+        "name": "OnResolveOptions",
+        "qualified_name": "OnResolveOptions",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          382,
+          385
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:382"
+        }
+      },
+      {
+        "name": "OnResolveArgs",
+        "qualified_name": "OnResolveArgs",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          388,
+          396
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:388"
+        }
+      },
+      {
+        "name": "ImportKind",
+        "qualified_name": "ImportKind",
+        "kind": "type",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          398,
+          410
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:398"
+        }
+      },
+      {
+        "name": "OnResolveResult",
+        "qualified_name": "OnResolveResult",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          413,
+          428
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:413"
+        }
+      },
+      {
+        "name": "OnLoadOptions",
+        "qualified_name": "OnLoadOptions",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          431,
+          434
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:431"
+        }
+      },
+      {
+        "name": "OnLoadArgs",
+        "qualified_name": "OnLoadArgs",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          437,
+          443
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:437"
+        }
+      },
+      {
+        "name": "OnLoadResult",
+        "qualified_name": "OnLoadResult",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          446,
+          459
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:446"
+        }
+      },
+      {
+        "name": "PartialMessage",
+        "qualified_name": "PartialMessage",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          461,
+          468
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:461"
+        }
+      },
+      {
+        "name": "PartialNote",
+        "qualified_name": "PartialNote",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          470,
+          473
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:470"
+        }
+      },
+      {
+        "name": "Metafile",
+        "qualified_name": "Metafile",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          476,
+          509
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:476"
+        }
+      },
+      {
+        "name": "FormatMessagesOptions",
+        "qualified_name": "FormatMessagesOptions",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          511,
+          516
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:511"
+        }
+      },
+      {
+        "name": "AnalyzeMetafileOptions",
+        "qualified_name": "AnalyzeMetafileOptions",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          518,
+          521
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:518"
+        }
+      },
+      {
+        "name": "WatchOptions",
+        "qualified_name": "WatchOptions",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          524,
+          526
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:524"
+        }
+      },
+      {
+        "name": "BuildContext",
+        "qualified_name": "BuildContext",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          528,
+          540
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:528"
+        }
+      },
+      {
+        "name": "SameShape",
+        "qualified_name": "SameShape",
+        "kind": "type",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          545,
+          545
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:545"
+        }
+      },
+      {
+        "name": "InitializeOptions",
+        "qualified_name": "InitializeOptions",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          655,
+          678
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:655"
+        }
+      },
+      {
+        "name": "URL",
+        "qualified_name": "URL",
+        "kind": "interface",
+        "path": "lib/shared/types.ts",
+        "lines": [
+          709,
+          710
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "lib/shared/types.ts:709"
+        }
+      }
+    ],
+    "symbols_total": 48,
+    "symbols_truncated": false,
+    "changed_lines": {},
+    "removed_symbols": [],
+    "deleted": [],
+    "missing_from_index": [],
+    "diff": null
+  },
+  "changed_files": [
+    "lib/shared/types.ts"
+  ],
+  "direct_dependents": [
+    {
+      "path": "lib/npm/browser.ts",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "lib/shared/types.ts",
+          "line": 1,
+          "module": "../shared/types",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "lib/npm/browser.ts:1"
+          }
+        }
+      ],
+      "reason_count": 1,
+      "evidence": {
+        "location": "lib/npm/browser.ts:1"
+      }
+    },
+    {
+      "path": "lib/npm/node.ts",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "lib/shared/types.ts",
+          "line": 1,
+          "module": "../shared/types",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "lib/npm/node.ts:1"
+          }
+        }
+      ],
+      "reason_count": 1,
+      "evidence": {
+        "location": "lib/npm/node.ts:1"
+      }
+    },
+    {
+      "path": "lib/shared/common.ts",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "lib/shared/types.ts",
+          "line": 1,
+          "module": "./types",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "lib/shared/common.ts:1"
+          }
+        }
+      ],
+      "reason_count": 1,
+      "evidence": {
+        "location": "lib/shared/common.ts:1"
+      }
+    },
+    {
+      "path": "lib/shared/stdio_protocol.ts",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "lib/shared/types.ts",
+          "line": 7,
+          "module": "./types",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "lib/shared/stdio_protocol.ts:7"
+          }
+        }
+      ],
+      "reason_count": 1,
+      "evidence": {
+        "location": "lib/shared/stdio_protocol.ts:7"
+      }
+    }
+  ],
+  "transitive_dependents": [],
+  "transitive_dependents_total": 0,
+  "transitive_dependents_truncated": false,
+  "related_tests": [],
+  "related_tests_total": 0,
+  "related_tests_truncated": false,
+  "affected_routes": [],
+  "affected_routes_total": 0,
+  "affected_routes_truncated": false,
+  "related_models": [],
+  "related_models_total": 0,
+  "related_models_truncated": false,
+  "architecture": {
+    "layers": {
+      "domain": 1
+    },
+    "documentation_mentions": [
+      {
+        "path": "README.md",
+        "line": 32,
+        "excerpt": "- [JavaScript](https://esbuild.github.io/content-types/#javascript), [CSS](https://esbuild.github.io/content-types/#css), [TypeScript](https://esbuild.github.io/content-types/#typescript), and [JSX](https://esbuild.githu",
+        "matched": "types",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "README.md:32"
+        }
+      },
+      {
+        "path": "docs/development.md",
+        "line": 31,
+        "excerpt": "1. Run `make platform-wasm` to build the WebAssembly version of esbuild",
+        "matched": "Platform",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/development.md:31"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 9,
+        "excerpt": "* [TypeScript parsing](#typescript-parsing)",
+        "matched": "types",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:9"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 72,
+        "excerpt": "Lexer lookahead has been kept to one token in almost all cases with the notable exception of TypeScript, which requires arbitrary lookahead to parse correctly. All such cases are in methods called `trySkipTypeScript*With",
+        "matched": "types",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:72"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 74,
+        "excerpt": "The parser includes a lot of transformations, all of which have been condensed into just two passes for performance:",
+        "matched": "Format",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:74"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 88,
+        "excerpt": "The scope tree is not attached to the AST because it's really only needed to pass information from the first pass to the second pass. The scope tree is instead temporarily mapped onto the AST within the parser. This is d",
+        "matched": "Format",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:88"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 90,
+        "excerpt": "This is mostly pretty straightforward except for a few places where the parser has pushed a scope and is in the middle of parsing a declaration only to discover that it's not a declaration after all. This happens in Type",
+        "matched": "types",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:90"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 106,
+        "excerpt": "### TypeScript parsing",
+        "matched": "types",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:106"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 108,
+        "excerpt": "TypeScript parsing has been implemented by augmenting the existing JavaScript parser. Most of it just involves skipping over type declarations as if they are whitespace. Enums, namespaces, and TypeScript-only class featu",
+        "matched": "types",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:108"
+        }
+      },
+      {
+        "path": "docs/architecture.md",
+        "line": 110,
+        "excerpt": "One TypeScript subtlety is that unused imports in TypeScript code must be removed, since they may be type-only imports. And if all imports in an import statement are removed, the whole import statement itself must also b",
+        "matched": "types",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/architecture.md:110"
+        }
+      }
+    ],
+    "note": "Documentation matches are lexical and only point to where a concept is discussed."
+  },
+  "blind_spots": [
+    {
+      "kind": "repo-parse-errors",
+      "count": 1,
+      "message": "Files with parse errors contribute no symbols or edges anywhere in the index."
+    }
+  ],
+  "repo_health": {
+    "unresolved_imports": 1,
+    "dynamic_imports": 6,
+    "note": "Repository-wide counts; they are not scoped to this change."
+  },
+  "caveats": [
+    "This is a static analysis of statically resolvable relationships. Absence of a relationship is not evidence that a change is safe.",
+    "Dynamic imports, reflection, runtime dependency injection, generated code and external consumers are not modeled.",
+    "Test selection uses import edges and naming conventions, not execution traces; it can miss tests and include irrelevant ones.",
+    "Route and database-model detection use framework-specific heuristics and may produce false positives or miss frameworks.",
+    "Confidence levels describe extraction certainty, not the risk of the change itself."
+  ],
+  "summary": {
+    "changed_files": 1,
+    "changed_symbols": 48,
+    "direct_dependents": 4,
+    "transitive_dependents": 0,
+    "related_tests": 0,
+    "affected_routes": 0,
+    "related_models": 0,
+    "completeness": "partial",
+    "confidence_counts": {
+      "confirmed": 4,
+      "inferred": 0
+    }
+  },
+  "_query_time_ms": 4.7,
+  "_wall_ms": 54.7,
+  "_meta": {
+    "repo": "esbuild",
+    "file": "lib/shared/types.ts",
+    "tool": "repograph",
+    "wall_s": 0.1
+  }
+}

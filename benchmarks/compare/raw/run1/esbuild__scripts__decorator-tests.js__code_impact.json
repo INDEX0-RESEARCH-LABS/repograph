@@ -1,0 +1,50 @@
+{
+  "tool": "code-impact-mcp",
+  "version": "1.6.10",
+  "repo_root": "/tmp/opencode/compare/repos/esbuild",
+  "file": "scripts/decorator-tests.js",
+  "refresh": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"status\": \"Graph rebuilt successfully\",\n  \"files\": 30,\n  \"edges\": 27,\n  \"buildTimeMs\": 1226,\n  \"circularDependencies\": 0\n}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 1
+  },
+  "get_dependencies": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"file\": \"scripts/decorator-tests.js\",\n  \"summary\": \"scripts/decorator-tests.js is a isolated module with 0 incoming and 0 outgoing dependency edges.\",\n  \"explanation\": \"This is a structural dependency view. It does not distinguish runtime-only vs type-only usage yet.\",\n  \"imports\": [],\n  \"importedBy\": [],\n  \"exports\": [],\n  \"fanIn\": 0,\n  \"fanOut\": 0,\n  \"isHighCoupling\": false,\n  \"couplingRole\": \"isolated module\"\n}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 2
+  },
+  "analyze_impact": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"summary\": \"Low graph impact: the current change looks locally contained in graph terms.\",\n  \"scanSummary\": \"LOW, locally contained\",\n  \"explanation\": \"This result is graph-based only. It does not account for tests, runtime behavior, migrations, or production traffic.\",\n  \"changedFiles\": [\n    \"scripts/decorator-tests.js\"\n  ],\n  \"directlyAffected\": [],\n  \"transitivelyAffected\": [],\n  \"impactBreakdown\": {\n    \"directCount\": 0,\n    \"transitiveCount\": 0,\n    \"directScan\": {\n      \"totalFiles\": 0,\n      \"topDirectories\": [],\n      \"directoryGroups\": [],\n      \"firstFiles\": [],\n      \"remainingFiles\": 0,\n      \"summaryLine\": \"\",\n      \"displayMode\": \"flat\"\n    },\n    \"transitiveScan\": {\n      \"totalFiles\": 0,\n      \"topDirectories\": [],\n      \"directoryGroups\": [],\n      \"firstFiles\": [],\n      \"remainingFiles\": 0,\n      \"summaryLine\": \"\",\n      \"displayMode\": \"flat\"\n    }\n  },\n  \"riskScore\": 0,\n  \"totalAffected\": 0,\n  \"cascadeDepth\": 0\n}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 3
+  },
+  "stderr": "",
+  "_wall_ms": 2015.3,
+  "_meta": {
+    "repo": "esbuild",
+    "file": "scripts/decorator-tests.js",
+    "tool": "code_impact",
+    "wall_s": 2.0
+  }
+}

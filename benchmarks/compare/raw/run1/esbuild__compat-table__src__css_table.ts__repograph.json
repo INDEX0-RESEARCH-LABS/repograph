@@ -1,0 +1,300 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-13T05:29:26+00:00",
+  "source": "files",
+  "target": {
+    "paths": [
+      "compat-table/src/css_table.ts"
+    ],
+    "symbols": [
+      {
+        "name": "cssFeatureString",
+        "qualified_name": "cssFeatureString",
+        "kind": "function",
+        "path": "compat-table/src/css_table.ts",
+        "lines": [
+          6,
+          8
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "compat-table/src/css_table.ts:6"
+        }
+      },
+      {
+        "name": "simpleMap",
+        "qualified_name": "simpleMap",
+        "kind": "function",
+        "path": "compat-table/src/css_table.ts",
+        "lines": [
+          10,
+          16
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "compat-table/src/css_table.ts:10"
+        }
+      },
+      {
+        "name": "compareEngines",
+        "qualified_name": "compareEngines",
+        "kind": "function",
+        "path": "compat-table/src/css_table.ts",
+        "lines": [
+          18,
+          22
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "compat-table/src/css_table.ts:18"
+        }
+      },
+      {
+        "name": "cssTableMap",
+        "qualified_name": "cssTableMap",
+        "kind": "function",
+        "path": "compat-table/src/css_table.ts",
+        "lines": [
+          24,
+          35
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "compat-table/src/css_table.ts:24"
+        }
+      },
+      {
+        "name": "cssPrefixName",
+        "qualified_name": "cssPrefixName",
+        "kind": "function",
+        "path": "compat-table/src/css_table.ts",
+        "lines": [
+          37,
+          39
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "compat-table/src/css_table.ts:37"
+        }
+      },
+      {
+        "name": "cssPrefixMap",
+        "qualified_name": "cssPrefixMap",
+        "kind": "function",
+        "path": "compat-table/src/css_table.ts",
+        "lines": [
+          41,
+          48
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "compat-table/src/css_table.ts:41"
+        }
+      },
+      {
+        "name": "generateTableForCSS",
+        "qualified_name": "generateTableForCSS",
+        "kind": "function",
+        "path": "compat-table/src/css_table.ts",
+        "lines": [
+          52,
+          158
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "compat-table/src/css_table.ts:52"
+        }
+      }
+    ],
+    "symbols_total": 7,
+    "symbols_truncated": false,
+    "changed_lines": {},
+    "removed_symbols": [],
+    "deleted": [],
+    "missing_from_index": [],
+    "diff": null
+  },
+  "changed_files": [
+    "compat-table/src/css_table.ts"
+  ],
+  "direct_dependents": [
+    {
+      "path": "compat-table/src/index.ts",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "compat-table/src/css_table.ts",
+          "line": 8,
+          "module": "./css_table",
+          "method": "typescript-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "compat-table/src/index.ts:8"
+          }
+        }
+      ],
+      "reason_count": 1,
+      "evidence": {
+        "location": "compat-table/src/index.ts:8"
+      }
+    }
+  ],
+  "transitive_dependents": [
+    {
+      "path": "compat-table/src/caniuse.ts",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "compat-table/src/caniuse.ts",
+          "to": "compat-table/src/index.ts",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "compat-table/src/index.ts",
+          "to": "compat-table/src/css_table.ts",
+          "line": 8,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "compat-table/src/index.ts:8"
+      }
+    },
+    {
+      "path": "compat-table/src/compat-table.ts",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "compat-table/src/compat-table.ts",
+          "to": "compat-table/src/index.ts",
+          "line": 13,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "compat-table/src/index.ts",
+          "to": "compat-table/src/css_table.ts",
+          "line": 8,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "compat-table/src/index.ts:8"
+      }
+    },
+    {
+      "path": "compat-table/src/js_table.ts",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "compat-table/src/js_table.ts",
+          "to": "compat-table/src/index.ts",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "compat-table/src/index.ts",
+          "to": "compat-table/src/css_table.ts",
+          "line": 8,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "compat-table/src/index.ts:8"
+      }
+    },
+    {
+      "path": "compat-table/src/mdn.ts",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "compat-table/src/mdn.ts",
+          "to": "compat-table/src/index.ts",
+          "line": 4,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "compat-table/src/index.ts",
+          "to": "compat-table/src/css_table.ts",
+          "line": 8,
+          "method": "typescript-relative-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "compat-table/src/index.ts:8"
+      }
+    }
+  ],
+  "transitive_dependents_total": 4,
+  "transitive_dependents_truncated": false,
+  "related_tests": [],
+  "related_tests_total": 0,
+  "related_tests_truncated": false,
+  "affected_routes": [],
+  "affected_routes_total": 0,
+  "affected_routes_truncated": false,
+  "related_models": [],
+  "related_models_total": 0,
+  "related_models_truncated": false,
+  "architecture": {
+    "layers": {
+      "other": 1
+    },
+    "documentation_mentions": [],
+    "note": "Documentation matches are lexical and only point to where a concept is discussed."
+  },
+  "blind_spots": [
+    {
+      "kind": "repo-parse-errors",
+      "count": 1,
+      "message": "Files with parse errors contribute no symbols or edges anywhere in the index."
+    }
+  ],
+  "repo_health": {
+    "unresolved_imports": 1,
+    "dynamic_imports": 6,
+    "note": "Repository-wide counts; they are not scoped to this change."
+  },
+  "caveats": [
+    "This is a static analysis of statically resolvable relationships. Absence of a relationship is not evidence that a change is safe.",
+    "Dynamic imports, reflection, runtime dependency injection, generated code and external consumers are not modeled.",
+    "Test selection uses import edges and naming conventions, not execution traces; it can miss tests and include irrelevant ones.",
+    "Route and database-model detection use framework-specific heuristics and may produce false positives or miss frameworks.",
+    "Confidence levels describe extraction certainty, not the risk of the change itself."
+  ],
+  "summary": {
+    "changed_files": 1,
+    "changed_symbols": 7,
+    "direct_dependents": 1,
+    "transitive_dependents": 4,
+    "related_tests": 0,
+    "affected_routes": 0,
+    "related_models": 0,
+    "completeness": "partial",
+    "confidence_counts": {
+      "confirmed": 1,
+      "inferred": 0
+    }
+  },
+  "_query_time_ms": 5.6,
+  "_wall_ms": 63.1,
+  "_meta": {
+    "repo": "esbuild",
+    "file": "compat-table/src/css_table.ts",
+    "tool": "repograph",
+    "wall_s": 0.1
+  }
+}

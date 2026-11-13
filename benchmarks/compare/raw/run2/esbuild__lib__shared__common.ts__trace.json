@@ -1,0 +1,36 @@
+{
+  "tool": "trace-mcp",
+  "version": "3.44.0",
+  "repo_root": "/tmp/opencode/compare/repos/esbuild",
+  "file": "lib/shared/common.ts",
+  "get_change_impact": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"target\":{\"path\":\"lib/shared/common.ts\",\"symbolId\":\"lib/shared/common.ts::validateAndJoinStringArray#function\",\"symbolName\":\"validateAndJoinStringArray\",\"kind\":\"function\"},\"summary\":{\"totalFiles\":2,\"totalSymbols\":16,\"maxDepth\":1,\"crossBoundary\":true,\"publicApiAffected\":11,\"untestedDependents\":2,\"highComplexityDependents\":1,\"sentence\":\"Impact: 2 file(s) across 1 module(s), 11 public API, 2 untested, 1 high-complexity, 4 breaking risk(s). Risk: medium.\"},\"risk\":{\"score\":0.39,\"level\":\"medium\",\"publicApiBreaking\":true,\"untestedRatio\":1,\"maxComplexity\":17,\"mitigations\":[\"Add test coverage for the target before modifying\",\"High complexity in dependents \u2014 review carefully for regressions\",\"2/2 dependents lack tests \u2014 add integration tests\",\"11 public API symbol(s) affected \u2014 check for breaking changes\",\"4 exported symbol(s) with 6 consumer(s) \u2014 signature change = breaking\"]},\"affectedTests\":{\"total\":0,\"files\":[],\"truncated\":false},\"dependents\":[{\"path\":\"lib/npm/browser.ts\",\"edgeTypes\":[\"imports\",\"calls\"],\"depth\":1,\"hasTests\":false,\"symbols\":[{\"symbolId\":\"lib/npm/browser.ts::initialize#function\",\"symbolName\":\"initialize\",\"symbolKind\":\"function\",\"resolutionTier\":\"ast_resolved\",\"complexity\":7,\"isExported\":true},{\"symbolId\":\"lib/npm/browser.ts::startRunningService#function\",\"symbolName\":\"startRunningService\",\"symbolKind\":\"function\",\"resolutionTier\":\"ast_resolved\",\"complexity\":15,\"isExported\":false}]},{\"path\":\"lib/npm/node.ts\",\"edgeTypes\":[\"imports\",\"calls\"],\"depth\":1,\"hasTests\":false,\"symbols\":[{\"symbolId\":\"lib/npm/node.ts::initialize#function\",\"symbolName\":\"initialize\",\"symbolKind\":\"function\",\"resolutionTier\":\"ast_resolved\",\"complexity\":6,\"isExported\":true},{\"symbolId\":\"lib/npm/node.ts::ensureServiceIsRunning#function\",\"symbolName\":\"ensureServiceIsRunning\",\"symbolKind\":\"function\",\"resolutionTier\":\"ast_resolved\",\"complexity\":17,\"isExported\":false},{\"symbolId\":\"lib/npm/node.ts::runServiceSync#function\",\"symbolName\":\"runServiceSync\",\"symbolKind\":\"function\",\"resolutionTier\":\"ast_resolved\",\"complexity\":3,\"isExported\":false},{\"symbolId\":\"lib/npm/node.ts::build#function\",\"symbolName\":\"build\",\"symbolKind\":\"function\",\"resolutionTier\":\"ast_resolved\",\"complexity\":1,\"isExported\":true}]}],\"totalAffected\":2,\"resolution_tiers\":{\"scip_resolved\":0,\"lsp_resolved\":0,\"ast_resolved\":18,\"ast_inferred\":0,\"text_matched\":0},\"breakingChanges\":[{\"symbolId\":\"lib/shared/common.ts::validateInitializeOptions#function\",\"symbolName\":\"validateInitializeOptions\",\"kind\":\"function\",\"consumers\":2,\"consumerFiles\":[\"lib/npm/browser.ts\",\"lib/npm/node.ts\"]},{\"symbolId\":\"lib/shared/common.ts::createChannel#function\",\"symbolName\":\"createChannel\",\"kind\":\"function\",\"consumers\":2,\"consumerFiles\":[\"lib/npm/browser.ts\",\"lib/npm/node.ts\"]},{\"symbolId\":\"lib/shared/common.ts::Refs#interface\",\"symbolName\":\"Refs\",\"kind\":\"interface\",\"consumers\":1,\"consumerFiles\":[\"lib/npm/node.ts\"]},{\"symbolId\":\"lib/shared/common.ts::StreamService#interface\",\"symbolName\":\"StreamService\",\"kind\":\"interface\",\"consumers\":1,\"consumerFiles\":[\"lib/npm/node.ts\"]}],\"byModule\":[{\"module\":\"lib/npm\",\"count\":2,\"files\":[\"lib/npm/browser.ts\",\"lib/npm/node.ts\"],\"maxDepth\":1,\"hasUntested\":true}],\"byEdgeType\":{\"imports\":2,\"calls\":16},\"byDepth\":{\"1\":7,\"2\":10,\"3\":1},\"truncated\":true,\"_hints\":[{\"tool\":\"get_tests_for\",\"args\":{\"symbol_id\":\"<affected_symbol>\"},\"why\":\"Find tests for affected dependents\"},{\"tool\":\"check_rename\",\"args\":{\"symbol_id\":\"<symbol>\"},\"why\":\"Verify rename is safe across all usages\"}]}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 1
+  },
+  "find_usages": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"target\":{\"file\":\"lib/shared/common.ts\"},\"references\":[{\"edge_type\":\"imports\",\"resolution_tier\":\"ast_resolved\",\"file\":\"lib/npm/browser.ts\",\"_freshness\":\"fresh\"},{\"edge_type\":\"imports\",\"resolution_tier\":\"ast_resolved\",\"file\":\"lib/npm/node.ts\",\"_freshness\":\"fresh\"}],\"total\":2,\"resolution_tiers\":{\"scip_resolved\":0,\"lsp_resolved\":0,\"ast_resolved\":2,\"ast_inferred\":0,\"text_matched\":0},\"_meta\":{\"freshness\":{\"fresh\":2,\"edited_uncommitted\":0,\"stale_index\":0,\"repo_is_stale\":false},\"confidence\":0.55,\"confidence_signals\":{\"top1_strength\":1,\"top_gap\":0,\"identity_match\":0,\"freshness\":1}},\"_hints\":[{\"tool\":\"get_change_impact\",\"args\":{\"symbol_id\":\"<symbol>\"},\"why\":\"See transitive impact beyond direct references\"},{\"tool\":\"get_tests_for\",\"args\":{\"symbol_id\":\"<symbol>\"},\"why\":\"Find tests covering this symbol\"}]}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 2
+  },
+  "_meta": {
+    "repo": "esbuild",
+    "file": "lib/shared/common.ts",
+    "tool": "trace-v2",
+    "wall_s": 6.2
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "tool": "trace-mcp",
+  "version": "3.44.0",
+  "repo_root": "/tmp/opencode/compare/repos/koa",
+  "file": "lib/search-params.js",
+  "depth_used": 1,
+  "get_change_impact": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"target\":{\"path\":\"lib/search-params.js\",\"symbolId\":\"lib/search-params.js::__module__#namespace\",\"symbolName\":\"__module__:search-params\",\"kind\":\"namespace\"},\"summary\":{\"totalFiles\":2,\"totalSymbols\":0,\"maxDepth\":1,\"crossBoundary\":true,\"publicApiAffected\":0,\"untestedDependents\":2,\"highComplexityDependents\":0,\"sentence\":\"Impact: 2 file(s) across 2 module(s), 2 untested, 1 test(s) to run.\"},\"risk\":{\"score\":0.02,\"level\":\"low\",\"publicApiBreaking\":false,\"untestedRatio\":1,\"maxComplexity\":0,\"mitigations\":[\"2/2 dependents lack tests \u2014 add integration tests\"]},\"affectedTests\":{\"total\":1,\"files\":[\"__tests__/lib/search-params.test.js\"],\"truncated\":false},\"dependents\":[{\"path\":\"__tests__/lib/search-params.test.js\",\"edgeTypes\":[\"imports\"],\"depth\":1,\"hasTests\":false},{\"path\":\"lib/request.js\",\"edgeTypes\":[\"imports\"],\"depth\":1,\"hasTests\":false}],\"totalAffected\":2,\"resolution_tiers\":{\"scip_resolved\":0,\"lsp_resolved\":0,\"ast_resolved\":2,\"ast_inferred\":0,\"text_matched\":0},\"byModule\":[{\"module\":\"__tests__/lib\",\"count\":1,\"files\":[\"__tests__/lib/search-params.test.js\"],\"maxDepth\":1,\"hasUntested\":true},{\"module\":\"lib\",\"count\":1,\"files\":[\"lib/request.js\"],\"maxDepth\":1,\"hasUntested\":true}],\"byEdgeType\":{\"imports\":2},\"byDepth\":{\"1\":2},\"_hints\":[{\"tool\":\"get_tests_for\",\"args\":{\"symbol_id\":\"<affected_symbol>\"},\"why\":\"Find tests for affected dependents\"},{\"tool\":\"check_rename\",\"args\":{\"symbol_id\":\"<symbol>\"},\"why\":\"Verify rename is safe across all usages\"}]}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 1
+  },
+  "_meta": {
+    "repo": "koa",
+    "file": "lib/search-params.js",
+    "tool": "trace-v2-d1",
+    "wall_s": 6.2
+  }
+}

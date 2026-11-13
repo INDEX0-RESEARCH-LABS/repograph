@@ -1,0 +1,50 @@
+{
+  "tool": "code-impact-mcp",
+  "version": "1.6.10",
+  "repo_root": "/tmp/opencode/compare/repos/esbuild",
+  "file": "lib/shared/common.ts",
+  "refresh": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"status\": \"Graph rebuilt successfully\",\n  \"files\": 30,\n  \"edges\": 27,\n  \"buildTimeMs\": 1186,\n  \"circularDependencies\": 0\n}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 1
+  },
+  "get_dependencies": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"file\": \"lib/shared/common.ts\",\n  \"summary\": \"lib/shared/common.ts is a bridge module with 2 incoming and 3 outgoing dependency edges.\",\n  \"explanation\": \"This is a structural dependency view. It does not distinguish runtime-only vs type-only usage yet.\",\n  \"imports\": [\n    \"lib/shared/stdio_protocol.ts\",\n    \"lib/shared/types.ts\",\n    \"lib/shared/uint8array_json_parser.ts\"\n  ],\n  \"importedBy\": [\n    \"lib/npm/browser.ts\",\n    \"lib/npm/node.ts\"\n  ],\n  \"exports\": [\n    \"Refs\",\n    \"StreamFS\",\n    \"StreamIn\",\n    \"StreamOut\",\n    \"StreamService\",\n    \"createChannel\",\n    \"validateInitializeOptions\"\n  ],\n  \"fanIn\": 2,\n  \"fanOut\": 3,\n  \"isHighCoupling\": false,\n  \"couplingRole\": \"bridge module\"\n}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 2
+  },
+  "analyze_impact": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"summary\": \"Low graph impact: the current change looks locally contained in graph terms.\",\n  \"scanSummary\": \"LOW, 2 affected across lib/npm (2)\",\n  \"explanation\": \"This result is graph-based only. It does not account for tests, runtime behavior, migrations, or production traffic.\",\n  \"changedFiles\": [\n    \"lib/shared/common.ts\"\n  ],\n  \"directlyAffected\": [\n    \"lib/npm/browser.ts\",\n    \"lib/npm/node.ts\"\n  ],\n  \"transitivelyAffected\": [],\n  \"impactBreakdown\": {\n    \"directCount\": 2,\n    \"transitiveCount\": 0,\n    \"directScan\": {\n      \"totalFiles\": 2,\n      \"topDirectories\": [\n        {\n          \"directory\": \"lib/npm\",\n          \"count\": 2\n        }\n      ],\n      \"directoryGroups\": [\n        {\n          \"directory\": \"lib/npm\",\n          \"count\": 2,\n          \"examples\": [\n            \"lib/npm/browser.ts\",\n            \"lib/npm/node.ts\"\n          ],\n          \"remainingExamples\": 0\n        }\n      ],\n      \"firstFiles\": [\n        \"lib/npm/browser.ts\",\n        \"lib/npm/node.ts\"\n      ],\n      \"remainingFiles\": 0,\n      \"summaryLine\": \"lib/npm (2)\",\n      \"displayMode\": \"flat\"\n    },\n    \"transitiveScan\": {\n      \"totalFiles\": 0,\n      \"topDirectories\": [],\n      \"directoryGroups\": [],\n      \"firstFiles\": [],\n      \"remainingFiles\": 0,\n      \"summaryLine\": \"\",\n      \"displayMode\": \"flat\"\n    }\n  },\n  \"riskScore\": 0.07,\n  \"totalAffected\": 2,\n  \"cascadeDepth\": 2\n}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 3
+  },
+  "stderr": "",
+  "_wall_ms": 1979.1,
+  "_meta": {
+    "repo": "esbuild",
+    "file": "lib/shared/common.ts",
+    "tool": "code_impact",
+    "wall_s": 2.0
+  }
+}

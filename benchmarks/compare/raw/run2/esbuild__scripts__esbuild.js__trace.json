@@ -1,0 +1,36 @@
+{
+  "tool": "trace-mcp",
+  "version": "3.44.0",
+  "repo_root": "/tmp/opencode/compare/repos/esbuild",
+  "file": "scripts/esbuild.js",
+  "get_change_impact": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"target\":{\"path\":\"scripts/esbuild.js\",\"symbolId\":\"scripts/esbuild.js::__module__#namespace\",\"symbolName\":\"__module__:esbuild\",\"kind\":\"namespace\"},\"summary\":{\"totalFiles\":16,\"totalSymbols\":0,\"maxDepth\":2,\"crossBoundary\":false,\"publicApiAffected\":0,\"untestedDependents\":16,\"highComplexityDependents\":0,\"sentence\":\"Impact: 16 file(s) across 1 module(s), 16 untested. Risk: medium.\"},\"risk\":{\"score\":0.27,\"level\":\"medium\",\"publicApiBreaking\":false,\"untestedRatio\":1,\"maxComplexity\":0,\"mitigations\":[\"Add test coverage for the target before modifying\",\"16/16 dependents lack tests \u2014 add integration tests\"]},\"affectedTests\":{\"total\":0,\"files\":[],\"truncated\":false},\"dependents\":[{\"path\":\"scripts/destructuring-fuzzer.js\",\"edgeTypes\":[\"imports\"],\"depth\":1,\"hasTests\":false},{\"path\":\"scripts/end-to-end-tests.js\",\"edgeTypes\":[\"imports\"],\"depth\":1,\"hasTests\":false},{\"path\":\"scripts/js-api-tests.js\",\"edgeTypes\":[\"imports\"],\"depth\":1,\"hasTests\":false},{\"path\":\"scripts/node-unref-tests.js\",\"edgeTypes\":[\"imports\"],\"depth\":1,\"hasTests\":false},{\"path\":\"scripts/plugin-tests.js\",\"edgeTypes\":[\"imports\"],\"depth\":1,\"hasTests\":false},{\"path\":\"scripts/register-test.js\",\"edgeTypes\":[\"imports\"],\"depth\":1,\"hasTests\":false},{\"path\":\"scripts/terser-tests.js\",\"edgeTypes\":[\"imports\"],\"depth\":1,\"hasTests\":false},{\"path\":\"scripts/test-yarnpnp.js\",\"edgeTypes\":[\"imports\"],\"depth\":1,\"hasTests\":false},{\"path\":\"scripts/test262-async.js\",\"edgeTypes\":[\"imports\"],\"depth\":1,\"hasTests\":false},{\"path\":\"scripts/test262.js\",\"edgeTypes\":[\"imports\"],\"depth\":1,\"hasTests\":false},{\"path\":\"scripts/ts-type-tests.js\",\"edgeTypes\":[\"imports\"],\"depth\":1,\"hasTests\":false},{\"path\":\"scripts/uglify-tests.js\",\"edgeTypes\":[\"imports\"],\"depth\":1,\"hasTests\":false},{\"path\":\"scripts/verify-source-map.js\",\"edgeTypes\":[\"imports\"],\"depth\":1,\"hasTests\":false},{\"path\":\"scripts/wasm-tests.js\",\"edgeTypes\":[\"imports\"],\"depth\":1,\"hasTests\":false},{\"path\":\"scripts/decorator-tests.js\",\"edgeTypes\":[\"imports\"],\"depth\":2,\"hasTests\":false},{\"path\":\"scripts/decorator-tests.ts\",\"edgeTypes\":[\"imports\"],\"depth\":2,\"hasTests\":false}],\"totalAffected\":16,\"resolution_tiers\":{\"scip_resolved\":0,\"lsp_resolved\":0,\"ast_resolved\":14,\"ast_inferred\":2,\"text_matched\":0},\"byModule\":[{\"module\":\"scripts\",\"count\":16,\"files\":[\"scripts/destructuring-fuzzer.js\",\"scripts/end-to-end-tests.js\",\"scripts/js-api-tests.js\",\"scripts/node-unref-tests.js\",\"scripts/plugin-tests.js\",\"scripts/register-test.js\",\"scripts/terser-tests.js\",\"scripts/test-yarnpnp.js\",\"scripts/test262-async.js\",\"scripts/test262.js\",\"scripts/ts-type-tests.js\",\"scripts/uglify-tests.js\",\"scripts/verify-source-map.js\",\"scripts/wasm-tests.js\",\"scripts/decorator-tests.js\"],\"maxDepth\":2,\"hasUntested\":true}],\"byEdgeType\":{\"imports\":16},\"byDepth\":{\"1\":14,\"2\":2},\"_hints\":[{\"tool\":\"get_tests_for\",\"args\":{\"symbol_id\":\"<affected_symbol>\"},\"why\":\"Find tests for affected dependents\"},{\"tool\":\"check_rename\",\"args\":{\"symbol_id\":\"<symbol>\"},\"why\":\"Verify rename is safe across all usages\"}]}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 1
+  },
+  "find_usages": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"target\":{\"file\":\"scripts/esbuild.js\"},\"references\":[{\"edge_type\":\"imports\",\"resolution_tier\":\"ast_resolved\",\"file\":\"scripts/destructuring-fuzzer.js\",\"_freshness\":\"fresh\"},{\"edge_type\":\"imports\",\"resolution_tier\":\"ast_resolved\",\"file\":\"scripts/end-to-end-tests.js\",\"_freshness\":\"fresh\"},{\"edge_type\":\"imports\",\"resolution_tier\":\"ast_resolved\",\"file\":\"scripts/js-api-tests.js\",\"_freshness\":\"fresh\"},{\"edge_type\":\"imports\",\"resolution_tier\":\"ast_resolved\",\"file\":\"scripts/node-unref-tests.js\",\"_freshness\":\"fresh\"},{\"edge_type\":\"imports\",\"resolution_tier\":\"ast_resolved\",\"file\":\"scripts/plugin-tests.js\",\"_freshness\":\"fresh\"},{\"edge_type\":\"imports\",\"resolution_tier\":\"ast_resolved\",\"file\":\"scripts/register-test.js\",\"_freshness\":\"fresh\"},{\"edge_type\":\"imports\",\"resolution_tier\":\"ast_resolved\",\"file\":\"scripts/terser-tests.js\",\"_freshness\":\"fresh\"},{\"edge_type\":\"imports\",\"resolution_tier\":\"ast_resolved\",\"file\":\"scripts/test-yarnpnp.js\",\"_freshness\":\"fresh\"},{\"edge_type\":\"imports\",\"resolution_tier\":\"ast_resolved\",\"file\":\"scripts/test262-async.js\",\"_freshness\":\"fresh\"},{\"edge_type\":\"imports\",\"resolution_tier\":\"ast_resolved\",\"file\":\"scripts/test262.js\",\"_freshness\":\"fresh\"},{\"edge_type\":\"imports\",\"resolution_tier\":\"ast_resolved\",\"file\":\"scripts/ts-type-tests.js\",\"_freshness\":\"fresh\"},{\"edge_type\":\"imports\",\"resolution_tier\":\"ast_resolved\",\"file\":\"scripts/uglify-tests.js\",\"_freshness\":\"fresh\"},{\"edge_type\":\"imports\",\"resolution_tier\":\"ast_resolved\",\"file\":\"scripts/verify-source-map.js\",\"_freshness\":\"fresh\"},{\"edge_type\":\"imports\",\"resolution_tier\":\"ast_resolved\",\"file\":\"scripts/wasm-tests.js\",\"_freshness\":\"fresh\"}],\"total\":14,\"resolution_tiers\":{\"scip_resolved\":0,\"lsp_resolved\":0,\"ast_resolved\":14,\"ast_inferred\":0,\"text_matched\":0},\"_meta\":{\"freshness\":{\"fresh\":14,\"edited_uncommitted\":0,\"stale_index\":0,\"repo_is_stale\":false},\"confidence\":0.55,\"confidence_signals\":{\"top1_strength\":1,\"top_gap\":0,\"identity_match\":0,\"freshness\":1}},\"_hints\":[{\"tool\":\"get_change_impact\",\"args\":{\"symbol_id\":\"<symbol>\"},\"why\":\"See transitive impact beyond direct references\"},{\"tool\":\"get_tests_for\",\"args\":{\"symbol_id\":\"<symbol>\"},\"why\":\"Find tests covering this symbol\"}]}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 2
+  },
+  "_meta": {
+    "repo": "esbuild",
+    "file": "scripts/esbuild.js",
+    "tool": "trace-v2",
+    "wall_s": 6.2
+  }
+}

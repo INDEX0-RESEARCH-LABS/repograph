@@ -1,0 +1,25 @@
+{
+  "tool": "trace-mcp",
+  "version": "3.44.0",
+  "repo_root": "/tmp/opencode/compare/repos/django",
+  "file": "django/template/backends/base.py",
+  "depth_used": 1,
+  "get_change_impact": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"target\":{\"path\":\"django/template/backends/base.py\",\"symbolId\":\"django/template/backends/base.py::BaseEngine#class\",\"symbolName\":\"BaseEngine\",\"kind\":\"class\"},\"summary\":{\"totalFiles\":4,\"totalSymbols\":5,\"maxDepth\":1,\"crossBoundary\":true,\"publicApiAffected\":4,\"untestedDependents\":2,\"highComplexityDependents\":0,\"sentence\":\"Impact: 4 file(s) across 2 module(s), 4 public API, 2 untested, 4 test(s) to run, 1 breaking risk(s).\"},\"risk\":{\"score\":0.15,\"level\":\"low\",\"publicApiBreaking\":true,\"untestedRatio\":0.5,\"maxComplexity\":8,\"mitigations\":[\"4 public API symbol(s) affected \u2014 check for breaking changes\",\"1 exported symbol(s) with 4 consumer(s) \u2014 signature change = breaking\"]},\"affectedTests\":{\"total\":4,\"files\":[\"tests/check_framework/test_templates.py\",\"tests/template_backends/test_django.py\",\"tests/template_backends/test_dummy.py\",\"tests/template_tests/test_partials.py\"],\"truncated\":false},\"dependents\":[{\"path\":\"django/template/backends/django.py\",\"edgeTypes\":[\"imports\",\"extends\"],\"depth\":1,\"hasTests\":true,\"symbols\":[{\"symbolId\":\"django/template/backends/django.py::DjangoTemplates#class\",\"symbolName\":\"DjangoTemplates\",\"symbolKind\":\"class\",\"resolutionTier\":\"ast_resolved\",\"complexity\":8,\"isExported\":true,\"hasTestReach\":false}]},{\"path\":\"django/template/backends/dummy.py\",\"edgeTypes\":[\"imports\",\"extends\",\"calls\"],\"depth\":1,\"hasTests\":true,\"symbols\":[{\"symbolId\":\"django/template/backends/dummy.py::TemplateStrings#class\",\"symbolName\":\"TemplateStrings\",\"symbolKind\":\"class\",\"resolutionTier\":\"ast_resolved\",\"complexity\":5,\"isExported\":true,\"hasTestReach\":false},{\"symbolId\":\"django/template/backends/dummy.py::TemplateStrings::get_template#method\",\"symbolName\":\"get_template\",\"symbolKind\":\"method\",\"resolutionTier\":\"ast_resolved\",\"complexity\":4,\"isExported\":false,\"hasTestReach\":false}]},{\"path\":\"django/template/backends/jinja2.py\",\"edgeTypes\":[\"imports\",\"extends\"],\"depth\":1,\"hasTests\":false,\"symbols\":[{\"symbolId\":\"django/template/backends/jinja2.py::Jinja2#class\",\"symbolName\":\"Jinja2\",\"symbolKind\":\"class\",\"resolutionTier\":\"ast_resolved\",\"complexity\":6,\"isExported\":true}]},{\"path\":\"tests/check_framework/test_templates.py\",\"edgeTypes\":[\"imports\",\"extends\"],\"depth\":1,\"hasTests\":false,\"symbols\":[{\"symbolId\":\"tests/check_framework/test_templates.py::ErrorEngine#class\",\"symbolName\":\"ErrorEngine\",\"symbolKind\":\"class\",\"resolutionTier\":\"ast_resolved\",\"complexity\":1,\"isExported\":true}]}],\"totalAffected\":4,\"resolution_tiers\":{\"scip_resolved\":0,\"lsp_resolved\":0,\"ast_resolved\":9,\"ast_inferred\":0,\"text_matched\":0},\"breakingChanges\":[{\"symbolId\":\"django/template/backends/base.py::BaseEngine#class\",\"symbolName\":\"BaseEngine\",\"kind\":\"class\",\"consumers\":4,\"consumerFiles\":[\"django/template/backends/dummy.py\",\"django/template/backends/django.py\",\"django/template/backends/jinja2.py\",\"tests/check_framework/test_templates.py\"]}],\"byModule\":[{\"module\":\"django/template\",\"count\":3,\"files\":[\"django/template/backends/django.py\",\"django/template/backends/dummy.py\",\"django/template/backends/jinja2.py\"],\"maxDepth\":1,\"hasUntested\":true},{\"module\":\"tests/check_framework\",\"count\":1,\"files\":[\"tests/check_framework/test_templates.py\"],\"maxDepth\":1,\"hasUntested\":true}],\"byEdgeType\":{\"imports\":4,\"extends\":4,\"calls\":1},\"byDepth\":{\"1\":9},\"_hints\":[{\"tool\":\"get_tests_for\",\"args\":{\"symbol_id\":\"<affected_symbol>\"},\"why\":\"Find tests for affected dependents\"},{\"tool\":\"check_rename\",\"args\":{\"symbol_id\":\"<symbol>\"},\"why\":\"Verify rename is safe across all usages\"}]}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 1
+  },
+  "_meta": {
+    "repo": "django",
+    "file": "django/template/backends/base.py",
+    "tool": "trace-v2-d1",
+    "wall_s": 7.5
+  }
+}

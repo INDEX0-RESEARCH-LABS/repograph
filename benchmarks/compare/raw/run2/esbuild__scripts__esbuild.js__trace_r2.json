@@ -1,0 +1,25 @@
+{
+  "tool": "trace-mcp",
+  "version": "3.44.0",
+  "repo_root": "/tmp/opencode/compare/repos/esbuild",
+  "file": "scripts/esbuild.js",
+  "depth_used": 1,
+  "get_change_impact": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"target\":{\"path\":\"scripts/esbuild.js\",\"symbolId\":\"scripts/esbuild.js::__module__#namespace\",\"symbolName\":\"__module__:esbuild\",\"kind\":\"namespace\"},\"summary\":{\"totalFiles\":14,\"totalSymbols\":0,\"maxDepth\":1,\"crossBoundary\":false,\"publicApiAffected\":0,\"untestedDependents\":14,\"highComplexityDependents\":0,\"sentence\":\"Impact: 14 file(s) across 1 module(s), 14 untested. Risk: medium.\"},\"risk\":{\"score\":0.25,\"level\":\"medium\",\"publicApiBreaking\":false,\"untestedRatio\":1,\"maxComplexity\":0,\"mitigations\":[\"Add test coverage for the target before modifying\",\"14/14 dependents lack tests \u2014 add integration tests\"]},\"affectedTests\":{\"total\":0,\"files\":[],\"truncated\":false},\"dependents\":[{\"path\":\"scripts/destructuring-fuzzer.js\",\"edgeTypes\":[\"imports\"],\"depth\":1,\"hasTests\":false},{\"path\":\"scripts/end-to-end-tests.js\",\"edgeTypes\":[\"imports\"],\"depth\":1,\"hasTests\":false},{\"path\":\"scripts/js-api-tests.js\",\"edgeTypes\":[\"imports\"],\"depth\":1,\"hasTests\":false},{\"path\":\"scripts/node-unref-tests.js\",\"edgeTypes\":[\"imports\"],\"depth\":1,\"hasTests\":false},{\"path\":\"scripts/plugin-tests.js\",\"edgeTypes\":[\"imports\"],\"depth\":1,\"hasTests\":false},{\"path\":\"scripts/register-test.js\",\"edgeTypes\":[\"imports\"],\"depth\":1,\"hasTests\":false},{\"path\":\"scripts/terser-tests.js\",\"edgeTypes\":[\"imports\"],\"depth\":1,\"hasTests\":false},{\"path\":\"scripts/test-yarnpnp.js\",\"edgeTypes\":[\"imports\"],\"depth\":1,\"hasTests\":false},{\"path\":\"scripts/test262-async.js\",\"edgeTypes\":[\"imports\"],\"depth\":1,\"hasTests\":false},{\"path\":\"scripts/test262.js\",\"edgeTypes\":[\"imports\"],\"depth\":1,\"hasTests\":false},{\"path\":\"scripts/ts-type-tests.js\",\"edgeTypes\":[\"imports\"],\"depth\":1,\"hasTests\":false},{\"path\":\"scripts/uglify-tests.js\",\"edgeTypes\":[\"imports\"],\"depth\":1,\"hasTests\":false},{\"path\":\"scripts/verify-source-map.js\",\"edgeTypes\":[\"imports\"],\"depth\":1,\"hasTests\":false},{\"path\":\"scripts/wasm-tests.js\",\"edgeTypes\":[\"imports\"],\"depth\":1,\"hasTests\":false}],\"totalAffected\":14,\"resolution_tiers\":{\"scip_resolved\":0,\"lsp_resolved\":0,\"ast_resolved\":14,\"ast_inferred\":0,\"text_matched\":0},\"byModule\":[{\"module\":\"scripts\",\"count\":14,\"files\":[\"scripts/destructuring-fuzzer.js\",\"scripts/end-to-end-tests.js\",\"scripts/js-api-tests.js\",\"scripts/node-unref-tests.js\",\"scripts/plugin-tests.js\",\"scripts/register-test.js\",\"scripts/terser-tests.js\",\"scripts/test-yarnpnp.js\",\"scripts/test262-async.js\",\"scripts/test262.js\",\"scripts/ts-type-tests.js\",\"scripts/uglify-tests.js\",\"scripts/verify-source-map.js\",\"scripts/wasm-tests.js\"],\"maxDepth\":1,\"hasUntested\":true}],\"byEdgeType\":{\"imports\":14},\"byDepth\":{\"1\":14},\"_hints\":[{\"tool\":\"get_tests_for\",\"args\":{\"symbol_id\":\"<affected_symbol>\"},\"why\":\"Find tests for affected dependents\"},{\"tool\":\"check_rename\",\"args\":{\"symbol_id\":\"<symbol>\"},\"why\":\"Verify rename is safe across all usages\"}]}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 1
+  },
+  "_meta": {
+    "repo": "esbuild",
+    "file": "scripts/esbuild.js",
+    "tool": "trace-v2-d1",
+    "wall_s": 6.2
+  }
+}

@@ -2536,9 +2536,34 @@
     },
     "lib/application.js": {
       "verified_importers": [
+        "__tests__/application/compose.test.js",
+        "__tests__/application/context.test.js",
+        "__tests__/application/currentContext.test.js",
+        "__tests__/application/index.test.js",
+        "__tests__/application/inspect.test.js",
+        "__tests__/application/onerror.test.js",
+        "__tests__/application/request.test.js",
+        "__tests__/application/respond.test.js",
+        "__tests__/application/response.test.js",
+        "__tests__/application/toJSON.test.js",
+        "__tests__/application/use.test.js",
+        "__tests__/context/assert.test.js",
+        "__tests__/context/cookies.test.js",
+        "__tests__/context/onerror.test.js",
+        "__tests__/context/state.test.js",
+        "__tests__/load-with-esm.test.js",
+        "__tests__/request/href.test.js",
+        "__tests__/request/ip.test.js",
+        "__tests__/response/attachment.test.js",
+        "__tests__/response/flushHeaders.test.js",
+        "__tests__/response/header.test.js",
+        "__tests__/response/redirect.test.js",
+        "__tests__/response/status.test.js",
+        "__tests__/response/writable.test.js",
         "test-helpers/context.js"
       ],
-      "unverified_candidates": []
+      "unverified_candidates": [],
+      "note": "require('../..') resolves to lib/application.js via package.json main"
     },
     "test-helpers/stream.js": {
       "verified_importers": [

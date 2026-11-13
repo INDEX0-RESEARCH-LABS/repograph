@@ -1,0 +1,25 @@
+{
+  "tool": "trace-mcp",
+  "version": "3.44.0",
+  "repo_root": "/tmp/opencode/compare/repos/esbuild",
+  "file": "scripts/decorator-tests.js",
+  "depth_used": 1,
+  "get_change_impact": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"target\":{\"path\":\"scripts/decorator-tests.js\",\"symbolId\":\"scripts/decorator-tests.js::__module__#namespace\",\"symbolName\":\"__module__:decorator-tests\",\"kind\":\"namespace\"},\"summary\":{\"totalFiles\":1,\"totalSymbols\":1,\"maxDepth\":1,\"crossBoundary\":false,\"publicApiAffected\":0,\"untestedDependents\":1,\"highComplexityDependents\":0,\"sentence\":\"Impact: 1 file(s) across 1 module(s), 1 untested.\"},\"risk\":{\"score\":0.17,\"level\":\"low\",\"publicApiBreaking\":false,\"untestedRatio\":1,\"maxComplexity\":0,\"mitigations\":[\"Add test coverage for the target before modifying\",\"1/1 dependents lack tests \u2014 add integration tests\"]},\"affectedTests\":{\"total\":0,\"files\":[],\"truncated\":false},\"dependents\":[{\"path\":\"scripts/js-api-tests.js\",\"edgeTypes\":[\"imports\",\"calls\"],\"depth\":1,\"hasTests\":false,\"symbols\":[{\"symbolId\":\"scripts/js-api-tests.js::__module__#namespace\",\"symbolName\":\"__module__:js-api-tests\",\"symbolKind\":\"namespace\",\"resolutionTier\":\"ast_resolved\",\"isExported\":false}]}],\"totalAffected\":1,\"resolution_tiers\":{\"scip_resolved\":0,\"lsp_resolved\":0,\"ast_resolved\":1,\"ast_inferred\":1,\"text_matched\":0},\"byModule\":[{\"module\":\"scripts\",\"count\":1,\"files\":[\"scripts/js-api-tests.js\"],\"maxDepth\":1,\"hasUntested\":true}],\"byEdgeType\":{\"imports\":1,\"calls\":1},\"byDepth\":{\"1\":2},\"_hints\":[{\"tool\":\"get_tests_for\",\"args\":{\"symbol_id\":\"<affected_symbol>\"},\"why\":\"Find tests for affected dependents\"},{\"tool\":\"check_rename\",\"args\":{\"symbol_id\":\"<symbol>\"},\"why\":\"Verify rename is safe across all usages\"}]}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 1
+  },
+  "_meta": {
+    "repo": "esbuild",
+    "file": "scripts/decorator-tests.js",
+    "tool": "trace-v2-d1",
+    "wall_s": 6.2
+  }
+}

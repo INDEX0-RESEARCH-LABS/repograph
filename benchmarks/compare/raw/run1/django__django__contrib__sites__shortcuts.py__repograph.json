@@ -1,0 +1,3994 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-13T05:25:52+00:00",
+  "source": "files",
+  "target": {
+    "paths": [
+      "django/contrib/sites/shortcuts.py"
+    ],
+    "symbols": [
+      {
+        "name": "get_current_site",
+        "qualified_name": "get_current_site",
+        "kind": "function",
+        "path": "django/contrib/sites/shortcuts.py",
+        "lines": [
+          6,
+          18
+        ],
+        "changed_by_hunk": true,
+        "evidence": {
+          "location": "django/contrib/sites/shortcuts.py:6"
+        }
+      }
+    ],
+    "symbols_total": 1,
+    "symbols_truncated": false,
+    "changed_lines": {},
+    "removed_symbols": [],
+    "deleted": [],
+    "missing_from_index": [],
+    "diff": null
+  },
+  "changed_files": [
+    "django/contrib/sites/shortcuts.py"
+  ],
+  "direct_dependents": [
+    {
+      "path": "django/contrib/auth/forms.py",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "django/contrib/sites/shortcuts.py",
+          "line": 9,
+          "module": "django.contrib.sites.shortcuts",
+          "method": "python-absolute-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "django/contrib/auth/forms.py:9"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "django/contrib/sites/shortcuts.py",
+          "symbol": "get_current_site",
+          "line": 462,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "django/contrib/auth/forms.py:462"
+          }
+        }
+      ],
+      "reason_count": 2,
+      "evidence": {
+        "location": "django/contrib/auth/forms.py:9"
+      }
+    },
+    {
+      "path": "django/contrib/auth/views.py",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "django/contrib/sites/shortcuts.py",
+          "line": 18,
+          "module": "django.contrib.sites.shortcuts",
+          "method": "python-absolute-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "django/contrib/auth/views.py:18"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "django/contrib/sites/shortcuts.py",
+          "symbol": "get_current_site",
+          "line": 121,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "django/contrib/auth/views.py:121"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "django/contrib/sites/shortcuts.py",
+          "symbol": "get_current_site",
+          "line": 163,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "django/contrib/auth/views.py:163"
+          }
+        }
+      ],
+      "reason_count": 3,
+      "evidence": {
+        "location": "django/contrib/auth/views.py:18"
+      }
+    },
+    {
+      "path": "django/contrib/contenttypes/views.py",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "django/contrib/sites/shortcuts.py",
+          "line": 3,
+          "module": "django.contrib.sites.shortcuts",
+          "method": "python-absolute-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "django/contrib/contenttypes/views.py:3"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "django/contrib/sites/shortcuts.py",
+          "symbol": "get_current_site",
+          "line": 47,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "django/contrib/contenttypes/views.py:47"
+          }
+        }
+      ],
+      "reason_count": 2,
+      "evidence": {
+        "location": "django/contrib/contenttypes/views.py:3"
+      }
+    },
+    {
+      "path": "django/contrib/flatpages/templatetags/flatpages.py",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "django/contrib/sites/shortcuts.py",
+          "line": 4,
+          "module": "django.contrib.sites.shortcuts",
+          "method": "python-absolute-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "django/contrib/flatpages/templatetags/flatpages.py:4"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "django/contrib/sites/shortcuts.py",
+          "symbol": "get_current_site",
+          "line": 23,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "django/contrib/flatpages/templatetags/flatpages.py:23"
+          }
+        }
+      ],
+      "reason_count": 2,
+      "evidence": {
+        "location": "django/contrib/flatpages/templatetags/flatpages.py:4"
+      }
+    },
+    {
+      "path": "django/contrib/flatpages/views.py",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "django/contrib/sites/shortcuts.py",
+          "line": 3,
+          "module": "django.contrib.sites.shortcuts",
+          "method": "python-absolute-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "django/contrib/flatpages/views.py:3"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "django/contrib/sites/shortcuts.py",
+          "symbol": "get_current_site",
+          "line": 35,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "django/contrib/flatpages/views.py:35"
+          }
+        }
+      ],
+      "reason_count": 2,
+      "evidence": {
+        "location": "django/contrib/flatpages/views.py:3"
+      }
+    },
+    {
+      "path": "django/contrib/redirects/middleware.py",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "django/contrib/sites/shortcuts.py",
+          "line": 4,
+          "module": "django.contrib.sites.shortcuts",
+          "method": "python-absolute-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "django/contrib/redirects/middleware.py:4"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "django/contrib/sites/shortcuts.py",
+          "symbol": "get_current_site",
+          "line": 31,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "django/contrib/redirects/middleware.py:31"
+          }
+        }
+      ],
+      "reason_count": 2,
+      "evidence": {
+        "location": "django/contrib/redirects/middleware.py:4"
+      }
+    },
+    {
+      "path": "django/contrib/sitemaps/views.py",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "django/contrib/sites/shortcuts.py",
+          "line": 5,
+          "module": "django.contrib.sites.shortcuts",
+          "method": "python-absolute-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "django/contrib/sitemaps/views.py:5"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "django/contrib/sites/shortcuts.py",
+          "symbol": "get_current_site",
+          "line": 51,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "django/contrib/sitemaps/views.py:51"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "django/contrib/sites/shortcuts.py",
+          "symbol": "get_current_site",
+          "line": 100,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "django/contrib/sitemaps/views.py:100"
+          }
+        }
+      ],
+      "reason_count": 3,
+      "evidence": {
+        "location": "django/contrib/sitemaps/views.py:5"
+      }
+    },
+    {
+      "path": "django/contrib/sites/middleware.py",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "django/contrib/sites/shortcuts.py",
+          "line": 3,
+          "module": "shortcuts",
+          "method": "python-relative-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "django/contrib/sites/middleware.py:3"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "django/contrib/sites/shortcuts.py",
+          "symbol": "get_current_site",
+          "line": 14,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "django/contrib/sites/middleware.py:14"
+          }
+        }
+      ],
+      "reason_count": 2,
+      "evidence": {
+        "location": "django/contrib/sites/middleware.py:3"
+      }
+    },
+    {
+      "path": "django/contrib/syndication/views.py",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "django/contrib/sites/shortcuts.py",
+          "line": 3,
+          "module": "django.contrib.sites.shortcuts",
+          "method": "python-absolute-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "django/contrib/syndication/views.py:3"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "django/contrib/sites/shortcuts.py",
+          "symbol": "get_current_site",
+          "line": 140,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "django/contrib/syndication/views.py:140"
+          }
+        }
+      ],
+      "reason_count": 2,
+      "evidence": {
+        "location": "django/contrib/syndication/views.py:3"
+      }
+    },
+    {
+      "path": "tests/contenttypes_tests/test_views.py",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "django/contrib/sites/shortcuts.py",
+          "line": 8,
+          "module": "django.contrib.sites.shortcuts",
+          "method": "python-absolute-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "tests/contenttypes_tests/test_views.py:8"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "django/contrib/sites/shortcuts.py",
+          "symbol": "get_current_site",
+          "line": 247,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "tests/contenttypes_tests/test_views.py:247"
+          }
+        }
+      ],
+      "reason_count": 2,
+      "evidence": {
+        "location": "tests/contenttypes_tests/test_views.py:8"
+      }
+    },
+    {
+      "path": "tests/sites_tests/tests.py",
+      "confidence": "confirmed",
+      "reasons": [
+        {
+          "relation": "imports-changed-file",
+          "target": "django/contrib/sites/shortcuts.py",
+          "line": 10,
+          "module": "django.contrib.sites.shortcuts",
+          "method": "python-absolute-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "tests/sites_tests/tests.py:10"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "django/contrib/sites/shortcuts.py",
+          "symbol": "get_current_site",
+          "line": 67,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "tests/sites_tests/tests.py:67"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "django/contrib/sites/shortcuts.py",
+          "symbol": "get_current_site",
+          "line": 75,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "tests/sites_tests/tests.py:75"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "django/contrib/sites/shortcuts.py",
+          "symbol": "get_current_site",
+          "line": 79,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "tests/sites_tests/tests.py:79"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "django/contrib/sites/shortcuts.py",
+          "symbol": "get_current_site",
+          "line": 91,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "tests/sites_tests/tests.py:91"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "django/contrib/sites/shortcuts.py",
+          "symbol": "get_current_site",
+          "line": 104,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "tests/sites_tests/tests.py:104"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "django/contrib/sites/shortcuts.py",
+          "symbol": "get_current_site",
+          "line": 115,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "tests/sites_tests/tests.py:115"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "django/contrib/sites/shortcuts.py",
+          "symbol": "get_current_site",
+          "line": 120,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "tests/sites_tests/tests.py:120"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "django/contrib/sites/shortcuts.py",
+          "symbol": "get_current_site",
+          "line": 125,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "tests/sites_tests/tests.py:125"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "django/contrib/sites/shortcuts.py",
+          "symbol": "get_current_site",
+          "line": 131,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "tests/sites_tests/tests.py:131"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "django/contrib/sites/shortcuts.py",
+          "symbol": "get_current_site",
+          "line": 136,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "tests/sites_tests/tests.py:136"
+          }
+        },
+        {
+          "relation": "references-changed-symbol",
+          "target": "django/contrib/sites/shortcuts.py",
+          "symbol": "get_current_site",
+          "line": 140,
+          "reference_kind": "call",
+          "method": "import-binding",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "tests/sites_tests/tests.py:140"
+          }
+        }
+      ],
+      "reason_count": 15,
+      "evidence": {
+        "location": "tests/sites_tests/tests.py:10"
+      }
+    }
+  ],
+  "transitive_dependents": [
+    {
+      "path": "django/contrib/admin/forms.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/contrib/admin/forms.py",
+          "to": "django/contrib/auth/forms.py",
+          "line": 1,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/forms.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 9,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/forms.py:9"
+      }
+    },
+    {
+      "path": "django/contrib/admin/sites.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/contrib/admin/sites.py",
+          "to": "django/contrib/auth/views.py",
+          "line": 242,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 18,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/views.py:18"
+      }
+    },
+    {
+      "path": "django/contrib/auth/admin.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/contrib/auth/admin.py",
+          "to": "django/contrib/auth/forms.py",
+          "line": 6,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/forms.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 9,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/forms.py:9"
+      }
+    },
+    {
+      "path": "django/contrib/auth/decorators.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/contrib/auth/decorators.py",
+          "to": "django/contrib/auth/views.py",
+          "line": 34,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 18,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/views.py:18"
+      }
+    },
+    {
+      "path": "django/contrib/auth/middleware.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/contrib/auth/middleware.py",
+          "to": "django/contrib/auth/views.py",
+          "line": 9,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 18,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/views.py:18"
+      }
+    },
+    {
+      "path": "django/contrib/auth/mixins.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/contrib/auth/mixins.py",
+          "to": "django/contrib/auth/views.py",
+          "line": 5,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 18,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/views.py:18"
+      }
+    },
+    {
+      "path": "django/contrib/auth/urls.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/contrib/auth/urls.py",
+          "to": "django/contrib/auth/views.py",
+          "line": 6,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 18,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/views.py:18"
+      }
+    },
+    {
+      "path": "django/contrib/flatpages/middleware.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/contrib/flatpages/middleware.py",
+          "to": "django/contrib/flatpages/views.py",
+          "line": 2,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/flatpages/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 3,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/flatpages/views.py:3"
+      }
+    },
+    {
+      "path": "django/contrib/flatpages/models.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/contrib/flatpages/models.py",
+          "to": "django/contrib/flatpages/views.py",
+          "line": 41,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/flatpages/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 3,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/flatpages/views.py:3"
+      }
+    },
+    {
+      "path": "django/contrib/flatpages/urls.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/contrib/flatpages/urls.py",
+          "to": "django/contrib/flatpages/views.py",
+          "line": 1,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/flatpages/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 3,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/flatpages/views.py:3"
+      }
+    },
+    {
+      "path": "django/contrib/gis/feeds.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/contrib/gis/feeds.py",
+          "to": "django/contrib/syndication/views.py",
+          "line": 1,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/syndication/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 3,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/syndication/views.py:3"
+      }
+    },
+    {
+      "path": "django/test/signals.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/test/signals.py",
+          "to": "django/contrib/auth/forms.py",
+          "line": 241,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/forms.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 9,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/forms.py:9"
+      }
+    },
+    {
+      "path": "tests/admin_views/custom_has_permission_admin.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/admin_views/custom_has_permission_admin.py",
+          "to": "django/contrib/auth/forms.py",
+          "line": 7,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/forms.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 9,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/forms.py:9"
+      }
+    },
+    {
+      "path": "tests/admin_views/tests.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/admin_views/tests.py",
+          "to": "django/contrib/auth/forms.py",
+          "line": 23,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/forms.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 9,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/forms.py:9"
+      }
+    },
+    {
+      "path": "tests/auth_tests/client.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/auth_tests/client.py",
+          "to": "django/contrib/auth/views.py",
+          "line": 3,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 18,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/views.py:18"
+      }
+    },
+    {
+      "path": "tests/auth_tests/test_auth_backends.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/auth_tests/test_auth_backends.py",
+          "to": "django/contrib/auth/forms.py",
+          "line": 20,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/forms.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 9,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/forms.py:9"
+      }
+    },
+    {
+      "path": "tests/auth_tests/test_forms.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/auth_tests/test_forms.py",
+          "to": "django/contrib/auth/forms.py",
+          "line": 10,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/forms.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 9,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/forms.py:9"
+      }
+    },
+    {
+      "path": "tests/auth_tests/test_templates.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/auth_tests/test_templates.py",
+          "to": "django/contrib/auth/views.py",
+          "line": 6,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 18,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/views.py:18"
+      }
+    },
+    {
+      "path": "tests/auth_tests/test_views.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/auth_tests/test_views.py",
+          "to": "django/contrib/auth/forms.py",
+          "line": 12,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/forms.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 9,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/forms.py:9"
+      }
+    },
+    {
+      "path": "tests/auth_tests/urls.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/auth_tests/urls.py",
+          "to": "django/contrib/auth/forms.py",
+          "line": 8,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/forms.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 9,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/forms.py:9"
+      }
+    },
+    {
+      "path": "tests/contenttypes_tests/urls.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/contenttypes_tests/urls.py",
+          "to": "django/contrib/contenttypes/views.py",
+          "line": 1,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/contenttypes/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 3,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/contenttypes/views.py:3"
+      }
+    },
+    {
+      "path": "tests/deprecation/test_middleware_mixin.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/deprecation/test_middleware_mixin.py",
+          "to": "django/contrib/redirects/middleware.py",
+          "line": 13,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/redirects/middleware.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 4,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/redirects/middleware.py:4"
+      }
+    },
+    {
+      "path": "tests/flatpages_tests/absolute_urls.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/flatpages_tests/absolute_urls.py",
+          "to": "django/contrib/flatpages/views.py",
+          "line": 1,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/flatpages/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 3,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/flatpages/views.py:3"
+      }
+    },
+    {
+      "path": "tests/flatpages_tests/urls.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/flatpages_tests/urls.py",
+          "to": "django/contrib/sitemaps/views.py",
+          "line": 2,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/sitemaps/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 5,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/sitemaps/views.py:5"
+      }
+    },
+    {
+      "path": "tests/generic_views/urls.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/generic_views/urls.py",
+          "to": "django/contrib/auth/views.py",
+          "line": 1,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 18,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/views.py:18"
+      }
+    },
+    {
+      "path": "tests/gis_tests/geoapp/urls.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/gis_tests/geoapp/urls.py",
+          "to": "django/contrib/sitemaps/views.py",
+          "line": 3,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/sitemaps/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 5,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/sitemaps/views.py:5"
+      }
+    },
+    {
+      "path": "tests/redirects_tests/tests.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/redirects_tests/tests.py",
+          "to": "django/contrib/redirects/middleware.py",
+          "line": 2,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/redirects/middleware.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 4,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/redirects/middleware.py:4"
+      }
+    },
+    {
+      "path": "tests/sitemaps_tests/urls/http.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/sitemaps_tests/urls/http.py",
+          "to": "django/contrib/sitemaps/views.py",
+          "line": 4,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/sitemaps/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 5,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/sitemaps/views.py:5"
+      }
+    },
+    {
+      "path": "tests/sitemaps_tests/urls/https.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/sitemaps_tests/urls/https.py",
+          "to": "django/contrib/sitemaps/views.py",
+          "line": 1,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/sitemaps/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 5,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/sitemaps/views.py:5"
+      }
+    },
+    {
+      "path": "tests/syndication_tests/feeds.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/syndication_tests/feeds.py",
+          "to": "django/contrib/syndication/views.py",
+          "line": 3,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/syndication/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 3,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/syndication/views.py:3"
+      }
+    },
+    {
+      "path": "tests/syndication_tests/tests.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/syndication_tests/tests.py",
+          "to": "django/contrib/syndication/views.py",
+          "line": 5,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/syndication/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 3,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/syndication/views.py:3"
+      }
+    },
+    {
+      "path": "tests/test_client/urls.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/test_client/urls.py",
+          "to": "django/contrib/auth/views.py",
+          "line": 1,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 18,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/views.py:18"
+      }
+    },
+    {
+      "path": "tests/view_tests/generic_urls.py",
+      "depth": 2,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/view_tests/generic_urls.py",
+          "to": "django/contrib/auth/views.py",
+          "line": 1,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 18,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/views.py:18"
+      }
+    },
+    {
+      "path": "django/contrib/admin/__init__.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/contrib/admin/__init__.py",
+          "to": "django/contrib/admin/sites.py",
+          "line": 24,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/admin/sites.py",
+          "to": "django/contrib/auth/views.py",
+          "line": 242,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 18,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/views.py:18"
+      }
+    },
+    {
+      "path": "django/contrib/admin/checks.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/contrib/admin/checks.py",
+          "to": "django/contrib/admin/sites.py",
+          "line": 48,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/admin/sites.py",
+          "to": "django/contrib/auth/views.py",
+          "line": 242,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 18,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/views.py:18"
+      }
+    },
+    {
+      "path": "django/contrib/admin/decorators.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/contrib/admin/decorators.py",
+          "to": "django/contrib/admin/sites.py",
+          "line": 109,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/admin/sites.py",
+          "to": "django/contrib/auth/views.py",
+          "line": 242,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 18,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/views.py:18"
+      }
+    },
+    {
+      "path": "django/contrib/admin/views/decorators.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/contrib/admin/views/decorators.py",
+          "to": "django/contrib/auth/decorators.py",
+          "line": 2,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/decorators.py",
+          "to": "django/contrib/auth/views.py",
+          "line": 34,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 18,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/views.py:18"
+      }
+    },
+    {
+      "path": "django/contrib/flatpages/admin.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/contrib/flatpages/admin.py",
+          "to": "django/contrib/flatpages/models.py",
+          "line": 3,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/flatpages/models.py",
+          "to": "django/contrib/flatpages/views.py",
+          "line": 41,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/flatpages/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 3,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/flatpages/views.py:3"
+      }
+    },
+    {
+      "path": "django/contrib/flatpages/forms.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/contrib/flatpages/forms.py",
+          "to": "django/contrib/flatpages/models.py",
+          "line": 3,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/flatpages/models.py",
+          "to": "django/contrib/flatpages/views.py",
+          "line": 41,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/flatpages/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 3,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/flatpages/views.py:3"
+      }
+    },
+    {
+      "path": "django/test/client.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/test/client.py",
+          "to": "django/test/signals.py",
+          "line": 23,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/test/signals.py",
+          "to": "django/contrib/auth/forms.py",
+          "line": 241,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/forms.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 9,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/forms.py:9"
+      }
+    },
+    {
+      "path": "django/test/testcases.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/test/testcases.py",
+          "to": "django/test/signals.py",
+          "line": 50,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/test/signals.py",
+          "to": "django/contrib/auth/forms.py",
+          "line": 241,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/forms.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 9,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/forms.py:9"
+      }
+    },
+    {
+      "path": "django/test/utils.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "django/test/utils.py",
+          "to": "django/test/signals.py",
+          "line": 27,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/test/signals.py",
+          "to": "django/contrib/auth/forms.py",
+          "line": 241,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/forms.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 9,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/forms.py:9"
+      }
+    },
+    {
+      "path": "tests/admin_changelist/admin.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/admin_changelist/admin.py",
+          "to": "django/contrib/auth/admin.py",
+          "line": 2,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/admin.py",
+          "to": "django/contrib/auth/forms.py",
+          "line": 6,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/forms.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 9,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/forms.py:9"
+      }
+    },
+    {
+      "path": "tests/admin_checks/tests.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/admin_checks/tests.py",
+          "to": "django/contrib/auth/middleware.py",
+          "line": 5,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/middleware.py",
+          "to": "django/contrib/auth/views.py",
+          "line": 9,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 18,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/views.py:18"
+      }
+    },
+    {
+      "path": "tests/admin_default_site/tests.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/admin_default_site/tests.py",
+          "to": "django/contrib/admin/sites.py",
+          "line": 2,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/admin/sites.py",
+          "to": "django/contrib/auth/views.py",
+          "line": 242,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 18,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/views.py:18"
+      }
+    },
+    {
+      "path": "tests/admin_filters/tests.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/admin_filters/tests.py",
+          "to": "django/contrib/auth/admin.py",
+          "line": 17,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/admin.py",
+          "to": "django/contrib/auth/forms.py",
+          "line": 6,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/forms.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 9,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/forms.py:9"
+      }
+    },
+    {
+      "path": "tests/admin_registration/tests.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/admin_registration/tests.py",
+          "to": "django/contrib/admin/sites.py",
+          "line": 4,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/admin/sites.py",
+          "to": "django/contrib/auth/views.py",
+          "line": 242,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 18,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/views.py:18"
+      }
+    },
+    {
+      "path": "tests/admin_views/admin.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/admin_views/admin.py",
+          "to": "django/contrib/auth/admin.py",
+          "line": 11,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/admin.py",
+          "to": "django/contrib/auth/forms.py",
+          "line": 6,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/forms.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 9,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/forms.py:9"
+      }
+    },
+    {
+      "path": "tests/admin_views/customadmin.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/admin_views/customadmin.py",
+          "to": "django/contrib/auth/admin.py",
+          "line": 6,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/admin.py",
+          "to": "django/contrib/auth/forms.py",
+          "line": 6,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/forms.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 9,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/forms.py:9"
+      }
+    },
+    {
+      "path": "tests/admin_views/forms.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/admin_views/forms.py",
+          "to": "django/contrib/admin/forms.py",
+          "line": 2,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/admin/forms.py",
+          "to": "django/contrib/auth/forms.py",
+          "line": 1,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/forms.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 9,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/forms.py:9"
+      }
+    },
+    {
+      "path": "tests/admin_views/test_autocomplete_view.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/admin_views/test_autocomplete_view.py",
+          "to": "tests/admin_views/tests.py",
+          "line": 32,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "tests/admin_views/tests.py",
+          "to": "django/contrib/auth/forms.py",
+          "line": 23,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/forms.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 9,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/forms.py:9"
+      }
+    },
+    {
+      "path": "tests/admin_views/test_forms.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/admin_views/test_forms.py",
+          "to": "django/contrib/admin/forms.py",
+          "line": 1,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/admin/forms.py",
+          "to": "django/contrib/auth/forms.py",
+          "line": 1,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/forms.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 9,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/forms.py:9"
+      }
+    },
+    {
+      "path": "tests/admin_views/test_templatetags.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/admin_views/test_templatetags.py",
+          "to": "django/contrib/auth/admin.py",
+          "line": 11,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/admin.py",
+          "to": "django/contrib/auth/forms.py",
+          "line": 6,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/forms.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 9,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/forms.py:9"
+      }
+    },
+    {
+      "path": "tests/admin_views/urls.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/admin_views/urls.py",
+          "to": "tests/admin_views/custom_has_permission_admin.py",
+          "line": 4,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "tests/admin_views/custom_has_permission_admin.py",
+          "to": "django/contrib/auth/forms.py",
+          "line": 7,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/forms.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 9,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/forms.py:9"
+      }
+    },
+    {
+      "path": "tests/auth_tests/backend_alias.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/auth_tests/backend_alias.py",
+          "to": "tests/auth_tests/test_auth_backends.py",
+          "line": 2,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "tests/auth_tests/test_auth_backends.py",
+          "to": "django/contrib/auth/forms.py",
+          "line": 20,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/forms.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 9,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/forms.py:9"
+      }
+    },
+    {
+      "path": "tests/auth_tests/test_admin_multidb.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/auth_tests/test_admin_multidb.py",
+          "to": "django/contrib/auth/admin.py",
+          "line": 4,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/admin.py",
+          "to": "django/contrib/auth/forms.py",
+          "line": 6,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/forms.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 9,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/forms.py:9"
+      }
+    },
+    {
+      "path": "tests/auth_tests/test_checks.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/auth_tests/test_checks.py",
+          "to": "django/contrib/auth/middleware.py",
+          "line": 6,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/middleware.py",
+          "to": "django/contrib/auth/views.py",
+          "line": 9,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 18,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/views.py:18"
+      }
+    },
+    {
+      "path": "tests/auth_tests/test_decorators.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/auth_tests/test_decorators.py",
+          "to": "tests/auth_tests/test_views.py",
+          "line": 16,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "tests/auth_tests/test_views.py",
+          "to": "django/contrib/auth/forms.py",
+          "line": 12,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/forms.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 9,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/forms.py:9"
+      }
+    },
+    {
+      "path": "tests/auth_tests/test_middleware.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/auth_tests/test_middleware.py",
+          "to": "django/contrib/auth/middleware.py",
+          "line": 5,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/middleware.py",
+          "to": "django/contrib/auth/views.py",
+          "line": 9,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 18,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/views.py:18"
+      }
+    },
+    {
+      "path": "tests/auth_tests/test_mixins.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/auth_tests/test_mixins.py",
+          "to": "django/contrib/auth/mixins.py",
+          "line": 4,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/mixins.py",
+          "to": "django/contrib/auth/views.py",
+          "line": 5,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 18,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/views.py:18"
+      }
+    },
+    {
+      "path": "tests/auth_tests/test_remote_user.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/auth_tests/test_remote_user.py",
+          "to": "django/contrib/auth/middleware.py",
+          "line": 8,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/middleware.py",
+          "to": "django/contrib/auth/views.py",
+          "line": 9,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 18,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/views.py:18"
+      }
+    },
+    {
+      "path": "tests/auth_tests/urls_admin.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/auth_tests/urls_admin.py",
+          "to": "django/contrib/auth/admin.py",
+          "line": 6,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/admin.py",
+          "to": "django/contrib/auth/forms.py",
+          "line": 6,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/forms.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 9,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/forms.py:9"
+      }
+    },
+    {
+      "path": "tests/auth_tests/urls_custom_user_admin.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/auth_tests/urls_custom_user_admin.py",
+          "to": "django/contrib/auth/admin.py",
+          "line": 3,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/admin.py",
+          "to": "django/contrib/auth/forms.py",
+          "line": 6,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/forms.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 9,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/forms.py:9"
+      }
+    },
+    {
+      "path": "tests/cache/tests.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/cache/tests.py",
+          "to": "django/test/signals.py",
+          "line": 55,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/test/signals.py",
+          "to": "django/contrib/auth/forms.py",
+          "line": 241,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/forms.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 9,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/forms.py:9"
+      }
+    },
+    {
+      "path": "tests/decorators/tests.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/decorators/tests.py",
+          "to": "django/contrib/auth/decorators.py",
+          "line": 7,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/decorators.py",
+          "to": "django/contrib/auth/views.py",
+          "line": 34,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 18,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/views.py:18"
+      }
+    },
+    {
+      "path": "tests/flatpages_tests/test_csrf.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/flatpages_tests/test_csrf.py",
+          "to": "django/contrib/flatpages/models.py",
+          "line": 2,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/flatpages/models.py",
+          "to": "django/contrib/flatpages/views.py",
+          "line": 41,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/flatpages/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 3,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/flatpages/views.py:3"
+      }
+    },
+    {
+      "path": "tests/flatpages_tests/test_forms.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/flatpages_tests/test_forms.py",
+          "to": "django/contrib/flatpages/models.py",
+          "line": 3,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/flatpages/models.py",
+          "to": "django/contrib/flatpages/views.py",
+          "line": 41,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/flatpages/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 3,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/flatpages/views.py:3"
+      }
+    },
+    {
+      "path": "tests/flatpages_tests/test_middleware.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/flatpages_tests/test_middleware.py",
+          "to": "django/contrib/flatpages/models.py",
+          "line": 3,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/flatpages/models.py",
+          "to": "django/contrib/flatpages/views.py",
+          "line": 41,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/flatpages/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 3,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/flatpages/views.py:3"
+      }
+    },
+    {
+      "path": "tests/flatpages_tests/test_models.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/flatpages_tests/test_models.py",
+          "to": "django/contrib/flatpages/models.py",
+          "line": 1,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/flatpages/models.py",
+          "to": "django/contrib/flatpages/views.py",
+          "line": 41,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/flatpages/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 3,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/flatpages/views.py:3"
+      }
+    },
+    {
+      "path": "tests/flatpages_tests/test_templatetags.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/flatpages_tests/test_templatetags.py",
+          "to": "django/contrib/flatpages/models.py",
+          "line": 2,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/flatpages/models.py",
+          "to": "django/contrib/flatpages/views.py",
+          "line": 41,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/flatpages/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 3,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/flatpages/views.py:3"
+      }
+    },
+    {
+      "path": "tests/flatpages_tests/test_views.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/flatpages_tests/test_views.py",
+          "to": "django/contrib/flatpages/models.py",
+          "line": 3,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/flatpages/models.py",
+          "to": "django/contrib/flatpages/views.py",
+          "line": 41,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/flatpages/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 3,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/flatpages/views.py:3"
+      }
+    },
+    {
+      "path": "tests/generic_inline_admin/tests.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/generic_inline_admin/tests.py",
+          "to": "django/contrib/admin/sites.py",
+          "line": 2,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/admin/sites.py",
+          "to": "django/contrib/auth/views.py",
+          "line": 242,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 18,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/views.py:18"
+      }
+    },
+    {
+      "path": "tests/generic_views/views.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/generic_views/views.py",
+          "to": "django/contrib/auth/decorators.py",
+          "line": 1,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/decorators.py",
+          "to": "django/contrib/auth/views.py",
+          "line": 34,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 18,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/views.py:18"
+      }
+    },
+    {
+      "path": "tests/gis_tests/geoapp/feeds.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/gis_tests/geoapp/feeds.py",
+          "to": "django/contrib/gis/feeds.py",
+          "line": 1,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/gis/feeds.py",
+          "to": "django/contrib/syndication/views.py",
+          "line": 1,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/syndication/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 3,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/syndication/views.py:3"
+      }
+    },
+    {
+      "path": "tests/modeladmin/test_checks.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/modeladmin/test_checks.py",
+          "to": "django/contrib/admin/sites.py",
+          "line": 5,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/admin/sites.py",
+          "to": "django/contrib/auth/views.py",
+          "line": 242,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 18,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/views.py:18"
+      }
+    },
+    {
+      "path": "tests/modeladmin/tests.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/modeladmin/tests.py",
+          "to": "django/contrib/admin/sites.py",
+          "line": 12,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/admin/sites.py",
+          "to": "django/contrib/auth/views.py",
+          "line": 242,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 18,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/views.py:18"
+      }
+    },
+    {
+      "path": "tests/settings_tests/tests.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/settings_tests/tests.py",
+          "to": "django/test/signals.py",
+          "line": 10,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/test/signals.py",
+          "to": "django/contrib/auth/forms.py",
+          "line": 241,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/forms.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 9,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/forms.py:9"
+      }
+    },
+    {
+      "path": "tests/syndication_tests/urls.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/syndication_tests/urls.py",
+          "to": "tests/syndication_tests/feeds.py",
+          "line": 3,
+          "method": "python-relative-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "tests/syndication_tests/feeds.py",
+          "to": "django/contrib/syndication/views.py",
+          "line": 3,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/syndication/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 3,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/syndication/views.py:3"
+      }
+    },
+    {
+      "path": "tests/test_client/views.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/test_client/views.py",
+          "to": "django/contrib/auth/decorators.py",
+          "line": 5,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/decorators.py",
+          "to": "django/contrib/auth/views.py",
+          "line": 34,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 18,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/views.py:18"
+      }
+    },
+    {
+      "path": "tests/test_client_regress/views.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/test_client_regress/views.py",
+          "to": "django/contrib/auth/decorators.py",
+          "line": 4,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/decorators.py",
+          "to": "django/contrib/auth/views.py",
+          "line": 34,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 18,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/views.py:18"
+      }
+    },
+    {
+      "path": "tests/urlpatterns_reverse/views.py",
+      "depth": 3,
+      "confidence": "confirmed",
+      "via": [
+        {
+          "from": "tests/urlpatterns_reverse/views.py",
+          "to": "django/contrib/auth/decorators.py",
+          "line": 3,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/decorators.py",
+          "to": "django/contrib/auth/views.py",
+          "line": 34,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        },
+        {
+          "from": "django/contrib/auth/views.py",
+          "to": "django/contrib/sites/shortcuts.py",
+          "line": 18,
+          "method": "python-absolute-import",
+          "confidence": "confirmed"
+        }
+      ],
+      "evidence": {
+        "location": "django/contrib/auth/views.py:18"
+      }
+    }
+  ],
+  "transitive_dependents_total": 81,
+  "transitive_dependents_truncated": false,
+  "related_tests": [
+    {
+      "path": "tests/admin_docs/test_middleware.py",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "tests/admin_docs/test_middleware.py",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "tests/admin_docs/test_middleware.py",
+        "method": "path-name-convention"
+      }
+    },
+    {
+      "path": "tests/admin_docs/test_views.py",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "tests/admin_docs/test_views.py",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "tests/admin_docs/test_views.py",
+        "method": "path-name-convention"
+      }
+    },
+    {
+      "path": "tests/admin_views/test_forms.py",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "tests/admin_views/test_forms.py",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "tests/admin_views/test_forms.py",
+        "method": "path-name-convention"
+      }
+    },
+    {
+      "path": "tests/auth_tests/test_forms.py",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "tests/auth_tests/test_forms.py",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "tests/auth_tests/test_forms.py",
+        "method": "path-name-convention"
+      }
+    },
+    {
+      "path": "tests/auth_tests/test_middleware.py",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "tests/auth_tests/test_middleware.py",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "tests/auth_tests/test_middleware.py",
+        "method": "path-name-convention"
+      }
+    },
+    {
+      "path": "tests/auth_tests/test_views.py",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "tests/auth_tests/test_views.py",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "tests/auth_tests/test_views.py",
+        "method": "path-name-convention"
+      }
+    },
+    {
+      "path": "tests/contenttypes_tests/test_views.py",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-imports-changed-file",
+          "target": "django/contrib/sites/shortcuts.py",
+          "line": 8,
+          "method": "python-absolute-import",
+          "confidence": "confirmed",
+          "evidence": {
+            "location": "tests/contenttypes_tests/test_views.py:8"
+          }
+        },
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "tests/contenttypes_tests/test_views.py",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "tests/contenttypes_tests/test_views.py:8"
+      }
+    },
+    {
+      "path": "tests/flatpages_tests/test_forms.py",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "tests/flatpages_tests/test_forms.py",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "tests/flatpages_tests/test_forms.py",
+        "method": "path-name-convention"
+      }
+    },
+    {
+      "path": "tests/flatpages_tests/test_middleware.py",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "tests/flatpages_tests/test_middleware.py",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "tests/flatpages_tests/test_middleware.py",
+        "method": "path-name-convention"
+      }
+    },
+    {
+      "path": "tests/flatpages_tests/test_views.py",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "tests/flatpages_tests/test_views.py",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "tests/flatpages_tests/test_views.py",
+        "method": "path-name-convention"
+      }
+    },
+    {
+      "path": "tests/foreign_object/test_forms.py",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "tests/foreign_object/test_forms.py",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "tests/foreign_object/test_forms.py",
+        "method": "path-name-convention"
+      }
+    },
+    {
+      "path": "tests/forms_tests/tests/test_forms.py",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "tests/forms_tests/tests/test_forms.py",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "tests/forms_tests/tests/test_forms.py",
+        "method": "path-name-convention"
+      }
+    },
+    {
+      "path": "tests/generic_relations/test_forms.py",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "tests/generic_relations/test_forms.py",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "tests/generic_relations/test_forms.py",
+        "method": "path-name-convention"
+      }
+    },
+    {
+      "path": "tests/messages_tests/test_middleware.py",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "tests/messages_tests/test_middleware.py",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "tests/messages_tests/test_middleware.py",
+        "method": "path-name-convention"
+      }
+    },
+    {
+      "path": "tests/staticfiles_tests/test_forms.py",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "tests/staticfiles_tests/test_forms.py",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "tests/staticfiles_tests/test_forms.py",
+        "method": "path-name-convention"
+      }
+    },
+    {
+      "path": "tests/staticfiles_tests/test_views.py",
+      "confidence": "inferred",
+      "rules": [
+        {
+          "rule": "test-name-matches-dependent",
+          "confidence": "inferred",
+          "evidence": {
+            "location": "tests/staticfiles_tests/test_views.py",
+            "method": "path-name-convention"
+          }
+        }
+      ],
+      "evidence": {
+        "location": "tests/staticfiles_tests/test_views.py",
+        "method": "path-name-convention"
+      }
+    }
+  ],
+  "related_tests_total": 16,
+  "related_tests_truncated": false,
+  "affected_routes": [
+    {
+      "method": "PATCH",
+      "path": "django.contrib.admin.options.InlineModelAdmin.has_change_permission",
+      "handler": "test_add_view_with_view_only_inlines",
+      "file": "tests/admin_views/tests.py",
+      "line": 2847,
+      "confidence": "heuristic",
+      "reason": "route-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "extractor": "python-web",
+        "location": "tests/admin_views/tests.py:2847"
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "django.contrib.auth.admin.transaction",
+      "handler": "test_add_view",
+      "file": "tests/auth_tests/test_admin_multidb.py",
+      "line": 50,
+      "confidence": "heuristic",
+      "reason": "route-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "extractor": "python-web",
+        "location": "tests/auth_tests/test_admin_multidb.py:50"
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "django.contrib.auth.admin.transaction",
+      "handler": "test_read_only_methods_add_view",
+      "file": "tests/auth_tests/test_admin_multidb.py",
+      "line": 67,
+      "confidence": "heuristic",
+      "reason": "route-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "extractor": "python-web",
+        "location": "tests/auth_tests/test_admin_multidb.py:67"
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "django.contrib.auth.password_validation.password_changed",
+      "handler": "test_success",
+      "file": "tests/auth_tests/test_forms.py",
+      "line": 151,
+      "confidence": "heuristic",
+      "reason": "route-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "extractor": "python-web",
+        "location": "tests/auth_tests/test_forms.py:151"
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "django.contrib.auth.password_validation.password_changed",
+      "handler": "test_success",
+      "file": "tests/auth_tests/test_forms.py",
+      "line": 768,
+      "confidence": "heuristic",
+      "reason": "route-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "extractor": "python-web",
+        "location": "tests/auth_tests/test_forms.py:768"
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "django.contrib.auth.password_validation.password_changed",
+      "handler": "test_success",
+      "file": "tests/auth_tests/test_forms.py",
+      "line": 956,
+      "confidence": "heuristic",
+      "reason": "route-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "extractor": "python-web",
+        "location": "tests/auth_tests/test_forms.py:956"
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "django.contrib.auth.password_validation.password_changed",
+      "handler": "test_success",
+      "file": "tests/auth_tests/test_forms.py",
+      "line": 1503,
+      "confidence": "heuristic",
+      "reason": "route-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "extractor": "python-web",
+        "location": "tests/auth_tests/test_forms.py:1503"
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "django.contrib.auth.admin.UserAdmin.has_change_permission",
+      "handler": "test_user_change_password_passes_user_to_has_change_permission",
+      "file": "tests/auth_tests/test_views.py",
+      "line": 1699,
+      "confidence": "heuristic",
+      "reason": "route-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "extractor": "python-web",
+        "location": "tests/auth_tests/test_views.py:1699"
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "django.apps.apps.get_model",
+      "handler": "test_shortcut_view_with_null_site_fk",
+      "file": "tests/contenttypes_tests/test_views.py",
+      "line": 154,
+      "confidence": "heuristic",
+      "reason": "route-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "extractor": "python-web",
+        "location": "tests/contenttypes_tests/test_views.py:154"
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "django.apps.apps.get_model",
+      "handler": "test_shortcut_view_with_site_m2m",
+      "file": "tests/contenttypes_tests/test_views.py",
+      "line": 172,
+      "confidence": "heuristic",
+      "reason": "route-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "extractor": "python-web",
+        "location": "tests/contenttypes_tests/test_views.py:172"
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "django.conf.global_settings.TIME_ZONE",
+      "handler": "test_incorrect_timezone",
+      "file": "tests/settings_tests/tests.py",
+      "line": 337,
+      "confidence": "heuristic",
+      "reason": "route-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "extractor": "python-web",
+        "location": "tests/settings_tests/tests.py:337"
+      }
+    }
+  ],
+  "affected_routes_total": 11,
+  "affected_routes_truncated": false,
+  "related_models": [
+    {
+      "name": "FlatPage",
+      "qualified_name": "FlatPage",
+      "kind": "class",
+      "path": "django/contrib/flatpages/models.py",
+      "line": 8,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "django/contrib/flatpages/models.py:8"
+      }
+    },
+    {
+      "name": "FakePayload",
+      "qualified_name": "FakePayload",
+      "kind": "class",
+      "path": "django/test/client.py",
+      "line": 69,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "django/test/client.py:69"
+      }
+    },
+    {
+      "name": "Checked",
+      "qualified_name": "ModelsPermissionsChecksTests.test_clashing_default_permissions.Checked",
+      "kind": "class",
+      "path": "tests/auth_tests/test_checks.py",
+      "line": 253,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/auth_tests/test_checks.py:253"
+      }
+    },
+    {
+      "name": "Checked",
+      "qualified_name": "ModelsPermissionsChecksTests.test_non_clashing_custom_permissions.Checked",
+      "kind": "class",
+      "path": "tests/auth_tests/test_checks.py",
+      "line": 271,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/auth_tests/test_checks.py:271"
+      }
+    },
+    {
+      "name": "Checked",
+      "qualified_name": "ModelsPermissionsChecksTests.test_clashing_custom_permissions.Checked",
+      "kind": "class",
+      "path": "tests/auth_tests/test_checks.py",
+      "line": 282,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/auth_tests/test_checks.py:282"
+      }
+    },
+    {
+      "name": "Checked",
+      "qualified_name": "ModelsPermissionsChecksTests.test_verbose_name_max_length.Checked",
+      "kind": "class",
+      "path": "tests/auth_tests/test_checks.py",
+      "line": 307,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/auth_tests/test_checks.py:307"
+      }
+    },
+    {
+      "name": "Checked",
+      "qualified_name": "ModelsPermissionsChecksTests.test_custom_permission_name_max_length.Checked",
+      "kind": "class",
+      "path": "tests/auth_tests/test_checks.py",
+      "line": 349,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/auth_tests/test_checks.py:349"
+      }
+    },
+    {
+      "name": "Checked",
+      "qualified_name": "ModelsPermissionsChecksTests.test_custom_permission_codename_max_length.Checked",
+      "kind": "class",
+      "path": "tests/auth_tests/test_checks.py",
+      "line": 371,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/auth_tests/test_checks.py:371"
+      }
+    },
+    {
+      "name": "Checked",
+      "qualified_name": "ModelsPermissionsChecksTests.test_empty_default_permissions.Checked",
+      "kind": "class",
+      "path": "tests/auth_tests/test_checks.py",
+      "line": 391,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/auth_tests/test_checks.py:391"
+      }
+    },
+    {
+      "name": "TestModel",
+      "qualified_name": "RawIdCheckTests.assertGeneratedDateTimeFieldIsValid.TestModel",
+      "kind": "class",
+      "path": "tests/modeladmin/test_checks.py",
+      "line": 103,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/modeladmin/test_checks.py:103"
+      }
+    },
+    {
+      "name": "Contact",
+      "qualified_name": "FilterVerticalCheckTests.test_invalid_reverse_m2m_field_with_related_name.Contact",
+      "kind": "class",
+      "path": "tests/modeladmin/test_checks.py",
+      "line": 354,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/modeladmin/test_checks.py:354"
+      }
+    },
+    {
+      "name": "Customer",
+      "qualified_name": "FilterVerticalCheckTests.test_invalid_reverse_m2m_field_with_related_name.Customer",
+      "kind": "class",
+      "path": "tests/modeladmin/test_checks.py",
+      "line": 357,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/modeladmin/test_checks.py:357"
+      }
+    },
+    {
+      "name": "Artist",
+      "qualified_name": "FilterVerticalCheckTests.test_invalid_m2m_field_with_through.Artist",
+      "kind": "class",
+      "path": "tests/modeladmin/test_checks.py",
+      "line": 372,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/modeladmin/test_checks.py:372"
+      }
+    },
+    {
+      "name": "BandArtist",
+      "qualified_name": "FilterVerticalCheckTests.test_invalid_m2m_field_with_through.BandArtist",
+      "kind": "class",
+      "path": "tests/modeladmin/test_checks.py",
+      "line": 375,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/modeladmin/test_checks.py:375"
+      }
+    },
+    {
+      "name": "Contact",
+      "qualified_name": "FilterHorizontalCheckTests.test_invalid_reverse_m2m_field_with_related_name.Contact",
+      "kind": "class",
+      "path": "tests/modeladmin/test_checks.py",
+      "line": 434,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/modeladmin/test_checks.py:434"
+      }
+    },
+    {
+      "name": "Customer",
+      "qualified_name": "FilterHorizontalCheckTests.test_invalid_reverse_m2m_field_with_related_name.Customer",
+      "kind": "class",
+      "path": "tests/modeladmin/test_checks.py",
+      "line": 437,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/modeladmin/test_checks.py:437"
+      }
+    },
+    {
+      "name": "Artist",
+      "qualified_name": "FilterHorizontalCheckTests.test_invalid_m2m_field_with_through.Artist",
+      "kind": "class",
+      "path": "tests/modeladmin/test_checks.py",
+      "line": 452,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/modeladmin/test_checks.py:452"
+      }
+    },
+    {
+      "name": "BandArtist",
+      "qualified_name": "FilterHorizontalCheckTests.test_invalid_m2m_field_with_through.BandArtist",
+      "kind": "class",
+      "path": "tests/modeladmin/test_checks.py",
+      "line": 455,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/modeladmin/test_checks.py:455"
+      }
+    },
+    {
+      "name": "TestModel",
+      "qualified_name": "ListDisplayTests.test_valid_field_accessible_via_instance.TestModel",
+      "kind": "class",
+      "path": "tests/modeladmin/test_checks.py",
+      "line": 724,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/modeladmin/test_checks.py:724"
+      }
+    },
+    {
+      "name": "TestModel",
+      "qualified_name": "DateHierarchyCheckTests.assertGeneratedIntegerFieldIsInvalid.TestModel",
+      "kind": "class",
+      "path": "tests/modeladmin/test_checks.py",
+      "line": 1122,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/modeladmin/test_checks.py:1122"
+      }
+    },
+    {
+      "name": "Reporter",
+      "qualified_name": "FkNameCheckTests.test_proxy_model.Reporter",
+      "kind": "class",
+      "path": "tests/modeladmin/test_checks.py",
+      "line": 1438,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/modeladmin/test_checks.py:1438"
+      }
+    },
+    {
+      "name": "Article",
+      "qualified_name": "FkNameCheckTests.test_proxy_model.Article",
+      "kind": "class",
+      "path": "tests/modeladmin/test_checks.py",
+      "line": 1445,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/modeladmin/test_checks.py:1445"
+      }
+    },
+    {
+      "name": "ReporterFkName",
+      "qualified_name": "FkNameCheckTests.test_proxy_model_fk_name.ReporterFkName",
+      "kind": "class",
+      "path": "tests/modeladmin/test_checks.py",
+      "line": 1457,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/modeladmin/test_checks.py:1457"
+      }
+    },
+    {
+      "name": "ArticleFkName",
+      "qualified_name": "FkNameCheckTests.test_proxy_model_fk_name.ArticleFkName",
+      "kind": "class",
+      "path": "tests/modeladmin/test_checks.py",
+      "line": 1464,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/modeladmin/test_checks.py:1464"
+      }
+    },
+    {
+      "name": "Parent",
+      "qualified_name": "FkNameCheckTests.test_proxy_model_parent.Parent",
+      "kind": "class",
+      "path": "tests/modeladmin/test_checks.py",
+      "line": 1477,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/modeladmin/test_checks.py:1477"
+      }
+    },
+    {
+      "name": "Related",
+      "qualified_name": "FkNameCheckTests.test_proxy_model_parent.Related",
+      "kind": "class",
+      "path": "tests/modeladmin/test_checks.py",
+      "line": 1488,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/modeladmin/test_checks.py:1488"
+      }
+    },
+    {
+      "name": "UnresolvedForeignKeyModel",
+      "qualified_name": "AutocompleteFieldsTests.test_autocomplete_e039_unresolved_model.UnresolvedForeignKeyModel",
+      "kind": "class",
+      "path": "tests/modeladmin/test_checks.py",
+      "line": 1791,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/modeladmin/test_checks.py:1791"
+      }
+    },
+    {
+      "name": "Department",
+      "qualified_name": "ModelAdminTests.test_lookup_allowed_onetoone.Department",
+      "kind": "class",
+      "path": "tests/modeladmin/tests.py",
+      "line": 134,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/modeladmin/tests.py:134"
+      }
+    },
+    {
+      "name": "Employee",
+      "qualified_name": "ModelAdminTests.test_lookup_allowed_onetoone.Employee",
+      "kind": "class",
+      "path": "tests/modeladmin/tests.py",
+      "line": 137,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/modeladmin/tests.py:137"
+      }
+    },
+    {
+      "name": "EmployeeProfile",
+      "qualified_name": "ModelAdminTests.test_lookup_allowed_onetoone.EmployeeProfile",
+      "kind": "class",
+      "path": "tests/modeladmin/tests.py",
+      "line": 140,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/modeladmin/tests.py:140"
+      }
+    },
+    {
+      "name": "EmployeeInfo",
+      "qualified_name": "ModelAdminTests.test_lookup_allowed_onetoone.EmployeeInfo",
+      "kind": "class",
+      "path": "tests/modeladmin/tests.py",
+      "line": 143,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/modeladmin/tests.py:143"
+      }
+    },
+    {
+      "name": "Country",
+      "qualified_name": "ModelAdminTests.test_lookup_allowed_for_local_fk_fields.Country",
+      "kind": "class",
+      "path": "tests/modeladmin/tests.py",
+      "line": 169,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/modeladmin/tests.py:169"
+      }
+    },
+    {
+      "name": "Place",
+      "qualified_name": "ModelAdminTests.test_lookup_allowed_for_local_fk_fields.Place",
+      "kind": "class",
+      "path": "tests/modeladmin/tests.py",
+      "line": 172,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/modeladmin/tests.py:172"
+      }
+    },
+    {
+      "name": "Country",
+      "qualified_name": "ModelAdminTests.test_lookup_allowed_non_autofield_primary_key.Country",
+      "kind": "class",
+      "path": "tests/modeladmin/tests.py",
+      "line": 195,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/modeladmin/tests.py:195"
+      }
+    },
+    {
+      "name": "Place",
+      "qualified_name": "ModelAdminTests.test_lookup_allowed_non_autofield_primary_key.Place",
+      "kind": "class",
+      "path": "tests/modeladmin/tests.py",
+      "line": 198,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/modeladmin/tests.py:198"
+      }
+    },
+    {
+      "name": "Country",
+      "qualified_name": "ModelAdminTests.test_lookup_allowed_foreign_primary.Country",
+      "kind": "class",
+      "path": "tests/modeladmin/tests.py",
+      "line": 209,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/modeladmin/tests.py:209"
+      }
+    },
+    {
+      "name": "Place",
+      "qualified_name": "ModelAdminTests.test_lookup_allowed_foreign_primary.Place",
+      "kind": "class",
+      "path": "tests/modeladmin/tests.py",
+      "line": 212,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/modeladmin/tests.py:212"
+      }
+    },
+    {
+      "name": "Restaurant",
+      "qualified_name": "ModelAdminTests.test_lookup_allowed_foreign_primary.Restaurant",
+      "kind": "class",
+      "path": "tests/modeladmin/tests.py",
+      "line": 215,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/modeladmin/tests.py:215"
+      }
+    },
+    {
+      "name": "Waiter",
+      "qualified_name": "ModelAdminTests.test_lookup_allowed_foreign_primary.Waiter",
+      "kind": "class",
+      "path": "tests/modeladmin/tests.py",
+      "line": 218,
+      "confidence": "heuristic",
+      "reason": "model-defined-in-changed-or-dependent-file",
+      "evidence": {
+        "method": "base-class-name-heuristic",
+        "location": "tests/modeladmin/tests.py:218"
+      }
+    }
+  ],
+  "related_models_total": 39,
+  "related_models_truncated": false,
+  "architecture": {
+    "layers": {
+      "other": 1
+    },
+    "documentation_mentions": [
+      {
+        "path": "docs/index.txt",
+        "line": 89,
+        "excerpt": ":doc:`Shortcuts </topics/http/shortcuts>` |",
+        "matched": "shortcuts",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/index.txt:89"
+        }
+      },
+      {
+        "path": "docs/topics/templates.txt",
+        "line": 483,
+        "excerpt": "See also the :func:`~django.shortcuts.render` shortcut which calls",
+        "matched": "shortcuts",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/topics/templates.txt:483"
+        }
+      },
+      {
+        "path": "docs/topics/templates.txt",
+        "line": 668,
+        "excerpt": "rendered with a request (e.g. when using :func:`~django.shortcuts.render`),",
+        "matched": "shortcuts",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/topics/templates.txt:668"
+        }
+      },
+      {
+        "path": "docs/topics/signing.txt",
+        "line": 215,
+        "excerpt": "``dumps()`` or ``loads()`` functions (which are shortcuts for",
+        "matched": "shortcuts",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/topics/signing.txt:215"
+        }
+      },
+      {
+        "path": "docs/topics/pagination.txt",
+        "line": 141,
+        "excerpt": "from django.shortcuts import render",
+        "matched": "shortcuts",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/topics/pagination.txt:141"
+        }
+      },
+      {
+        "path": "docs/topics/conditional-view-processing.txt",
+        "line": 117,
+        "excerpt": "Shortcuts for only computing one value",
+        "matched": "shortcuts",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/topics/conditional-view-processing.txt:117"
+        }
+      },
+      {
+        "path": "docs/topics/checks.txt",
+        "line": 78,
+        "excerpt": "There are also shortcuts to make creating messages with common levels easier.",
+        "matched": "shortcuts",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/topics/checks.txt:78"
+        }
+      },
+      {
+        "path": "docs/topics/cache.txt",
+        "line": 1430,
+        "excerpt": "from django.shortcuts import render",
+        "matched": "shortcuts",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/topics/cache.txt:1430"
+        }
+      },
+      {
+        "path": "docs/topics/i18n/timezones.txt",
+        "line": 183,
+        "excerpt": "from django.shortcuts import redirect, render",
+        "matched": "shortcuts",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/topics/i18n/timezones.txt:183"
+        }
+      },
+      {
+        "path": "docs/topics/http/views.txt",
+        "line": 119,
+        "excerpt": "from django.shortcuts import render",
+        "matched": "shortcuts",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/topics/http/views.txt:119"
+        }
+      }
+    ],
+    "note": "Documentation matches are lexical and only point to where a concept is discussed."
+  },
+  "blind_spots": [
+    {
+      "kind": "test-selection-reachability",
+      "count": 561,
+      "message": "Test files reachable through dependent modules but not in the selected list. The list is a selection, not the full impact; run these or the suite before trusting it.",
+      "items": [
+        "tests/admin_changelist/test_date_hierarchy.py",
+        "tests/admin_docs/test_utils.py",
+        "tests/admin_inlines/test_templates.py",
+        "tests/admin_utils/test_logentry.py",
+        "tests/admin_views/test_actions.py",
+        "tests/admin_views/test_adminsite.py",
+        "tests/admin_views/test_autocomplete_view.py",
+        "tests/admin_views/test_breadcrumbs.py",
+        "tests/admin_views/test_csp.py",
+        "tests/admin_views/test_history_view.py",
+        "tests/admin_views/test_multidb.py",
+        "tests/admin_views/test_nav_sidebar.py",
+        "tests/admin_views/test_password_form.py",
+        "tests/admin_views/test_related_object_lookups.py",
+        "tests/admin_views/test_skip_link_to_content.py",
+        "tests/admin_views/test_templatetags.py",
+        "tests/admin_widgets/test_autocomplete_widget.py",
+        "tests/aggregation/test_filter_argument.py",
+        "tests/async/test_async_auth.py",
+        "tests/async/test_async_model_methods.py",
+        "tests/async/test_async_queryset.py",
+        "tests/async/test_async_related_managers.py",
+        "tests/async/test_async_shortcuts.py",
+        "tests/auth_tests/test_admin_multidb.py",
+        "tests/auth_tests/test_auth_backends.py",
+        "tests/auth_tests/test_basic.py",
+        "tests/auth_tests/test_checks.py",
+        "tests/auth_tests/test_context_processors.py",
+        "tests/auth_tests/test_decorators.py",
+        "tests/auth_tests/test_handlers.py",
+        "tests/auth_tests/test_hashers.py",
+        "tests/auth_tests/test_login.py",
+        "tests/auth_tests/test_management.py",
+        "tests/auth_tests/test_migrations.py",
+        "tests/auth_tests/test_mixins.py",
+        "tests/auth_tests/test_models.py",
+        "tests/auth_tests/test_remote_user.py",
+        "tests/auth_tests/test_signals.py",
+        "tests/auth_tests/test_templates.py",
+        "tests/auth_tests/test_templatetags.py",
+        "tests/auth_tests/test_tokens.py",
+        "tests/auth_tests/test_validators.py",
+        "tests/backends/base/test_base.py",
+        "tests/backends/base/test_client.py",
+        "tests/backends/base/test_creation.py",
+        "tests/backends/base/test_features.py",
+        "tests/backends/base/test_introspection.py",
+        "tests/backends/base/test_operations.py",
+        "tests/backends/base/test_schema.py",
+        "tests/backends/mysql/test_creation.py"
+      ]
+    },
+    {
+      "kind": "repo-parse-errors",
+      "count": 3,
+      "message": "Files with parse errors contribute no symbols or edges anywhere in the index."
+    }
+  ],
+  "repo_health": {
+    "unresolved_imports": 25,
+    "dynamic_imports": 9,
+    "note": "Repository-wide counts; they are not scoped to this change."
+  },
+  "caveats": [
+    "This is a static analysis of statically resolvable relationships. Absence of a relationship is not evidence that a change is safe.",
+    "Dynamic imports, reflection, runtime dependency injection, generated code and external consumers are not modeled.",
+    "Test selection uses import edges and naming conventions, not execution traces; it can miss tests and include irrelevant ones.",
+    "Route and database-model detection use framework-specific heuristics and may produce false positives or miss frameworks.",
+    "Confidence levels describe extraction certainty, not the risk of the change itself."
+  ],
+  "summary": {
+    "changed_files": 1,
+    "changed_symbols": 1,
+    "direct_dependents": 11,
+    "transitive_dependents": 81,
+    "related_tests": 16,
+    "affected_routes": 11,
+    "related_models": 39,
+    "completeness": "partial",
+    "confidence_counts": {
+      "confirmed": 11,
+      "inferred": 0
+    }
+  },
+  "_query_time_ms": 91.4,
+  "_wall_ms": 157.0,
+  "_meta": {
+    "repo": "django",
+    "file": "django/contrib/sites/shortcuts.py",
+    "tool": "repograph",
+    "wall_s": 0.2
+  }
+}

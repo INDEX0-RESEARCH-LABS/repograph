@@ -1,0 +1,25 @@
+{
+  "tool": "trace-mcp",
+  "version": "3.44.0",
+  "repo_root": "/tmp/opencode/compare/repos/koa",
+  "file": "test-helpers/stream.js",
+  "depth_used": 1,
+  "get_change_impact": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"target\":{\"path\":\"test-helpers/stream.js\",\"symbolId\":\"test-helpers/stream.js::Readable#class\",\"symbolName\":\"Readable\",\"kind\":\"class\"},\"summary\":{\"totalFiles\":1,\"totalSymbols\":0,\"maxDepth\":1,\"crossBoundary\":true,\"publicApiAffected\":0,\"untestedDependents\":1,\"highComplexityDependents\":0,\"sentence\":\"Impact: 1 file(s) across 1 module(s), 1 untested, 1 test(s) to run.\"},\"risk\":{\"score\":0.01,\"level\":\"low\",\"publicApiBreaking\":false,\"untestedRatio\":1,\"maxComplexity\":0,\"mitigations\":[\"1/1 dependents lack tests \u2014 add integration tests\"]},\"affectedTests\":{\"total\":1,\"files\":[\"__tests__/response/body.test.js\"],\"truncated\":false},\"dependents\":[{\"path\":\"__tests__/response/body.test.js\",\"edgeTypes\":[\"imports\"],\"depth\":1,\"hasTests\":false}],\"totalAffected\":1,\"resolution_tiers\":{\"scip_resolved\":0,\"lsp_resolved\":0,\"ast_resolved\":1,\"ast_inferred\":0,\"text_matched\":0},\"byModule\":[{\"module\":\"__tests__/response\",\"count\":1,\"files\":[\"__tests__/response/body.test.js\"],\"maxDepth\":1,\"hasUntested\":true}],\"byEdgeType\":{\"imports\":1},\"byDepth\":{\"1\":1},\"_hints\":[{\"tool\":\"get_tests_for\",\"args\":{\"symbol_id\":\"<affected_symbol>\"},\"why\":\"Find tests for affected dependents\"},{\"tool\":\"check_rename\",\"args\":{\"symbol_id\":\"<symbol>\"},\"why\":\"Verify rename is safe across all usages\"}]}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 1
+  },
+  "_meta": {
+    "repo": "koa",
+    "file": "test-helpers/stream.js",
+    "tool": "trace-v2-d1",
+    "wall_s": 6.3
+  }
+}

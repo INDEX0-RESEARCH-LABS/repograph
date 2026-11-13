@@ -1,0 +1,38 @@
+{
+  "tool": "trace-mcp",
+  "version": "3.44.0",
+  "repo_root": "/tmp/opencode/compare/repos/esbuild",
+  "file": "lib/shared/uint8array_json_parser.ts",
+  "get_change_impact": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"target\":{\"path\":\"lib/shared/uint8array_json_parser.ts\",\"symbolId\":\"lib/shared/uint8array_json_parser.ts::State#enum\",\"symbolName\":\"State\",\"kind\":\"enum\"},\"summary\":{\"totalFiles\":3,\"totalSymbols\":1,\"maxDepth\":2,\"crossBoundary\":true,\"publicApiAffected\":0,\"untestedDependents\":3,\"highComplexityDependents\":0,\"sentence\":\"Impact: 3 file(s) across 2 module(s), 3 untested, 1 breaking risk(s).\"},\"risk\":{\"score\":0.2,\"level\":\"low\",\"publicApiBreaking\":false,\"untestedRatio\":1,\"maxComplexity\":2,\"mitigations\":[\"Add test coverage for the target before modifying\",\"3/3 dependents lack tests \u2014 add integration tests\",\"1 exported symbol(s) with 1 consumer(s) \u2014 signature change = breaking\"]},\"affectedTests\":{\"total\":0,\"files\":[],\"truncated\":false},\"dependents\":[{\"path\":\"lib/shared/common.ts\",\"edgeTypes\":[\"imports\",\"calls\"],\"depth\":1,\"hasTests\":false,\"symbols\":[{\"symbolId\":\"lib/shared/common.ts::parseJSON#function\",\"symbolName\":\"parseJSON\",\"symbolKind\":\"function\",\"resolutionTier\":\"ast_resolved\",\"complexity\":2,\"isExported\":false}]},{\"path\":\"lib/npm/browser.ts\",\"edgeTypes\":[\"imports\"],\"depth\":2,\"hasTests\":false},{\"path\":\"lib/npm/node.ts\",\"edgeTypes\":[\"imports\"],\"depth\":2,\"hasTests\":false}],\"totalAffected\":3,\"resolution_tiers\":{\"scip_resolved\":0,\"lsp_resolved\":0,\"ast_resolved\":4,\"ast_inferred\":0,\"text_matched\":0},\"breakingChanges\":[{\"symbolId\":\"lib/shared/uint8array_json_parser.ts::JSON_parse#function\",\"symbolName\":\"JSON_parse\",\"kind\":\"function\",\"consumers\":1,\"consumerFiles\":[\"lib/shared/common.ts\"]}],\"byModule\":[{\"module\":\"lib/npm\",\"count\":2,\"files\":[\"lib/npm/browser.ts\",\"lib/npm/node.ts\"],\"maxDepth\":2,\"hasUntested\":true},{\"module\":\"lib/shared\",\"count\":1,\"files\":[\"lib/shared/common.ts\"],\"maxDepth\":1,\"hasUntested\":true}],\"byEdgeType\":{\"imports\":3,\"calls\":1},\"byDepth\":{\"1\":2,\"2\":2},\"_hints\":[{\"tool\":\"get_tests_for\",\"args\":{\"symbol_id\":\"<affected_symbol>\"},\"why\":\"Find tests for affected dependents\"},{\"tool\":\"check_rename\",\"args\":{\"symbol_id\":\"<symbol>\"},\"why\":\"Verify rename is safe across all usages\"}]}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 1
+  },
+  "find_usages": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"target\":{\"file\":\"lib/shared/uint8array_json_parser.ts\"},\"references\":[{\"edge_type\":\"imports\",\"resolution_tier\":\"ast_resolved\",\"file\":\"lib/shared/common.ts\",\"_freshness\":\"fresh\"}],\"total\":1,\"resolution_tiers\":{\"scip_resolved\":0,\"lsp_resolved\":0,\"ast_resolved\":1,\"ast_inferred\":0,\"text_matched\":0},\"_meta\":{\"freshness\":{\"fresh\":1,\"edited_uncommitted\":0,\"stale_index\":0,\"repo_is_stale\":false},\"confidence\":0.8,\"confidence_signals\":{\"top1_strength\":1,\"top_gap\":1,\"identity_match\":0,\"freshness\":1}},\"_hints\":[{\"tool\":\"get_change_impact\",\"args\":{\"symbol_id\":\"<symbol>\"},\"why\":\"See transitive impact beyond direct references\"},{\"tool\":\"get_tests_for\",\"args\":{\"symbol_id\":\"<symbol>\"},\"why\":\"Find tests covering this symbol\"}]}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 2
+  },
+  "stderr": "{\"level\":30,\"time\":1794547760882,\"pid\":38823,\"hostname\":\"omarchy\",\"name\":\"trace-mcp\",\"msg\":\"Daemon auto-spawn is disabled \u2014 running local-only (stdio).\"}\n{\"level\":30,\"time\":1794547760884,\"pid\":38823,\"hostname\":\"omarchy\",\"name\":\"trace-mcp\",\"projectRoot\":\"/tmp/opencode/compare/repos/esbuild\",\"indexRoot\":\"/tmp/opencode/compare/repos/esbuild\",\"idleTimeoutMs\":1800000,\"daemonStabilityMs\":30000,\"msg\":\"Starting trace-mcp stdio session...\"}\n{\"level\":40,\"time\":1794547760890,\"pid\":38823,\"hostname\":\"omarchy",
+  "_wall_ms": 6184.4,
+  "_meta": {
+    "repo": "esbuild",
+    "file": "lib/shared/uint8array_json_parser.ts",
+    "tool": "trace",
+    "wall_s": 6.2
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "tool": "trace-mcp",
+  "version": "3.44.0",
+  "repo_root": "/tmp/opencode/compare/repos/esbuild",
+  "file": "lib/npm/node-platform.ts",
+  "depth_used": 1,
+  "get_change_impact": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"target\":{\"path\":\"lib/npm/node-platform.ts\",\"symbolId\":\"lib/npm/node-platform.ts::isValidBinaryPath#function\",\"symbolName\":\"isValidBinaryPath\",\"kind\":\"function\"},\"summary\":{\"totalFiles\":3,\"totalSymbols\":3,\"maxDepth\":1,\"crossBoundary\":false,\"publicApiAffected\":0,\"untestedDependents\":3,\"highComplexityDependents\":0,\"sentence\":\"Impact: 3 file(s) across 1 module(s), 3 untested, 4 breaking risk(s). Risk: medium.\"},\"risk\":{\"score\":0.25,\"level\":\"medium\",\"publicApiBreaking\":false,\"untestedRatio\":1,\"maxComplexity\":7,\"mitigations\":[\"Add test coverage for the target before modifying\",\"3/3 dependents lack tests \u2014 add integration tests\",\"4 exported symbol(s) with 5 consumer(s) \u2014 signature change = breaking\"]},\"affectedTests\":{\"total\":0,\"files\":[],\"truncated\":false},\"dependents\":[{\"path\":\"lib/npm/node-install.ts\",\"edgeTypes\":[\"imports\",\"calls\"],\"depth\":1,\"hasTests\":false,\"symbols\":[{\"symbolId\":\"lib/npm/node-install.ts::checkAndPreparePackage#function\",\"symbolName\":\"checkAndPreparePackage\",\"symbolKind\":\"function\",\"resolutionTier\":\"ast_resolved\",\"complexity\":7,\"isExported\":false}]},{\"path\":\"lib/npm/node-shim.ts\",\"edgeTypes\":[\"imports\",\"calls\"],\"depth\":1,\"hasTests\":false,\"symbols\":[{\"symbolId\":\"lib/npm/node-shim.ts::__module__#namespace\",\"symbolName\":\"__module__:node-shim\",\"symbolKind\":\"namespace\",\"resolutionTier\":\"ast_resolved\",\"isExported\":false}]},{\"path\":\"lib/npm/node.ts\",\"edgeTypes\":[\"imports\",\"calls\"],\"depth\":1,\"hasTests\":false,\"symbols\":[{\"symbolId\":\"lib/npm/node.ts::esbuildCommandAndArgs#function\",\"symbolName\":\"esbuildCommandAndArgs\",\"symbolKind\":\"function\",\"resolutionTier\":\"ast_resolved\",\"complexity\":7,\"isExported\":false}]}],\"totalAffected\":3,\"resolution_tiers\":{\"scip_resolved\":0,\"lsp_resolved\":0,\"ast_resolved\":6,\"ast_inferred\":0,\"text_matched\":0},\"breakingChanges\":[{\"symbolId\":\"lib/npm/node-platform.ts::generateBinPath#function\",\"symbolName\":\"generateBinPath\",\"kind\":\"function\",\"consumers\":2,\"consumerFiles\":[\"lib/npm/node-shim.ts\",\"lib/npm/node.ts\"]},{\"symbolId\":\"lib/npm/node-platform.ts::isValidBinaryPath#function\",\"symbolName\":\"isValidBinaryPath\",\"kind\":\"function\",\"consumers\":1,\"consumerFiles\":[\"lib/npm/node-install.ts\"]},{\"symbolId\":\"lib/npm/node-platform.ts::pkgAndSubpathForCurrentPlatform#function\",\"symbolName\":\"pkgAndSubpathForCurrentPlatform\",\"kind\":\"function\",\"consumers\":1,\"consumerFiles\":[\"lib/npm/node-install.ts\"]},{\"symbolId\":\"lib/npm/node-platform.ts::downloadedBinPath#function\",\"symbolName\":\"downloadedBinPath\",\"kind\":\"function\",\"consumers\":1,\"consumerFiles\":[\"lib/npm/node-install.ts\"]}],\"byModule\":[{\"module\":\"lib/npm\",\"count\":3,\"files\":[\"lib/npm/node-install.ts\",\"lib/npm/node-shim.ts\",\"lib/npm/node.ts\"],\"maxDepth\":1,\"hasUntested\":true}],\"byEdgeType\":{\"imports\":3,\"calls\":3},\"byDepth\":{\"1\":6},\"_hints\":[{\"tool\":\"get_tests_for\",\"args\":{\"symbol_id\":\"<affected_symbol>\"},\"why\":\"Find tests for affected dependents\"},{\"tool\":\"check_rename\",\"args\":{\"symbol_id\":\"<symbol>\"},\"why\":\"Verify rename is safe across all usages\"}]}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 1
+  },
+  "_meta": {
+    "repo": "esbuild",
+    "file": "lib/npm/node-platform.ts",
+    "tool": "trace-v2-d1",
+    "wall_s": 6.2
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "tool": "code-impact-mcp",
+  "version": "1.6.10",
+  "repo_root": "/tmp/opencode/compare/repos/koa",
+  "file": "lib/search-params.js",
+  "refresh": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"status\": \"Graph rebuilt successfully\",\n  \"files\": 7,\n  \"edges\": 9,\n  \"buildTimeMs\": 170,\n  \"circularDependencies\": 0\n}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 1
+  },
+  "get_dependencies": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"file\": \"lib/search-params.js\",\n  \"summary\": \"lib/search-params.js is a leaf with 1 incoming and 0 outgoing dependency edge.\",\n  \"explanation\": \"This is a structural dependency view. It does not distinguish runtime-only vs type-only usage yet.\",\n  \"imports\": [],\n  \"importedBy\": [\n    \"lib/request.js\"\n  ],\n  \"exports\": [],\n  \"fanIn\": 1,\n  \"fanOut\": 0,\n  \"isHighCoupling\": false,\n  \"couplingRole\": \"leaf\"\n}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 2
+  },
+  "analyze_impact": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"summary\": \"Low graph impact: the current change looks locally contained in graph terms.\",\n  \"scanSummary\": \"LOW, 2 affected across lib (1)\",\n  \"explanation\": \"This result is graph-based only. It does not account for tests, runtime behavior, migrations, or production traffic.\",\n  \"changedFiles\": [\n    \"lib/search-params.js\"\n  ],\n  \"directlyAffected\": [\n    \"lib/request.js\"\n  ],\n  \"transitivelyAffected\": [\n    \"lib/application.js\"\n  ],\n  \"impactBreakdown\": {\n    \"directCount\": 1,\n    \"transitiveCount\": 1,\n    \"directScan\": {\n      \"totalFiles\": 1,\n      \"topDirectories\": [\n        {\n          \"directory\": \"lib\",\n          \"count\": 1\n        }\n      ],\n      \"directoryGroups\": [\n        {\n          \"directory\": \"lib\",\n          \"count\": 1,\n          \"examples\": [\n            \"lib/request.js\"\n          ],\n          \"remainingExamples\": 0\n        }\n      ],\n      \"firstFiles\": [\n        \"lib/request.js\"\n      ],\n      \"remainingFiles\": 0,\n      \"summaryLine\": \"lib (1)\",\n      \"displayMode\": \"flat\"\n    },\n    \"transitiveScan\": {\n      \"totalFiles\": 1,\n      \"topDirectories\": [\n        {\n          \"directory\": \"lib\",\n          \"count\": 1\n        }\n      ],\n      \"directoryGroups\": [\n        {\n          \"directory\": \"lib\",\n          \"count\": 1,\n          \"examples\": [\n            \"lib/application.js\"\n          ],\n          \"remainingExamples\": 0\n        }\n      ],\n      \"firstFiles\": [\n        \"lib/application.js\"\n      ],\n      \"remainingFiles\": 0,\n      \"summaryLine\": \"lib (1)\",\n      \"displayMode\": \"flat\"\n    }\n  },\n  \"riskScore\": 0.29,\n  \"totalAffected\": 2,\n  \"cascadeDepth\": 3\n}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 3
+  },
+  "stderr": "",
+  "_wall_ms": 953.9,
+  "_meta": {
+    "repo": "koa",
+    "file": "lib/search-params.js",
+    "tool": "code_impact",
+    "wall_s": 1.0
+  }
+}

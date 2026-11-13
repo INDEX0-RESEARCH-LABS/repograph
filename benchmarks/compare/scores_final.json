@@ -1,0 +1,82 @@
+{
+  "run1_description": "Original benchmark - trace-mcp NOT indexed before querying",
+  "run2_description": "Fixed benchmark - trace-mcp indexed with `trace index <dir>` + depth=1 + esbuild .trace-mcp.json added",
+  "gt_total_edges": 2430,
+  "gt_corrections": [
+    "Added django/utils/version.py importer (from django import get_version via django/__init__)",
+    "Added 21 koa/__tests__/**/*.js files importing lib/application.js via require('../..')",
+    "Added 3 more koa test files importing lib/application.js via require('../../')",
+    "package.json main resolution: '../..' in test dirs resolves to lib/application.js"
+  ],
+  "run1": {
+    "repograph": {
+      "tp": 2374,
+      "fp": 2,
+      "fn": 56,
+      "precision": 0.999,
+      "recall": 0.977,
+      "errors": 0
+    },
+    "code_impact_mcp": {
+      "tp": 33,
+      "fp": 0,
+      "fn": 93,
+      "precision": 1.0,
+      "recall": 0.262,
+      "errors": 15,
+      "scope": "JS/TS files only - Python explicitly not in its graph"
+    },
+    "trace_mcp_broken": {
+      "tp": 40,
+      "fp": 17,
+      "fn": 2390,
+      "precision": 0.702,
+      "recall": 0.016,
+      "errors": 1,
+      "bug": "repos not indexed before querying (Last indexed: never)"
+    }
+  },
+  "run2": {
+    "repograph": {
+      "tp": 2374,
+      "fp": 2,
+      "fn": 56,
+      "precision": 0.999,
+      "recall": 0.977,
+      "errors": 0,
+      "note": "unchanged - repograph indexes itself"
+    },
+    "code_impact_mcp": {
+      "tp": 33,
+      "fp": 0,
+      "fn": 93,
+      "precision": 1.0,
+      "recall": 0.262,
+      "errors": 15,
+      "note": "unchanged - same documented Python limitation"
+    },
+    "trace_mcp_fixed": {
+      "tp": 256,
+      "fp": 2,
+      "fn": 2174,
+      "precision": 0.992,
+      "recall": 0.105,
+      "errors": 0,
+      "setup": "trace index <dir> run for all repos, esbuild .trace-mcp.json added, depth=1"
+    }
+  },
+  "setup_errors_found": {
+    "trace_mcp": "Required `trace index <dir>` before MCP queries; repos were auto-registered but never indexed. esbuild needed .trace-mcp.json (default pattern was src/**/*.ts, not lib/**/*.ts). Without these steps, all results were zeros.",
+    "code_impact_mcp": "Python is documented as not in its graph. 15 Django query errors are expected behavior. No misconfiguration.",
+    "toy_repo_verification": {
+      "pkg/models.py GT: views.py + api.py": {
+        "repograph": "BOTH found (confirmed)",
+        "trace_fixed": "views.py only (misses `from pkg import models` \u2192 api.py)"
+      },
+      "js/utils.js GT: app.js + app2.js": {
+        "repograph": "app.js only (misses require('./utils').greet chained form)",
+        "trace_fixed": "BOTH found (correctly resolves chained require)"
+      }
+    }
+  }
+}

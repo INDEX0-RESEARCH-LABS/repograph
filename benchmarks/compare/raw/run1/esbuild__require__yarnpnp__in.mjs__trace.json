@@ -1,0 +1,40 @@
+{
+  "tool": "trace-mcp",
+  "version": "3.44.0",
+  "repo_root": "/tmp/opencode/compare/repos/esbuild",
+  "file": "require/yarnpnp/in.mjs",
+  "get_change_impact": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"error\":{\"code\":\"NOT_FOUND\",\"message\":\"'require/yarnpnp/in.mjs' is not in the index\",\"help\":\"If this is a file path, it may not match the configured include globs \u2014 check `include`/`exclude` in .trace-mcp.json and reindex. Otherwise use search() to locate the symbol.\"}}"
+        }
+      ],
+      "isError": true
+    },
+    "jsonrpc": "2.0",
+    "id": 1
+  },
+  "find_usages": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"error\":{\"code\":\"NOT_FOUND\",\"message\":\"'require/yarnpnp/in.mjs' is not in the index\",\"help\":\"If this is a file path, it may not match the configured include globs \u2014 check `include`/`exclude` in .trace-mcp.json and reindex. Otherwise use search() to locate the symbol.\"}}"
+        }
+      ],
+      "isError": true
+    },
+    "jsonrpc": "2.0",
+    "id": 2
+  },
+  "stderr": "{\"level\":30,\"time\":1794547785672,\"pid\":39481,\"hostname\":\"omarchy\",\"name\":\"trace-mcp\",\"msg\":\"Daemon auto-spawn is disabled \u2014 running local-only (stdio).\"}\n{\"level\":30,\"time\":1794547785674,\"pid\":39481,\"hostname\":\"omarchy\",\"name\":\"trace-mcp\",\"projectRoot\":\"/tmp/opencode/compare/repos/esbuild\",\"indexRoot\":\"/tmp/opencode/compare/repos/esbuild\",\"idleTimeoutMs\":1800000,\"daemonStabilityMs\":30000,\"msg\":\"Starting trace-mcp stdio session...\"}\n{\"level\":40,\"time\":1794547785681,\"pid\":39481,\"hostname\":\"omarchy",
+  "_wall_ms": 6135.6,
+  "_meta": {
+    "repo": "esbuild",
+    "file": "require/yarnpnp/in.mjs",
+    "tool": "trace",
+    "wall_s": 6.1
+  }
+}

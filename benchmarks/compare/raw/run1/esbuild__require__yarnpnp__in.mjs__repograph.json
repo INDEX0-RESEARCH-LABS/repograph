@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-13T05:29:42+00:00",
+  "source": "files",
+  "target": {
+    "paths": [
+      "require/yarnpnp/in.mjs"
+    ],
+    "symbols": [],
+    "symbols_total": 0,
+    "symbols_truncated": false,
+    "changed_lines": {},
+    "removed_symbols": [],
+    "deleted": [],
+    "missing_from_index": [],
+    "diff": null
+  },
+  "changed_files": [
+    "require/yarnpnp/in.mjs"
+  ],
+  "direct_dependents": [],
+  "transitive_dependents": [],
+  "transitive_dependents_total": 0,
+  "transitive_dependents_truncated": false,
+  "related_tests": [],
+  "related_tests_total": 0,
+  "related_tests_truncated": false,
+  "affected_routes": [],
+  "affected_routes_total": 0,
+  "affected_routes_truncated": false,
+  "related_models": [],
+  "related_models_total": 0,
+  "related_models_truncated": false,
+  "architecture": {
+    "layers": {
+      "other": 1
+    },
+    "documentation_mentions": [
+      {
+        "path": "README.md",
+        "line": 9,
+        "excerpt": "<a href=\"https://esbuild.github.io/getting-started/\">Getting started</a> |",
+        "matched": "in",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "README.md:9"
+        }
+      },
+      {
+        "path": "README.md",
+        "line": 11,
+        "excerpt": "<a href=\"https://esbuild.github.io/plugins/\">Plugins</a> |",
+        "matched": "in",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "README.md:11"
+        }
+      },
+      {
+        "path": "README.md",
+        "line": 27,
+        "excerpt": "The main goal of the esbuild bundler project is to bring about a new era of build tool performance, and create an easy-to-use modern bundler along the way.",
+        "matched": "in",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "README.md:27"
+        }
+      },
+      {
+        "path": "README.md",
+        "line": 31,
+        "excerpt": "- Extreme speed without needing a cache",
+        "matched": "in",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "README.md:31"
+        }
+      },
+      {
+        "path": "README.md",
+        "line": 32,
+        "excerpt": "- [JavaScript](https://esbuild.github.io/content-types/#javascript), [CSS](https://esbuild.github.io/content-types/#css), [TypeScript](https://esbuild.github.io/content-types/#typescript), and [JSX](https://esbuild.githu",
+        "matched": "in",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "README.md:32"
+        }
+      },
+      {
+        "path": "README.md",
+        "line": 35,
+        "excerpt": "- Bundles CSS including [CSS modules](https://github.com/css-modules/css-modules)",
+        "matched": "in",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "README.md:35"
+        }
+      },
+      {
+        "path": "README.md",
+        "line": 36,
+        "excerpt": "- Tree shaking, [minification](https://esbuild.github.io/api/#minify), and [source maps](https://esbuild.github.io/api/#sourcemap)",
+        "matched": "in",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "README.md:36"
+        }
+      },
+      {
+        "path": "README.md",
+        "line": 37,
+        "excerpt": "- [Local server](https://esbuild.github.io/api/#serve), [watch mode](https://esbuild.github.io/api/#watch), and [plugins](https://esbuild.github.io/plugins/)",
+        "matched": "in",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "README.md:37"
+        }
+      },
+      {
+        "path": "README.md",
+        "line": 39,
+        "excerpt": "Check out the [getting started](https://esbuild.github.io/getting-started/) instructions if you want to give esbuild a try.",
+        "matched": "in",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "README.md:39"
+        }
+      },
+      {
+        "path": "docs/development.md",
+        "line": 11,
+        "excerpt": "Assuming you have [Go](https://go.dev/) installed, you can compile esbuild by running `make` in the top-level directory (or `go build ./cmd/esbuild` if you don't have `make` installed). This creates an executable called ",
+        "matched": "in",
+        "evidence": {
+          "method": "documentation-text-match",
+          "location": "docs/development.md:11"
+        }
+      }
+    ],
+    "note": "Documentation matches are lexical and only point to where a concept is discussed."
+  },
+  "blind_spots": [
+    {
+      "kind": "external-imports",
+      "count": 6,
+      "message": "External packages were not analyzed; only their local import sites are known.",
+      "items": [
+        "aws-jwt-verify",
+        "d3-time",
+        "mime",
+        "react-dom",
+        "strtok3",
+        "strtok3/core"
+      ]
+    },
+    {
+      "kind": "no-static-dependents",
+      "count": 1,
+      "message": "No static dependents were found. The code may still be used dynamically, as an entry point, or outside this repository.",
+      "items": [
+        "require/yarnpnp/in.mjs"
+      ]
+    },
+    {
+      "kind": "repo-parse-errors",
+      "count": 1,
+      "message": "Files with parse errors contribute no symbols or edges anywhere in the index."
+    }
+  ],
+  "repo_health": {
+    "unresolved_imports": 1,
+    "dynamic_imports": 6,
+    "note": "Repository-wide counts; they are not scoped to this change."
+  },
+  "caveats": [
+    "This is a static analysis of statically resolvable relationships. Absence of a relationship is not evidence that a change is safe.",
+    "Dynamic imports, reflection, runtime dependency injection, generated code and external consumers are not modeled.",
+    "Test selection uses import edges and naming conventions, not execution traces; it can miss tests and include irrelevant ones.",
+    "Route and database-model detection use framework-specific heuristics and may produce false positives or miss frameworks.",
+    "Confidence levels describe extraction certainty, not the risk of the change itself."
+  ],
+  "summary": {
+    "changed_files": 1,
+    "changed_symbols": 0,
+    "direct_dependents": 0,
+    "transitive_dependents": 0,
+    "related_tests": 0,
+    "affected_routes": 0,
+    "related_models": 0,
+    "completeness": "partial",
+    "confidence_counts": {
+      "confirmed": 0,
+      "inferred": 0
+    }
+  },
+  "_query_time_ms": 4.1,
+  "_wall_ms": 57.4,
+  "_meta": {
+    "repo": "esbuild",
+    "file": "require/yarnpnp/in.mjs",
+    "tool": "repograph",
+    "wall_s": 0.1
+  }
+}

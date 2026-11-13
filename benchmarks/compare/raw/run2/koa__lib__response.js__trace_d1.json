@@ -1,0 +1,25 @@
+{
+  "tool": "trace-mcp",
+  "version": "3.44.0",
+  "repo_root": "/tmp/opencode/compare/repos/koa",
+  "file": "lib/response.js",
+  "depth_used": 1,
+  "get_change_impact": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"target\":{\"path\":\"lib/response.js\",\"symbolId\":\"lib/response.js::__module__#namespace\",\"symbolName\":\"__module__:response\",\"kind\":\"namespace\"},\"summary\":{\"totalFiles\":1,\"totalSymbols\":0,\"maxDepth\":1,\"crossBoundary\":false,\"publicApiAffected\":0,\"untestedDependents\":0,\"highComplexityDependents\":0,\"sentence\":\"Impact: 1 file(s) across 1 module(s), 24 test(s) to run.\"},\"risk\":{\"score\":0.18,\"level\":\"low\",\"publicApiBreaking\":false,\"untestedRatio\":0,\"maxComplexity\":0,\"mitigations\":[\"Add test coverage for the target before modifying\"]},\"affectedTests\":{\"total\":24,\"files\":[\"__tests__/application/compose.test.js\",\"__tests__/application/context.test.js\",\"__tests__/application/currentContext.test.js\",\"__tests__/application/index.test.js\",\"__tests__/application/inspect.test.js\",\"__tests__/application/onerror.test.js\",\"__tests__/application/request.test.js\",\"__tests__/application/respond.test.js\",\"__tests__/application/response.test.js\",\"__tests__/application/toJSON.test.js\",\"__tests__/application/use.test.js\",\"__tests__/context/assert.test.js\",\"__tests__/context/cookies.test.js\",\"__tests__/context/onerror.test.js\",\"__tests__/context/state.test.js\",\"__tests__/load-with-esm.test.js\",\"__tests__/request/href.test.js\",\"__tests__/request/ip.test.js\",\"__tests__/response/attachment.test.js\",\"__tests__/response/flushHeaders.test.js\",\"__tests__/response/header.test.js\",\"__tests__/response/redirect.test.js\",\"__tests__/response/status.test.js\",\"__tests__/response/writable.test.js\"],\"truncated\":false},\"dependents\":[{\"path\":\"lib/application.js\",\"edgeTypes\":[\"imports\"],\"depth\":1,\"hasTests\":true}],\"totalAffected\":1,\"resolution_tiers\":{\"scip_resolved\":0,\"lsp_resolved\":0,\"ast_resolved\":1,\"ast_inferred\":0,\"text_matched\":0},\"byModule\":[{\"module\":\"lib\",\"count\":1,\"files\":[\"lib/application.js\"],\"maxDepth\":1,\"hasUntested\":false}],\"byEdgeType\":{\"imports\":1},\"byDepth\":{\"1\":1},\"_hints\":[{\"tool\":\"get_tests_for\",\"args\":{\"symbol_id\":\"<affected_symbol>\"},\"why\":\"Find tests for affected dependents\"},{\"tool\":\"check_rename\",\"args\":{\"symbol_id\":\"<symbol>\"},\"why\":\"Verify rename is safe across all usages\"}]}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 1
+  },
+  "_meta": {
+    "repo": "koa",
+    "file": "lib/response.js",
+    "tool": "trace-v2-d1",
+    "wall_s": 6.3
+  }
+}

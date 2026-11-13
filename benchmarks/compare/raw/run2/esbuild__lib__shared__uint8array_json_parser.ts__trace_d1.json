@@ -1,0 +1,25 @@
+{
+  "tool": "trace-mcp",
+  "version": "3.44.0",
+  "repo_root": "/tmp/opencode/compare/repos/esbuild",
+  "file": "lib/shared/uint8array_json_parser.ts",
+  "depth_used": 1,
+  "get_change_impact": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"target\":{\"path\":\"lib/shared/uint8array_json_parser.ts\",\"symbolId\":\"lib/shared/uint8array_json_parser.ts::State#enum\",\"symbolName\":\"State\",\"kind\":\"enum\"},\"summary\":{\"totalFiles\":1,\"totalSymbols\":1,\"maxDepth\":1,\"crossBoundary\":false,\"publicApiAffected\":0,\"untestedDependents\":1,\"highComplexityDependents\":0,\"sentence\":\"Impact: 1 file(s) across 1 module(s), 1 untested, 1 breaking risk(s).\"},\"risk\":{\"score\":0.19,\"level\":\"low\",\"publicApiBreaking\":false,\"untestedRatio\":1,\"maxComplexity\":2,\"mitigations\":[\"Add test coverage for the target before modifying\",\"1/1 dependents lack tests \u2014 add integration tests\",\"1 exported symbol(s) with 1 consumer(s) \u2014 signature change = breaking\"]},\"affectedTests\":{\"total\":0,\"files\":[],\"truncated\":false},\"dependents\":[{\"path\":\"lib/shared/common.ts\",\"edgeTypes\":[\"imports\",\"calls\"],\"depth\":1,\"hasTests\":false,\"symbols\":[{\"symbolId\":\"lib/shared/common.ts::parseJSON#function\",\"symbolName\":\"parseJSON\",\"symbolKind\":\"function\",\"resolutionTier\":\"ast_resolved\",\"complexity\":2,\"isExported\":false}]}],\"totalAffected\":1,\"resolution_tiers\":{\"scip_resolved\":0,\"lsp_resolved\":0,\"ast_resolved\":2,\"ast_inferred\":0,\"text_matched\":0},\"breakingChanges\":[{\"symbolId\":\"lib/shared/uint8array_json_parser.ts::JSON_parse#function\",\"symbolName\":\"JSON_parse\",\"kind\":\"function\",\"consumers\":1,\"consumerFiles\":[\"lib/shared/common.ts\"]}],\"byModule\":[{\"module\":\"lib/shared\",\"count\":1,\"files\":[\"lib/shared/common.ts\"],\"maxDepth\":1,\"hasUntested\":true}],\"byEdgeType\":{\"imports\":1,\"calls\":1},\"byDepth\":{\"1\":2},\"_hints\":[{\"tool\":\"get_tests_for\",\"args\":{\"symbol_id\":\"<affected_symbol>\"},\"why\":\"Find tests for affected dependents\"},{\"tool\":\"check_rename\",\"args\":{\"symbol_id\":\"<symbol>\"},\"why\":\"Verify rename is safe across all usages\"}]}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 1
+  },
+  "_meta": {
+    "repo": "esbuild",
+    "file": "lib/shared/uint8array_json_parser.ts",
+    "tool": "trace-v2-d1",
+    "wall_s": 6.1
+  }
+}

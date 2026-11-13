@@ -1,0 +1,36 @@
+{
+  "tool": "trace-mcp",
+  "version": "3.44.0",
+  "repo_root": "/tmp/opencode/compare/repos/esbuild",
+  "file": "scripts/decorator-tests.js",
+  "get_change_impact": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"target\":{\"path\":\"scripts/decorator-tests.js\",\"symbolId\":\"scripts/decorator-tests.js::__module__#namespace\",\"symbolName\":\"__module__:decorator-tests\",\"kind\":\"namespace\"},\"summary\":{\"totalFiles\":1,\"totalSymbols\":1,\"maxDepth\":1,\"crossBoundary\":false,\"publicApiAffected\":0,\"untestedDependents\":1,\"highComplexityDependents\":0,\"sentence\":\"Impact: 1 file(s) across 1 module(s), 1 untested.\"},\"risk\":{\"score\":0.17,\"level\":\"low\",\"publicApiBreaking\":false,\"untestedRatio\":1,\"maxComplexity\":0,\"mitigations\":[\"Add test coverage for the target before modifying\",\"1/1 dependents lack tests \u2014 add integration tests\"]},\"affectedTests\":{\"total\":0,\"files\":[],\"truncated\":false},\"dependents\":[{\"path\":\"scripts/js-api-tests.js\",\"edgeTypes\":[\"imports\",\"calls\"],\"depth\":1,\"hasTests\":false,\"symbols\":[{\"symbolId\":\"scripts/js-api-tests.js::__module__#namespace\",\"symbolName\":\"__module__:js-api-tests\",\"symbolKind\":\"namespace\",\"resolutionTier\":\"ast_resolved\",\"isExported\":false}]}],\"totalAffected\":1,\"resolution_tiers\":{\"scip_resolved\":0,\"lsp_resolved\":0,\"ast_resolved\":1,\"ast_inferred\":1,\"text_matched\":0},\"byModule\":[{\"module\":\"scripts\",\"count\":1,\"files\":[\"scripts/js-api-tests.js\"],\"maxDepth\":1,\"hasUntested\":true}],\"byEdgeType\":{\"imports\":1,\"calls\":1},\"byDepth\":{\"1\":2},\"_hints\":[{\"tool\":\"get_tests_for\",\"args\":{\"symbol_id\":\"<affected_symbol>\"},\"why\":\"Find tests for affected dependents\"},{\"tool\":\"check_rename\",\"args\":{\"symbol_id\":\"<symbol>\"},\"why\":\"Verify rename is safe across all usages\"}]}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 1
+  },
+  "find_usages": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"target\":{\"file\":\"scripts/decorator-tests.js\"},\"references\":[{\"edge_type\":\"imports\",\"resolution_tier\":\"ast_inferred\",\"file\":\"scripts/js-api-tests.js\",\"_freshness\":\"fresh\"}],\"total\":1,\"resolution_tiers\":{\"scip_resolved\":0,\"lsp_resolved\":0,\"ast_resolved\":0,\"ast_inferred\":1,\"text_matched\":0},\"_meta\":{\"freshness\":{\"fresh\":1,\"edited_uncommitted\":0,\"stale_index\":0,\"repo_is_stale\":false},\"confidence\":0.8,\"confidence_signals\":{\"top1_strength\":1,\"top_gap\":1,\"identity_match\":0,\"freshness\":1}},\"_hints\":[{\"tool\":\"get_change_impact\",\"args\":{\"symbol_id\":\"<symbol>\"},\"why\":\"See transitive impact beyond direct references\"},{\"tool\":\"get_tests_for\",\"args\":{\"symbol_id\":\"<symbol>\"},\"why\":\"Find tests covering this symbol\"}]}"
+        }
+      ]
+    },
+    "jsonrpc": "2.0",
+    "id": 2
+  },
+  "_meta": {
+    "repo": "esbuild",
+    "file": "scripts/decorator-tests.js",
+    "tool": "trace-v2",
+    "wall_s": 7.9
+  }
+}
